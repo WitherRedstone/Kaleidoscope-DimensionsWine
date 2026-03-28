@@ -11,6 +11,18 @@
   "block.kaleidoscope_dim_wine.warped_grape_crop": "诡异葡萄",
   "block.kaleidoscope_dim_wine.warped_grapevine_trellis": "诡异葡萄藤架",
 
+  "_comment.items": "物品",
+  "block.kaleidoscope_dim_wine.crimson_fungal_sap": "绯红菌露",
+  "block.kaleidoscope_dim_wine.warped_fungal_sap": "诡影菌髓",
+
+  "_comment.fluids": "流体",
+  "fluid_type.mooncake_delight.crimson_grape_juice_type": "绯红葡萄汁",
+  "fluid_type.mooncake_delight.warped_grape_juice_type": "诡异葡萄汁",
+  "item.kaleidoscope_dim_wine.crimson_grape_juice_bucket": "绯红葡萄汁桶",
+  "item.kaleidoscope_dim_wine.warped_grape_juice_bucket": "诡异葡萄汁桶",
+  "block.kaleidoscope_dim_wine.crimson_grape_juice_block": "绯红葡萄汁",
+  "block.kaleidoscope_dim_wine.warped_grape_juice_block": "诡异葡萄汁",
+
   "_comment.wine_items": "酒类-物品",
   "item.kaleidoscope_dim_wine.crimson_crescendo": "绯红绝响",
   "item.kaleidoscope_dim_wine.ethereal_noble": "诡影尊爵",

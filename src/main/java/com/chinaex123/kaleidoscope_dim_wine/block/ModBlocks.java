@@ -17,7 +17,8 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCK_REGISTER =
             DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
 
-    // ======================= 下界 - 作物 =======================
+    // ==================== 次元维度 - 下界 ====================
+    // -------------------- 作物 --------------------
     // 绯红葡萄藤 - 绯红葡萄藤架生长的果实
     public static final DeferredBlock<Block> CRIMSON_GRAPE_CROP = BLOCK_REGISTER.register("crimson_grape_crop", CrimsonGrapeCropBlock::new);
     // 绯红葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
@@ -26,8 +27,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_GRAPE_CROP = BLOCK_REGISTER.register("warped_grape_crop", WarpedGrapeCropBlock::new);
     // 诡异葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
     public static final DeferredBlock<Block> WARPED_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("warped_grapevine_trellis", WarpedGrapevineTrellisBlock::new);
-
-    // ======================= 下界 - 酒类 =======================
+    // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Block, Block> CRIMSON_CRESCENDO =
             BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());

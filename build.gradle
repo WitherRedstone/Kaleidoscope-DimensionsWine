@@ -133,6 +133,10 @@ dependencies {
     localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
     localRuntime "curse.maven:jade-324717:7545219" // jade
     localRuntime "curse.maven:appleskin-248787:7517379" // 苹果皮
+    localRuntime "curse.maven:kubejs-238086:7278501"
+    localRuntime "curse.maven:rhino-416294:7104526"
+    implementation "curse.maven:functional-storage-556861:7061714"
+    implementation "curse.maven:titanium-287342:7662843"
     
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

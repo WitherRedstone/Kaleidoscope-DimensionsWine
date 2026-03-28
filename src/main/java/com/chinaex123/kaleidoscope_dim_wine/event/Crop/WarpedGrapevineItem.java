@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
@@ -29,6 +30,12 @@ public class WarpedGrapevineItem extends Item {
 
         // 如果点击的是普通藤架
         if (state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get())) {
+            // 检查藤架下方是否是草方块
+            BlockState belowTrellis = level.getBlockState(pos.below());
+            if (!belowTrellis.is(Blocks.GRASS_BLOCK)) {
+                return InteractionResult.FAIL;
+            }
+
             if (!level.isClientSide) {
                 // 获取藤架的朝向和含水状态
                 BlockState newState = ModBlocks.WARPED_GRAPEVINE_TRELLIS.get()
