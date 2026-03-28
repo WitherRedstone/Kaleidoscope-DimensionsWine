@@ -1,0 +1,29 @@
+{
+  "itemGroup.kaleidoscope_dim_wine_tab": "Kaleidoscope Dimensions Wine",
+
+  "_comment.crops": "Crops",
+  "item.kaleidoscope_dim_wine.crimson_grapevine": "Crimson Grapevine",
+  "item.kaleidoscope_dim_wine.crimson_grape": "Crimson Grape",
+  "block.kaleidoscope_dim_wine.crimson_grape_crop": "Crimson Grape Crop",
+  "block.kaleidoscope_dim_wine.crimson_grapevine_trellis": "Crimson Grapevine Trellis",
+  "item.kaleidoscope_dim_wine.warped_grapevine": "Warped Grapevine",
+  "item.kaleidoscope_dim_wine.warped_grape": "Warped Grape",
+  "block.kaleidoscope_dim_wine.warped_grape_crop": "Warped Grape Crop",
+  "block.kaleidoscope_dim_wine.warped_grapevine_trellis": "Warped Grapevine Trellis",
+
+  "_comment.wine_items": "Wine-Items",
+  "item.kaleidoscope_dim_wine.crimson_crescendo": "Crimson Crescendo",
+  "item.kaleidoscope_dim_wine.ethereal_noble": "Ethereal Noble",
+  "item.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",
+  "item.kaleidoscope_dim_wine.blaze_martell": "Blaze Martell",
+  "item.kaleidoscope_dim_wine.magma_royal_salute": "Magma Royal Salute",
+  "item.kaleidoscope_dim_wine.black_bone_lafite": "Black Bone Lafite",
+
+  "_comment.wine_blocksentity": "Wine-Blocks Entity",
+  "block.kaleidoscope_dim_wine.crimson_crescendo": "Crimson Crescendo",
+  "block.kaleidoscope_dim_wine.ethereal_noble": "Ethereal Noble",
+  "block.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",
+  "block.kaleidoscope_dim_wine.blaze_martell": "Blaze Martell",
+  "block.kaleidoscope_dim_wine.magma_royal_salute": "Magma Royal Salute",
+  "block.kaleidoscope_dim_wine.black_bone_lafite": "Black Bone Lafite"
+}

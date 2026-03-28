@@ -1,0 +1,55 @@
+package com.chinaex123.kaleidoscope_dim_wine.block;
+
+import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.CrimsonGrapeCropBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.CrimsonGrapevineTrellisBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.WarpedGrapeCropBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.WarpedGrapevineTrellisBlock;
+import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ModBlocks {
+    public static final DeferredRegister.Blocks BLOCK_REGISTER =
+            DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
+
+    // ======================= 下界 - 作物 =======================
+    // 绯红葡萄藤 - 绯红葡萄藤架生长的果实
+    public static final DeferredBlock<Block> CRIMSON_GRAPE_CROP = BLOCK_REGISTER.register("crimson_grape_crop", CrimsonGrapeCropBlock::new);
+    // 绯红葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
+    public static final DeferredBlock<Block> CRIMSON_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("crimson_grapevine_trellis", CrimsonGrapevineTrellisBlock::new);
+    // 诡异葡萄藤 - 诡异葡萄藤架生长的果实
+    public static final DeferredBlock<Block> WARPED_GRAPE_CROP = BLOCK_REGISTER.register("warped_grape_crop", WarpedGrapeCropBlock::new);
+    // 诡异葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
+    public static final DeferredBlock<Block> WARPED_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("warped_grapevine_trellis", WarpedGrapevineTrellisBlock::new);
+
+    // ======================= 下界 - 酒类 =======================
+    // 绯红绝响
+    public static final DeferredHolder<Block, Block> CRIMSON_CRESCENDO =
+            BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 诡影尊爵
+    public static final DeferredHolder<Block, Block> ETHEREAL_NOBLE =
+            BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 疣域轩尼诗
+    public static final DeferredHolder<Block, Block> WART_HENNESSY =
+            BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 烈焰马爹利
+    public static final DeferredHolder<Block, Block> BLAZE_MARTELL =
+            BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 岩浆皇家礼炮
+    public static final DeferredHolder<Block, Block> MAGMA_ROYAL_SALUTE =
+            BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 黑骨拉菲
+    public static final DeferredHolder<Block, Block> BLACK_BONE_LAFITE =
+            BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+
+
+
+    public static void register(IEventBus eventBus) {
+        BLOCK_REGISTER.register(eventBus);
+    }
+}
