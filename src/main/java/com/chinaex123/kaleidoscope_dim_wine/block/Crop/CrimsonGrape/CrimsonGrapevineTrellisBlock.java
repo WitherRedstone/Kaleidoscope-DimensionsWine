@@ -6,16 +6,25 @@ import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.properties.TrellisType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.neoforged.neoforge.common.CommonHooks;
+import net.neoforged.neoforge.common.ItemAbilities;
 
 /**
  * 绯红葡萄藤 - 可以种植在普通藤架上的藤蔓作物
@@ -29,6 +38,19 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        // 如果玩家拿的是剪刀，可以剪下葡萄藤
+        ItemStack itemInHand = player.getItemInHand(hand);
+        if (itemInHand.canPerformAction(ItemAbilities.SHEARS_HARVEST)) {
+            BlockState newState = com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()
+                    .defaultBlockState()
+                    .setValue(TYPE, state.getValue(TYPE))
+                    .setValue(WATERLOGGED, state.getValue(WATERLOGGED));
+            level.setBlockAndUpdate(pos, newState);
+            Block.popResource(level, pos, ModItems.CRIMSON_GRAPEVINE.get().getDefaultInstance());
+            itemInHand.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
+            player.playSound(SoundEvents.BEEHIVE_SHEAR);
+            return ItemInteractionResult.SUCCESS;
+        }
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
@@ -43,6 +65,26 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
             }
         }
         return false;
+    }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        // 调用父类方法来更新藤架类型（连接逻辑）
+        return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
+    }
+
+    @Override
+    public boolean sameType(BlockState state) {
+        // 允许与普通藤架、其他绯红葡萄藤藤架连接
+        return state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
+                state.is(ModBlocks.CRIMSON_GRAPEVINE_TRELLIS.get());
+    }
+
+    @Override
+    public boolean belowSupportGrow(BlockState belowState) {
+        // 绯红菌岩作为支撑方块
+        return belowState.is(this) ? this.isMaxAge(belowState) :
+                belowState.is(Blocks.CRIMSON_NYLIUM);
     }
 
     @Override

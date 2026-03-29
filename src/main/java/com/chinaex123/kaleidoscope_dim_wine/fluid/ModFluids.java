@@ -4,12 +4,10 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.fluid.JuiceFluidType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 import net.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
@@ -67,110 +65,3 @@ public class ModFluids {
         ).bucket(ModItems.WARPED_GRAPE_JUICE_BUCKET);
     }
 }
-
-
-//public class ModFluids {
-//    public static final DeferredRegister<FluidType> FLUID_TYPES =
-//            DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, KaleidoscopeDimensionsWine.MOD_ID);
-//    public static final DeferredRegister<Fluid> FLUIDS =
-//            DeferredRegister.create(Registries.FLUID, KaleidoscopeDimensionsWine.MOD_ID);
-//
-//    public static final ResourceLocation CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("crimson_grape_juice");
-//    public static final ResourceLocation FLOWING_CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_crimson_grape_juice");
-//
-//    public static final DeferredHolder<FluidType, FluidType> CRIMSON_GRAPE_JUICE_TYPE =
-//            FLUID_TYPES.register("crimson_grape_juice", () -> new JuiceFluidType(CRIMSON_GRAPE_JUICE_ID, 0));
-//
-//    public static BaseFlowingFluid.Properties CRIMSON_GRAPE_PROPERTIES;
-//
-//    public static final DeferredHolder<Fluid, BaseFlowingFluid.Source> CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("crimson_grape_juice", () -> new BaseFlowingFluid.Source(CRIMSON_GRAPE_PROPERTIES));
-//    public static final DeferredHolder<Fluid, BaseFlowingFluid.Flowing> FLOWING_CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("flowing_crimson_grape_juice", () -> new BaseFlowingFluid.Flowing(CRIMSON_GRAPE_PROPERTIES));
-//
-//    static {
-//        CRIMSON_GRAPE_PROPERTIES = new BaseFlowingFluid.Properties(
-//                CRIMSON_GRAPE_JUICE_TYPE,
-//                CRIMSON_GRAPE_JUICE,
-//                FLOWING_CRIMSON_GRAPE_JUICE
-//        ).bucket(ModItems.CRIMSON_GRAPE_JUICE_BUCKET);
-//    }
-//}
-
-//public class ModFluids {
-//    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, KaleidoscopeDimensionsWine.MOD_ID);
-//    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, KaleidoscopeDimensionsWine.MOD_ID);
-//
-//    // ID
-//    public static final ResourceLocation CRIMSON_GRAPE_JUICE_ID = id("crimson_grape_juice");
-//    public static final ResourceLocation FLOWING_CRIMSON_GRAPE_JUICE_ID = id("flowing_crimson_grape_juice");
-//
-//    // 流体属性
-//    public static final Supplier<FluidType> CRIMSON_GRAPE_JUICE_TYPE =
-//            FLUID_TYPES.register("crimson_grape_juice", () -> new JuiceFluidType(CRIMSON_GRAPE_JUICE_ID, 0));
-//
-//    // 流体
-//    public static final Supplier<BaseFlowingFluid.Source> CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("crimson_grape_juice", () -> new BaseFlowingFluid.Source(ModFluids.CrimsonGrapeJuiceProperties()));
-//    public static final Supplier<BaseFlowingFluid.Flowing> FLOWING_CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("flowing_crimson_grape_juice", () -> new BaseFlowingFluid.Flowing(ModFluids.CrimsonGrapeJuiceProperties()));
-//
-//    private static BaseFlowingFluid.Properties CrimsonGrapeJuiceProperties() {
-//        return new BaseFlowingFluid.Properties(CRIMSON_GRAPE_JUICE_TYPE, CRIMSON_GRAPE_JUICE, FLOWING_CRIMSON_GRAPE_JUICE).bucket(ModItems.CRIMSON_GRAPE_JUICE_BUCKET);
-//    }
-//}
-
-
-//public class ModFluids {
-//    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, KaleidoscopeDimensionsWine.MOD_ID);
-//
-//    public static final Supplier<Fluid> CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("crimson_grape_juice", () -> new BaseFlowingFluid.Source(
-//                    createProperties("crimson_grape_juice",
-//                            ModFluidTypes.CRIMSON_GRAPE_JUICE_TYPE, ModFluids.CRIMSON_GRAPE_JUICE, ModFluids.FLOWING_CRIMSON_GRAPE_JUICE, CRIMSON_GRAPE_JUICE_BUCKET)
-//            ));
-//    public static final Supplier<Fluid> FLOWING_CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("flowing_crimson_grape_juice", () -> new BaseFlowingFluid.Flowing(
-//                    createProperties("crimson_grape_juice",
-//                            ModFluidTypes.CRIMSON_GRAPE_JUICE_TYPE, ModFluids.CRIMSON_GRAPE_JUICE, ModFluids.FLOWING_CRIMSON_GRAPE_JUICE, CRIMSON_GRAPE_JUICE_BUCKET)
-//            ));
-//
-//    private static BaseFlowingFluid.Properties createProperties(String name, Supplier<FluidType> type, Supplier<Fluid> source, Supplier<Fluid> flowing, Supplier<Item> bucket) {
-//        return new BaseFlowingFluid.Properties(type, source, flowing).bucket(bucket);
-//    }
-//}
-
-//public class ModFluids {
-//
-//    public static final DeferredRegister<FluidType> FLUID_TYPES =
-//            DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, KaleidoscopeDimensionsWine.MOD_ID);
-//    public static final DeferredRegister<Fluid> FLUIDS =
-//            DeferredRegister.create(Registries.FLUID, KaleidoscopeDimensionsWine.MOD_ID);
-//
-//    public static final ResourceLocation CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("crimson_grape_juice");
-//    public static final ResourceLocation FLOWING_CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_crimson_grape_juice");
-//
-//    public static final DeferredHolder<FluidType, FluidType> CRIMSON_GRAPE_JUICE_TYPE =
-//            FLUID_TYPES.register("crimson_grape_juice_type", () -> new JuiceFluidType(ModFluids.CRIMSON_GRAPE_JUICE_ID, 0));
-//
-//    public static BaseFlowingFluid.Properties CRIMSON_GRAPE;
-//
-//    public static final DeferredHolder<Fluid, BaseFlowingFluid.Source> CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("crimson_grape_juice", () -> new BaseFlowingFluid.Source(CRIMSON_GRAPE));
-//
-//    public static final DeferredHolder<Fluid, BaseFlowingFluid.Flowing> FLOWING_CRIMSON_GRAPE_JUICE =
-//            FLUIDS.register("flowing_crimson_grape_juice", () -> new BaseFlowingFluid.Flowing(CRIMSON_GRAPE));
-//
-//    static {
-//        CRIMSON_GRAPE = new BaseFlowingFluid.Properties(
-//                CRIMSON_GRAPE_JUICE_TYPE,
-//                CRIMSON_GRAPE_JUICE,
-//                FLOWING_CRIMSON_GRAPE_JUICE
-//        ).bucket(ModItems.CRIMSON_GRAPE_JUICE_BUCKET);
-//    }
-//}
-
-
-
-
-

@@ -15,12 +15,10 @@ public class KaleidoscopeDimensionsWine {
 
     public KaleidoscopeDimensionsWine(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.register(modEventBus);
+        ModItems.ITEMS_REGISTER.register(modEventBus);
         ModFluids.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
-        ModItems.ITEMS_REGISTER.register(modEventBus);
-
         ModCreativeTabs.register(modEventBus);
-
         modEventBus.addListener(DrinkBlockEntityTypeEventHandler::onBlockEntityTypeAddBlocks);
     }
 

@@ -1,10 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.block;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.CrimsonGrapeCropBlock;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.CrimsonGrapevineTrellisBlock;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.WarpedGrapeCropBlock;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.WarpedGrapevineTrellisBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.level.block.Block;
@@ -23,10 +21,19 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CRIMSON_GRAPE_CROP = BLOCK_REGISTER.register("crimson_grape_crop", CrimsonGrapeCropBlock::new);
     // 绯红葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
     public static final DeferredBlock<Block> CRIMSON_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("crimson_grapevine_trellis", CrimsonGrapevineTrellisBlock::new);
+    // 野生绯红葡萄藤 - 向下生长的藤蔓植物顶部方块
+    public static final DeferredBlock<Block> CRIMSON_GRAPEVINE = BLOCK_REGISTER.register("crimson_grapevine", CrimsonGrapeCropWildGrapevine::new);
+    // 野生绯红葡萄藤植物 - 向下生长的藤蔓植物主体方块
+    public static final DeferredBlock<Block> CRIMSON_GRAPEVINE_PLANT = BLOCK_REGISTER.register("crimson_grapevine_plant", CrimsonGrapeCropWildGrapevinePlant::new);
+
     // 诡异葡萄藤 - 诡异葡萄藤架生长的果实
     public static final DeferredBlock<Block> WARPED_GRAPE_CROP = BLOCK_REGISTER.register("warped_grape_crop", WarpedGrapeCropBlock::new);
     // 诡异葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
     public static final DeferredBlock<Block> WARPED_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("warped_grapevine_trellis", WarpedGrapevineTrellisBlock::new);
+    // 野生绯红葡萄藤
+    public static final DeferredBlock<Block> WARPED_GRAPEVINE = BLOCK_REGISTER.register("warped_grapevine", WarpedGrapeCropWildGrapevine::new);
+    // 野生绯红葡萄藤植物
+    public static final DeferredBlock<Block> WARPED_GRAPEVINE_PLANT = BLOCK_REGISTER.register("warped_grapevine_plant", WarpedGrapeCropWildGrapevinePlant::new);
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Block, Block> CRIMSON_CRESCENDO =

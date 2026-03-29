@@ -6,8 +6,6 @@ import com.chinaex123.kaleidoscope_dim_wine.event.Crop.CrimsonGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.event.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.fluid.ModFluids;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
-import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
