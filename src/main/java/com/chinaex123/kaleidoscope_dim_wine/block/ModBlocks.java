@@ -55,7 +55,6 @@ public class ModBlocks {
             BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
 
-
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);
     }

@@ -1,17 +1,21 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape;
 
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
@@ -36,6 +40,11 @@ public class CrimsonGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock im
                 relativeState.is(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) ||
                 this.canAttachTo(relativeState) ||
                 relativeState.isFaceSturdy(level, relative, this.growthDirection);
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+        return new ItemStack(ModItems.CRIMSON_GRAPEVINE.get());
     }
 
     @Override

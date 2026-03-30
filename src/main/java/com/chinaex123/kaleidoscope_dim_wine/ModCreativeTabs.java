@@ -17,7 +17,7 @@ public class ModCreativeTabs {
 
     public static final Supplier<CreativeModeTab> KALEIDOSCOPE_DIM_WINE_TAB =
             CREATIVE_MODE_TAB.register("kaleidoscope_dim_wine_tab", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlocks.CRIMSON_CRESCENDO.get()))
+                    .icon(() -> new ItemStack(ModItems.CRIMSON_GRAPE.get()))
                     .title(Component.translatable("itemGroup.kaleidoscope_dim_wine_tab"))
                     .displayItems((parameters, output) -> {
 

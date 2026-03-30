@@ -13,12 +13,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ModItems {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ModItems.class);
-
     public static final DeferredRegister.Items ITEMS_REGISTER =
             DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
