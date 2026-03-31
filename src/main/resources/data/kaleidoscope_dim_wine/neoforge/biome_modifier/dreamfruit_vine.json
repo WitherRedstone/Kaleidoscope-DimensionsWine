@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#kaleidoscope_dim_wine:end_dreamfruit_vine",
+  "features": [
+    "kaleidoscope_dim_wine:dreamfruit_vine_end_stone",
+    "kaleidoscope_dim_wine:dreamfruit_vine_purpur_block"
+  ]
+  ,
+  "step": "vegetal_decoration"
+}
