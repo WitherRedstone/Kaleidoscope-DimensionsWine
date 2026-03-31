@@ -30,7 +30,13 @@
       },
       "allowed_search_condition": {
         "type": "minecraft:matching_blocks",
-        "blocks": "minecraft:air"
+        "blocks": [
+          "minecraft:air",
+          "minecraft:lava",
+          "minecraft:netherrack",
+          "minecraft:warped_nylium",
+          "minecraft:glowstone"
+        ]
       }
     },
     {

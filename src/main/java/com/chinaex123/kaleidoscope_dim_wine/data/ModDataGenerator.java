@@ -24,12 +24,5 @@ public class ModDataGenerator {
 
         generator.addProvider(event.includeClient(), new ModItemModelsProvider(packOutput, event.getExistingFileHelper()));
         generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput, lookupProvider));
-//        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
-
-//        generator.addProvider(event.includeServer(), new ModConfiguredFeaturesProvider(packOutput, lookupProvider));
-//        generator.addProvider(event.includeServer(), new ModPlacedFeaturesProvider(packOutput, lookupProvider));
-
-//        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-//                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTablesProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
     }
 }

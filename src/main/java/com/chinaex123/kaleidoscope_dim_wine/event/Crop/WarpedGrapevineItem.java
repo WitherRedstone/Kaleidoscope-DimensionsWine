@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * 绯红葡萄藤物品 - 右键普通藤架时，将其替换为绯红葡萄藤
@@ -24,7 +25,7 @@ public class WarpedGrapevineItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext context) {
+    public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos();
         BlockState state = level.getBlockState(pos);
@@ -119,7 +120,7 @@ public class WarpedGrapevineItem extends Item {
 
                 // 消耗物品
                 ItemStack stack = context.getItemInHand();
-                if (!context.getPlayer().isCreative()) {
+                if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                     stack.shrink(1);
                 }
             }

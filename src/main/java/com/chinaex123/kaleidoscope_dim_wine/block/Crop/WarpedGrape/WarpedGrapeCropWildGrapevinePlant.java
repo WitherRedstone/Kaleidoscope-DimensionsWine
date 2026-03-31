@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape;
 
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.BlockUtil;
 import net.minecraft.core.BlockPos;
@@ -51,7 +52,7 @@ public class WarpedGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock imp
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
                 state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
-                state.getBlock() instanceof com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
+                state.getBlock() instanceof GrapevineTrellisBlock;
     }
 
     @Override
@@ -64,7 +65,7 @@ public class WarpedGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock imp
         GrowingPlantHeadBlock headBlock = this.getHeadBlock();
         return BlockUtil.getTopConnectedBlock(level, pos, state.getBlock(), this.growthDirection, headBlock).map((headPos) -> {
             BlockState blockState = level.getBlockState(headPos);
-            return blockState.is(headBlock) && !(Boolean) blockState.getValue(WarpedGrapeCropWildGrapevine.SHEARED);
+            return blockState.is(headBlock) && !(Boolean) blockState.getValue(WarpedGrapeCropWildGrapevineHead.SHEARED);
         }).orElse(false);
     }
 

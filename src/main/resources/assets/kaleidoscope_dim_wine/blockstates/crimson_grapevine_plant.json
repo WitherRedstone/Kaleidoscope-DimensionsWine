@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "kaleidoscope_dim_wine:block/crimson_grape/crimson_grapevine_plant"
+      "model": "kaleidoscope_dim_wine:block/grape/crimson_grape/crimson_grapevine_plant"
     }
   }
 }

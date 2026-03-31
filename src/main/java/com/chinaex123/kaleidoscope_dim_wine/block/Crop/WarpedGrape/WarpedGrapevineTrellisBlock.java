@@ -72,7 +72,7 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
 
     @Override
     public boolean sameType(BlockState state) {
-        // 允许与普通藤架、其他绯红葡萄藤藤架连接
+        // 允许与普通藤架、其他诡异葡萄藤藤架连接
         return state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
                 state.is(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get());
     }

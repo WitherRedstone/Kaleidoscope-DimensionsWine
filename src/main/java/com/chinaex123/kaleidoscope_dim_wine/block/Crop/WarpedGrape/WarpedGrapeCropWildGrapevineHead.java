@@ -1,6 +1,7 @@
-package com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape;
+package com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape;
 
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,7 +24,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
@@ -31,17 +31,17 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.ItemAbilities;
 
 /**
- * 绯红葡萄藤作物方块 - 向下生长的藤蔓植物顶部方块
+ * 诡异葡萄藤作物方块 - 向下生长的藤蔓植物顶部方块
  * <p>
  * 支持骨粉催熟和剪刀修剪，修剪后停止生长
  */
-public class CrimsonGrapeCropWildGrapevine extends GrowingPlantHeadBlock implements BonemealableBlock {
-    public static final MapCodec<CrimsonGrapeCropWildGrapevine> CODEC = simpleCodec((p) -> new CrimsonGrapeCropWildGrapevine());
+public class WarpedGrapeCropWildGrapevineHead extends GrowingPlantHeadBlock implements BonemealableBlock {
+    public static final MapCodec<WarpedGrapeCropWildGrapevineHead> CODEC = simpleCodec((p) -> new WarpedGrapeCropWildGrapevineHead());
     public static final BooleanProperty SHEARED = BooleanProperty.create("sheared");
     private static final VoxelShape SHAPE = Block.box(1.0F, 0.0F, 1.0F, 15.0F, 16.0F, 15.0F);
     private static final BlockBehaviour.Properties PROPERTIES;
 
-    public CrimsonGrapeCropWildGrapevine() {
+    public WarpedGrapeCropWildGrapevineHead() {
         super(PROPERTIES, Direction.DOWN, SHAPE, false, 0.15);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(SHEARED, false));
     }
@@ -72,8 +72,8 @@ public class CrimsonGrapeCropWildGrapevine extends GrowingPlantHeadBlock impleme
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos relative = pos.relative(this.growthDirection.getOpposite());
         BlockState relativeState = level.getBlockState(relative);
-        return relativeState.is(ModBlocks.CRIMSON_GRAPEVINE.get()) ||
-                relativeState.is(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) ||
+        return relativeState.is(ModBlocks.WARPED_GRAPEVINE.get()) ||
+                relativeState.is(ModBlocks.WARPED_GRAPEVINE_PLANT.get()) ||
                 this.canAttachTo(relativeState) ||
                 relativeState.isFaceSturdy(level, relative, this.growthDirection);
     }
@@ -82,7 +82,7 @@ public class CrimsonGrapeCropWildGrapevine extends GrowingPlantHeadBlock impleme
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
                 state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
-                state.getBlock() instanceof com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
+                state.getBlock() instanceof GrapevineTrellisBlock;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class CrimsonGrapeCropWildGrapevine extends GrowingPlantHeadBlock impleme
 
     @Override
     protected Block getBodyBlock() {
-        return ModBlocks.CRIMSON_GRAPEVINE_PLANT.get();
+        return ModBlocks.WARPED_GRAPEVINE_PLANT.get();
     }
 
     static {

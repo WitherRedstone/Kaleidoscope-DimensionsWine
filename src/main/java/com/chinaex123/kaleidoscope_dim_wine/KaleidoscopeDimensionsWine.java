@@ -24,7 +24,6 @@ public class KaleidoscopeDimensionsWine {
         ModFluids.FLUIDS.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         ModEffects.register(modEventBus);
-        //ModFeatures.FEATURES.register(modEventBus);
         modEventBus.addListener(DrinkBlockEntityTypeEventHandler::onBlockEntityTypeAddBlocks);
     }
 

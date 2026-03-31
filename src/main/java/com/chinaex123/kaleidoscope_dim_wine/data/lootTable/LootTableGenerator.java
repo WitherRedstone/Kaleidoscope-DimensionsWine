@@ -1,6 +1,5 @@
 package com.chinaex123.kaleidoscope_dim_wine.data.lootTable;
 
-import com.chinaex123.kaleidoscope_dim_wine.data.lootTable.BlockLootTable;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;

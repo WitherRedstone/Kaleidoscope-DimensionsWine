@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import org.jetbrains.annotations.NotNull;
 
 // 狂怒 效果机制 - 增加攻击速度和伤害
 public class Rage extends MobEffect {
@@ -30,7 +31,7 @@ public class Rage extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
         return true;
     }
 

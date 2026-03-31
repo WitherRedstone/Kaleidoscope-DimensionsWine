@@ -3,6 +3,7 @@ package com.chinaex123.kaleidoscope_dim_wine.block;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.level.block.Block;
@@ -22,7 +23,7 @@ public class ModBlocks {
     // 绯红葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
     public static final DeferredBlock<Block> CRIMSON_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("crimson_grapevine_trellis", CrimsonGrapevineTrellisBlock::new);
     // 野生绯红葡萄藤 - 向下生长的藤蔓植物顶部方块
-    public static final DeferredBlock<Block> CRIMSON_GRAPEVINE = BLOCK_REGISTER.register("crimson_grapevine", CrimsonGrapeCropWildGrapevine::new);
+    public static final DeferredBlock<Block> CRIMSON_GRAPEVINE = BLOCK_REGISTER.register("crimson_grapevine", CrimsonGrapeCropWildGrapevineHead::new);
     // 野生绯红葡萄藤植物 - 向下生长的藤蔓植物主体方块
     public static final DeferredBlock<Block> CRIMSON_GRAPEVINE_PLANT = BLOCK_REGISTER.register("crimson_grapevine_plant", CrimsonGrapeCropWildGrapevinePlant::new);
 
@@ -31,7 +32,7 @@ public class ModBlocks {
     // 诡异葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
     public static final DeferredBlock<Block> WARPED_GRAPEVINE_TRELLIS = BLOCK_REGISTER.register("warped_grapevine_trellis", WarpedGrapevineTrellisBlock::new);
     // 野生绯红葡萄藤
-    public static final DeferredBlock<Block> WARPED_GRAPEVINE = BLOCK_REGISTER.register("warped_grapevine", WarpedGrapeCropWildGrapevine::new);
+    public static final DeferredBlock<Block> WARPED_GRAPEVINE = BLOCK_REGISTER.register("warped_grapevine", WarpedGrapeCropWildGrapevineHead::new);
     // 野生绯红葡萄藤植物
     public static final DeferredBlock<Block> WARPED_GRAPEVINE_PLANT = BLOCK_REGISTER.register("warped_grapevine_plant", WarpedGrapeCropWildGrapevinePlant::new);
     // -------------------- 酒类 --------------------
@@ -54,6 +55,14 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> BLACK_BONE_LAFITE =
             BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
+
+    // ==================== 次元维度 - 末地 ====================
+    // -------------------- 作物 --------------------
+    // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
+    public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
+    // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
+    public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
+    // -------------------- 酒类 --------------------
 
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

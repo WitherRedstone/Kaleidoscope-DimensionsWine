@@ -8,4 +8,5 @@ public class ModFoods {
     // ---------------- 作物 ----------------
     public static final FoodProperties CRIMSON_GRAPE = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4f).build(); // 绯红葡萄
     public static final FoodProperties WARPED_GRAPE = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4f).build(); // 诡异葡萄
+    public static final FoodProperties DREAMFRUIT = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4f).build(); // 迷梦果
 }

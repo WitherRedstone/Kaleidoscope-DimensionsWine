@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import org.jetbrains.annotations.NotNull;
 
 // 枯斩 效果机制
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
@@ -19,7 +20,7 @@ public class WitheredSlash extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
         return true;
     }
 

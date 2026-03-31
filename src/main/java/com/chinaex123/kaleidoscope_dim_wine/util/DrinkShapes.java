@@ -3,6 +3,9 @@ package com.chinaex123.kaleidoscope_dim_wine.util;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+/**
+ * 酒类 BlockEntity 的碰撞箱
+ */
 public class DrinkShapes {
 
     public static final VoxelShape[] STANDARD_BOTTLE_SHAPES = new VoxelShape[] {

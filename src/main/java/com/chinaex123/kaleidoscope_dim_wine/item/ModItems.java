@@ -3,6 +3,7 @@ package com.chinaex123.kaleidoscope_dim_wine.item;
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.event.Crop.CrimsonGrapevineItem;
+import com.chinaex123.kaleidoscope_dim_wine.event.Crop.DreamfruitCropWildVineItem;
 import com.chinaex123.kaleidoscope_dim_wine.event.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.fluid.ModFluids;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
@@ -32,13 +33,11 @@ public class ModItems {
     // 诡异葡萄 - 结出的果实
     public static final DeferredItem<Item> WARPED_GRAPE =
             ITEMS_REGISTER.register("warped_grape", () -> new Item(new Item.Properties().food(ModFoods.WARPED_GRAPE)));
-
     // -------------------- 物品 --------------------
     // 绯红菌露
     public static final DeferredItem<Item> CRIMSON_FUNGAL_SAP = ITEMS_REGISTER.register("crimson_fungal_sap", () -> new Item(new Item.Properties()));
     // 诡影菌髓
     public static final DeferredItem<Item> WARPED_FUNGAL_SAP = ITEMS_REGISTER.register("warped_fungal_sap", () -> new Item(new Item.Properties()));
-
     // -------------------- 流体 --------------------
     // 绯红葡萄汁桶
     public static final DeferredItem<Item> CRIMSON_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("crimson_grape_juice_bucket", () ->
@@ -46,7 +45,6 @@ public class ModItems {
     // 诡异葡萄汁桶
     public static final DeferredItem<Item> WARPED_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("warped_grape_juice_bucket", () ->
             new BucketItem(ModFluids.WARPED_GRAPE_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
-
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Item, DrinkBlockItem> CRIMSON_CRESCENDO =
@@ -66,6 +64,18 @@ public class ModItems {
     // 黑骨拉菲
     public static final DeferredHolder<Item, DrinkBlockItem> BLACK_BONE_LAFITE =
             ITEMS_REGISTER.register("black_bone_lafite", () -> new DrinkBlockItem(ModBlocks.BLACK_BONE_LAFITE.get()));
+
+
+    // ==================== 次元维度 - 末地 ====================
+    // -------------------- 作物 --------------------
+    // 迷梦果
+    public static final DeferredItem<Item> DREAMFRUIT =
+            ITEMS_REGISTER.register("dreamfruit", () -> new DreamfruitCropWildVineItem(new Item.Properties().food(ModFoods.DREAMFRUIT)));
+    // -------------------- 流体 --------------------
+    // -------------------- 酒类 --------------------
+
+
+
 
     public static void register(IEventBus eventBus){
         ITEMS_REGISTER.register(eventBus);

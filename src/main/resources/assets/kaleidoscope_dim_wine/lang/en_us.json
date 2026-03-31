@@ -14,6 +14,9 @@
   "block.kaleidoscope_dim_wine.warped_grapevine_trellis": "Warped Grapevine Trellis",
   "block.kaleidoscope_dim_wine.warped_grapevine": "Warped Grapevine",
   "block.kaleidoscope_dim_wine.warped_grapevine_plant": "Warped Grapevine Plant",
+  "item.kaleidoscope_dim_wine.dreamfruit": "Dreamfruit",
+  "block.kaleidoscope_dim_wine.dreamfruit_vine": "Dreamfruit Vine",
+  "block.kaleidoscope_dim_wine.dreamfruit_vine_plant": "Dreamfruit Vine Plant",
 
   "_comment.items": "Items",
   "item.kaleidoscope_dim_wine.crimson_fungal_sap": "Crimson Fungal Sap",
@@ -49,5 +52,22 @@
   "block.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",
   "block.kaleidoscope_dim_wine.blaze_martell": "Blaze Martell",
   "block.kaleidoscope_dim_wine.magma_royal_salute": "Magma Royal Salute",
-  "block.kaleidoscope_dim_wine.black_bone_lafite": "Black Bone Lafite"
+  "block.kaleidoscope_dim_wine.black_bone_lafite": "Black Bone Lafite",
+
+  "_comment.jei_info": "JEI Info",
+  "jei.info.kaleidoscope_dim_wine.items.dimensions": "Obtain Dimension",
+  "jei.info.kaleidoscope_dim_wine.items.the_nether": "  ·The Nether",
+  "jei.info.kaleidoscope_dim_wine.items.the_end": "  ·The End",
+  "jei.info.kaleidoscope_dim_wine.items.the_nether.biome.crimson_forest": "  ·Crimson Forest",
+  "jei.info.kaleidoscope_dim_wine.items.the_nether.biome.warped_forest": "  ·Warped Forest",
+  "jei.info.kaleidoscope_dim_wine.items.the_end.biome.end_midlands": "  ·End Midlands",
+  "jei.info.kaleidoscope_dim_wine.items.the_end.biome.end_highlands": "  ·End Highlands",
+  "jei.info.kaleidoscope_dim_wine.items.requirement": "Obtain Condition",
+  "jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.crimson_grapevine": "  ·Dropped by breaking naturally grown Crimson Grapevines.",
+  "jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.warped_grapevine": "  ·Dropped by breaking naturally grown Warped Grapevines.",
+  "jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.dreamfruit": "  ·Right-click a mature Dreamfruit Vine to make it drop.",
+  "jei.info.kaleidoscope_dim_wine.items.growing_environment": "Growing Environment",
+  "jei.info.kaleidoscope_dim_wine.items.growing_environment.crimson_grapevine": "  ·Planted on a trellis above Crimson Nylium.",
+  "jei.info.kaleidoscope_dim_wine.items.growing_environment.warped_grapevine": "  ·Planted on a trellis above Warped Nylium.",
+  "jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit": "  ·Can only be planted under End Stone or Purpur Blocks."
 }
