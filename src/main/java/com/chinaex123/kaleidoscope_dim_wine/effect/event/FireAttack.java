@@ -11,7 +11,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import org.jetbrains.annotations.NotNull;
 
-// 火焰攻击 效果机制 - 攻击时使敌人燃烧
+/**
+ * 火焰攻击：攻击时使敌人燃烧
+ */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class FireAttack extends MobEffect {
 

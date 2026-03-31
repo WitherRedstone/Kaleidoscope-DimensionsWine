@@ -38,22 +38,22 @@ public class ModBlocks {
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Block, Block> CRIMSON_CRESCENDO =
-            BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 诡影尊爵
     public static final DeferredHolder<Block, Block> ETHEREAL_NOBLE =
-            BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 疣域轩尼诗
     public static final DeferredHolder<Block, Block> WART_HENNESSY =
-            BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 烈焰马爹利
     public static final DeferredHolder<Block, Block> BLAZE_MARTELL =
-            BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 岩浆皇家礼炮
     public static final DeferredHolder<Block, Block> MAGMA_ROYAL_SALUTE =
-            BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 黑骨拉菲
     public static final DeferredHolder<Block, Block> BLACK_BONE_LAFITE =
-            BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
 
     // ==================== 次元维度 - 末地 ====================

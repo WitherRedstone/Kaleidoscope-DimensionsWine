@@ -12,7 +12,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import org.jetbrains.annotations.NotNull;
 
-// 枯斩 效果机制
+/**
+ * 枯斩：攻击敌人可以虚弱敌人并对其造成凋零
+ */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class WitheredSlash extends MobEffect {
     public WitheredSlash(int color) {

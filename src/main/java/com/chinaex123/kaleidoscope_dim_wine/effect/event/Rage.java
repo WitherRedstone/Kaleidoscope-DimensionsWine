@@ -8,7 +8,9 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.jetbrains.annotations.NotNull;
 
-// 狂怒 效果机制 - 增加攻击速度和伤害
+/**
+ * 狂怒：增加攻击速度和伤害
+ */
 public class Rage extends MobEffect {
     public Rage(int color) {
         super(MobEffectCategory.BENEFICIAL, color);

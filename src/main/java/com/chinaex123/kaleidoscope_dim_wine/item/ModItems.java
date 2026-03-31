@@ -72,6 +72,9 @@ public class ModItems {
     public static final DeferredItem<Item> DREAMFRUIT =
             ITEMS_REGISTER.register("dreamfruit", () -> new DreamfruitCropWildVineItem(new Item.Properties().food(ModFoods.DREAMFRUIT)));
     // -------------------- 流体 --------------------
+    // 迷梦果汁桶
+    public static final DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
+            new BucketItem(ModFluids.DREAMFRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
 
 

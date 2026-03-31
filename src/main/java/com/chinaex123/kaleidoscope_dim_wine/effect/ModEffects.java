@@ -23,6 +23,15 @@ public class ModEffects {
     // 火焰攻击 - 攻击敌人时使对方燃烧
     public static final DeferredHolder<MobEffect, MobEffect> FIRE_ATTACK =
             EFFECTS.register("fire_attack", () -> new FireAttack(0x3A2E1F));
+    // 后发制人 - 抵消一次受到的伤害，并提升下一次攻击造成的伤害
+    public static final DeferredHolder<MobEffect, MobEffect> PAYBACK =
+            EFFECTS.register("payback", () -> new FireAttack(0x3A2E1F));
+    // 嗜血 - 攻击时，恢复相当于造成伤害 25% 的生命值
+    public static final DeferredHolder<MobEffect, MobEffect> BLOODTHIRSTY =
+            EFFECTS.register("bloodthirsty", () -> new FireAttack(0x3A2E1F));
+    // 悖论 - 伤害转治疗，治疗时反伤。死亡时若带效果，以半颗心复活并清除效果
+    public static final DeferredHolder<MobEffect, MobEffect> PARADOX =
+            EFFECTS.register("paradox", () -> new FireAttack(0x3A2E1F));
 
     public static void register(IEventBus modEventBus) {
         EFFECTS.register(modEventBus);

@@ -24,6 +24,9 @@ public class ModFluids {
     // 诡异葡萄汁
     public static final ResourceLocation WARPED_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("warped_grape_juice");
     public static final ResourceLocation FLOWING_WARPED_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_warped_grape_juice");
+    // 迷梦果汁
+    public static final ResourceLocation DREAMFRUIT_JUICE_ID = KaleidoscopeDimensionsWine.id("dreamfruit_juice");
+    public static final ResourceLocation FLOWING_DREAMFRUIT_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_dreamfruit_juice");
 
     // -------------------- 流体属性 --------------------
     // 绯红葡萄汁
@@ -32,10 +35,14 @@ public class ModFluids {
     // 诡异葡萄汁
     public static final Supplier<FluidType> WARPED_GRAPE_JUICE_TYPE =
             FLUID_TYPES.register("warped_grape_juice", () -> new JuiceFluidType(WARPED_GRAPE_JUICE_ID, 0));
+    // 迷梦果汁
+    public static final Supplier<FluidType> DREAMFRUIT_JUICE_TYPE =
+            FLUID_TYPES.register("dreamfruit_juice", () -> new JuiceFluidType(DREAMFRUIT_JUICE_ID, 0));
 
     // -------------------- 流体 Properties --------------------
     public static BaseFlowingFluid.Properties CRIMSON_GRAPE_JUICE_PROPERTIES; // 绯红葡萄汁
     public static BaseFlowingFluid.Properties WARPED_GRAPE_JUICE_PROPERTIES; // 诡异葡萄汁
+    public static BaseFlowingFluid.Properties DREAMFRUIT_JUICE_PROPERTIES; // 迷梦果汁
 
     // -------------------- 流体 --------------------
     // 绯红葡萄汁
@@ -48,6 +55,11 @@ public class ModFluids {
             FLUIDS.register("warped_grape_juice", () -> new BaseFlowingFluid.Source(ModFluids.WARPED_GRAPE_JUICE_PROPERTIES));
     public static final Supplier<BaseFlowingFluid.Flowing> FLOWING_WARPED_GRAPE_JUICE =
             FLUIDS.register("flowing_warped_grape_juice", () -> new BaseFlowingFluid.Flowing(ModFluids.WARPED_GRAPE_JUICE_PROPERTIES));
+    // 迷梦果汁
+    public static final Supplier<BaseFlowingFluid.Source> DREAMFRUIT_JUICE =
+            FLUIDS.register("dreamfruit_juice", () -> new BaseFlowingFluid.Source(ModFluids.DREAMFRUIT_JUICE_PROPERTIES));
+    public static final Supplier<BaseFlowingFluid.Flowing> FLOWING_DREAMFRUIT_JUICE =
+            FLUIDS.register("flowing_dreamfruit_juice", () -> new BaseFlowingFluid.Flowing(ModFluids.DREAMFRUIT_JUICE_PROPERTIES));
 
     static {
         // 绯红葡萄汁
@@ -63,5 +75,12 @@ public class ModFluids {
                 WARPED_GRAPE_JUICE,
                 FLOWING_WARPED_GRAPE_JUICE
         ).bucket(ModItems.WARPED_GRAPE_JUICE_BUCKET);
+
+        // 迷梦果汁
+        DREAMFRUIT_JUICE_PROPERTIES = new BaseFlowingFluid.Properties(
+                DREAMFRUIT_JUICE_TYPE,
+                DREAMFRUIT_JUICE,
+                FLOWING_DREAMFRUIT_JUICE
+        ).bucket(ModItems.DREAMFRUIT_JUICE_BUCKET);
     }
 }

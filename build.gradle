@@ -140,6 +140,8 @@ dependencies {
     localRuntime "curse.maven:titanium-287342:7662843"
     localRuntime "curse.maven:placebo-283644:6926281"
     localRuntime "curse.maven:apothic-attributes-898963:7445079"
+    localRuntime "curse.maven:mmmmmmmmmmmm-225738:7206981"
+    localRuntime "curse.maven:selene-499980:7822739"
     
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
