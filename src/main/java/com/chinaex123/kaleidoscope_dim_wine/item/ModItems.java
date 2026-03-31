@@ -78,6 +78,9 @@ public class ModItems {
     // 龙血桶
     public static final DeferredItem<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
             new BucketItem(ModFluids.DRAGON_BLOOD.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    // 龙血瓶
+    public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE =
+            ITEMS_REGISTER.register("dragon_blood_bottle", () -> new Item(new Item.Properties()));
     // -------------------- 酒类 --------------------
 
 

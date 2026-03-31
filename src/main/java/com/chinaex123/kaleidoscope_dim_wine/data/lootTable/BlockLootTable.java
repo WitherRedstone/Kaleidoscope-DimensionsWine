@@ -1,16 +1,22 @@
 package com.chinaex123.kaleidoscope_dim_wine.data.lootTable;
 
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.DreamfruitCropWildVineHead;
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CaveVines;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -46,6 +52,12 @@ public class BlockLootTable extends BlockLootSubProvider {
         dropOther(ModBlocks.WARPED_GRAPEVINE.get(), ModItems.WARPED_GRAPEVINE.get());
         // 野生诡异葡萄藤植物 - 向下生长的藤蔓植物主体方块
         dropOther(ModBlocks.WARPED_GRAPEVINE_PLANT.get(), ModItems.WARPED_GRAPEVINE.get());
+
+        // ==================== 次元维度 - 末地 ====================
+        // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
+        vines(ModBlocks.DREAMFRUIT_VINE.get(), Items.TWISTING_VINES, ModItems.DREAMFRUIT.get());
+        // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
+        vines(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), Items.TWISTING_VINES, ModItems.DREAMFRUIT.get());
     }
 
     @Override
@@ -78,6 +90,15 @@ public class BlockLootTable extends BlockLootSubProvider {
                 .add(LootItem.lootTableItem(item));
         builder.withPool(this.applyExplosionCondition(item, pool));
         return builder;
+    }
+
+    private void vines(Block block, Item normal, Item berries) {
+        this.add(block, LootTable.lootTable()
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(berries))
+                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DreamfruitCropWildVineHead.HAS_FRUIT, true))))
+                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(normal)))
+        );
     }
 }
 

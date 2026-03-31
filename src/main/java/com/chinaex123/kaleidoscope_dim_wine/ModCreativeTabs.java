@@ -35,6 +35,7 @@ public class ModCreativeTabs {
                         // -------------------- 物品 --------------------
                         output.accept(ModItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
                         output.accept(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
+                        output.accept(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
                         // -------------------- 酒类 --------------------
                         output.accept(ModItems.CRIMSON_CRESCENDO.get()); // 绯红绝响
                         output.accept(ModItems.ETHEREAL_NOBLE.get()); // 诡影尊爵

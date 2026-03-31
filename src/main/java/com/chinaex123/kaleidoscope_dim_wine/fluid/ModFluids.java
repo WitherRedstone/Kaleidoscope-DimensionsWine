@@ -3,7 +3,6 @@ package com.chinaex123.kaleidoscope_dim_wine.fluid;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
-import com.github.ysbbbbbb.kaleidoscopetavern.fluid.JuiceFluidType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
@@ -99,6 +98,11 @@ public class ModFluids {
                 DRAGON_BLOOD_TYPE,
                 DRAGON_BLOOD,
                 FLOWING_DRAGON_BLOOD
-        ).bucket(ModItems.DRAGON_BLOOD_BUCKET).block(ModBlocks.DRAGON_BLOOD_FLUID_BLOCK);
+        ).bucket(ModItems.DRAGON_BLOOD_BUCKET)
+                .block(ModBlocks.DRAGON_BLOOD_FLUID)
+                .explosionResistance(100.0F) // 抗爆性
+                .slopeFindDistance(4) // 流动查找距离
+                .levelDecreasePerBlock(1) // 液面下降等级
+                .tickRate(10); // 流动速度
     }
 }

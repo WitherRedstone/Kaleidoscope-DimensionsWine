@@ -46,7 +46,7 @@ public class DragonBloodSpawnHandler {
 
             if (groundPos != null) {
                 // 放置龙血流体方块
-                level.setBlock(groundPos, ModBlocks.DRAGON_BLOOD_FLUID_BLOCK.get().defaultBlockState(),
+                level.setBlock(groundPos, ModBlocks.DRAGON_BLOOD_FLUID.get().defaultBlockState(),
                         Block.UPDATE_ALL);
             }
         }

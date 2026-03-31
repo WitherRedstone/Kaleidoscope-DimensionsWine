@@ -32,5 +32,21 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.BLAZE_MARTELL.get()); // 烈焰马爹利
 //        basicItem(ModItems.MAGMA_ROYAL_SALUTE.get()); // 岩浆皇家礼炮
 //        basicItem(ModItems.BLACK_BONE_LAFITE.get()); // 黑骨拉菲
+
+        // ==================== 次元维度 - 下界 ====================
+        // -------------------- 作物 --------------------
+//        basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
+        // -------------------- 物品 --------------------
+        basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
+        // -------------------- 流体 --------------------
+//        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
+        basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
+        // -------------------- 酒类 --------------------
+
+        // ==================== 次元维度 -  ====================
+        // -------------------- 作物 --------------------
+        // -------------------- 物品 --------------------
+        // -------------------- 流体 --------------------
+        // -------------------- 酒类 --------------------
     }
 }
