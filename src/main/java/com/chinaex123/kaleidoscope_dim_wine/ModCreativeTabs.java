@@ -21,6 +21,10 @@ public class ModCreativeTabs {
                     .title(Component.translatable("itemGroup.kaleidoscope_dim_wine_tab"))
                     .displayItems((parameters, output) -> {
 
+                        // -------------------- 流体桶 --------------------
+                        output.accept(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
+                        output.accept(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
+                        output.accept(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
                         // -------------------- 作物 --------------------
                         output.accept(ModItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
                         output.accept(ModItems.WARPED_GRAPEVINE.get()); // 诡异葡萄藤
@@ -30,9 +34,6 @@ public class ModCreativeTabs {
                         // -------------------- 物品 --------------------
                         output.accept(ModItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
                         output.accept(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
-                        // -------------------- 流体桶 --------------------
-                        output.accept(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
-                        output.accept(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
                         // -------------------- 酒类 --------------------
                         output.accept(ModItems.CRIMSON_CRESCENDO.get()); // 绯红绝响
                         output.accept(ModItems.ETHEREAL_NOBLE.get()); // 诡影尊爵
