@@ -25,6 +25,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
                         output.accept(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
                         output.accept(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
+                        output.accept(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
                         // -------------------- 作物 --------------------
                         output.accept(ModItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
                         output.accept(ModItems.WARPED_GRAPEVINE.get()); // 诡异葡萄藤

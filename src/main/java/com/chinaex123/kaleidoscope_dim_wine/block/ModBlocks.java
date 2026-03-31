@@ -4,9 +4,15 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
+import com.chinaex123.kaleidoscope_dim_wine.fluid.ModFluids;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -62,6 +68,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
     // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
     public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
+    // -------------------- 流体 --------------------
+    public static final DeferredBlock<LiquidBlock> DRAGON_BLOOD_FLUID_BLOCK =
+            BLOCK_REGISTER.register("dragon_blood_fluid_block", () -> new LiquidBlock(ModFluids.DRAGON_BLOOD.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)
+                    .friction(0.6F)
+                    .speedFactor(0.5F)
+                    .jumpFactor(0.5F)
+                    .mapColor(MapColor.COLOR_RED)
+                    .sound(SoundType.HONEY_BLOCK)));
+
     // -------------------- 酒类 --------------------
 
     public static void register(IEventBus eventBus) {
