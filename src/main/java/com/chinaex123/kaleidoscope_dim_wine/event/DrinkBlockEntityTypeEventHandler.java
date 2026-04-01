@@ -22,12 +22,24 @@ public final class DrinkBlockEntityTypeEventHandler {
         }
         BuiltInRegistries.BLOCK_ENTITY_TYPE.getOptional(TAVERN_DRINK_BE).ifPresent(drinkType -> {
             Block[] drinks = new Block[] {
+                    // ==================== 次元维度 - 下界 ====================
                     ModBlocks.CRIMSON_CRESCENDO.get(), // 绯红绝响
                     ModBlocks.ETHEREAL_NOBLE.get(), // 以太贵族
                     ModBlocks.WART_HENNESSY.get(), // 疣状轩尼诗
                     ModBlocks.BLAZE_MARTELL.get(), // 烈焰马爹利
                     ModBlocks.MAGMA_ROYAL_SALUTE.get(), // 岩浆皇家礼炮
-                    ModBlocks.BLACK_BONE_LAFITE.get() // 黑骨拉菲
+                    ModBlocks.BLACK_BONE_LAFITE.get(), // 黑骨拉菲
+
+                    // ==================== 次元维度 - 末地 ====================
+                    ModBlocks.CHORUS_COGNAC.get(), // 紫颂干邑
+                    ModBlocks.DRAGONS_BREATH_BRANDY.get(), // 龙息白兰地
+                    ModBlocks.ABYSSAL_PORTER.get(), // 深渊波特
+                    ModBlocks.SILENT_SHERRY.get(), // 静默雪莉
+                    ModBlocks.FORGOTTEN_MARGARITA.get(), // 遗忘玛格丽特
+                    ModBlocks.PHANTOM_DREAM_BUBBLE.get(), // 幻梦泡影
+                    ModBlocks.END_STARLIGHT.get(), // 终末星光
+                    ModBlocks.DIVINE_EMBRYO_PORT.get(), // 神血波尔多
+                    ModBlocks.DRACONIC_BLOOD_WINE.get() // 龙血酒
             };
             for (Block drink : drinks) {
                 event.modify(drinkType, drink);

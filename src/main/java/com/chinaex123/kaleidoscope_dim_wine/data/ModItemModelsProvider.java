@@ -42,6 +42,15 @@ public class ModItemModelsProvider extends ItemModelProvider {
 //        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
         basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
         // -------------------- 酒类 --------------------
+//        basicItem(ModItems.CHORUS_COGNAC.get()); // 紫颂干邑
+//        basicItem(ModItems.DRAGONS_BREATH_BRANDY.get()); // 龙息白兰地
+//        basicItem(ModItems.ABYSSAL_PORTER.get()); // 深渊波特
+//        basicItem(ModItems.SILENT_SHERRY.get()); // 静默雪莉
+//        basicItem(ModItems.FORGOTTEN_MARGARITA.get()); // 遗忘玛格丽特
+//        basicItem(ModItems.PHANTOM_DREAM_BUBBLE.get()); // 幻梦泡影
+//        basicItem(ModItems.END_STARLIGHT.get()); // 终末星光
+//        basicItem(ModItems.DIVINE_EMBRYO_PORT.get()); // 神血波尔多
+//        basicItem(ModItems.DRACONIC_BLOOD.get()); // 龙血酒
 
         // ==================== 次元维度 -  ====================
         // -------------------- 作物 --------------------

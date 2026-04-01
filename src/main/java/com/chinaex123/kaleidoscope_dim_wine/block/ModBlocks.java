@@ -82,8 +82,39 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_RED)
                     .sound(SoundType.HONEY_BLOCK)
             ));
-
     // -------------------- 酒类 --------------------
+    // 紫颂干邑
+    public static final DeferredHolder<Block, Block> CHORUS_COGNAC =
+            BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 龙息白兰地
+    public static final DeferredHolder<Block, Block> DRAGONS_BREATH_BRANDY =
+            BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 深渊波特
+    public static final DeferredHolder<Block, Block> ABYSSAL_PORTER =
+            BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 静默雪莉
+    public static final DeferredHolder<Block, Block> SILENT_SHERRY =
+            BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 遗忘玛格丽特
+    public static final DeferredHolder<Block, Block> FORGOTTEN_MARGARITA =
+            BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 幻梦泡影
+    public static final DeferredHolder<Block, Block> PHANTOM_DREAM_BUBBLE =
+            BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 终末星光
+    public static final DeferredHolder<Block, Block> END_STARLIGHT =
+            BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 神血波尔多
+    public static final DeferredHolder<Block, Block> DIVINE_EMBRYO_PORT =
+            BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    // 龙血酒
+    public static final DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE =
+            BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+
+
+
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

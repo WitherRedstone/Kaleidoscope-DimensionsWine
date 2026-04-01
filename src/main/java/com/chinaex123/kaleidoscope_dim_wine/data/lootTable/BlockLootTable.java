@@ -55,9 +55,9 @@ public class BlockLootTable extends BlockLootSubProvider {
 
         // ==================== 次元维度 - 末地 ====================
         // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
-        vines(ModBlocks.DREAMFRUIT_VINE.get(), Items.TWISTING_VINES, ModItems.DREAMFRUIT.get());
+        dropOther(ModBlocks.DREAMFRUIT_VINE.get(), ModItems.DREAMFRUIT.get());
         // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
-        vines(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), Items.TWISTING_VINES, ModItems.DREAMFRUIT.get());
+        dropOther(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), ModItems.DREAMFRUIT.get());
     }
 
     @Override

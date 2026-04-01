@@ -82,6 +82,33 @@ public class ModItems {
     public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE =
             ITEMS_REGISTER.register("dragon_blood_bottle", () -> new Item(new Item.Properties()));
     // -------------------- 酒类 --------------------
+    // 紫颂干邑
+    public static final DeferredHolder<Item, DrinkBlockItem> CHORUS_COGNAC =
+            ITEMS_REGISTER.register("chorus_cognac", () -> new DrinkBlockItem(ModBlocks.CHORUS_COGNAC.get()));
+    // 龙息白兰地
+    public static final DeferredHolder<Item, DrinkBlockItem> DRAGONS_BREATH_BRANDY =
+            ITEMS_REGISTER.register("dragons_breath_brandy", () -> new DrinkBlockItem(ModBlocks.DRAGONS_BREATH_BRANDY.get()));
+    // 深渊波特
+    public static final DeferredHolder<Item, DrinkBlockItem> ABYSSAL_PORTER =
+            ITEMS_REGISTER.register("abyssal_porter", () -> new DrinkBlockItem(ModBlocks.ABYSSAL_PORTER.get()));
+    // 静默雪莉
+    public static final DeferredHolder<Item, DrinkBlockItem> SILENT_SHERRY =
+            ITEMS_REGISTER.register("silent_sherry", () -> new DrinkBlockItem(ModBlocks.SILENT_SHERRY.get()));
+    // 遗忘玛格丽特
+    public static final DeferredHolder<Item, DrinkBlockItem> FORGOTTEN_MARGARITA =
+            ITEMS_REGISTER.register("forgotten_margarita", () -> new DrinkBlockItem(ModBlocks.FORGOTTEN_MARGARITA.get()));
+    // 幻梦泡影
+    public static final DeferredHolder<Item, DrinkBlockItem> PHANTOM_DREAM_BUBBLE =
+            ITEMS_REGISTER.register("phantom_dream_bubble", () -> new DrinkBlockItem(ModBlocks.PHANTOM_DREAM_BUBBLE.get()));
+    // 终末星光
+    public static final DeferredHolder<Item, DrinkBlockItem> END_STARLIGHT =
+            ITEMS_REGISTER.register("end_starlight", () -> new DrinkBlockItem(ModBlocks.END_STARLIGHT.get()));
+    // 神血波尔多
+    public static final DeferredHolder<Item, DrinkBlockItem> DIVINE_EMBRYO_PORT =
+            ITEMS_REGISTER.register("divine_embryo_port", () -> new DrinkBlockItem(ModBlocks.DIVINE_EMBRYO_PORT.get()));
+    // 龙血酒
+    public static final DeferredHolder<Item, DrinkBlockItem> DRACONIC_BLOOD_WINE =
+            ITEMS_REGISTER.register("draconic_blood_wine", () -> new DrinkBlockItem(ModBlocks.DRACONIC_BLOOD_WINE.get()));
 
 
 

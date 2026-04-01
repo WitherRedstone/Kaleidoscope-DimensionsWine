@@ -28,7 +28,8 @@ public class ModJeiPlugin implements IModPlugin {
         itemInfos.put(ModItems.CRIMSON_GRAPEVINE.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_nether"),
-                Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_nether.biome.crimson_forest"),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome.the_nether.crimson_forest"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.crimson_grapevine"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
@@ -38,7 +39,8 @@ public class ModJeiPlugin implements IModPlugin {
         itemInfos.put(ModItems.WARPED_GRAPEVINE.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_nether"),
-                Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_nether.biome.warped_forest"),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome.the_nether.warped_forest"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.warped_grapevine"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
@@ -48,12 +50,18 @@ public class ModJeiPlugin implements IModPlugin {
         itemInfos.put(ModItems.DREAMFRUIT.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_end"),
-                Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_end.biome.end_midlands"),
-                Component.translatable("jei.info.kaleidoscope_dim_wine.items.the_end.biome.end_highlands"),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome.the_end.end_midlands"),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome.the_end.end_highlands"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.dreamfruit"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit")
+        });
+        // 龙血桶
+        itemInfos.put(ModItems.DRAGON_BLOOD_BUCKET.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.natural_growth.dragon_blood_bucket")
         });
 
         itemInfos.forEach(registration::addIngredientInfo);
