@@ -30,7 +30,7 @@ public class ModFluidTypes extends FluidType {
     }
 
     // 参数：流体 ID，掉落伤害，光亮等级，滋润耕地，无限生成
-    public ModFluidTypes(ResourceLocation id, int Distance, int lightLevel, boolean canHydrate, boolean ConvertToSource) {
+    public ModFluidTypes(ResourceLocation id, float Distance, int lightLevel, boolean canHydrate, boolean ConvertToSource) {
         this(id, Properties.create()
                 .descriptionId(Util.makeDescriptionId("block", id)) // 设置流体的本地化名称 Key
                 .fallDistanceModifier(Distance) // 掉落伤害修正

@@ -17,19 +17,23 @@ public class ModFluids {
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, KaleidoscopeDimensionsWine.MOD_ID);
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(BuiltInRegistries.FLUID, KaleidoscopeDimensionsWine.MOD_ID);
 
+    public static ResourceLocation id(String name) {
+        return ResourceLocation.tryBuild(KaleidoscopeDimensionsWine.MOD_ID, name);
+    }
+
     // -------------------- 流体ID --------------------
     // 绯红葡萄汁
-    public static final ResourceLocation CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("crimson_grape_juice");
-    public static final ResourceLocation FLOWING_CRIMSON_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_crimson_grape_juice");
+    public static final ResourceLocation CRIMSON_GRAPE_JUICE_ID = ModFluids.id("crimson_grape_juice");
+    public static final ResourceLocation FLOWING_CRIMSON_GRAPE_JUICE_ID = ModFluids.id("flowing_crimson_grape_juice");
     // 诡异葡萄汁
-    public static final ResourceLocation WARPED_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("warped_grape_juice");
-    public static final ResourceLocation FLOWING_WARPED_GRAPE_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_warped_grape_juice");
+    public static final ResourceLocation WARPED_GRAPE_JUICE_ID = ModFluids.id("warped_grape_juice");
+    public static final ResourceLocation FLOWING_WARPED_GRAPE_JUICE_ID = ModFluids.id("flowing_warped_grape_juice");
     // 迷梦果汁
-    public static final ResourceLocation DREAMFRUIT_JUICE_ID = KaleidoscopeDimensionsWine.id("dreamfruit_juice");
-    public static final ResourceLocation FLOWING_DREAMFRUIT_JUICE_ID = KaleidoscopeDimensionsWine.id("flowing_dreamfruit_juice");
+    public static final ResourceLocation DREAMFRUIT_JUICE_ID = ModFluids.id("dreamfruit_juice");
+    public static final ResourceLocation FLOWING_DREAMFRUIT_JUICE_ID = ModFluids.id("flowing_dreamfruit_juice");
     // 龙血
-    public static final ResourceLocation DRAGON_BLOOD_ID = KaleidoscopeDimensionsWine.id("dragon_blood");
-    public static final ResourceLocation FLOWING_DRAGON_BLOOD_ID = KaleidoscopeDimensionsWine.id("flowing_dragon_blood");
+    public static final ResourceLocation DRAGON_BLOOD_ID = ModFluids.id("dragon_blood");
+    public static final ResourceLocation FLOWING_DRAGON_BLOOD_ID = ModFluids.id("flowing_dragon_blood");
 
     // -------------------- 流体属性 --------------------
     // 参数：流体 ID，掉落伤害，光亮等级，滋润耕地，无限生成
