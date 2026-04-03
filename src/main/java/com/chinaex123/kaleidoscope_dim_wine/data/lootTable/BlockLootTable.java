@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.data.lootTable;
 
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.DreamfruitCropWildVineHead;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.DreamfruitCropWildVinePlant;
 import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -8,10 +9,9 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CaveVines;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -55,9 +55,10 @@ public class BlockLootTable extends BlockLootSubProvider {
 
         // ==================== 次元维度 - 末地 ====================
         // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
-        dropOther(ModBlocks.DREAMFRUIT_VINE.get(), ModItems.DREAMFRUIT.get());
+        this.vinesWithBerries(ModBlocks.DREAMFRUIT_VINE.get(), ModItems.DREAMFRUIT.get(), DreamfruitCropWildVineHead.HAS_FRUIT);
         // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
-        dropOther(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), ModItems.DREAMFRUIT.get());
+        this.vinesWithBerries(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), ModItems.DREAMFRUIT.get(), DreamfruitCropWildVinePlant.HAS_FRUIT);
+
     }
 
     @Override
@@ -92,46 +93,13 @@ public class BlockLootTable extends BlockLootSubProvider {
         return builder;
     }
 
-    private void vines(Block block, Item normal, Item berries) {
-        this.add(block, LootTable.lootTable()
-                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(berries))
-                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DreamfruitCropWildVineHead.HAS_FRUIT, true))))
-                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(normal)))
+    private void vinesWithBerries(Block block, ItemLike berryItem, BooleanProperty property) {
+        this.add(block, blockState ->
+                LootTable.lootTable()
+                        .withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(property, true)))
+                                .add(LootItem.lootTableItem(berryItem)))
         );
     }
 }
-
-
-//public class ModLootTableProvider extends LootTableProvider {
-//    public ModLootTableProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
-//        super(packOutput, Set.of(), List.of(
-//                new SubProviderEntry(BlockLoots::new, LootContextParamSets.BLOCK)
-//        ), registries);
-//    }
-//
-//    public static class BlockLoots extends BlockLootSubProvider {
-//        protected BlockLoots(HolderLookup.Provider provider) {
-//            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
-//        }
-//
-//        @Override
-//        protected void generate() {
-//            dropOther(ModBlocks.CRIMSON_GRAPEVINE.get(), ModItems.CRIMSON_GRAPEVINE.get());
-//            dropOther(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get(), ModItems.CRIMSON_GRAPEVINE.get());
-//
-//            this.add(ModBlocks.CRIMSON_GRAPEVINE.get(), LootTable.lootTable()
-//                    .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModItems.CRIMSON_GRAPEVINE.get()))));
-//            this.add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get(), LootTable.lootTable()
-//                    .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModItems.CRIMSON_GRAPEVINE.get()))));
-//        }
-//
-//        @Override
-//        protected @NotNull Iterable<Block> getKnownBlocks() {
-//            return Set.of(
-//                    ModBlocks.CRIMSON_GRAPEVINE.get(),
-//                    ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()
-//            );
-//        }
-//    }
-//}

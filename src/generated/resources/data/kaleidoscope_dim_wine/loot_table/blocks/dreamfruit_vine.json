@@ -5,7 +5,11 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:survives_explosion"
+          "block": "kaleidoscope_dim_wine:dreamfruit_vine",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "has_fruit": "true"
+          }
         }
       ],
       "entries": [

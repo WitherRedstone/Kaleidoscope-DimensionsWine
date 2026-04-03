@@ -30,28 +30,28 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.ETHEREAL_NOBLE.get()); // 诡影尊爵
         basicItem(ModItems.WART_HENNESSY.get()); // 疣域轩尼诗
         basicItem(ModItems.BLAZE_MARTELL.get()); // 烈焰马爹利
-//        basicItem(ModItems.MAGMA_ROYAL_SALUTE.get()); // 岩浆皇家礼炮
-//        basicItem(ModItems.BLACK_BONE_LAFITE.get()); // 黑骨拉菲
+        basicItem(ModItems.MAGMA_ROYAL_SALUTE.get()); // 岩浆皇家礼炮
+        basicItem(ModItems.BLACK_BONE_LAFITE.get()); // 黑骨拉菲
 
 
         // ==================== 次元维度 - 末地 ====================
         // -------------------- 作物 --------------------
-//        basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
+        basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
         // -------------------- 物品 --------------------
         basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
         // -------------------- 流体 --------------------
-//        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
+        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
         basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
         // -------------------- 酒类 --------------------
 //        basicItem(ModItems.CHORUS_COGNAC.get()); // 紫颂干邑
-//        basicItem(ModItems.DRAGONS_BREATH_BRANDY.get()); // 龙息白兰地
+        basicItem(ModItems.DRAGONS_BREATH_BRANDY.get()); // 龙息白兰地
 //        basicItem(ModItems.ABYSSAL_PORTER.get()); // 深渊波特
-//        basicItem(ModItems.SILENT_SHERRY.get()); // 静默雪莉
-//        basicItem(ModItems.FORGOTTEN_MARGARITA.get()); // 遗忘玛格丽特
+        basicItem(ModItems.SILENT_SHERRY.get()); // 静默雪莉
+        basicItem(ModItems.FORGOTTEN_MARGARITA.get()); // 遗忘玛格丽特
 //        basicItem(ModItems.PHANTOM_DREAM_BUBBLE.get()); // 幻梦泡影
 //        basicItem(ModItems.END_STARLIGHT.get()); // 终末星光
 //        basicItem(ModItems.DIVINE_EMBRYO_PORT.get()); // 神血波尔多
-//        basicItem(ModItems.DRACONIC_BLOOD.get()); // 龙血酒
+        basicItem(ModItems.DRACONIC_BLOOD_WINE.get()); // 龙血酒
 
 
         // ==================== 次元维度 - 下界 ====================

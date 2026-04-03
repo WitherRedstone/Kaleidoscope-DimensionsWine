@@ -121,18 +121,15 @@ public class DreamfruitCropWildVineHead extends GrowingPlantHeadBlock implements
         BlockPos relative = pos.relative(this.growthDirection.getOpposite());
         BlockState relativeState = level.getBlockState(relative);
 
-        // 检查上方方块是否是末地石或紫珀块
+        if (relativeState.is(ModBlocks.DREAMFRUIT_VINE.get()) ||
+                relativeState.is(ModBlocks.DREAMFRUIT_VINE_PLANT.get())) {
+            return true;
+        }
+
         boolean isEndStone = relativeState.is(Blocks.END_STONE);
         boolean isPurpur = relativeState.is(Blocks.PURPUR_BLOCK);
 
-        if (!isEndStone && !isPurpur) {
-            return false;
-        }
-
-        // 检查下方是否有足够的空间
-        BlockPos below = pos.relative(this.growthDirection);
-        BlockState belowState = level.getBlockState(below);
-        return belowState.isAir() || belowState.canBeReplaced();
+        return isEndStone || isPurpur;
     }
 
     @Override
@@ -155,75 +152,53 @@ public class DreamfruitCropWildVineHead extends GrowingPlantHeadBlock implements
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!(Boolean)state.getValue(SHEARED)) {
-            // 尝试向下生长（10% 概率）
-            BlockPos below = pos.relative(this.growthDirection);
-            BlockState belowState = level.getBlockState(below);
-
-            if ((belowState.isAir() || belowState.canBeReplaced()) && !state.getValue(HAS_FRUIT)) {
-                BlockState plantState = ModBlocks.DREAMFRUIT_VINE_PLANT.get().defaultBlockState();
-                if (plantState.canSurvive(level, below)) {
-                    if (random.nextInt(10) == 0) {
-                        // 将当前头部转换为身体方块
-                        level.setBlockAndUpdate(pos, plantState);
-                        // 在下方生成新的头部方块
-                        BlockState newHeadState = ModBlocks.DREAMFRUIT_VINE.get().defaultBlockState();
-                        level.setBlockAndUpdate(below, newHeadState);
-                    }
-                    return;
+            if (state.getValue(AGE) >= 25) {
+                if (!state.getValue(HAS_FRUIT)) {
+                    level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
                 }
-            }
+            } else {
+                BlockPos below = pos.relative(this.growthDirection);
+                BlockState belowState = level.getBlockState(below);
 
-            // 不能生长时，概率结果
-            if (!state.getValue(HAS_FRUIT) && random.nextInt(5) == 0) {
-                level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
+                if ((belowState.isAir() || belowState.canBeReplaced()) && this.canGrowInto(belowState)) {
+                    super.randomTick(state, level, pos, random);
+                } else if (!state.getValue(HAS_FRUIT) && random.nextInt(5) == 0) {
+                    level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
+                }
             }
         }
     }
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
-        if (!(Boolean)state.getValue(SHEARED)) {
-            BlockPos below = pos.relative(this.growthDirection);
-            BlockState belowState = level.getBlockState(below);
-
-            // 如果下方是空气或可替换方块，可以生长
-            if (belowState.isAir() || belowState.canBeReplaced()) {
-                return true;
-            }
-
-            // 如果不能生长，检查是否可以结果
-            return !state.getValue(HAS_FRUIT);
-        }
-        return false;
+        return true;
     }
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
         return true;
     }
-
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        if (state.getValue(SHEARED)) {
-            return;
-        }
-
-        // 尝试向下生长
-        BlockPos below = pos.relative(this.growthDirection);
-        BlockState belowState = level.getBlockState(below);
-
-        if ((belowState.isAir() || belowState.canBeReplaced()) && !state.getValue(HAS_FRUIT)) {
-            BlockState plantState = ModBlocks.DREAMFRUIT_VINE_PLANT.get().defaultBlockState();
-            if (plantState.canSurvive(level, below)) {
-                // 将当前头部转换为身体方块
-                level.setBlockAndUpdate(pos, plantState);
-                // 在下方生成新的头部方块
-                BlockState newHeadState = ModBlocks.DREAMFRUIT_VINE.get().defaultBlockState();
-                level.setBlockAndUpdate(below, newHeadState);
+        if (state.getValue(AGE) >= 25) {
+            if (!state.getValue(HAS_FRUIT)) {
+                level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
             }
-        } else if (!state.getValue(HAS_FRUIT)) {
-            // 如果不能生长，则结果
-            level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
+        } else {
+            BlockPos blockpos = pos.relative(this.growthDirection);
+            int i = Math.min(state.getValue(AGE) + 1, 25);
+            int j = this.getBlocksToGrowWhenBonemealed(random);
+
+            int k;
+            for(k = 0; k < j && this.canGrowInto(level.getBlockState(blockpos)); ++k) {
+                level.setBlockAndUpdate(blockpos, state.setValue(AGE, i));
+                blockpos = blockpos.relative(this.growthDirection);
+                i = Math.min(i + 1, 25);
+            }
+
+            if (k == 0 && !state.getValue(HAS_FRUIT)) {
+                level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
+            }
         }
     }
 
@@ -243,6 +218,12 @@ public class DreamfruitCropWildVineHead extends GrowingPlantHeadBlock implements
     }
 
     static {
-        PROPERTIES = Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
+        PROPERTIES = Properties.of()
+                .mapColor(MapColor.PLANT)
+                .randomTicks()
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.CAVE_VINES)
+                .pushReaction(PushReaction.DESTROY);
     }
 }

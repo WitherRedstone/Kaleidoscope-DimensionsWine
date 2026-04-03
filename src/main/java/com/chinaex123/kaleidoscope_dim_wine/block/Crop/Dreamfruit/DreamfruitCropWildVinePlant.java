@@ -95,14 +95,9 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
     protected GrowingPlantHeadBlock getHeadBlock() {
         return (GrowingPlantHeadBlock) ModBlocks.DREAMFRUIT_VINE.get();
     }
-
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
-        GrowingPlantHeadBlock headBlock = this.getHeadBlock();
-        return BlockUtil.getTopConnectedBlock(level, pos, state.getBlock(), this.growthDirection, headBlock).map((headPos) -> {
-            BlockState blockState = level.getBlockState(headPos);
-            return blockState.is(headBlock) && !(Boolean) blockState.getValue(DreamfruitCropWildVineHead.SHEARED);
-        }).orElse(false);
+        return true;
     }
 
     @Override
@@ -112,18 +107,21 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        // 藤蔓节段使用骨粉时，直接让整株藤蔓的所有头部方块结果
-        GrowingPlantHeadBlock headBlock = this.getHeadBlock();
-        BlockUtil.getTopConnectedBlock(level, pos, state.getBlock(), this.growthDirection, headBlock).ifPresent((headPos) -> {
-            BlockState headState = level.getBlockState(headPos);
-            if (headState.is(headBlock) && !(Boolean) headState.getValue(DreamfruitCropWildVineHead.SHEARED)) {
-                // 直接结果，不触发生长
-                level.setBlock(headPos, headState.setValue(DreamfruitCropWildVineHead.HAS_FRUIT, Boolean.TRUE), 2);
-            }
-        });
+        if (state.getValue(HAS_FRUIT)) {
+            Block.popResource(level, pos, new ItemStack(ModItems.DREAMFRUIT.get(), 1));
+            float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
+            level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, f);
+            BlockState newState = state.setValue(HAS_FRUIT, Boolean.FALSE);
+            level.setBlock(pos, newState, 2);
+            level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(newState));
+        } else {
+            level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
+        }
+    }
 
-        // 同时让当前节段也结果
-        if (!state.getValue(HAS_FRUIT)) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (!state.getValue(HAS_FRUIT) && random.nextInt(5) == 0) {
             level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
         }
     }
@@ -134,6 +132,12 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
     }
 
     static {
-        PROPERTIES = Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
+        PROPERTIES = Properties.of()
+                .mapColor(MapColor.PLANT)
+                .randomTicks()
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.CAVE_VINES)
+                .pushReaction(PushReaction.DESTROY);
     }
 }
