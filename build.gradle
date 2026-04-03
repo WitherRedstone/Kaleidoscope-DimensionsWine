@@ -131,6 +131,7 @@ dependencies {
     // 联动
     implementation "curse.maven:jei-238222:7420587" // jei
     implementation "curse.maven:the-twilight-forest-227639:7797302" // 暮色森林
+    implementation "curse.maven:kaleidoscope-doll-1233277:7738926" // 森罗物语：玩偶
 
 
     // 辅助

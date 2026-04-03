@@ -12,7 +12,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -30,9 +29,16 @@ public class ModBlocks {
 
     // ==================== 小彩蛋 ====================
     // 玩偶 - ChinaEX123_BILI
-    public static final DeferredBlock<Block> DOLL_001 = registerBlocks("doll_001", DollBlock::new, Rarity.RARE);
-    // 玩偶 - Fvue233
-    public static final DeferredBlock<Block> DOLL_002 = registerBlocks("doll_002", DollBlock::new, Rarity.RARE);
+//    public static final DeferredBlock<Block> DOLL_001 = registerBlocks("doll_001", DollBlock::new, Rarity.RARE);
+//    // 玩偶 - Fvue233
+//    public static final DeferredBlock<Block> DOLL_002 = registerBlocks("doll_002", DollBlock::new, Rarity.RARE);
+
+    // 玩偶 - ChinaEX123_BILI（条件注册）
+    public static final DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE);
+
+    // 玩偶 - Fvue233（条件注册）
+    public static final DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE);
+
 
     // ==================== 次元维度 - 下界 ====================
     // -------------------- 作物 --------------------
@@ -172,5 +178,50 @@ public class ModBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);
+    }
+
+    private static DeferredBlock<Block> registerConditionalDoll(String name, Rarity rarity) {
+        return registerBlocks(name, () -> {
+            if (isKaleidoscopeDollLoaded()) {
+                return createKaleidoscopeDoll();
+            } else {
+                return new DollBlock();
+            }
+        }, rarity);
+    }
+
+
+    private static boolean isKaleidoscopeDollLoaded() {
+        try {
+            Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.block.DollBlock");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
+
+    private static Block createKaleidoscopeDoll() {
+        try {
+            // 使用反射创建森罗物语的 DollBlock 实例
+            Class<?> kaleidoDollClass = Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.block.DollBlock");
+            return (Block) kaleidoDollClass.getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            KaleidoscopeDimensionsWine.LOGGER.error("Failed to create Kaleidoscope Doll using reflection", e);
+            return new DollBlock();
+        }
+    }
+
+    public static void registerDollBlockEntities() {
+        if (!isKaleidoscopeDollLoaded()) {
+            return;
+        }
+
+        try {
+            // 通过反射注册森罗物语的 BlockEntity
+            Class<?> entityTypeClass = Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.init.ModBlockEntityTypes");
+            // 调用它的注册方法
+        } catch (Exception e) {
+            KaleidoscopeDimensionsWine.LOGGER.warn("Could not register Kaleidoscope Doll BlockEntity", e);
+        }
     }
 }

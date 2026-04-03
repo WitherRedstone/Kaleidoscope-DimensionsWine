@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 @Mod(KaleidoscopeDimensionsWine.MOD_ID)
 public class KaleidoscopeDimensionsWine {
     public static final String MOD_ID = "kaleidoscope_dim_wine";
-    private static final Logger LOGGER = LoggerFactory.getLogger(KaleidoscopeDimensionsWine.class);
+    public static final Logger LOGGER = LoggerFactory.getLogger(KaleidoscopeDimensionsWine.class);
 
     public KaleidoscopeDimensionsWine(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.register(modEventBus);
