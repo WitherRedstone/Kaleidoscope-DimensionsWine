@@ -1,6 +1,10 @@
 {
   "itemGroup.kaleidoscope_dim_wine_tab": "Kaleidoscope Dimensions Wine",
 
+  "_comment.doll": "Doll",
+  "block.kaleidoscope_dim_wine.doll_001": "ChinaEX123_BILI",
+  "block.kaleidoscope_dim_wine.doll_002": "Fvue233",
+
   "_comment.crops": "Crops",
   "item.kaleidoscope_dim_wine.crimson_grapevine": "Crimson Grapevine",
   "item.kaleidoscope_dim_wine.crimson_grape": "Crimson Grape",

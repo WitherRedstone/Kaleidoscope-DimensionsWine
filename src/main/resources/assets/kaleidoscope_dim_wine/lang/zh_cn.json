@@ -1,6 +1,10 @@
 {
   "itemGroup.kaleidoscope_dim_wine_tab": "森罗酒馆：次元酒窖",
 
+  "_comment.doll": "玩偶",
+  "block.kaleidoscope_dim_wine.doll_001": "ChinaEX123_BILI",
+  "block.kaleidoscope_dim_wine.doll_002": "Fvue233",
+
   "_comment.crops": "作物",
   "item.kaleidoscope_dim_wine.crimson_grapevine": "绯红葡萄藤",
   "item.kaleidoscope_dim_wine.crimson_grape": "绯红葡萄",

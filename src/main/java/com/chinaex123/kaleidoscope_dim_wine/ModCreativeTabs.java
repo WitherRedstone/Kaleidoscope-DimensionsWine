@@ -1,5 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
+import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -19,6 +20,9 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.CRIMSON_GRAPE.get()))
                     .title(Component.translatable("itemGroup.kaleidoscope_dim_wine_tab"))
                     .displayItems((parameters, output) -> {
+
+                        output.accept(ModBlocks.DOLL_001.get()); // 玩偶 - ChinaEX123_BILI
+                        output.accept(ModBlocks.DOLL_002.get()); // 玩偶 - Fvue233
 
                         // ==================== 流体桶 ====================
                         // -------------------- 下界 --------------------

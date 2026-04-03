@@ -48,9 +48,27 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
         this.registerDefaultState(this.stateDefinition.any().setValue(HAS_FRUIT, false));
     }
 
+    /**
+     * 处理玩家空手右键点击迷梦果藤身体方块的逻辑
+     * <p>
+     * 当藤蔓结果时（HAS_FRUIT=true），执行收获操作：
+     * - 掉落 1 个迷梦果
+     * - 播放采摘浆果的音效（音量随机）
+     * - 将方块状态设置为未结果
+     * - 触发方块变更游戏事件
+     *
+     * @param state      当前方块状态
+     * @param level      游戏世界
+     * @param pos        方块位置
+     * @param player     操作的玩家
+     * @param hit        命中结果信息
+     * @return 如果成功收获则返回 SUCCESS，否则返回 PASS
+     */
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        // 检查是否结果，如果结果则进行收获
         if (state.getValue(HAS_FRUIT)) {
+            // 掉落产物并播放音效
             Block.popResource(level, pos, new ItemStack(ModItems.DREAMFRUIT.get(), 1));
             float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
             level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, f);
@@ -63,27 +81,74 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
         return InteractionResult.PASS;
     }
 
+    /**
+     * 创建迷梦果藤身体方块的方块状态定义
+     * <p>
+     * 添加 HAS_FRUIT 属性到方块状态，用于标记藤蔓是否结有果实（可收获）
+     *
+     * @param builder 方块状态构建器
+     */
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(HAS_FRUIT);
     }
 
+    /**
+     * 检查迷梦果藤身体方块是否能在指定位置生存
+     * <p>
+     * 验证上方方块是否为以下类型之一：
+     * - 迷梦果藤头部方块
+     * - 迷梦果藤身体方块
+     * - 可附着的方块（树叶、藤架等）
+     * - 具有坚固表面的方块
+     *
+     * @param state 当前方块状态
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @return 如果方块能在此位置生存则返回 true，否则返回 false
+     */
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        // 获取上方相邻方块的位置和状态
         BlockPos relative = pos.relative(this.growthDirection.getOpposite());
         BlockState relativeState = level.getBlockState(relative);
+
+        // 检查上方方块是否满足生存条件
         return relativeState.is(ModBlocks.DREAMFRUIT_VINE.get()) ||
                 relativeState.is(ModBlocks.DREAMFRUIT_VINE_PLANT.get()) ||
                 this.canAttachTo(relativeState) ||
                 relativeState.isFaceSturdy(level, relative, this.growthDirection);
     }
 
+    /**
+     * 获取玩家中键拾取此方块时获得的物品
+     * <p>
+     * 返回迷梦果物品，用于创造模式下的方块复制
+     *
+     * @param state   当前方块状态
+     * @param target  命中结果信息
+     * @param level   世界读取器
+     * @param pos     方块位置
+     * @param player  执行拾取的玩家
+     * @return 包含迷梦果物品的 ItemStack
+     */
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
         return new ItemStack(ModItems.DREAMFRUIT.get());
     }
 
+    /**
+     * 检查迷梦果藤身体方块是否能附着到指定方块上
+     * <p>
+     * 允许附着到以下类型的方块：
+     * - 树叶（任意类型，BlockTags.LEAVES）
+     * - 模组中的标准藤架方块
+     * - 任何实现 GrapevineTrellisBlock 的藤架方块
+     *
+     * @param state 目标方块的状态
+     * @return 如果藤蔓可以附着到该方块则返回 true，否则返回 false
+     */
     @Override
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
@@ -91,15 +156,46 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
                 state.getBlock() instanceof GrapevineTrellisBlock;
     }
 
+    /**
+     * 获取与此身体方块关联的头部方块
+     * <p>
+     * 返回迷梦果藤的头部方块实例，用于藤蔓生长系统的内部逻辑
+     *
+     * @return 迷梦果藤头部方块实例
+     */
     @Override
     protected GrowingPlantHeadBlock getHeadBlock() {
         return (GrowingPlantHeadBlock) ModBlocks.DREAMFRUIT_VINE.get();
     }
+
+    /**
+     * 检查迷梦果藤身体方块是否是有效的骨粉目标
+     * <p>
+     * 固定返回 true，表示身体方块始终可以成为骨粉的目标
+     * 实际的催熟效果（结果）由 performBonemeal 方法控制
+     *
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @param state 当前方块状态
+     * @return 始终返回 true
+     */
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
         return true;
     }
 
+    /**
+     * 检查骨粉催熟迷梦果藤身体方块是否成功
+     * <p>
+     * 固定返回 true，表示骨粉催熟始终会成功
+     * 具体的催熟效果（结果）由 performBonemeal 方法实现
+     *
+     * @param level  游戏世界
+     * @param random 随机数生成器
+     * @param pos    方块位置
+     * @param state  当前方块状态
+     * @return 始终返回 true
+     */
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
         return true;

@@ -5,9 +5,14 @@ import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.fluid.ModFluids;
+import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -17,9 +22,17 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCK_REGISTER =
             DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
+
+    // ==================== 小彩蛋 ====================
+    // 玩偶 - ChinaEX123_BILI
+    public static final DeferredBlock<Block> DOLL_001 = registerBlocks("doll_001", DollBlock::new, Rarity.RARE);
+    // 玩偶 - Fvue233
+    public static final DeferredBlock<Block> DOLL_002 = registerBlocks("doll_002", DollBlock::new, Rarity.RARE);
 
     // ==================== 次元维度 - 下界 ====================
     // -------------------- 作物 --------------------
@@ -137,6 +150,25 @@ public class ModBlocks {
 
 
 
+    public static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block, Rarity rarity) {
+        ModItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
+    }
+
+    public static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block) {
+        ModItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
+
+    public static <T extends Block> DeferredBlock<T> registerBlocks(String name, Supplier<T> block, Rarity rarity) {
+        DeferredBlock<T> blocks = BLOCK_REGISTER.register(name, block);
+        registerBlockItems(name, blocks, rarity);
+        return blocks;
+    }
+
+    public static <T extends Block> DeferredBlock<T> registerBlocks(String name, Supplier<T> block) {
+        DeferredBlock<T> blocks = BLOCK_REGISTER.register(name, block);
+        registerBlockItems(name, blocks);
+        return blocks;
+    }
 
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);
