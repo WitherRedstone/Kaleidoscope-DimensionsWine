@@ -21,16 +21,6 @@ public class WitheredSlash extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, color);
     }
 
-    @Override
-    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
-        return true;
-    }
-
-    @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return true;
-    }
-
     @SubscribeEvent
     public static void onPlayerAttack(LivingDamageEvent.Pre event) {
         // 检查攻击者是否是玩家
@@ -54,5 +44,15 @@ public class WitheredSlash extends MobEffect {
                     MobEffects.WEAKNESS, 20 * 5, amplifier, false, false
             ));
         }
+    }
+
+    @Override
+    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
+        return true;
+    }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+        return true;
     }
 }

@@ -201,9 +201,23 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
         return true;
     }
 
+    /**
+     * 执行骨粉对迷梦果藤身体方块的催熟效果
+     * <p>
+     * 催熟逻辑：
+     * - **已结果（HAS_FRUIT=true）**：收获果实，掉落 1 个迷梦果，播放采摘音效，重置为未结果状态
+     * - **未结果（HAS_FRUIT=false）**：直接让藤蔓结果（设置 HAS_FRUIT=true）
+     *
+     * @param level  服务器世界等级
+     * @param random 随机数生成器
+     * @param pos    方块位置
+     * @param state  当前方块状态
+     */
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+        // 已结果则收获，未结果则催熟
         if (state.getValue(HAS_FRUIT)) {
+            // 收获果实并播放音效
             Block.popResource(level, pos, new ItemStack(ModItems.DREAMFRUIT.get(), 1));
             float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
             level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, f);
@@ -211,12 +225,25 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
             level.setBlock(pos, newState, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(newState));
         } else {
+            // 未结果则直接结果
             level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
         }
     }
 
+    /**
+     * 迷梦果藤身体方块的随机刻逻辑
+     * <p>
+     * 当藤蔓未结果时，有 20% 的概率（1/5）自然结果
+     * 已结果的藤蔓不执行任何操作
+     *
+     * @param state   当前方块状态
+     * @param level   服务器世界等级
+     * @param pos     方块位置
+     * @param random  随机数生成器
+     */
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        // 未结果时有概率自然结果
         if (!state.getValue(HAS_FRUIT) && random.nextInt(5) == 0) {
             level.setBlock(pos, state.setValue(HAS_FRUIT, Boolean.TRUE), 2);
         }

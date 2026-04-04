@@ -33,11 +33,31 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
         super();
     }
 
+    /**
+     * 处理玩家使用物品右键点击诡异葡萄藤架的逻辑
+     * <p>
+     * 当玩家手持剪刀时，可以剪下葡萄藤：
+     * - 将藤架方块恢复为普通藤架状态
+     * - 保留原有的类型（TYPE）和水流（WATERLOGGED）属性
+     * - 掉落一个诡异葡萄藤物品
+     * - 消耗剪刀耐久度
+     * - 播放剪蜂箱音效
+     *
+     * @param stack      被使用的物品
+     * @param state      当前方块状态
+     * @param level      游戏世界
+     * @param pos        方块位置
+     * @param player     操作的玩家
+     * @param hand       使用的手（主手或副手）
+     * @param hitResult  命中结果信息
+     * @return 交互结果，成功则返回 SUCCESS，否则交由父类处理
+     */
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         // 如果玩家拿的是剪刀，可以剪下葡萄藤
         ItemStack itemInHand = player.getItemInHand(hand);
         if (itemInHand.canPerformAction(ItemAbilities.SHEARS_HARVEST)) {
+            // 恢复为普通藤架并保留属性
             BlockState newState = com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()
                     .defaultBlockState()
                     .setValue(TYPE, state.getValue(TYPE))
@@ -51,6 +71,20 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
         return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
+    /**
+     * 检查诡异葡萄藤架是否能在指定位置生存
+     * <p>
+     * 验证周围六个方向是否存在以下方块之一：
+     * - 标准藤架方块（TRELLIS）
+     * - 任意实现 GrapevineTrellisBlock 的藤架方块
+     * <p>
+     * 藤架必须依附于其他藤架才能存在，防止悬空放置
+     *
+     * @param state 当前方块状态
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @return 如果周围有藤架支撑则返回 true，否则返回 false
+     */
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         // 检查周围是否有藤架类方块
@@ -64,12 +98,36 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
         return false;
     }
 
+    /**
+     * 更新诡异葡萄藤架的形状状态
+     * <p>
+     * 当相邻方块发生变化时调用，用于更新藤架的连接形态
+     * 委托给父类处理具体的连接逻辑和类型设置
+     *
+     * @param state       当前方块状态
+     * @param direction   相邻方块的方向
+     * @param neighborState 相邻方块的状态
+     * @param level       世界访问器
+     * @param pos         当前方块位置
+     * @param neighborPos 相邻方块位置
+     * @return 更新后的方块状态
+     */
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         // 调用父类方法来更新藤架类型（连接逻辑）
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 
+    /**
+     * 检查指定方块状态是否与当前诡异葡萄藤藤架属于同一类型
+     * <p>
+     * 用于判断藤架之间的连接关系，允许与以下方块连接：
+     * - 标准藤架方块（TRELLIS）
+     * - 其他诡异葡萄藤藤架方块
+     *
+     * @param state 待检查的方块状态
+     * @return 如果方块类型相同或兼容则返回 true，否则返回 false
+     */
     @Override
     public boolean sameType(BlockState state) {
         // 允许与普通藤架、其他诡异葡萄藤藤架连接
@@ -77,6 +135,18 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
                 state.is(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get());
     }
 
+    /**
+     * 检查诡异葡萄藤架下方的方块是否支持其生长
+     * <p>
+     * 验证下方方块是否为以下类型之一：
+     * - 已成熟的诡异葡萄藤架（达到最大年龄）
+     * - 诡异菌岩（WARPED_NYLIUM）
+     * <p>
+     * 只有满足条件时，藤蔓才能从藤架向下延伸生长
+     *
+     * @param belowState 下方方块的状态
+     * @return 如果下方方块支持生长则返回 true，否则返回 false
+     */
     @Override
     public boolean belowSupportGrow(BlockState belowState) {
         // 诡异菌岩作为支撑方块
@@ -84,6 +154,27 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
                 belowState.is(Blocks.WARPED_NYLIUM);
     }
 
+    /**
+     * 执行诡异葡萄藤架的生长逻辑
+     * <p>
+     * 生长流程：
+     * 1. **SINGLE 类型处理**：
+     *    - 检查下方方块是否满足生长条件
+     *    - 未成熟时增加年龄值
+     *    - 成熟后进入多方向生长阶段
+     * <p>
+     * 2. **成熟阶段（MAX_AGE）**：
+     *    - 遍历预设方向（东西南北）尝试延伸藤蔓
+     *    - 找到可生长的位置后生成新的藤架节段
+     *    - 若无法延伸，则在下方生成诡异葡萄果实作物
+     * <p>
+     * 3. **非 SINGLE 类型**：
+     *    - 直接设置为最大年龄
+     *
+     * @param level 游戏世界
+     * @param pos   藤架方块位置
+     * @param state 当前方块状态
+     */
     @Override
     public void doGrow(Level level, BlockPos pos, BlockState state) {
         // 如果是 single 状态
@@ -116,7 +207,7 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
 
             // 如果所有方向都检查完了都不能生长，那么检查下方是否有两格空位，生长葡萄
             if (canGrowGrape(level, pos)) {
-                // 生成绯红葡萄果实
+                // 生成诡异葡萄果实
                 level.setBlockAndUpdate(pos.below(), ModBlocks.WARPED_GRAPE_CROP.get().defaultBlockState());
                 CommonHooks.fireCropGrowPost(level, pos.below(), state);
             }
@@ -127,6 +218,18 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
         }
     }
 
+    /**
+     * 获取玩家中键拾取此方块时获得的物品
+     * <p>
+     * 返回诡异葡萄藤物品，用于创造模式下的方块复制
+     *
+     * @param state   当前方块状态
+     * @param target  命中结果信息
+     * @param level   世界读取器
+     * @param pos     方块位置
+     * @param player  执行拾取的玩家
+     * @return 包含诡异葡萄藤物品的 ItemStack
+     */
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
         return new ItemStack(ModItems.WARPED_GRAPEVINE.get());

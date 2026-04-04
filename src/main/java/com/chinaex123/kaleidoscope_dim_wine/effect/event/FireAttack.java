@@ -21,16 +21,6 @@ public class FireAttack extends MobEffect {
         super(MobEffectCategory.BENEFICIAL, color);
     }
 
-    @Override
-    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
-        return true;
-    }
-
-    @Override
-    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return true;
-    }
-
     /**
      * 监听玩家攻击事件，当玩家有火焰攻击效果时，使目标燃烧并增加火焰伤害
      */
@@ -65,5 +55,15 @@ public class FireAttack extends MobEffect {
                 target.hurt(target.damageSources().onFire(), fireDamage);
             }
         }
+    }
+
+    @Override
+    public boolean applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
+        return true;
+    }
+
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+        return true;
     }
 }

@@ -237,11 +237,6 @@ public class DreamfruitCropWildVineHead extends GrowingPlantHeadBlock implements
         return new ItemStack(ModItems.DREAMFRUIT.get());
     }
 
-    @Override
-    protected MapCodec<? extends GrowingPlantHeadBlock> codec() {
-        return CODEC;
-    }
-
     /**
      * 迷梦果藤头部的随机刻生长逻辑
      * <p>
@@ -396,6 +391,11 @@ public class DreamfruitCropWildVineHead extends GrowingPlantHeadBlock implements
     @Override
     protected Block getBodyBlock() {
         return ModBlocks.DREAMFRUIT_VINE_PLANT.get();
+    }
+
+    @Override
+    protected MapCodec<? extends GrowingPlantHeadBlock> codec() {
+        return CODEC;
     }
 
     static {

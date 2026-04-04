@@ -2,6 +2,8 @@ package com.chinaex123.kaleidoscope_dim_wine.effect.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.effect.ModEffects;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -17,7 +19,11 @@ import java.util.Set;
  * 悖论：受伤时转为治疗，治疗时转为受伤，死亡时半心复活
  */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
-public class Paradox {
+public class Paradox extends MobEffect {
+
+    public Paradox(int color) {
+        super(MobEffectCategory.BENEFICIAL, color);
+    }
 
     // 标记正在处理反转，防止循环触发
     private static final Set<LivingEntity> processingEntities = new HashSet<>();

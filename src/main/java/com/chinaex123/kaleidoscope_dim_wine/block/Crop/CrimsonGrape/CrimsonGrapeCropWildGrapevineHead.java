@@ -142,11 +142,6 @@ public class CrimsonGrapeCropWildGrapevineHead extends GrowingPlantHeadBlock imp
                 state.getBlock() instanceof GrapevineTrellisBlock;
     }
 
-    @Override
-    protected MapCodec<? extends GrowingPlantHeadBlock> codec() {
-        return CODEC;
-    }
-
     /**
      * 绯红葡萄藤头部的随机刻逻辑
      * <p>
@@ -219,6 +214,11 @@ public class CrimsonGrapeCropWildGrapevineHead extends GrowingPlantHeadBlock imp
     @Override
     protected Block getBodyBlock() {
         return ModBlocks.CRIMSON_GRAPEVINE_PLANT.get();
+    }
+
+    @Override
+    protected MapCodec<? extends GrowingPlantHeadBlock> codec() {
+        return CODEC;
     }
 
     static {

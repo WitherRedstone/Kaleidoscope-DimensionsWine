@@ -2,6 +2,8 @@ package com.chinaex123.kaleidoscope_dim_wine.effect.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.effect.ModEffects;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,7 +17,11 @@ import java.util.Set;
  * 后发制人：抵消一次伤害，下次攻击伤害大幅提升，攻击后效果消失。
  */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
-public class Payback {
+public class Payback extends MobEffect {
+
+    public Payback(int color) {
+        super(MobEffectCategory.BENEFICIAL, color);
+    }
 
     // 存储可以增伤的玩家
     private static final Set<Player> paybackPlayers = new HashSet<>();

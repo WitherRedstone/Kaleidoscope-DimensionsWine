@@ -24,6 +24,28 @@ public class WarpedGrapevineItem extends Item {
         super(new Properties());
     }
 
+    /**
+     * 处理诡异葡萄藤物品右键点击方块的使用逻辑
+     * <p>
+     * **种植模式**（点击方块底部）：
+     * 1. **向下种植藤蔓**：
+     *    - 检测下方是否为空气，是则种植诡异葡萄藤
+     *    - 优先放置头部方块（藤蔓顶部），若无法生存则改用身体方块
+     *    - 非创造模式下消耗物品
+     * <p>
+     * 2. **延伸现有藤蔓**：
+     *    - 若下方已是藤蔓节段，继续向下延伸身体方块
+     *    - 检查更下方的空间是否可用
+     * <p>
+     * **替换模式**（点击普通藤架）：
+     * - 仅当藤架下方为诡异菌岩时才允许替换
+     * - 将普通藤架升级为诡异葡萄藤架
+     * - 保留原藤架的类型（TYPE）和含水（WATERLOGGED）属性
+     * - 消耗诡异葡萄藤物品
+     *
+     * @param context 使用上下文（包含玩家、物品、位置等信息）
+     * @return 交互结果：成功则返回 SUCCESS，失败则返回 FAIL 或交由父类处理
+     */
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -126,7 +148,7 @@ public class WarpedGrapevineItem extends Item {
             }
             return InteractionResult.SUCCESS;
         }
-        
+
         return super.useOn(context);
     }
 }

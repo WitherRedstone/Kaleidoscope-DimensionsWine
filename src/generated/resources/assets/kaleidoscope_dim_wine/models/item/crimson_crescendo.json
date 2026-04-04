@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "kaleidoscope_dim_wine:item/crimson_crescendo"
+    "layer0": "kaleidoscope_dim_wine:item/drink/crimson_crescendo"
   }
 }

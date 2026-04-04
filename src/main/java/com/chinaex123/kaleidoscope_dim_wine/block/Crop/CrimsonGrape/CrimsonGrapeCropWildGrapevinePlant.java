@@ -133,13 +133,6 @@ public class CrimsonGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock im
         }).orElse(false);
     }
 
-    /**
-     * 获取此方块的 MapCodec 序列化器
-     * <p>
-     * 用于 Minecraft 的数据序列化和反序列化系统，支持方块数据的网络同步和保存
-     *
-     * @return 绯红葡萄藤身体方块的 MapCodec 实例
-     */
     @Override
     protected MapCodec<? extends GrowingPlantBodyBlock> codec() {
         return CODEC;

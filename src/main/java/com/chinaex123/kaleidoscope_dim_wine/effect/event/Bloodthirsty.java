@@ -2,6 +2,8 @@ package com.chinaex123.kaleidoscope_dim_wine.effect.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.effect.ModEffects;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -11,7 +13,11 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
  * 嗜血：攻击时，恢复相当于造成伤害 10% 的生命值
  */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
-public class Bloodthirsty {
+public class Bloodthirsty extends MobEffect {
+
+    public Bloodthirsty(int color) {
+        super(MobEffectCategory.BENEFICIAL, color);
+    }
 
     /**
      * 处理造成伤害事件 - 恢复生命值

@@ -33,21 +33,61 @@ public class WarpedGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock imp
         super(PROPERTIES, Direction.DOWN, SHAPE, false);
     }
 
+    /**
+     * 检查诡异葡萄藤身体方块是否能在指定位置生存
+     * <p>
+     * 验证上方方块是否为以下类型之一：
+     * - 诡异葡萄藤头部方块
+     * - 诡异葡萄藤身体方块
+     * - 可附着的方块（树叶、藤架等）
+     * - 具有坚固表面的方块
+     *
+     * @param state 当前方块状态
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @return 如果方块能在此位置生存则返回 true，否则返回 false
+     */
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        // 获取上方相邻方块的位置和状态
         BlockPos relative = pos.relative(this.growthDirection.getOpposite());
         BlockState relativeState = level.getBlockState(relative);
+
+        // 检查上方方块是否满足生存条件
         return relativeState.is(ModBlocks.WARPED_GRAPEVINE.get()) ||
                 relativeState.is(ModBlocks.WARPED_GRAPEVINE_PLANT.get()) ||
                 this.canAttachTo(relativeState) ||
                 relativeState.isFaceSturdy(level, relative, this.growthDirection);
     }
 
+    /**
+     * 获取玩家中键拾取此方块时获得的物品
+     * <p>
+     * 返回诡异葡萄藤物品，用于创造模式下的方块复制
+     *
+     * @param state   当前方块状态
+     * @param target  命中结果信息
+     * @param level   世界读取器
+     * @param pos     方块位置
+     * @param player  执行拾取的玩家
+     * @return 包含诡异葡萄藤物品的 ItemStack
+     */
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
         return new ItemStack(ModItems.WARPED_GRAPEVINE.get());
     }
 
+    /**
+     * 检查诡异葡萄藤身体方块是否能附着到指定方块上
+     * <p>
+     * 允许附着到以下类型的方块：
+     * - 树叶（任意类型）
+     * - 模组中的标准藤架方块
+     * - 任何实现 GrapevineTrellisBlock 的藤架方块
+     *
+     * @param state 目标方块的状态
+     * @return 如果藤蔓可以附着到该方块则返回 true，否则返回 false
+     */
     @Override
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
@@ -55,14 +95,38 @@ public class WarpedGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock imp
                 state.getBlock() instanceof GrapevineTrellisBlock;
     }
 
+    /**
+     * 获取与此身体方块关联的头部方块
+     * <p>
+     * 返回诡异葡萄藤的头部方块实例，用于藤蔓生长系统的内部逻辑
+     *
+     * @return 诡异葡萄藤头部方块实例
+     */
     @Override
     protected GrowingPlantHeadBlock getHeadBlock() {
         return (GrowingPlantHeadBlock) ModBlocks.WARPED_GRAPEVINE.get();
     }
 
+    /**
+     * 检查诡异葡萄藤身体方块是否是有效的骨粉目标
+     * <p>
+     * 验证条件：
+     * - 存在与当前身体方块连接的头部方块
+     * - 头部方块未被剪刀修剪（SHEARED=false）
+     * <p>
+     * 只有当头部方块处于可生长状态时，身体方块才能被骨粉催熟
+     *
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @param state 当前方块状态
+     * @return 如果可以被骨粉催熟则返回 true，否则返回 false
+     */
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
+        // 获取关联的头部方块
         GrowingPlantHeadBlock headBlock = this.getHeadBlock();
+
+        // 查找顶部连接的头部方块并检查其状态
         return BlockUtil.getTopConnectedBlock(level, pos, state.getBlock(), this.growthDirection, headBlock).map((headPos) -> {
             BlockState blockState = level.getBlockState(headPos);
             return blockState.is(headBlock) && !(Boolean) blockState.getValue(WarpedGrapeCropWildGrapevineHead.SHEARED);
@@ -75,6 +139,11 @@ public class WarpedGrapeCropWildGrapevinePlant extends GrowingPlantBodyBlock imp
     }
 
     static {
-        PROPERTIES = Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
+        PROPERTIES = Properties.of()
+                .mapColor(MapColor.PLANT)
+                .noCollission()
+                .instabreak()
+                .sound(SoundType.CAVE_VINES)
+                .pushReaction(PushReaction.DESTROY);
     }
 }

@@ -24,6 +24,28 @@ public class CrimsonGrapevineItem extends Item {
         super(new Item.Properties());
     }
 
+    /**
+     * 处理绯红葡萄藤物品右键点击方块的使用逻辑
+     * <p>
+     * **种植模式**（点击方块底部）：
+     * 1. **向下种植藤蔓**：
+     *    - 检测下方是否为空气，是则种植绯红葡萄藤
+     *    - 优先放置头部方块（藤蔓顶部），若无法生存则改用身体方块
+     *    - 非创造模式下消耗物品
+     * <p>
+     * 2. **延伸现有藤蔓**：
+     *    - 若下方已是藤蔓节段，继续向下延伸身体方块
+     *    - 检查更下方的空间是否可用
+     * <p>
+     * **替换模式**（点击普通藤架）：
+     * - 仅当藤架下方为绯红菌岩时才允许替换
+     * - 将普通藤架升级为绯红葡萄藤架
+     * - 保留原藤架的类型（TYPE）和含水（WATERLOGGED）属性
+     * - 消耗绯红葡萄藤物品
+     *
+     * @param context 使用上下文（包含玩家、物品、位置等信息）
+     * @return 交互结果：成功则返回 SUCCESS，失败则返回 FAIL 或交由父类处理
+     */
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -67,19 +89,19 @@ public class CrimsonGrapevineItem extends Item {
                 }
                 return InteractionResult.SUCCESS;
             }
-            
+
             // 如果下方已经是植物方块，继续向下延伸
-            if (plantState.is(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) || 
-                plantState.is(ModBlocks.CRIMSON_GRAPEVINE.get())) {
+            if (plantState.is(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) ||
+                    plantState.is(ModBlocks.CRIMSON_GRAPEVINE.get())) {
                 BlockPos furtherBelowPos = plantPos.below();
                 BlockState furtherBelowState = level.getBlockState(furtherBelowPos);
-                
+
                 if (furtherBelowState.isAir()) {
                     if (!level.isClientSide) {
                         BlockState newPlantState = ModBlocks.CRIMSON_GRAPEVINE_PLANT.get().defaultBlockState();
                         if (newPlantState.canSurvive(level, furtherBelowPos)) {
                             level.setBlockAndUpdate(furtherBelowPos, newPlantState);
-                            
+
                             ItemStack stack = context.getItemInHand();
                             if (context.getPlayer() != null && !context.getPlayer().isCreative()) {
                                 stack.shrink(1);

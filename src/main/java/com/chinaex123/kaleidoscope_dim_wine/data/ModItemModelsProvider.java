@@ -3,8 +3,13 @@ package com.chinaex123.kaleidoscope_dim_wine.data;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelsProvider extends ItemModelProvider {
     public ModItemModelsProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -26,12 +31,12 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
         basicItem(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
         // -------------------- 酒类 --------------------
-        basicItem(ModItems.CRIMSON_CRESCENDO.get()); // 绯红绝响
-        basicItem(ModItems.ETHEREAL_NOBLE.get()); // 诡影尊爵
-//        basicItem(ModItems.WART_HENNESSY.get()); // 疣域轩尼诗
-        basicItem(ModItems.BLAZE_MARTELL.get()); // 烈焰马爹利
-        basicItem(ModItems.MAGMA_ROYAL_SALUTE.get()); // 岩浆皇家礼炮
-        basicItem(ModItems.BLACK_BONE_LAFITE.get()); // 黑骨拉菲
+        basicDrinkItem(ModItems.CRIMSON_CRESCENDO); // 绯红绝响
+        basicDrinkItem(ModItems.ETHEREAL_NOBLE); // 诡影尊爵
+//        basicDrinkItem(ModItems.WART_HENNESSY); // 疣域轩尼诗
+        basicDrinkItem(ModItems.BLAZE_MARTELL); // 烈焰马爹利
+        basicDrinkItem(ModItems.MAGMA_ROYAL_SALUTE); // 岩浆皇家礼炮
+        basicDrinkItem(ModItems.BLACK_BONE_LAFITE); // 黑骨拉菲
 
 
         // ==================== 次元维度 - 末地 ====================
@@ -43,15 +48,15 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
         basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
         // -------------------- 酒类 --------------------
-        basicItem(ModItems.CHORUS_COGNAC.get()); // 紫颂干邑
-        basicItem(ModItems.DRAGONS_BREATH_BRANDY.get()); // 龙息白兰地
-//        basicItem(ModItems.ABYSSAL_PORTER.get()); // 深渊波特
-        basicItem(ModItems.SILENT_SHERRY.get()); // 静默雪莉
-        basicItem(ModItems.FORGOTTEN_MARGARITA.get()); // 遗忘玛格丽特
-//        basicItem(ModItems.PHANTOM_DREAM_BUBBLE.get()); // 幻梦泡影
-//        basicItem(ModItems.END_STARLIGHT.get()); // 终末星光
-        basicItem(ModItems.DIVINE_EMBRYO_PORT.get()); // 神血波尔多
-        basicItem(ModItems.DRACONIC_BLOOD_WINE.get()); // 龙血酒
+        basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑
+        basicDrinkItem(ModItems.DRAGONS_BREATH_BRANDY); // 龙息白兰地
+//        basicDrinkItem(ModItems.ABYSSAL_PORTER); // 深渊波特
+        basicDrinkItem(ModItems.SILENT_SHERRY); // 静默雪莉
+        basicDrinkItem(ModItems.FORGOTTEN_MARGARITA); // 遗忘玛格丽特
+//        basicDrinkItem(ModItems.PHANTOM_DREAM_BUBBLE); // 幻梦泡影
+//        basicDrinkItem(ModItems.END_STARLIGHT); // 终末星光
+        basicDrinkItem(ModItems.DIVINE_EMBRYO_PORT); // 神血波尔多
+        basicDrinkItem(ModItems.DRACONIC_BLOOD_WINE); // 龙血酒
 
 
         // ==================== 次元维度 - 下界 ====================
@@ -80,5 +85,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 物品 --------------------
         // -------------------- 流体 --------------------
         // -------------------- 酒类 --------------------
+    }
+
+    /**
+     * 酒类物品贴图路径（路径：textures/item/drink）
+     */
+    private void basicDrinkItem(DeferredHolder<Item, ? extends Item> item) {
+        String itemName = item.getId().getPath();
+        ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
+        builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/" + itemName));
     }
 }

@@ -18,6 +18,26 @@ public class DreamfruitCropWildVineItem  extends Item {
         super(properties);
     }
 
+    /**
+     * 处理迷梦果藤物品右键点击方块的使用逻辑
+     * <p>
+     * **种植条件**：
+     * - 仅允许在末地石（END_STONE）或紫珀块（PURPUR_BLOCK）的底部种植
+     * - 其他方块表面点击则直接失败
+     * <p>
+     * **种植模式**（点击方块底部）：
+     * 1. **向下种植藤蔓**：
+     *    - 检测下方是否为空气，是则种植迷梦果藤
+     *    - 优先放置头部方块（藤蔓顶部），若无法生存则改用身体方块
+     *    - 非创造模式下消耗物品
+     * <p>
+     * 2. **延伸现有藤蔓**：
+     *    - 若下方已是藤蔓节段，继续向下延伸身体方块
+     *    - 检查更下方的空间是否可用
+     *
+     * @param context 使用上下文（包含玩家、物品、位置等信息）
+     * @return 交互结果：成功则返回 SUCCESS，失败则返回 FAIL 或交由父类处理
+     */
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -31,6 +51,7 @@ public class DreamfruitCropWildVineItem  extends Item {
             boolean isEndStone = state.is(Blocks.END_STONE);
             boolean isPurpur = state.is(Blocks.PURPUR_BLOCK);
 
+            // 必须是末地石或紫珀块才能种植
             if (!isEndStone && !isPurpur) {
                 return InteractionResult.FAIL;
             }

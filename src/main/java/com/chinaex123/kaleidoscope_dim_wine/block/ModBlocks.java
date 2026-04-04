@@ -190,7 +190,6 @@ public class ModBlocks {
         }, rarity);
     }
 
-
     private static boolean isKaleidoscopeDollLoaded() {
         try {
             Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.block.DollBlock");
@@ -208,20 +207,6 @@ public class ModBlocks {
         } catch (Exception e) {
             KaleidoscopeDimensionsWine.LOGGER.error("Failed to create Kaleidoscope Doll using reflection", e);
             return new DollBlock();
-        }
-    }
-
-    public static void registerDollBlockEntities() {
-        if (!isKaleidoscopeDollLoaded()) {
-            return;
-        }
-
-        try {
-            // 通过反射注册森罗物语的 BlockEntity
-            Class<?> entityTypeClass = Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.init.ModBlockEntityTypes");
-            // 调用它的注册方法
-        } catch (Exception e) {
-            KaleidoscopeDimensionsWine.LOGGER.warn("Could not register Kaleidoscope Doll BlockEntity", e);
         }
     }
 }
