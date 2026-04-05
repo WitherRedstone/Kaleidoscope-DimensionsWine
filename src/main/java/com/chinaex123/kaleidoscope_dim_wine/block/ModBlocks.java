@@ -33,10 +33,9 @@ public class ModBlocks {
 //    // 玩偶 - Fvue233
 //    public static final DeferredBlock<Block> DOLL_002 = registerBlocks("doll_002", DollBlock::new, Rarity.RARE);
 
-    // 玩偶 - ChinaEX123_BILI（条件注册）
+    // 玩偶 - ChinaEX123_BILI
     public static final DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE);
-
-    // 玩偶 - Fvue233（条件注册）
+    // 玩偶 - Fvue233
     public static final DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE);
 
 

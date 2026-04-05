@@ -3,7 +3,9 @@
 
   "_comment.doll": "Doll",
   "block.kaleidoscope_dim_wine.doll_001": "ChinaEX123_BILI",
+  "block.kaleidoscope_dim_wine.doll_001.tooltip": "Mod Author",
   "block.kaleidoscope_dim_wine.doll_002": "Fvue233",
+  "block.kaleidoscope_dim_wine.doll_002.tooltip": "Mod Contributor",
 
   "_comment.crops": "Crops",
   "item.kaleidoscope_dim_wine.crimson_grapevine": "Crimson Grapevine",
