@@ -1,5 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape;
 
+import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapeCropBlock;
 import net.minecraft.core.BlockPos;
@@ -56,6 +58,13 @@ public class CrimsonGrapeCropBlock extends GrapeCropBlock {
             // 收获作物并掉落产物
             level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
             Block.popResource(level, pos, new ItemStack(ModItems.CRIMSON_GRAPE.get(), 3));
+
+            // 摘取时有几率掉落玩偶001
+            double chance = ServerConfig.CRIMSON_GRAPE_DOLL_CHANCE.get();
+            if (chance > 0.0 && level.random.nextDouble() < chance) {
+                Block.popResource(level, pos, new ItemStack(ModBlocks.DOLL_001.get().asItem()));
+            }
+
             heldItem.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             player.playSound(SoundEvents.BEEHIVE_SHEAR);
             return ItemInteractionResult.SUCCESS;

@@ -24,9 +24,10 @@ public class ModTooltop {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             tooltip.add(GradientTextHelper.createFullRainbowText(text, false,  0.25, false, false, false, false, false));
         }
+
         // 玩偶 - Fvue233
         if (stack.getItem() == ModBlocks.DOLL_002.get().asItem()) {
-            String text = Component.translatable("block.kaleidoscope_dim_wine.doll_001.tooltip").getString();
+            String text = Component.translatable("block.kaleidoscope_dim_wine.doll_002.tooltip").getString();
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
         }

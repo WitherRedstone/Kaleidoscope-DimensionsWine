@@ -32,6 +32,10 @@ public class BlockLootTable extends BlockLootSubProvider {
 
     @Override
     public void generate() {
+        // ==================== 小彩蛋 ====================
+        dropSelf(ModBlocks.DOLL_001.get());
+        dropSelf(ModBlocks.DOLL_002.get());
+
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------
         // 绯红葡萄藤 - 绯红葡萄藤架生长的果实

@@ -5,7 +5,7 @@
   "block.kaleidoscope_dim_wine.doll_001": "ChinaEX123_BILI",
   "block.kaleidoscope_dim_wine.doll_001.tooltip": "Mod Author",
   "block.kaleidoscope_dim_wine.doll_002": "Fvue233",
-  "block.kaleidoscope_dim_wine.doll_002.tooltip": "Mod Contributor",
+  "block.kaleidoscope_dim_wine.doll_002.tooltip": "Mod Author",
 
   "_comment.crops": "Crops",
   "item.kaleidoscope_dim_wine.crimson_grapevine": "Crimson Grapevine",
@@ -22,7 +22,7 @@
   "block.kaleidoscope_dim_wine.warped_grapevine_plant": "Warped Grapevine Plant",
   "item.kaleidoscope_dim_wine.dreamfruit": "Dreamfruit",
   "block.kaleidoscope_dim_wine.dreamfruit_vine": "Dreamfruit Vine",
-  "block.kaleidoscope_dim_wine.dreamfruit_vine_plant": "Dreamfruit Vine Plant",
+  "block.kaleidoscope_dim_wine.dragon_blood": "Dreamfruit Vine",
 
   "_comment.items": "Items",
   "item.kaleidoscope_dim_wine.crimson_fungal_sap": "Crimson Fungal Sap",
