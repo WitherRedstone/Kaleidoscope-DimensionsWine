@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
-import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

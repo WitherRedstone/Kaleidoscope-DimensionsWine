@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.compat.jei;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeRegistration;

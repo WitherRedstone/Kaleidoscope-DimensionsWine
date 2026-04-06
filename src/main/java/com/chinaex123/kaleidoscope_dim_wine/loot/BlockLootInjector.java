@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

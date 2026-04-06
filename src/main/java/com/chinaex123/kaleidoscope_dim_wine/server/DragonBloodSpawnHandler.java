@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.server;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;

@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape;
 
-import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

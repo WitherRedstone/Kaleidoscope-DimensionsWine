@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.tooltop;
 
-import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.util.GradientTextHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;

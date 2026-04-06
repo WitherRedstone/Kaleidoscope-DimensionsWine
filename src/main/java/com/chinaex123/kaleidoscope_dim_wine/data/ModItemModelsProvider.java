@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -9,7 +9,6 @@ import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelsProvider extends ItemModelProvider {
     public ModItemModelsProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -33,7 +32,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CRIMSON_CRESCENDO); // 绯红绝响
         basicDrinkItem(ModItems.ETHEREAL_NOBLE); // 诡影尊爵
-//        basicDrinkItem(ModItems.WART_HENNESSY); // 疣域轩尼诗
+        basicDrinkItem(ModItems.WART_HENNESSY); // 疣域轩尼诗
         basicDrinkItem(ModItems.BLAZE_MARTELL); // 烈焰马爹利
         basicDrinkItem(ModItems.MAGMA_ROYAL_SALUTE); // 岩浆皇家礼炮
         basicDrinkItem(ModItems.BLACK_BONE_LAFITE); // 黑骨拉菲
@@ -50,11 +49,11 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑
         basicDrinkItem(ModItems.DRAGONS_BREATH_BRANDY); // 龙息白兰地
-//        basicDrinkItem(ModItems.ABYSSAL_PORTER); // 深渊波特
+        basicDrinkItem(ModItems.ABYSSAL_PORTER); // 深渊波特
         basicDrinkItem(ModItems.SILENT_SHERRY); // 静默雪莉
         basicDrinkItem(ModItems.FORGOTTEN_MARGARITA); // 遗忘玛格丽特
-//        basicDrinkItem(ModItems.PHANTOM_DREAM_BUBBLE); // 幻梦泡影
-//        basicDrinkItem(ModItems.END_STARLIGHT); // 终末星光
+        basicDrinkItem(ModItems.PHANTOM_DREAM_BUBBLE); // 幻梦泡影
+        basicDrinkItem(ModItems.END_STARLIGHT); // 终末星光
         basicDrinkItem(ModItems.DIVINE_EMBRYO_PORT); // 神血波尔多
         basicDrinkItem(ModItems.DRACONIC_BLOOD_WINE); // 龙血酒
 

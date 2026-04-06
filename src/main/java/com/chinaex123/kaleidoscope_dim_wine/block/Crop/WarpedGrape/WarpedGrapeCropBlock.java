@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape;
 
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapeCropBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;

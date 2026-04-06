@@ -1,0 +1,37 @@
+package com.chinaex123.kaleidoscope_dim_wine.init;
+
+import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.effect.*;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.effect.MobEffect;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ModEffects {
+    public static final DeferredRegister<MobEffect> EFFECTS =
+            DeferredRegister.create(Registries.MOB_EFFECT, KaleidoscopeDimensionsWine.MOD_ID);
+
+    // 枯斩 - 攻击敌人可以对方并对敌人造成凋零
+    public static final DeferredHolder<MobEffect, MobEffect> WITHERED_SLASH =
+            EFFECTS.register("withered_slash", () -> new WitheredSlash(0x5A4A3A));
+    // 狂怒 - 增加攻击速度和伤害
+    public static final DeferredHolder<MobEffect, MobEffect> RAGE =
+            EFFECTS.register("rage", () -> new Rage(0xC41E3A));
+    // 火焰攻击 - 攻击敌人时使对方燃烧
+    public static final DeferredHolder<MobEffect, MobEffect> FIRE_ATTACK =
+            EFFECTS.register("fire_attack", () -> new FireAttack(0xFF6B00));
+    // 后发制人 - 抵消一次受到的伤害，并提升下一次攻击造成的伤害
+    public static final DeferredHolder<MobEffect, MobEffect> PAYBACK =
+            EFFECTS.register("payback", () -> new Payback(0x4A90C4));
+    // 嗜血 - 攻击时，恢复相当于造成伤害 25% 的生命值
+    public static final DeferredHolder<MobEffect, MobEffect> BLOODTHIRSTY =
+            EFFECTS.register("bloodthirsty", () -> new Bloodthirsty(0x8B0000));
+    // 悖论 - 伤害转治疗，治疗时反伤。死亡时若带效果，以半颗心复活并清除效果
+    public static final DeferredHolder<MobEffect, MobEffect> PARADOX =
+            EFFECTS.register("paradox", () -> new Paradox(0x9B30FF));
+
+    public static void register(IEventBus modEventBus) {
+        EFFECTS.register(modEventBus);
+    }
+}

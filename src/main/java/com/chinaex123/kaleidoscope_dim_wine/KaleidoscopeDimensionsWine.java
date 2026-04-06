@@ -1,10 +1,10 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
-import com.chinaex123.kaleidoscope_dim_wine.block.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.effect.ModEffects;
-import com.chinaex123.kaleidoscope_dim_wine.event.DrinkBlockEntityTypeEventHandler;
-import com.chinaex123.kaleidoscope_dim_wine.fluid.ModFluids;
-import com.chinaex123.kaleidoscope_dim_wine.item.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
