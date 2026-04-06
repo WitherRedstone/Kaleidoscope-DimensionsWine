@@ -139,7 +139,7 @@ public class GradientTextHelper {
 
     /**
      * 创建粉橙绿渐变文本（#e737c6 → #ff9c59 → #c3f3bb）
-     * PS：红石酱喜欢这个qwq
+     * ~红石酱喜欢这个哇qwq~
      */
     public static MutableComponent createPinkOrangeGreenGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
         return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculatePinkOrangeGreenGradientColor);
@@ -147,7 +147,7 @@ public class GradientTextHelper {
 
     /**
      * 创建粉色渐变文本（#FFCCEE → #FF88DD → #FF00BB → #CC0099 → #990077）
-     * PS：红石酱喜欢这个qwq
+     * ~红石酱喜欢这个哇qwq~
      */
     public static MutableComponent createPinkGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
         return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculatePinkGradientColor);
@@ -162,10 +162,50 @@ public class GradientTextHelper {
 
     /**
      * 创建蓝青渐变文本（#1b2c55 → #3d85a9 → #63cac8 → #b8edff）
-     * PS：红石酱喜欢这个qwq
+     * ~红石酱喜欢这个哇qwq~
      */
     public static MutableComponent createBlueCyanGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
         return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateBlueCyanGradientColor);
+    }
+
+    /**
+     * 创建马卡龙四色渐变文本（#f3e5f5 → #ffe0b2 → #80deea → #ffeeff）
+     * ~红石酱喜欢这个哇qwq~
+     */
+    public static MutableComponent createMacaronFourGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
+        return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateMacaronFourGradientColor);
+    }
+
+    /**
+     * 创建马卡龙柔和渐变文本（#ffd1d1 → #f6ffb3 → #95e0e9 → #fbcbfb）
+     * ~红石酱喜欢这个哇qwq~
+     */
+    public static MutableComponent createMacaronSoftGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
+        return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateMacaronSoftGradientColor);
+    }
+
+    /**
+     * 创建梦幻四色渐变文本（#ad86d8 → #fe75b3 → #ff816a → #fab10e）
+     * ~红石酱喜欢这个哇qwq~
+     */
+    public static MutableComponent createDreamyFourGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
+        return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateDreamyFourGradientColor);
+    }
+
+    /**
+     * 创建深海极光渐变文本（#063e8a → #0081c9 → #00bfba → #42f36d）
+     * ~红石酱喜欢这个哇qwq~
+     */
+    public static MutableComponent createDeepSeaAuroraGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
+        return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateDeepSeaAuroraGradientColor);
+    }
+
+    /**
+     * 创建自然四季渐变文本（#3be70a → #c29500 → #c93e26 → #871553）
+     * ~红石酱喜欢这个哇qwq~
+     */
+    public static MutableComponent createNatureSeasonsGradientText(String text, boolean leftToRight, double speed, boolean bold, boolean italic, boolean underlined, boolean strikethrough, boolean obfuscated) {
+        return createGradientText(text, leftToRight, speed, bold, italic, underlined, strikethrough, obfuscated, ColorCalculator::calculateNatureSeasonsGradientColor);
     }
 
     /**

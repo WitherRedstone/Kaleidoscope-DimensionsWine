@@ -1015,4 +1015,239 @@ public class ColorCalculator {
 
         return (currentRed << 16) | (currentGreen << 8) | currentBlue;
     }
+
+    /**
+     * 计算马卡龙四色渐变颜色值（#f3e5f5 → #ffe0b2 → #80deea → #ffeeff 往复循环）
+     *
+     * @param params 颜色计算参数
+     * @return RGB 颜色值（格式：0xRRGGBB）
+     */
+    public static int calculateMacaronFourGradientColor(GradientTextHelper.ColorParams params) {
+        // #f3e5f5 (RGB: 243, 229, 245)
+        int c1r = 243, c1g = 229, c1b = 245;
+        // #ffe0b2 (RGB: 255, 224, 178)
+        int c2r = 255, c2g = 224, c2b = 178;
+        // #80deea (RGB: 128, 222, 234)
+        int c3r = 128, c3g = 222, c3b = 234;
+        // #ffeeff (RGB: 255, 238, 255)
+        int c4r = 255, c4g = 238, c4b = 255;
+
+        // 计算渐变进度（0.0 到 3.0），实现四色往复
+        double progress = ((double) params.index() / params.textLength() + params.preciseTime() / 10) % 3.0;
+        // 转换为 0→1.5→0 的往复进度
+        double wave = progress < 1.5 ? progress : (3.0 - progress);
+
+        int currentRed, currentGreen, currentBlue;
+        double p;
+
+        if (wave < 0.5) {
+            // 第一阶段：color1 → color2
+            p = wave * 2;
+            currentRed = (int) (c1r + (c2r - c1r) * p);
+            currentGreen = (int) (c1g + (c2g - c1g) * p);
+            currentBlue = (int) (c1b + (c2b - c1b) * p);
+        } else if (wave < 1.0) {
+            // 第二阶段：color2 → color3
+            p = (wave - 0.5) * 2;
+            currentRed = (int) (c2r + (c3r - c2r) * p);
+            currentGreen = (int) (c2g + (c3g - c2g) * p);
+            currentBlue = (int) (c2b + (c3b - c2b) * p);
+        } else {
+            // 第三阶段：color3 → color4
+            p = (wave - 1.0) * 2;
+            currentRed = (int) (c3r + (c4r - c3r) * p);
+            currentGreen = (int) (c3g + (c4g - c3g) * p);
+            currentBlue = (int) (c3b + (c4b - c3b) * p);
+        }
+
+        return (currentRed << 16) | (currentGreen << 8) | currentBlue;
+    }
+
+    /**
+     * 计算马卡龙柔和渐变颜色值（#ffd1d1 → #f6ffb3 → #95e0e9 → #fbcbfb 往复循环）
+     *
+     * @param params 颜色计算参数
+     * @return RGB 颜色值（格式：0xRRGGBB）
+     */
+    public static int calculateMacaronSoftGradientColor(GradientTextHelper.ColorParams params) {
+        // #ffd1d1 (RGB: 255, 209, 209)
+        int c1r = 255, c1g = 209, c1b = 209;
+        // #f6ffb3 (RGB: 246, 255, 179)
+        int c2r = 246, c2g = 255, c2b = 179;
+        // #95e0e9 (RGB: 149, 224, 233)
+        int c3r = 149, c3g = 224, c3b = 233;
+        // #fbcbfb (RGB: 251, 203, 251)
+        int c4r = 251, c4g = 203, c4b = 251;
+
+        // 计算渐变进度（0.0 到 3.0），实现四色往复
+        double progress = ((double) params.index() / params.textLength() + params.preciseTime() / 10) % 3.0;
+        // 转换为 0→1.5→0 的往复进度
+        double wave = progress < 1.5 ? progress : (3.0 - progress);
+
+        int currentRed, currentGreen, currentBlue;
+        double p;
+
+        if (wave < 0.5) {
+            // 第一阶段：color1 → color2
+            p = wave * 2;
+            currentRed = (int) (c1r + (c2r - c1r) * p);
+            currentGreen = (int) (c1g + (c2g - c1g) * p);
+            currentBlue = (int) (c1b + (c2b - c1b) * p);
+        } else if (wave < 1.0) {
+            // 第二阶段：color2 → color3
+            p = (wave - 0.5) * 2;
+            currentRed = (int) (c2r + (c3r - c2r) * p);
+            currentGreen = (int) (c2g + (c3g - c2g) * p);
+            currentBlue = (int) (c2b + (c3b - c2b) * p);
+        } else {
+            // 第三阶段：color3 → color4
+            p = (wave - 1.0) * 2;
+            currentRed = (int) (c3r + (c4r - c3r) * p);
+            currentGreen = (int) (c3g + (c4g - c3g) * p);
+            currentBlue = (int) (c3b + (c4b - c3b) * p);
+        }
+
+        return (currentRed << 16) | (currentGreen << 8) | currentBlue;
+    }
+
+    /**
+     * 计算梦幻四色渐变颜色值（#ad86d8 → #fe75b3 → #ff816a → #fab10e 往复循环）
+     *
+     * @param params 颜色计算参数
+     * @return RGB 颜色值（格式：0xRRGGBB）
+     */
+    public static int calculateDreamyFourGradientColor(GradientTextHelper.ColorParams params) {
+        // #ad86d8 (RGB: 173, 134, 216)
+        int c1r = 173, c1g = 134, c1b = 216;
+        // #fe75b3 (RGB: 254, 117, 179)
+        int c2r = 254, c2g = 117, c2b = 179;
+        // #ff816a (RGB: 255, 129, 106)
+        int c3r = 255, c3g = 129, c3b = 106;
+        // #fab10e (RGB: 250, 177, 14)
+        int c4r = 250, c4g = 177, c4b = 14;
+
+        // 计算渐变进度（0.0 到 3.0），实现四色往复
+        double progress = ((double) params.index() / params.textLength() + params.preciseTime() / 10) % 3.0;
+        // 转换为 0→1.5→0 的往复进度
+        double wave = progress < 1.5 ? progress : (3.0 - progress);
+
+        int currentRed, currentGreen, currentBlue;
+        double p;
+
+        if (wave < 0.5) {
+            // 第一阶段：color1 → color2
+            p = wave * 2;
+            currentRed = (int) (c1r + (c2r - c1r) * p);
+            currentGreen = (int) (c1g + (c2g - c1g) * p);
+            currentBlue = (int) (c1b + (c2b - c1b) * p);
+        } else if (wave < 1.0) {
+            // 第二阶段：color2 → color3
+            p = (wave - 0.5) * 2;
+            currentRed = (int) (c2r + (c3r - c2r) * p);
+            currentGreen = (int) (c2g + (c3g - c2g) * p);
+            currentBlue = (int) (c2b + (c3b - c2b) * p);
+        } else {
+            // 第三阶段：color3 → color4
+            p = (wave - 1.0) * 2;
+            currentRed = (int) (c3r + (c4r - c3r) * p);
+            currentGreen = (int) (c3g + (c4g - c3g) * p);
+            currentBlue = (int) (c3b + (c4b - c3b) * p);
+        }
+
+        return (currentRed << 16) | (currentGreen << 8) | currentBlue;
+    }
+
+    /**
+     * 计算深海极光渐变颜色值（#063e8a → #0081c9 → #00bfba → #42f36d 往复循环）
+     *
+     * @param params 颜色计算参数
+     * @return RGB 颜色值（格式：0xRRGGBB）
+     */
+    public static int calculateDeepSeaAuroraGradientColor(GradientTextHelper.ColorParams params) {
+        // #063e8a (RGB: 6, 62, 138)
+        int c1r = 6, c1g = 62, c1b = 138;
+        // #0081c9 (RGB: 0, 129, 201)
+        int c2r = 0, c2g = 129, c2b = 201;
+        // #00bfba (RGB: 0, 191, 186)
+        int c3r = 0, c3g = 191, c3b = 186;
+        // #42f36d (RGB: 66, 243, 109)
+        int c4r = 66, c4g = 243, c4b = 109;
+
+        // 计算渐变进度（0.0 到 3.0），实现四色往复
+        double progress = ((double) params.index() / params.textLength() + params.preciseTime() / 10) % 3.0;
+        // 转换为 0→1.5→0 的往复进度
+        double wave = progress < 1.5 ? progress : (3.0 - progress);
+
+        int currentRed, currentGreen, currentBlue;
+        double p;
+
+        if (wave < 0.5) {
+            // 第一阶段：color1 → color2
+            p = wave * 2;
+            currentRed = (int) (c1r + (c2r - c1r) * p);
+            currentGreen = (int) (c1g + (c2g - c1g) * p);
+            currentBlue = (int) (c1b + (c2b - c1b) * p);
+        } else if (wave < 1.0) {
+            // 第二阶段：color2 → color3
+            p = (wave - 0.5) * 2;
+            currentRed = (int) (c2r + (c3r - c2r) * p);
+            currentGreen = (int) (c2g + (c3g - c2g) * p);
+            currentBlue = (int) (c2b + (c3b - c2b) * p);
+        } else {
+            // 第三阶段：color3 → color4
+            p = (wave - 1.0) * 2;
+            currentRed = (int) (c3r + (c4r - c3r) * p);
+            currentGreen = (int) (c3g + (c4g - c3g) * p);
+            currentBlue = (int) (c3b + (c4b - c3b) * p);
+        }
+
+        return (currentRed << 16) | (currentGreen << 8) | currentBlue;
+    }
+
+    /**
+     * 计算自然四季渐变颜色值（#3be70a → #c29500 → #c93e26 → #871553 往复循环）
+     *
+     * @param params 颜色计算参数
+     * @return RGB 颜色值（格式：0xRRGGBB）
+     */
+    public static int calculateNatureSeasonsGradientColor(GradientTextHelper.ColorParams params) {
+        // #3be70a (RGB: 59, 231, 10)
+        int c1r = 59, c1g = 231, c1b = 10;
+        // #c29500 (RGB: 194, 149, 0)
+        int c2r = 194, c2g = 149, c2b = 0;
+        // #c93e26 (RGB: 201, 62, 38)
+        int c3r = 201, c3g = 62, c3b = 38;
+        // #871553 (RGB: 135, 21, 83)
+        int c4r = 135, c4g = 21, c4b = 83;
+
+        // 计算渐变进度（0.0 到 3.0），实现四色往复
+        double progress = ((double) params.index() / params.textLength() + params.preciseTime() / 10) % 3.0;
+        // 转换为 0→1.5→0 的往复进度
+        double wave = progress < 1.5 ? progress : (3.0 - progress);
+
+        int currentRed, currentGreen, currentBlue;
+        double p;
+
+        if (wave < 0.5) {
+            // 第一阶段：color1 → color2
+            p = wave * 2;
+            currentRed = (int) (c1r + (c2r - c1r) * p);
+            currentGreen = (int) (c1g + (c2g - c1g) * p);
+            currentBlue = (int) (c1b + (c2b - c1b) * p);
+        } else if (wave < 1.0) {
+            // 第二阶段：color2 → color3
+            p = (wave - 0.5) * 2;
+            currentRed = (int) (c2r + (c3r - c2r) * p);
+            currentGreen = (int) (c2g + (c3g - c2g) * p);
+            currentBlue = (int) (c2b + (c3b - c2b) * p);
+        } else {
+            // 第三阶段：color3 → color4
+            p = (wave - 1.0) * 2;
+            currentRed = (int) (c3r + (c4r - c3r) * p);
+            currentGreen = (int) (c3g + (c4g - c3g) * p);
+            currentBlue = (int) (c3b + (c4b - c3b) * p);
+        }
+
+        return (currentRed << 16) | (currentGreen << 8) | currentBlue;
+    }
 }
