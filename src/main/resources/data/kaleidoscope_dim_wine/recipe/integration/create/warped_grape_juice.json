@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:warped_grape"
+    }
+  ],
+  "results": [
+    {
+      "id": "kaleidoscope_dim_wine:warped_grape_juice",
+      "amount": 1000
+    }
+  ]
+}

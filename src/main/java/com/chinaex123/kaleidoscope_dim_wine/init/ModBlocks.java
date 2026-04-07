@@ -55,22 +55,22 @@ public class ModBlocks {
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Block, Block> CRIMSON_CRESCENDO =
-            BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 诡影尊爵
     public static final DeferredHolder<Block, Block> ETHEREAL_NOBLE =
-            BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 疣域轩尼诗
     public static final DeferredHolder<Block, Block> WART_HENNESSY =
-            BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 烈焰马爹利
     public static final DeferredHolder<Block, Block> BLAZE_MARTELL =
-            BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 岩浆皇家礼炮
     public static final DeferredHolder<Block, Block> MAGMA_ROYAL_SALUTE =
-            BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 黑骨拉菲
     public static final DeferredHolder<Block, Block> BLACK_BONE_LAFITE =
-            BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
 
     // ==================== 次元维度 - 末地 ====================
@@ -97,31 +97,31 @@ public class ModBlocks {
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Block, Block> CHORUS_COGNAC =
-            BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 龙息白兰地
     public static final DeferredHolder<Block, Block> DRAGONS_BREATH_BRANDY =
-            BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 深渊波特
     public static final DeferredHolder<Block, Block> ABYSSAL_PORTER =
-            BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 静默雪莉
     public static final DeferredHolder<Block, Block> SILENT_SHERRY =
-            BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 遗忘玛格丽特
     public static final DeferredHolder<Block, Block> FORGOTTEN_MARGARITA =
-            BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 幻梦泡影
     public static final DeferredHolder<Block, Block> PHANTOM_DREAM_BUBBLE =
-            BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 终末星光
     public static final DeferredHolder<Block, Block> END_STARLIGHT =
-            BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 神血波尔多
     public static final DeferredHolder<Block, Block> DIVINE_EMBRYO_PORT =
-            BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 龙血酒
     public static final DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE =
-            BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(16).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
 
     // ==================== 次元维度 - 暮色森林 ====================

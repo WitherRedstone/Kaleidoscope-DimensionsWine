@@ -2,8 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
-import com.chinaex123.kaleidoscope_dim_wine.tag.ModItemTags;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;

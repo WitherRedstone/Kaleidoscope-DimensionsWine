@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.tag;
+package com.chinaex123.kaleidoscope_dim_wine.init;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import net.minecraft.core.registries.Registries;

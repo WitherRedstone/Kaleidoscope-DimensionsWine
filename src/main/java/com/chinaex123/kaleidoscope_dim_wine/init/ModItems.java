@@ -4,14 +4,21 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.CrimsonGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.DreamfruitCropWildVineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
+import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS_REGISTER =
@@ -77,8 +84,8 @@ public class ModItems {
     public static final DeferredItem<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
             new BucketItem(ModFluids.DRAGON_BLOOD.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // 龙血瓶
-    public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE =
-            ITEMS_REGISTER.register("dragon_blood_bottle", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE = ITEMS_REGISTER.register("dragon_blood_bottle", () ->
+            new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Item, DrinkBlockItem> CHORUS_COGNAC =

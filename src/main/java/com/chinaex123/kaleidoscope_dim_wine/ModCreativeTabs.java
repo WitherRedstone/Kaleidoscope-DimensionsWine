@@ -20,9 +20,10 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.CRIMSON_GRAPE.get()))
                     .title(Component.translatable("itemGroup.kaleidoscope_dim_wine_tab"))
                     .displayItems((parameters, output) -> {
-
+                        // ==================== 小彩蛋 ====================
                         output.accept(ModBlocks.DOLL_001.get()); // 玩偶 - ChinaEX123_BILI
                         output.accept(ModBlocks.DOLL_002.get()); // 玩偶 - Fvue233
+
 
                         // ==================== 流体桶 ====================
                         // -------------------- 下界 --------------------

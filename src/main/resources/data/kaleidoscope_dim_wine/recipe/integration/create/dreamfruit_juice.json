@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    }
+  ],
+  "results": [
+    {
+      "id": "kaleidoscope_dim_wine:dreamfruit_juice",
+      "amount": 1000
+    }
+  ]
+}

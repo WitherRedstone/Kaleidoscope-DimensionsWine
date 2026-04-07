@@ -35,6 +35,7 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.crimson_grapevine")
         });
+
         // 诡异葡萄藤
         itemInfos.put(ModItems.WARPED_GRAPEVINE.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
@@ -46,6 +47,7 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.warped_grapevine")
         });
+
         // 迷梦果
         itemInfos.put(ModItems.DREAMFRUIT.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
@@ -58,12 +60,25 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit")
         });
+
         // 龙血桶
         itemInfos.put(ModItems.DRAGON_BLOOD_BUCKET.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.dragon_blood_bucket"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.special_features").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.special_features.dragon_blood_bucket")
+        });
+
+        // 绯红菌露
+        itemInfos.put(ModItems.CRIMSON_FUNGAL_SAP.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.crimson_fungal_sap")
+        });
+
+        // 诡影菌髓
+        itemInfos.put(ModItems.WARPED_FUNGAL_SAP.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.warped_fungal_sap")
         });
 
         itemInfos.forEach(registration::addIngredientInfo);
