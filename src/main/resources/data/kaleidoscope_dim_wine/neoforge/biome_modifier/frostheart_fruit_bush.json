@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#kaleidoscope_dim_wine:frostheart_fruit_biomes",
+  "features": [
+    "kaleidoscope_dim_wine:frostheart_fruit_bush"
+  ],
+  "step": "vegetal_decoration"
+}

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "kaleidoscope_dim_wine:block/grape/warped_grape/warped_grapevine_plant"
+      "model": "kaleidoscope_dim_wine:block/crops/warped_grape/warped_grapevine_plant"
     }
   }
 }

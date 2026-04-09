@@ -3,12 +3,10 @@ package com.chinaex123.kaleidoscope_dim_wine.init;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.CrimsonGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.DreamfruitCropWildVineItem;
+import com.chinaex123.kaleidoscope_dim_wine.item.Crop.FrostheartFruitItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -76,6 +74,10 @@ public class ModItems {
     // 迷梦果
     public static final DeferredItem<Item> DREAMFRUIT =
             ITEMS_REGISTER.register("dreamfruit", () -> new DreamfruitCropWildVineItem(new Item.Properties().food(ModFoods.DREAMFRUIT)));
+    // -------------------- 物品 --------------------
+    // 龙血瓶
+    public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE = ITEMS_REGISTER.register("dragon_blood_bottle", () ->
+            new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
     // -------------------- 流体 --------------------
     // 迷梦果汁桶
     public static final DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
@@ -83,9 +85,6 @@ public class ModItems {
     // 龙血桶
     public static final DeferredItem<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
             new BucketItem(ModFluids.DRAGON_BLOOD.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
-    // 龙血瓶
-    public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE = ITEMS_REGISTER.register("dragon_blood_bottle", () ->
-            new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Item, DrinkBlockItem> CHORUS_COGNAC =
@@ -118,8 +117,14 @@ public class ModItems {
 
     // ==================== 次元维度 - 暮色森林 ====================
     // -------------------- 作物 --------------------
+    // 霜心果
+    public static final DeferredItem<Item> FROSTHEART_FRUIT =
+            ITEMS_REGISTER.register("frostheart_fruit", () -> new FrostheartFruitItem(new Item.Properties().food(ModFoods.FROSTHEART_FRUIT)));
     // -------------------- 物品 --------------------
     // -------------------- 流体 --------------------
+    // 火炬浆果汁桶
+    public static final DeferredItem<Item> TORCHBERRIES_JUICE_BUCKET =
+            ITEMS_REGISTER.register("torchberries_juice_bucket", () -> new BucketItem(ModFluids.TORCHBERRIES_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
 
 

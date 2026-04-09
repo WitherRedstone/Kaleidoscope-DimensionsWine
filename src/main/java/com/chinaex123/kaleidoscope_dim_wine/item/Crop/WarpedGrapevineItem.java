@@ -16,7 +16,9 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * 绯红葡萄藤物品 - 右键普通藤架时，将其替换为绯红葡萄藤
+ * 诡异葡萄藤物品 - 用于种植诡异葡萄藤的种子
+ * <p>
+ * 可放置在诡异葡萄藤架或诡异疣块上，点击方块底部会向下生长藤蔓
  */
 public class WarpedGrapevineItem extends Item {
 

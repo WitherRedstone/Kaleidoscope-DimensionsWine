@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "cross": "kaleidoscope_dim_wine:block/grape/dreamfruit_vine/dreamfruit_vine_plant_lit"
-  }
-}

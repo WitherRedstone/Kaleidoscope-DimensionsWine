@@ -17,11 +17,8 @@ public final class DrinkBlockEntityTypeEventHandler {
     private static final ResourceLocation TAVERN_DRINK_BE = ResourceLocation.tryBuild("kaleidoscope_tavern", "drink");
 
     public static void onBlockEntityTypeAddBlocks(BlockEntityTypeAddBlocksEvent event) {
-        if (!ModList.get().isLoaded("kaleidoscope_tavern")) {
-            return;
-        }
         BuiltInRegistries.BLOCK_ENTITY_TYPE.getOptional(TAVERN_DRINK_BE).ifPresent(drinkType -> {
-            Block[] drinks = new Block[] {
+            event.modify(drinkType,
                     // ==================== 次元维度 - 下界 ====================
                     ModBlocks.CRIMSON_CRESCENDO.get(), // 绯红绝响
                     ModBlocks.ETHEREAL_NOBLE.get(), // 以太贵族
@@ -40,10 +37,7 @@ public final class DrinkBlockEntityTypeEventHandler {
                     ModBlocks.END_STARLIGHT.get(), // 终末星光
                     ModBlocks.DIVINE_EMBRYO_PORT.get(), // 神血波尔多
                     ModBlocks.DRACONIC_BLOOD_WINE.get() // 龙血酒
-            };
-            for (Block drink : drinks) {
-                event.modify(drinkType, drink);
-            }
+            );
         });
     }
 }

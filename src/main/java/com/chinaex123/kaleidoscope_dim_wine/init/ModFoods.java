@@ -16,4 +16,6 @@ public class ModFoods {
     public static final FoodProperties DRAGON_BLOOD_BOTTLE = new FoodProperties.Builder()
             .effect(() -> new MobEffectInstance(MobEffects.WITHER, 20 * 5, 3), 1.0f) // 凋零
             .alwaysEdible().build();
+    // 霜心果
+    public static final FoodProperties FROSTHEART_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.4f).build();
 }

@@ -2,9 +2,11 @@ package com.chinaex123.kaleidoscope_dim_wine.init;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.FrostheartFruit.FrostheartFruitBushBlock;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.DollBlock;
+import com.chinaex123.kaleidoscope_dim_wine.compat.KaleidoscopeDoll.KaleidoscopeDollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.item.BlockItem;
@@ -126,6 +128,8 @@ public class ModBlocks {
 
     // ==================== 次元维度 - 暮色森林 ====================
     // -------------------- 作物 --------------------
+    // 霜心果丛 - 类似甜浆果种下后的方块
+    public static final DeferredBlock<Block> FROSTHEART_FRUIT_BUSH = BLOCK_REGISTER.register("frostheart_fruit_bush", FrostheartFruitBushBlock::new);
     // -------------------- 流体 --------------------
     // -------------------- 酒类 --------------------
 
@@ -169,37 +173,18 @@ public class ModBlocks {
         return blocks;
     }
 
-    public static void register(IEventBus eventBus) {
-        BLOCK_REGISTER.register(eventBus);
-    }
-
     private static DeferredBlock<Block> registerConditionalDoll(String name, Rarity rarity) {
         return registerBlocks(name, () -> {
-            if (isKaleidoscopeDollLoaded()) {
-                return createKaleidoscopeDoll();
+            if (KaleidoscopeDollBlock.isKaleidoscopeDollLoaded()) {
+                Block doll = KaleidoscopeDollBlock.createKaleidoscopeDoll();
+                return doll != null ? doll : new DollBlock();
             } else {
                 return new DollBlock();
             }
         }, rarity);
     }
 
-    private static boolean isKaleidoscopeDollLoaded() {
-        try {
-            Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.block.DollBlock");
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
-
-    private static Block createKaleidoscopeDoll() {
-        try {
-            // 使用反射创建森罗物语的 DollBlock 实例
-            Class<?> kaleidoDollClass = Class.forName("com.github.ysbbbbbb.kaleidoscopedoll.block.DollBlock");
-            return (Block) kaleidoDollClass.getDeclaredConstructor().newInstance();
-        } catch (Exception e) {
-            KaleidoscopeDimensionsWine.LOGGER.error("Failed to create Kaleidoscope Doll using reflection", e);
-            return new DollBlock();
-        }
+    public static void register(IEventBus eventBus) {
+        BLOCK_REGISTER.register(eventBus);
     }
 }

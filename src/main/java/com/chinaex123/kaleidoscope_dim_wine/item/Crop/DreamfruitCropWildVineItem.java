@@ -12,7 +12,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class DreamfruitCropWildVineItem  extends Item {
+/**
+ * 迷梦果藤物品 - 用于种植迷梦果藤的种子
+ * <p>
+ * 仅允许在末地石或紫珀块的底部种植，点击方块底部会向下生长藤蔓
+ */
+public class DreamfruitCropWildVineItem extends Item {
 
     public DreamfruitCropWildVineItem(Properties properties) {
         super(properties);

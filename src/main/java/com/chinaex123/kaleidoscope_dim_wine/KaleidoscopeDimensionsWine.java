@@ -1,15 +1,14 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
 import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.event.MaximizationEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluids;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.neoforged.fml.config.ModConfig.Type;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,5 +26,7 @@ public class KaleidoscopeDimensionsWine {
         ModEffects.register(modEventBus);
         modEventBus.addListener(DrinkBlockEntityTypeEventHandler::onBlockEntityTypeAddBlocks);
         modContainer.registerConfig(Type.COMMON, ServerConfig.SPEC);
+
+        NeoForge.EVENT_BUS.register(MaximizationEventHandler.class);
     }
 }

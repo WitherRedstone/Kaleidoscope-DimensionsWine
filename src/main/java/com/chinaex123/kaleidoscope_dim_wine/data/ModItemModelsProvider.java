@@ -60,8 +60,10 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 暮色森林 ====================
         // -------------------- 作物 --------------------
+        basicItem(ModItems.FROSTHEART_FRUIT.getId()); // 霜心果
         // -------------------- 物品 --------------------
         // -------------------- 流体 --------------------
+        basicItem(ModItems.TORCHBERRIES_JUICE_BUCKET.getId()); // 火炬浆果汁桶
         // -------------------- 酒类 --------------------
 
 
