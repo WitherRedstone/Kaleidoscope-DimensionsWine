@@ -39,6 +39,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.DREAMFRUIT.get()); // 迷梦果
 
                         // ==================== 物品 ====================
+                        output.accept(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
                         output.accept(ModItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
                         output.accept(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
                         output.accept(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶

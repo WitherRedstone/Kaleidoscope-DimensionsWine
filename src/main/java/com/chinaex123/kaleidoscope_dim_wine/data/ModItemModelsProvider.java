@@ -47,6 +47,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 作物 --------------------
         basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
         // -------------------- 物品 --------------------
+        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
         basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑

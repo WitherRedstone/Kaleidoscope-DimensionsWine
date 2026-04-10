@@ -7,6 +7,7 @@ import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.DollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.compat.KaleidoscopeDoll.KaleidoscopeDollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.BottleBlock;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -95,6 +96,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
     // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
     public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
+    // -------------------- 物品 --------------------
+    // 空竹杯
+    public static final DeferredBlock<Block> EMPTY_BAMBOO_CUP = BLOCK_REGISTER.register("empty_bamboo_cup", () -> new BottleBlock());
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Block, Block> CHORUS_COGNAC =

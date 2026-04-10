@@ -36,12 +36,11 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
                 .add(ModItems.CRIMSON_GRAPE.get()) // 绯红葡萄
                 .add(ModItems.WARPED_GRAPE.get()) // 诡异葡萄
                 .add(ModItems.DREAMFRUIT.get()); // 迷梦果
-
-        // 静谧四季 - sereneseasons:year_round_crops
-        this.tag(ModItemTags.YEAR_ROUND_CROPS)
+        // diet:fruits
+        this.tag(ModItemTags.FRUITS)
                 .add(ModItems.CRIMSON_GRAPE.get()) // 绯红葡萄
                 .add(ModItems.WARPED_GRAPE.get()) // 诡异葡萄
-                .add(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
+                .add(ModItems.DREAMFRUIT.get()); // 迷梦果
 
 
         // ==================== 次元维度 - 暮色森林 ====================
@@ -56,6 +55,18 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
             this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "colossal")))
                     .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword"))) // 巨人剑
                     .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_pickaxe"))); // 巨人镐
+            // 酿酒的水果 - kaleidoscope_dim_wine:wine/berry
+            this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "wine/berry")))
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "raspberry"))) // 树莓
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "blueberry"))) // 蓝莓
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "blackberry"))) // 黑莓
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "maloberry"))); // 桑葚
+            // 酿酒的云 - kaleidoscope_dim_wine:wine/cloud
+            this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "wine/cloud")))
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "wispy_cloud"))) // 薄云
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "fluffy_cloud"))) // 浮云
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "rainy_cloud"))) // 雨云
+                    .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "snowy_cloud"))); // 雪云
         }
     }
 }

@@ -5,6 +5,7 @@ import com.chinaex123.kaleidoscope_dim_wine.item.Crop.CrimsonGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.DreamfruitCropWildVineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
@@ -74,6 +75,9 @@ public class ModItems {
     public static final DeferredItem<Item> DREAMFRUIT =
             ITEMS_REGISTER.register("dreamfruit", () -> new DreamfruitCropWildVineItem(new Item.Properties().food(ModFoods.DREAMFRUIT)));
     // -------------------- 物品 --------------------
+    // 空竹杯
+    public static final DeferredItem<Item> EMPTY_BAMBOO_CUP = ITEMS_REGISTER.register("empty_bamboo_cup", () ->
+            new BottleBlockItem(ModBlocks.EMPTY_BAMBOO_CUP.get(), new Item.Properties()));
     // 龙血瓶
     public static final DeferredItem<Item> DRAGON_BLOOD_BOTTLE = ITEMS_REGISTER.register("dragon_blood_bottle", () ->
             new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));

@@ -80,6 +80,7 @@
   "effect.kaleidoscope_dim_wine.minify.desc": "缩小玩家体型",
 
   "_comment.wine_items": "酒类-物品",
+  "item.kaleidoscope_dim_wine.empty_bamboo_cup": "空竹杯",
   "item.kaleidoscope_dim_wine.crimson_crescendo": "绯红绝响",
   "item.kaleidoscope_dim_wine.ethereal_noble": "诡影尊爵",
   "item.kaleidoscope_dim_wine.wart_hennessy": "疣域轩尼诗",
@@ -111,6 +112,7 @@
   "item.kaleidoscope_dim_wine.goblins_stash": "地精的私藏",
 
   "_comment.wine_blocksentity": "酒类-方块实体",
+  "block.kaleidoscope_dim_wine.empty_bamboo_cup": "空竹杯",
   "block.kaleidoscope_dim_wine.crimson_crescendo": "绯红绝响",
   "block.kaleidoscope_dim_wine.ethereal_noble": "诡影尊爵",
   "block.kaleidoscope_dim_wine.wart_hennessy": "疣域轩尼诗",

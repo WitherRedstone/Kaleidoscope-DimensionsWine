@@ -80,6 +80,7 @@
   "effect.kaleidoscope_dim_wine.minify.desc": "Decreases the player's size.",
 
   "_comment.wine_items": "Wine-Items",
+  "item.kaleidoscope_dim_wine.empty_bamboo_cup": "Empty Bamboo Cup",
   "item.kaleidoscope_dim_wine.crimson_crescendo": "Crimson Crescendo",
   "item.kaleidoscope_dim_wine.ethereal_noble": "Ethereal Noble",
   "item.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",
@@ -111,6 +112,7 @@
   "item.kaleidoscope_dim_wine.goblins_stash": "Goblin's Stash",
 
   "_comment.wine_blocksentity": "Wine-Blocks Entity",
+  "block.kaleidoscope_dim_wine.empty_bamboo_cup": "Empty Bamboo Cup",
   "block.kaleidoscope_dim_wine.crimson_crescendo": "Crimson Crescendo",
   "block.kaleidoscope_dim_wine.ethereal_noble": "Ethereal Noble",
   "block.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",
