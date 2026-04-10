@@ -1,4 +1,10 @@
 {
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
   "type": "neoforge:add_features",
   "biomes": "#kaleidoscope_dim_wine:frostheart_fruit_biomes",
   "features": [

@@ -38,6 +38,15 @@ public class ModEffects {
     // 硬化 - 按百分比减免所有来源的伤害
     public static final DeferredHolder<MobEffect, MobEffect> HARDENED =
             EFFECTS.register("hardened", () -> new Hardened(0x9B30FF));
+    // 自然祝福 - 周围植物生长加速
+    public static final DeferredHolder<MobEffect, MobEffect> NATURE_BLESSING =
+            EFFECTS.register("nature_blessing", () -> new NatureBlessing(0x9B30FF));
+    // 霜寒 - 使生物冻结
+    public static final DeferredHolder<MobEffect, MobEffect> FROSTBITE =
+            EFFECTS.register("frostbite", () -> new Frostbite(0x9B30FF));
+    // 霜降 - 攻击生物时，使生物获得霜寒效果
+    public static final DeferredHolder<MobEffect, MobEffect> FROSTFALL =
+            EFFECTS.register("frostfall", () -> new Frostfall(0x9B30FF));
     // 巨大化 - 增大玩家体型
     public static final DeferredHolder<MobEffect, MobEffect> MAXIMIZATION =
             EFFECTS.register("maximization", () -> new Maximization(0x9B30FF));

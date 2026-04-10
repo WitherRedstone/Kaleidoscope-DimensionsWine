@@ -69,7 +69,23 @@ public class ModCreativeTabs {
                             // ==================== 作物 ====================
                             output.accept(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
                             // ==================== 物品 ====================
+                            output.accept(TwilightforestItems.COLOSSAL_FRAGMENT.get()); // 巨物碎片
+                            output.accept(TwilightforestItems.GOBLIN_ESSENCE.get()); // 哥布林精华
                             // ==================== 酒类 ====================
+                            output.accept(TwilightforestItems.CAVE_GLOWBREW.get()); // 洞窟萤火酿
+                            output.accept(TwilightforestItems.DAWNLIGHT_DEW.get()); // 林隙晨露
+                            output.accept(TwilightforestItems.DEAD_END_SPITTLE.get()); // 死巷之唾
+                            output.accept(TwilightforestItems.SNAKESKIN_LIQUEUR.get()); // 蛇蜕利口酒
+                            output.accept(TwilightforestItems.FROSTVEIN_BEASTBLOOD.get()); // 霜脉兽血
+                            output.accept(TwilightforestItems.RANGERS_SATCHEL.get()); // 巡林客的背囊
+                            output.accept(TwilightforestItems.EMBEREYE.get()); // 烬瞳
+                            output.accept(TwilightforestItems.STAGCALL_MONSOON.get()); // 鹿鸣季风
+                            output.accept(TwilightforestItems.THORNHEART.get()); // 荆棘之心
+                            output.accept(TwilightforestItems.DRUIDS_SECRET_BREW.get()); // 德鲁伊的秘酿
+                            output.accept(TwilightforestItems.MOORGLOW_BIRDS_SONG.get()); // 辉夜鸟之歌
+                            output.accept(TwilightforestItems.PERENNIAL_FROST.get()); // 终年冻土
+                            output.accept(TwilightforestItems.GIANTS_HYMN.get()); // 巨人赞歌
+                            output.accept(TwilightforestItems.GOBLINS_STASH.get()); // 地精的私藏
                         }
 
 

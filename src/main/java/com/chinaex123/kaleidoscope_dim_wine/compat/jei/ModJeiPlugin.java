@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.compat.JEI;
+package com.chinaex123.kaleidoscope_dim_wine.compat.jei;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;

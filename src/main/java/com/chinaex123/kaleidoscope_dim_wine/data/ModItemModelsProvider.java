@@ -20,6 +20,9 @@ public class ModItemModelsProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // ==================== 次元维度 - 下界 ====================
+        // -------------------- 流体 --------------------
+        basicItem(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
+        basicItem(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
         // -------------------- 作物 --------------------
         basicItem(ModItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
         basicItem(ModItems.CRIMSON_GRAPE.get()); // 绯红葡萄
@@ -28,9 +31,6 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 物品 --------------------
         basicItem(ModItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
         basicItem(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
-        // -------------------- 流体 --------------------
-        basicItem(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
-        basicItem(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CRIMSON_CRESCENDO); // 绯红绝响
         basicDrinkItem(ModItems.ETHEREAL_NOBLE); // 诡影尊爵
@@ -41,13 +41,13 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
 
         // ==================== 次元维度 - 末地 ====================
+        // -------------------- 流体 --------------------
+        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
+        basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
         // -------------------- 作物 --------------------
         basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
         // -------------------- 物品 --------------------
         basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
-        // -------------------- 流体 --------------------
-        basicItem(ModItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
-        basicItem(ModItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑
         basicDrinkItem(ModItems.DRAGONS_BREATH_BRANDY); // 龙息白兰地
@@ -62,13 +62,29 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
-            // -------------------- 作物 --------------------
-            basicItem(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
-            // -------------------- 物品 --------------------
             // -------------------- 流体 --------------------
             basicItem(TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.getId()); // 火炬浆果汁桶
             basicItem(TwilightforestItems.FROSTHEART_FRUIT_JUICE_BUCKET.getId()); // 霜心果汁桶
+            // -------------------- 作物 --------------------
+            basicItem(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
+            // -------------------- 物品 --------------------
+            basicItem(TwilightforestItems.COLOSSAL_FRAGMENT.getId()); // 巨物碎片
+            basicItem(TwilightforestItems.GOBLIN_ESSENCE.getId()); // 哥布林精华
             // -------------------- 酒类 --------------------
+//            compatTwilightforestDrinkItem(TwilightforestItems.CAVE_GLOWBREW); // 洞窟萤火酿
+//            compatTwilightforestDrinkItem(TwilightforestItems.DAWNLIGHT_DEW); // 林隙晨露
+//            compatTwilightforestDrinkItem(TwilightforestItems.DEAD_END_SPITTLE); // 死巷之唾
+//            compatTwilightforestDrinkItem(TwilightforestItems.SNAKESKIN_LIQUEUR); // 蛇蜕利口酒
+//            compatTwilightforestDrinkItem(TwilightforestItems.FROSTVEIN_BEASTBLOOD); // 霜脉兽血
+//            compatTwilightforestDrinkItem(TwilightforestItems.RANGERS_SATCHEL); // 巡林客的背囊
+//            compatTwilightforestDrinkItem(TwilightforestItems.EMBEREYE); // 烬瞳
+            compatTwilightforestDrinkItem(TwilightforestItems.STAGCALL_MONSOON); // 鹿鸣季风
+//            compatTwilightforestDrinkItem(TwilightforestItems.THORNHEART); // 荆棘之心
+//            compatTwilightforestDrinkItem(TwilightforestItems.DRUIDS_SECRET_BREW); // 德鲁伊的秘酿
+//            compatTwilightforestDrinkItem(TwilightforestItems.MOORGLOW_BIRDS_SONG); // 辉夜鸟之歌
+//            compatTwilightforestDrinkItem(TwilightforestItems.PERENNIAL_FROST); // 终年冻土
+//            compatTwilightforestDrinkItem(TwilightforestItems.GIANTS_HYMN); // 巨人赞歌
+//            compatTwilightforestDrinkItem(TwilightforestItems.GOBLINS_STASH); // 地精的私藏
         }
 
 
@@ -100,5 +116,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/" + itemName));
+    }
+
+    /**
+     * 联动酒类 - 暮色森林（路径：item/drink/compat/twilightforest）
+     */
+    private void compatTwilightforestDrinkItem(DeferredHolder<Item, ? extends Item> item) {
+        String itemName = item.getId().getPath();
+        ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
+        builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/twilightforest/" + itemName));
     }
 }

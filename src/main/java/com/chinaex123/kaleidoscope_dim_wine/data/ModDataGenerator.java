@@ -27,5 +27,6 @@ public class ModDataGenerator {
         generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
         generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new ModRecipesProvider(packOutput, lookupProvider));
     }
 }

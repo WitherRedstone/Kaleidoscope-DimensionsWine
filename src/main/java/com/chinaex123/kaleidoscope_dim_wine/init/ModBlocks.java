@@ -75,11 +75,6 @@ public class ModBlocks {
 
 
     // ==================== 次元维度 - 末地 ====================
-    // -------------------- 作物 --------------------
-    // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
-    public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
-    // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
-    public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
     // -------------------- 流体 --------------------
     // 龙血
     public static final DeferredBlock<LiquidBlock> DRAGON_BLOOD_FLUID =
@@ -95,6 +90,11 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_RED)
                     .sound(SoundType.HONEY_BLOCK)
             ));
+    // -------------------- 作物 --------------------
+    // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
+    public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
+    // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
+    public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Block, Block> CHORUS_COGNAC =

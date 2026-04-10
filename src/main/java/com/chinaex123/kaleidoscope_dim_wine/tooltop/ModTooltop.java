@@ -67,22 +67,22 @@ public class ModTooltop {
 
         // ==================== 次元维度 - 末地 ====================
         // 迷梦果
-        if (stack.getItem() == TwilightforestItems.FROSTHEART_FRUIT.get()) {
+        if (stack.getItem() == ModItems.DREAMFRUIT.get()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
-            String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.dreamfruit").getString();
+            String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.frostheart_fruit").getString();
             tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
-            String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit").getString();
+            String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.frostheart_fruit").getString();
             tooltip.add(GradientTextHelper.createPinkGradientText(text2, false,  1.0, false, false, false, false, false));
         }
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
             // 霜心果
-            if (stack.getItem() == ModItems.DREAMFRUIT.get()) {
+            if (stack.getItem() == TwilightforestItems.FROSTHEART_FRUIT.get()) {
                 // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
-                String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.frostheart_fruit").getString();
+                String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.dreamfruit").getString();
                 tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
-                String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.frostheart_fruit").getString();
+                String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit").getString();
                 tooltip.add(GradientTextHelper.createPinkGradientText(text2, false,  1.0, false, false, false, false, false));
             }
         }

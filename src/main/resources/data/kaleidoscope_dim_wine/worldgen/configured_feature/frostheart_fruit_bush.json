@@ -1,4 +1,10 @@
 {
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
   "type": "minecraft:random_patch",
   "config": {
     "tries": 16,

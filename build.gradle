@@ -134,10 +134,6 @@ dependencies {
     implementation "curse.maven:create-328085:7178775" // 机械动力
 
     implementation "curse.maven:the-twilight-forest-227639:7797302" // 维度酒 - 暮色森林
-//    implementation "curse.maven:ecliptic-seasons-1118306:7804077" // 节气
-//    implementation "curse.maven:serene-seasons-291874:6182596" // 静谧四季
-//    implementation "curse.maven:glitchcore-955399:5660740" // 静谧四季前置
-
 
     // 辅助
     localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
