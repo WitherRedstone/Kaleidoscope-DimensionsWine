@@ -1,9 +1,13 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
 import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.event.MaximizationEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.event.EffectAttributeRemoveHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.config.ModConfig.Type;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -22,11 +26,20 @@ public class KaleidoscopeDimensionsWine {
         ModItems.register(modEventBus);
         ModFluids.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
-        ModCreativeTabs.register(modEventBus);
-        ModEffects.register(modEventBus);
         modEventBus.addListener(DrinkBlockEntityTypeEventHandler::onBlockEntityTypeAddBlocks);
+
+        ModEffects.register(modEventBus);
+        NeoForge.EVENT_BUS.register(EffectAttributeRemoveHandler.class);
+
+        ModCreativeTabs.register(modEventBus);
         modContainer.registerConfig(Type.COMMON, ServerConfig.SPEC);
 
-        NeoForge.EVENT_BUS.register(MaximizationEventHandler.class);
+        // ==================== 次元维度 - 暮色森林 ====================
+        if (ModList.get().isLoaded("twilightforest")) {
+            TwilightforestBlocks.register(modEventBus);
+            TwilightforestItems.register(modEventBus);
+            TwilightforestFluids.FLUID_TYPES.register(modEventBus);
+            TwilightforestFluids.FLUIDS.register(modEventBus);
+        }
     }
 }

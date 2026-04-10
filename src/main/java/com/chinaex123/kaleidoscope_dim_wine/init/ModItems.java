@@ -3,7 +3,6 @@ package com.chinaex123.kaleidoscope_dim_wine.init;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.CrimsonGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.DreamfruitCropWildVineItem;
-import com.chinaex123.kaleidoscope_dim_wine.item.Crop.FrostheartFruitItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
@@ -15,8 +14,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS_REGISTER =
@@ -43,11 +40,13 @@ public class ModItems {
     public static final DeferredItem<Item> WARPED_FUNGAL_SAP = ITEMS_REGISTER.register("warped_fungal_sap", () -> new Item(new Item.Properties()));
     // -------------------- 流体 --------------------
     // 绯红葡萄汁桶
-    public static final DeferredItem<Item> CRIMSON_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("crimson_grape_juice_bucket", () ->
-            new BucketItem(ModFluids.CRIMSON_GRAPE_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> CRIMSON_GRAPE_JUICE_BUCKET =
+            ITEMS_REGISTER.register("crimson_grape_juice_bucket", () -> new BucketItem(ModFluids.CRIMSON_GRAPE_JUICE.get(),
+                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // 诡异葡萄汁桶
-    public static final DeferredItem<Item> WARPED_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("warped_grape_juice_bucket", () ->
-            new BucketItem(ModFluids.WARPED_GRAPE_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> WARPED_GRAPE_JUICE_BUCKET =
+            ITEMS_REGISTER.register("warped_grape_juice_bucket", () -> new BucketItem(ModFluids.WARPED_GRAPE_JUICE.get(),
+                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final DeferredHolder<Item, DrinkBlockItem> CRIMSON_CRESCENDO =
@@ -80,11 +79,13 @@ public class ModItems {
             new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
     // -------------------- 流体 --------------------
     // 迷梦果汁桶
-    public static final DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
-            new BucketItem(ModFluids.DREAMFRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET =
+            ITEMS_REGISTER.register("dreamfruit_juice_bucket", () -> new BucketItem(ModFluids.DREAMFRUIT_JUICE.get(),
+                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // 龙血桶
-    public static final DeferredItem<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
-            new BucketItem(ModFluids.DRAGON_BLOOD.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> DRAGON_BLOOD_BUCKET =
+            ITEMS_REGISTER.register("dragon_blood_bucket", () -> new BucketItem(ModFluids.DRAGON_BLOOD.get(),
+                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Item, DrinkBlockItem> CHORUS_COGNAC =
@@ -113,41 +114,6 @@ public class ModItems {
     // 龙血酒
     public static final DeferredHolder<Item, DrinkBlockItem> DRACONIC_BLOOD_WINE =
             ITEMS_REGISTER.register("draconic_blood_wine", () -> new DrinkBlockItem(ModBlocks.DRACONIC_BLOOD_WINE.get()));
-
-
-    // ==================== 次元维度 - 暮色森林 ====================
-    // -------------------- 作物 --------------------
-    // 霜心果
-    public static final DeferredItem<Item> FROSTHEART_FRUIT =
-            ITEMS_REGISTER.register("frostheart_fruit", () -> new FrostheartFruitItem(new Item.Properties().food(ModFoods.FROSTHEART_FRUIT)));
-    // -------------------- 物品 --------------------
-    // -------------------- 流体 --------------------
-    // 火炬浆果汁桶
-    public static final DeferredItem<Item> TORCHBERRIES_JUICE_BUCKET =
-            ITEMS_REGISTER.register("torchberries_juice_bucket", () -> new BucketItem(ModFluids.TORCHBERRIES_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 物品 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 物品 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 物品 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
 
     public static void register(IEventBus eventBus){
         ITEMS_REGISTER.register(eventBus);

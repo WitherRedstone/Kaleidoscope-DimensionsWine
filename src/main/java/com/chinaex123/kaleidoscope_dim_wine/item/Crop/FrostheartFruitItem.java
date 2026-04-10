@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.item.Crop;
 
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
@@ -37,7 +37,7 @@ public class FrostheartFruitItem extends Item {
                 BlockState plantAboveState = level.getBlockState(plantPos.above());
 
                 if (plantAboveState.isAir() && !level.isClientSide) {
-                    BlockState bushState = ModBlocks.FROSTHEART_FRUIT_BUSH.get().defaultBlockState();
+                    BlockState bushState = TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get().defaultBlockState();
 
                     if (bushState.canSurvive(level, plantPos)) {
                         level.setBlockAndUpdate(plantPos, bushState);
@@ -60,7 +60,7 @@ public class FrostheartFruitItem extends Item {
             BlockState aboveState = level.getBlockState(abovePos);
 
             if (aboveState.isAir() && !level.isClientSide) {
-                BlockState bushState = ModBlocks.FROSTHEART_FRUIT_BUSH.get().defaultBlockState();
+                BlockState bushState = TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get().defaultBlockState();
 
                 if (bushState.canSurvive(level, abovePos)) {
                     level.setBlockAndUpdate(abovePos, bushState);

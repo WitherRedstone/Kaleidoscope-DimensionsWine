@@ -2,7 +2,6 @@ package com.chinaex123.kaleidoscope_dim_wine.init;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.FrostheartFruit.FrostheartFruitBushBlock;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.DollBlock;
@@ -124,34 +123,6 @@ public class ModBlocks {
     // 龙血酒
     public static final DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE =
             BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-
-
-    // ==================== 次元维度 - 暮色森林 ====================
-    // -------------------- 作物 --------------------
-    // 霜心果丛 - 类似甜浆果种下后的方块
-    public static final DeferredBlock<Block> FROSTHEART_FRUIT_BUSH = BLOCK_REGISTER.register("frostheart_fruit_bush", FrostheartFruitBushBlock::new);
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
-    // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // -------------------- 流体 --------------------
-    // -------------------- 酒类 --------------------
-
-
 
     public static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block, Rarity rarity) {
         ModItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));

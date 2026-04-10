@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -63,9 +64,10 @@ public class ModCreativeTabs {
                         // 联动 - 暮色森林
                         if (ModList.get().isLoaded("twilightforest")) {
                             // ==================== 流体桶 ====================
-                            output.accept(ModItems.TORCHBERRIES_JUICE_BUCKET.get()); // 火炬浆果汁桶
+                            output.accept(TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.get()); // 火炬浆果汁桶
+                            output.accept(TwilightforestItems.FROSTHEART_FRUIT_JUICE_BUCKET.get()); // 霜心果汁桶
                             // ==================== 作物 ====================
-                            output.accept(ModItems.FROSTHEART_FRUIT.get()); // 霜心果
+                            output.accept(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
                             // ==================== 物品 ====================
                             // ==================== 酒类 ====================
                         }

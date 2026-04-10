@@ -37,6 +37,9 @@ public final class DrinkBlockEntityTypeEventHandler {
                     ModBlocks.END_STARLIGHT.get(), // 终末星光
                     ModBlocks.DIVINE_EMBRYO_PORT.get(), // 神血波尔多
                     ModBlocks.DRACONIC_BLOOD_WINE.get() // 龙血酒
+
+                    // ==================== 次元维度 - 暮色森林 ====================
+
             );
         });
     }

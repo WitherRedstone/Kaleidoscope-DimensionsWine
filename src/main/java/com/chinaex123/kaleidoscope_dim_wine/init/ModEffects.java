@@ -35,9 +35,15 @@ public class ModEffects {
             EFFECTS.register("paradox", () -> new Paradox(0x9B30FF));
 
     // ==================== 次元维度 - 暮色森林 ====================
+    // 硬化 - 按百分比减免所有来源的伤害
+    public static final DeferredHolder<MobEffect, MobEffect> HARDENED =
+            EFFECTS.register("hardened", () -> new Hardened(0x9B30FF));
     // 巨大化 - 增大玩家体型
     public static final DeferredHolder<MobEffect, MobEffect> MAXIMIZATION =
             EFFECTS.register("maximization", () -> new Maximization(0x9B30FF));
+    // 迷你化 - 缩小玩家体型
+    public static final DeferredHolder<MobEffect, MobEffect> MINIFY =
+            EFFECTS.register("minify", () -> new Minify(0x9B30FF));
 
 
     public static void register(IEventBus modEventBus) {

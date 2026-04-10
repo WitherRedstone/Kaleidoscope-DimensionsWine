@@ -2,9 +2,11 @@ package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -59,12 +61,15 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
 
         // ==================== 次元维度 - 暮色森林 ====================
-        // -------------------- 作物 --------------------
-        basicItem(ModItems.FROSTHEART_FRUIT.getId()); // 霜心果
-        // -------------------- 物品 --------------------
-        // -------------------- 流体 --------------------
-        basicItem(ModItems.TORCHBERRIES_JUICE_BUCKET.getId()); // 火炬浆果汁桶
-        // -------------------- 酒类 --------------------
+        if (ModList.get().isLoaded("twilightforest")) {
+            // -------------------- 作物 --------------------
+            basicItem(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
+            // -------------------- 物品 --------------------
+            // -------------------- 流体 --------------------
+            basicItem(TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.getId()); // 火炬浆果汁桶
+            basicItem(TwilightforestItems.FROSTHEART_FRUIT_JUICE_BUCKET.getId()); // 霜心果汁桶
+            // -------------------- 酒类 --------------------
+        }
 
 
         // ==================== 次元维度 - 下界 ====================

@@ -34,10 +34,6 @@ public class ModFluids {
     // 龙血
     public static final ResourceLocation DRAGON_BLOOD_ID = ModFluids.id("dragon_blood");
     public static final ResourceLocation FLOWING_DRAGON_BLOOD_ID = ModFluids.id("flowing_dragon_blood");
-    // -------------------- 次元维度 - 暮色森林 --------------------
-    // 火炬浆果汁
-    public static final ResourceLocation TORCHBERRIES_JUICE_ID = ModFluids.id("torchberries_juice");
-    public static final ResourceLocation FLOWING_TORCHBERRIES_JUICE_ID = ModFluids.id("flowing_torchberries_juice");
 
 
     // ==================== 流体属性 ====================
@@ -56,10 +52,6 @@ public class ModFluids {
     // 龙血
     public static final Supplier<FluidType> DRAGON_BLOOD_TYPE =
             FLUID_TYPES.register("dragon_blood", () -> new ModFluidTypes(DRAGON_BLOOD_ID, 0, 6, false, false));
-    // -------------------- 次元维度 - 暮色森林 --------------------
-    // 火炬浆果汁
-    public static final Supplier<FluidType> TORCHBERRIES_JUICE_TYPE =
-            FLUID_TYPES.register("torchberries_juice", () -> new ModFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
 
 
     // ==================== 流体 属性 ====================
@@ -69,8 +61,6 @@ public class ModFluids {
     // -------------------- 次元维度 - 末地 --------------------
     public static BaseFlowingFluid.Properties DREAMFRUIT_JUICE_PROPERTIES; // 迷梦果汁
     public static BaseFlowingFluid.Properties DRAGON_BLOOD_PROPERTIES; // 龙血
-    // -------------------- 次元维度 - 暮色森林 --------------------
-    public static BaseFlowingFluid.Properties TORCHBERRIES_JUICE_PROPERTIES; // 火炬浆果汁
 
 
     // ==================== 流体 物理和行为====================
@@ -96,12 +86,6 @@ public class ModFluids {
             FLUIDS.register("dragon_blood", () -> new BaseFlowingFluid.Source(ModFluids.DRAGON_BLOOD_PROPERTIES));
     public static final Supplier<BaseFlowingFluid.Flowing> FLOWING_DRAGON_BLOOD =
             FLUIDS.register("flowing_dragon_blood", () -> new BaseFlowingFluid.Flowing(ModFluids.DRAGON_BLOOD_PROPERTIES));
-    // -------------------- 次元维度 - 暮色森林 --------------------
-    // 火炬浆果汁
-    public static final Supplier<BaseFlowingFluid.Source> TORCHBERRIES_JUICE =
-            FLUIDS.register("torchberries_juice", () -> new BaseFlowingFluid.Source(ModFluids.TORCHBERRIES_JUICE_PROPERTIES));
-    public static final Supplier<BaseFlowingFluid.Flowing> FLOWING_TORCHBERRIES_JUICE =
-            FLUIDS.register("flowing_torchberries_juice", () -> new BaseFlowingFluid.Flowing(ModFluids.TORCHBERRIES_JUICE_PROPERTIES));
 
 
     static {
@@ -137,12 +121,5 @@ public class ModFluids {
                 .slopeFindDistance(4) // 流动查找距离
                 .levelDecreasePerBlock(1) // 液面下降等级
                 .tickRate(10); // 流动速度
-        // -------------------- 次元维度 - 暮色森林 --------------------
-        // 火炬浆果汁
-        TORCHBERRIES_JUICE_PROPERTIES = new BaseFlowingFluid.Properties(
-                TORCHBERRIES_JUICE_TYPE,
-                TORCHBERRIES_JUICE,
-                FLOWING_TORCHBERRIES_JUICE
-        ).bucket(ModItems.TORCHBERRIES_JUICE_BUCKET);
     }
 }
