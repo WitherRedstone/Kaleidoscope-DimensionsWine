@@ -17,7 +17,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 
 /**
- * 巨大化：增大玩家体型
+ * 迷你化 - 缩小玩家体型
  */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Minify extends MobEffect {

@@ -59,12 +59,6 @@ public class CrimsonGrapeCropBlock extends GrapeCropBlock {
             level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
             Block.popResource(level, pos, new ItemStack(ModItems.CRIMSON_GRAPE.get(), 3));
 
-            // 摘取时有几率掉落玩偶001
-            double chance = ServerConfig.CRIMSON_GRAPE_DOLL_CHANCE.get();
-            if (chance > 0.0 && level.random.nextDouble() < chance) {
-                Block.popResource(level, pos, new ItemStack(ModBlocks.DOLL_001.get().asItem()));
-            }
-
             heldItem.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             player.playSound(SoundEvents.BEEHIVE_SHEAR);
             return ItemInteractionResult.SUCCESS;

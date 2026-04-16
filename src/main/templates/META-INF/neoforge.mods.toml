@@ -39,7 +39,10 @@ displayName="${mod_name}" #mandatory
 logoFile="logo.png" #optional
 
 # A text field displayed in the mod UI
-#credits="" #optional
+credits="""
+Thanks to Agens_Eland for providing textures, and thanks to all players who participated in testing!
+感谢Agens_Eland提供的贴图，感谢所有参与测试的玩家！
+""" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
 authors="ChinaEX123, Fvue233"

@@ -37,22 +37,22 @@ public class ModEffects {
     // ==================== 次元维度 - 暮色森林 ====================
     // 硬化 - 按百分比减免所有来源的伤害
     public static final DeferredHolder<MobEffect, MobEffect> HARDENED =
-            EFFECTS.register("hardened", () -> new Hardened(0x9B30FF));
+            EFFECTS.register("hardened", () -> new Hardened(0x8B4513));
     // 自然祝福 - 周围植物生长加速
     public static final DeferredHolder<MobEffect, MobEffect> NATURE_BLESSING =
-            EFFECTS.register("nature_blessing", () -> new NatureBlessing(0x9B30FF));
+            EFFECTS.register("nature_blessing", () -> new NatureBlessing(0x228B22));
     // 霜寒 - 使生物冻结
     public static final DeferredHolder<MobEffect, MobEffect> FROSTBITE =
-            EFFECTS.register("frostbite", () -> new Frostbite(0x9B30FF));
+            EFFECTS.register("frostbite", () -> new Frostbite(0x00BFFF));
     // 霜降 - 攻击生物时，使生物获得霜寒效果
     public static final DeferredHolder<MobEffect, MobEffect> FROSTFALL =
-            EFFECTS.register("frostfall", () -> new Frostfall(0x9B30FF));
+            EFFECTS.register("frostfall", () -> new Frostfall(0x87CEEB));
     // 巨大化 - 增大玩家体型
     public static final DeferredHolder<MobEffect, MobEffect> MAXIMIZATION =
-            EFFECTS.register("maximization", () -> new Maximization(0x9B30FF));
+            EFFECTS.register("maximization", () -> new Maximization(0xFF4500));
     // 迷你化 - 缩小玩家体型
     public static final DeferredHolder<MobEffect, MobEffect> MINIFY =
-            EFFECTS.register("minify", () -> new Minify(0x9B30FF));
+            EFFECTS.register("minify", () -> new Minify(0x9370DB));
 
 
     public static void register(IEventBus modEventBus) {
