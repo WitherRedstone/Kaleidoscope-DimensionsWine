@@ -25,16 +25,16 @@ public class TwilightforestBlocks {
             BLOCK_REGISTER.register("cave_glowbrew", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 林隙晨露
     public static final DeferredHolder<Block, Block> DAWNLIGHT_DEW =
-            BLOCK_REGISTER.register("dawnlight_dew", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("dawnlight_dew", () -> DrinkBlock.create().maxCount(2).irregular().shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 死巷之唾
     public static final DeferredHolder<Block, Block> DEAD_END_SPITTLE =
-            BLOCK_REGISTER.register("dead_end_spittle", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("dead_end_spittle", () -> DrinkBlock.create().maxCount(2).irregular().shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 蛇蜕利口酒
     public static final DeferredHolder<Block, Block> SNAKESKIN_LIQUEUR =
             BLOCK_REGISTER.register("snakeskin_liqueur", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 霜脉兽血
     public static final DeferredHolder<Block, Block> FROSTVEIN_BEASTBLOOD =
-            BLOCK_REGISTER.register("frostvein_beastblood", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("frostvein_beastblood", () -> DrinkBlock.create().maxCount(2).irregular().shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 巡林客的背囊
     public static final DeferredHolder<Block, Block> RANGERS_SATCHEL =
             BLOCK_REGISTER.register("rangers_satchel", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
@@ -43,10 +43,10 @@ public class TwilightforestBlocks {
             BLOCK_REGISTER.register("embereye", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 鹿鸣季风
     public static final DeferredHolder<Block, Block> STAGCALL_MONSOON =
-            BLOCK_REGISTER.register("stagcall_monsoon", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("stagcall_monsoon", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 荆棘之心
     public static final DeferredHolder<Block, Block> THORNHEART =
-            BLOCK_REGISTER.register("thornheart", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("thornheart", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 德鲁伊的秘酿
     public static final DeferredHolder<Block, Block> DRUIDS_SECRET_BREW =
             BLOCK_REGISTER.register("druids_secret_brew", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
@@ -58,7 +58,7 @@ public class TwilightforestBlocks {
             BLOCK_REGISTER.register("perennial_frost", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 巨人赞歌
     public static final DeferredHolder<Block, Block> GIANTS_HYMN =
-            BLOCK_REGISTER.register("giants_hymn", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+            BLOCK_REGISTER.register("giants_hymn", () -> DrinkBlock.create().maxCount(2).irregular().shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     // 地精的私藏
     public static final DeferredHolder<Block, Block> GOBLINS_STASH =
             BLOCK_REGISTER.register("goblins_stash", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());

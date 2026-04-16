@@ -33,6 +33,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE);
     // 玩偶 - Fvue233
     public static final DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE);
+    // 玩偶 - Agens_Eland
+    public static final DeferredBlock<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE);
 
 
     // ==================== 次元维度 - 下界 ====================

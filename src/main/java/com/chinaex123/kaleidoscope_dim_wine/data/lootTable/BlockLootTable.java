@@ -35,6 +35,7 @@ public class BlockLootTable extends BlockLootSubProvider {
         // ==================== 小彩蛋 ====================
         dropSelf(ModBlocks.DOLL_001.get());
         dropSelf(ModBlocks.DOLL_002.get());
+        dropSelf(ModBlocks.DOLL_003.get());
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------

@@ -24,6 +24,7 @@ public class ModCreativeTabs {
                         // ==================== 小彩蛋 ====================
                         output.accept(ModBlocks.DOLL_001.get()); // 玩偶 - ChinaEX123_BILI
                         output.accept(ModBlocks.DOLL_002.get()); // 玩偶 - Fvue233
+                        output.accept(ModBlocks.DOLL_003.get()); // 玩偶 - Agens_Eland
 
                         // ==================== 流体桶 ====================
                         output.accept(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
@@ -39,7 +40,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.DREAMFRUIT.get()); // 迷梦果
 
                         // ==================== 物品 ====================
-                        output.accept(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
+//                        output.accept(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
                         output.accept(ModItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
                         output.accept(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
                         output.accept(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶

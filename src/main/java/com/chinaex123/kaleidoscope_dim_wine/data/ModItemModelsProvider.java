@@ -47,7 +47,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 作物 --------------------
         basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
         // -------------------- 物品 --------------------
-        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
+//        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
         basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑
@@ -72,20 +72,20 @@ public class ModItemModelsProvider extends ItemModelProvider {
             basicItem(TwilightforestItems.COLOSSAL_FRAGMENT.getId()); // 巨物碎片
             basicItem(TwilightforestItems.GOBLIN_ESSENCE.getId()); // 哥布林精华
             // -------------------- 酒类 --------------------
-//            compatTwilightforestDrinkItem(TwilightforestItems.CAVE_GLOWBREW); // 洞窟萤火酿
-//            compatTwilightforestDrinkItem(TwilightforestItems.DAWNLIGHT_DEW); // 林隙晨露
-//            compatTwilightforestDrinkItem(TwilightforestItems.DEAD_END_SPITTLE); // 死巷之唾
-//            compatTwilightforestDrinkItem(TwilightforestItems.SNAKESKIN_LIQUEUR); // 蛇蜕利口酒
-//            compatTwilightforestDrinkItem(TwilightforestItems.FROSTVEIN_BEASTBLOOD); // 霜脉兽血
-//            compatTwilightforestDrinkItem(TwilightforestItems.RANGERS_SATCHEL); // 巡林客的背囊
-//            compatTwilightforestDrinkItem(TwilightforestItems.EMBEREYE); // 烬瞳
+            compatTwilightforestDrinkItem(TwilightforestItems.CAVE_GLOWBREW); // 洞窟萤火酿
+            compatTwilightforestDrinkItem(TwilightforestItems.DAWNLIGHT_DEW); // 林隙晨露
+            compatTwilightforestDrinkItem(TwilightforestItems.DEAD_END_SPITTLE); // 死巷之唾
+            compatTwilightforestDrinkItem(TwilightforestItems.SNAKESKIN_LIQUEUR); // 蛇蜕利口酒
+            compatTwilightforestDrinkItem(TwilightforestItems.FROSTVEIN_BEASTBLOOD); // 霜脉兽血
+            compatTwilightforestDrinkItem(TwilightforestItems.RANGERS_SATCHEL); // 巡林客的背囊
+            compatTwilightforestDrinkItem(TwilightforestItems.EMBEREYE); // 烬瞳
             compatTwilightforestDrinkItem(TwilightforestItems.STAGCALL_MONSOON); // 鹿鸣季风
-//            compatTwilightforestDrinkItem(TwilightforestItems.THORNHEART); // 荆棘之心
-//            compatTwilightforestDrinkItem(TwilightforestItems.DRUIDS_SECRET_BREW); // 德鲁伊的秘酿
-//            compatTwilightforestDrinkItem(TwilightforestItems.MOORGLOW_BIRDS_SONG); // 辉夜鸟之歌
-//            compatTwilightforestDrinkItem(TwilightforestItems.PERENNIAL_FROST); // 终年冻土
-//            compatTwilightforestDrinkItem(TwilightforestItems.GIANTS_HYMN); // 巨人赞歌
-//            compatTwilightforestDrinkItem(TwilightforestItems.GOBLINS_STASH); // 地精的私藏
+            compatTwilightforestDrinkItem(TwilightforestItems.THORNHEART); // 荆棘之心
+            compatTwilightforestDrinkItem(TwilightforestItems.DRUIDS_SECRET_BREW); // 德鲁伊的秘酿
+            compatTwilightforestDrinkItem(TwilightforestItems.MOORGLOW_BIRDS_SONG); // 辉夜鸟之歌
+            compatTwilightforestDrinkItem(TwilightforestItems.PERENNIAL_FROST); // 终年冻土
+            compatTwilightforestDrinkItem(TwilightforestItems.GIANTS_HYMN); // 巨人赞歌
+            compatTwilightforestDrinkItem(TwilightforestItems.GOBLINS_STASH); // 地精的私藏
         }
 
 
