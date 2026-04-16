@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_doll_3": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:magenta_wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscope_dim_wine:doll_003"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_doll_3"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscope_dim_wine:doll_003"
+    ]
+  }
+}
