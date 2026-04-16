@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.FrostheartFruit.FrostheartFruitBushBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.Crop.compat.Twilightforest.FrostheartFruit.FrostheartFruitBushBlock;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import net.minecraft.world.level.block.Block;

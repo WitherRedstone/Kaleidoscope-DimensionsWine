@@ -1,6 +1,6 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-package com.chinaex123.kaleidoscope_dim_wine.block.Crop.FrostheartFruit;
+package com.chinaex123.kaleidoscope_dim_wine.block.Crop.compat.Twilightforest.FrostheartFruit;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

@@ -90,6 +90,12 @@ public class ModTooltop {
                 String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.frostheart_fruit").getString();
                 tooltip.add(GradientTextHelper.createPinkGradientText(text2, false,  1.0, false, false, false, false, false));
             }
+            // 哥布林精华
+            if (stack.getItem() == TwilightforestItems.GOBLIN_ESSENCE.get()) {
+                // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+                String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.goblin_essence").getString();
+                tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
+            }
         }
     }
 }

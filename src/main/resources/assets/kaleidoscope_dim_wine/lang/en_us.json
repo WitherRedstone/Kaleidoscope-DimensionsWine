@@ -165,6 +165,7 @@
   "jei.info.kaleidoscope_dim_wine.items.requirement.dragon_blood_bucket": "Spawns near the dragon's death location after each Ender Dragon kill",
   "jei.info.kaleidoscope_dim_wine.items.requirement.crimson_fungal_sap": "Obtained with a certain probability when mining crimson nylium.",
   "jei.info.kaleidoscope_dim_wine.items.requirement.warped_fungal_sap": "Obtained with a certain probability when mining warped nylium.",
+  "jei.info.kaleidoscope_dim_wine.items.requirement.goblin_essence": "Defeating Redcap Dwarves and Redcap Sappers has a chance to drop loot.",
   "jei.info.kaleidoscope_dim_wine.items.special_features": "Special Features",
   "jei.info.kaleidoscope_dim_wine.items.special_features.dragon_blood_bucket": "Stay in fluid for 3 minutes while under Wither II to gain +5 permanent hearts; You can only receive the reward once.",
   "jei.info.kaleidoscope_dim_wine.items.growing_environment": "Growing Environment",

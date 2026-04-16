@@ -12,6 +12,8 @@ public interface ModItemTags {
     // -------------------- 作物 --------------------
     TagKey<Item> FRUITS_CRIMSON_GRAPE = neoforgeItemTag("fruits/crimson_grape"); // c:fruits/crimson_grape
     TagKey<Item> FRUITS_WARPED_GRAPE = neoforgeItemTag("fruits/warped_grape"); // c:fruits/warped_grape
+    TagKey<Item> FRUITS_DREAMFRUIT = neoforgeItemTag("fruits/dreamfruit"); // c:fruits/dreamfruit
+    TagKey<Item> FRUITS_FROSTHEART = neoforgeItemTag("fruits/frostheart_fruit"); // c:fruits/frostheart_fruit
 
     // 均衡饮食
     TagKey<Item> FRUITS = dietTag("fruits"); // diet:fruits

@@ -31,6 +31,8 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
         this.tag(ModItemTags.FRUITS_CRIMSON_GRAPE).add(ModItems.CRIMSON_GRAPE.get()); // 绯红葡萄
         // c:fruits/warped_grape
         this.tag(ModItemTags.FRUITS_WARPED_GRAPE).add(ModItems.WARPED_GRAPE.get()); // 诡异葡萄
+        // c:fruits/warped_grape
+        this.tag(ModItemTags.FRUITS_DREAMFRUIT).add(ModItems.DREAMFRUIT.get()); // 迷梦果
         // diet:fruits
         this.tag(ModItemTags.FRUITS)
                 .add(ModItems.CRIMSON_GRAPE.get()) // 绯红葡萄
@@ -45,8 +47,8 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
-            // c:fruits/warped_grape
-            this.tag(ModItemTags.FRUITS_WARPED_GRAPE).add(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
+            // c:fruits/frostheart_fruit
+            this.tag(ModItemTags.FRUITS_FROSTHEART).add(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
             // diet:fruits
             this.tag(ModItemTags.FRUITS).add(TwilightforestItems.FROSTHEART_FRUIT.get()); // 霜心果
             // 静谧四季 - sereneseasons:winter_crops

@@ -95,6 +95,11 @@ public class ModJeiPlugin implements IModPlugin {
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment").withStyle(ChatFormatting.BOLD),
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.frostheart_fruit")
             });
+            // 霜心果
+            itemInfos.put(TwilightforestItems.GOBLIN_ESSENCE.get(), new Component[]{
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.goblin_essence")
+            });
         }
 
         itemInfos.forEach(registration::addIngredientInfo);
