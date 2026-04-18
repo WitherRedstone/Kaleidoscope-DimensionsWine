@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 3.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:nether_star"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:ore_meter"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:pocket_watch"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:moon_dial"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:crumble_horn"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:peacock_feather_fan"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:moonworm_queen"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:transformation_powder"
+        }
+      ],
+      "rolls": 2.0
+    }
+  ],
+  "random_sequence": "kaleidoscope_dim_wine:advancements/twilightforest_wine"
+}

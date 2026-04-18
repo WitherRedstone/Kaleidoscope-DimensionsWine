@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:gray_dye"
+    },
+    "B": {
+      "item": "kaleidoscope_dim_wine:string_lights_entity_shulker"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscope_dim_wine:string_lights_entity_shulker_gray"
+  }
+}

@@ -5,10 +5,13 @@ import com.chinaex123.kaleidoscope_dim_wine.block.Crop.CrimsonGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.DollBlock;
+import com.chinaex123.kaleidoscope_dim_wine.block.PopCanBlock;
 import com.chinaex123.kaleidoscope_dim_wine.compat.KaleidoscopeDoll.KaleidoscopeDollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.BottleBlock;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.deco.StringLightsBlock;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.StringLightsBlockItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -36,6 +39,35 @@ public class ModBlocks {
     // 玩偶 - Agens_Eland
     public static final DeferredBlock<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE);
 
+    // ==================== 次元维度 - 小装饰 ====================
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER = registerStringLights("string_lights_entity_shulker", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-无色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_WHITE = registerStringLights("string_lights_entity_shulker_white", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-白色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_ORANGE = registerStringLights("string_lights_entity_shulker_orange", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-橙色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_MAGENTA = registerStringLights("string_lights_entity_shulker_magenta", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-品红色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE = registerStringLights("string_lights_entity_shulker_light_blue", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-淡蓝色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_YELLOW = registerStringLights("string_lights_entity_shulker_yellow", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-黄色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_LIME = registerStringLights("string_lights_entity_shulker_lime", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-黄绿色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_PINK = registerStringLights("string_lights_entity_shulker_pink", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-粉红色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_GRAY = registerStringLights("string_lights_entity_shulker_gray", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-灰色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY = registerStringLights("string_lights_entity_shulker_light_gray", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-淡灰色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_CYAN = registerStringLights("string_lights_entity_shulker_cyan", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-青色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_PURPLE = registerStringLights("string_lights_entity_shulker_purple", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-紫色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_BLUE = registerStringLights("string_lights_entity_shulker_blue", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-蓝色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_BROWN = registerStringLights("string_lights_entity_shulker_brown", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-棕色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_GREEN = registerStringLights("string_lights_entity_shulker_green", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-绿色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_RED = registerStringLights("string_lights_entity_shulker_red", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-红色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_BLACK = registerStringLights("string_lights_entity_shulker_black", () -> new StringLightsBlock(null)); // 小灯串（潜影贝-黑色）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_CHICKEN = registerStringLights("string_lights_entity_chicken", () -> new StringLightsBlock(null)); // 小灯串（小鸡仔）
+    public static final DeferredBlock<Block> STRING_LIGHTS_ENTITY_BEE = registerStringLights("string_lights_entity_bee", () -> new StringLightsBlock(null)); // 小灯串（蜜蜂）
+
+    public static final DeferredBlock<Block> STRING_LIGHTS_BLOCK_COMMAND = registerStringLights("string_lights_block_command", () -> new StringLightsBlock(null)); // 小灯串（命令方块）
+    public static final DeferredBlock<Block> STRING_LIGHTS_BLOCK_BEDROCK = registerStringLights("string_lights_block_bedrock", () -> new StringLightsBlock(null)); // 小灯串（基岩）
+
+    // -------------------- 瓶装 --------------------
+    // 空竹杯
+    public static final DeferredBlock<Block> EMPTY_BAMBOO_CUP = BLOCK_REGISTER.register("empty_bamboo_cup", () -> new BottleBlock());
+    // 易拉罐
+    public static final DeferredBlock<Block> POP_CAN = BLOCK_REGISTER.register("pop_can", PopCanBlock::new);
 
     // ==================== 次元维度 - 下界 ====================
     // -------------------- 作物 --------------------
@@ -98,9 +130,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DREAMFRUIT_VINE = BLOCK_REGISTER.register("dreamfruit_vine", DreamfruitCropWildVineHead::new);
     // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
     public static final DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
-    // -------------------- 物品 --------------------
-    // 空竹杯
-    public static final DeferredBlock<Block> EMPTY_BAMBOO_CUP = BLOCK_REGISTER.register("empty_bamboo_cup", () -> new BottleBlock());
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final DeferredHolder<Block, Block> CHORUS_COGNAC =
@@ -159,6 +188,12 @@ public class ModBlocks {
                 return new DollBlock();
             }
         }, rarity);
+    }
+
+    private static DeferredBlock<Block> registerStringLights(String name, Supplier<Block> blockSupplier) {
+        DeferredBlock<Block> block = BLOCK_REGISTER.register(name, blockSupplier);
+        ModItems.ITEMS_REGISTER.register(name, () -> new StringLightsBlockItem(block));
+        return block;
     }
 
     public static void register(IEventBus eventBus) {

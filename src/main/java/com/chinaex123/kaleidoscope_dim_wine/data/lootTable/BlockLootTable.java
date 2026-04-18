@@ -36,6 +36,28 @@ public class BlockLootTable extends BlockLootSubProvider {
         dropSelf(ModBlocks.DOLL_001.get());
         dropSelf(ModBlocks.DOLL_002.get());
         dropSelf(ModBlocks.DOLL_003.get());
+        // ==================== 小彩蛋 ====================
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER.get()); // 小灯串（潜影贝-无色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get()); // 小灯串（潜影贝-白色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_ORANGE.get()); // 小灯串（潜影贝-橙色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_MAGENTA.get()); // 小灯串（潜影贝-品红色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE.get()); // 小灯串（潜影贝-淡蓝色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_YELLOW.get()); // 小灯串（潜影贝-黄色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIME.get()); // 小灯串（潜影贝-黄绿色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PINK.get()); // 小灯串（潜影贝-粉红色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GRAY.get()); // 小灯串（潜影贝-灰色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY.get()); // 小灯串（潜影贝-淡灰色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_CYAN.get()); // 小灯串（潜影贝-青色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PURPLE.get()); // 小灯串（潜影贝-紫色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLUE.get()); // 小灯串（潜影贝-蓝色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BROWN.get()); // 小灯串（潜影贝-棕色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GREEN.get()); // 小灯串（潜影贝-绿色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_RED.get()); // 小灯串（潜影贝-红色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLACK.get()); // 小灯串（潜影贝-黑色）
+        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_CHICKEN.get()); // 小灯串（小鸡仔）
+
+        dropSelf(ModBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()); // 小灯串（命令方块）
+        dropSelf(ModBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get()); // 小灯串（基岩）
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------

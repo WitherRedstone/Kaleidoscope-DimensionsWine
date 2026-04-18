@@ -1,5 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.entity;
 
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -54,6 +55,19 @@ public final class DrinkBlockEntityTypeEventHandler {
                 blocks.add(TwilightforestBlocks.PERENNIAL_FROST.get()); // 终年冻土
                 blocks.add(TwilightforestBlocks.GIANTS_HYMN.get()); // 巨人赞歌
                 blocks.add(TwilightforestBlocks.GOBLINS_STASH.get()); // 地精的私藏
+            }
+            
+            // ==================== 次元维度 - 蜜蜂领域 ====================
+            if (ModList.get().isLoaded("the_bumblezone")) {
+                // -------------------- 酒类 --------------------
+                blocks.add(TheBumblezoneBlocks.SPRITE.get()); // 雪碧
+                blocks.add(TheBumblezoneBlocks.PEPSI.get()); // 可乐
+                blocks.add(TheBumblezoneBlocks.FANTA.get()); // 芬达
+                blocks.add(TheBumblezoneBlocks.POLLEN_NECTAR.get()); // 花粉甜酿
+                blocks.add(TheBumblezoneBlocks.HONEYTHORN_MEAD.get()); // 蜜刺佳酿
+                blocks.add(TheBumblezoneBlocks.BEESWAX_HONEY_WINE.get()); // 蜂蜡陈酿
+                blocks.add(TheBumblezoneBlocks.SWEET_CRYSTAL_HONEY.get()); // 甜蜜水晶
+                blocks.add(TheBumblezoneBlocks.ROYAL_HONEY_BREW.get()); // 蜂王特酿
             }
 
             event.modify(drinkType, blocks.toArray(new Block[0]));

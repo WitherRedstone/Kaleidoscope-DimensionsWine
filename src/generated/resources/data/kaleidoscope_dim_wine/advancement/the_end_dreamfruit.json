@@ -1,0 +1,33 @@
+{
+  "parent": "kaleidoscope_dim_wine:the_end_enter",
+  "criteria": {
+    "has_dreamfruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:dreamfruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dreamfruit.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dreamfruit.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dreamfruit"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

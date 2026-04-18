@@ -1,0 +1,25 @@
+{
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "the_bumblezone"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "the_bumblezone:honey_fluid_still",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:beehive_beeswax"
+    },
+    {
+      "item": "the_bumblezone:pollen_puff"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_dim_wine:beeswax_honey_wine"
+  }
+}

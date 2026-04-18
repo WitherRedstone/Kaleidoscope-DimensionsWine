@@ -2,7 +2,9 @@
   "required": true,
   "package": "com.chinaex123.kaleidoscope_dim_wine.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "StringLightsBlockMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

@@ -1,8 +1,9 @@
 package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.data.lootTable.BlockLootTable;
+import com.chinaex123.kaleidoscope_dim_wine.data.advancements.ModAdvancements;
 import com.chinaex123.kaleidoscope_dim_wine.data.lootTable.LootTableGenerator;
+import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipesProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -25,8 +26,11 @@ public class ModDataGenerator {
 
         generator.addProvider(event.includeClient(), new ModItemModelsProvider(packOutput, event.getExistingFileHelper()));
         generator.addProvider(event.includeServer(), new LootTableGenerator(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider,
+                CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
         generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModRecipesProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new DataMaps(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModAdvancements(packOutput, lookupProvider, existingFileHelper));
     }
 }

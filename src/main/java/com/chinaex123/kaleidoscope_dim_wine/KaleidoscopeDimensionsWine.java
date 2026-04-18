@@ -1,9 +1,12 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
 import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.event.EffectAttributeRemoveHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
@@ -33,6 +36,7 @@ public class KaleidoscopeDimensionsWine {
 
         ModCreativeTabs.register(modEventBus);
         modContainer.registerConfig(Type.COMMON, ServerConfig.SPEC);
+        ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
@@ -40,6 +44,12 @@ public class KaleidoscopeDimensionsWine {
             TwilightforestItems.register(modEventBus);
             TwilightforestFluids.FLUID_TYPES.register(modEventBus);
             TwilightforestFluids.FLUIDS.register(modEventBus);
+        }
+
+        // ==================== 次元维度 - 蜜蜂领域 ====================
+        if (ModList.get().isLoaded("the_bumblezone")) {
+            TheBumblezoneBlocks.register(modEventBus);
+            TheBumblezoneItems.register(modEventBus);
         }
     }
 }

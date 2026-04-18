@@ -16,7 +16,19 @@ public class DrinkShapes {
             Block.box(2, 0, 2, 14, 16, 14)
     };
 
+    public static final VoxelShape[] SHORT_BOTTLE_SHAPES = new VoxelShape[] {
+            Block.box(6, 0, 6, 10, 8, 10),
+            Block.box(2, 0, 6, 14, 8, 10),
+            Block.box(2, 0, 10, 14, 8, 14),
+            Block.box(6, 0, 2, 10, 8, 14),
+            Block.box(2, 0, 2, 14, 8, 14)
+    };
+
     public static VoxelShape[] getStandardBottleShapes() {
         return STANDARD_BOTTLE_SHAPES;
+    }
+
+    public static VoxelShape[] getShortBottleShapes() {
+        return SHORT_BOTTLE_SHAPES;
     }
 }

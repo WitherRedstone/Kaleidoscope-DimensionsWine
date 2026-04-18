@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.data.PackOutput;
@@ -19,6 +20,12 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        basicItem(ModItems.MOD_LOGO.get()); // 模组logo
+        // ==================== 瓶装 ====================
+//        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
+        basicItem(ModItems.POP_CAN.get()); // 易拉罐
+
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 流体 --------------------
         basicItem(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
@@ -47,7 +54,6 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // -------------------- 作物 --------------------
         basicItem(ModItems.DREAMFRUIT.get()); // 迷梦果
         // -------------------- 物品 --------------------
-//        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
         basicItem(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
         // -------------------- 酒类 --------------------
         basicDrinkItem(ModItems.CHORUS_COGNAC); // 紫颂干邑
@@ -89,6 +95,22 @@ public class ModItemModelsProvider extends ItemModelProvider {
         }
 
 
+        // ==================== 次元维度 - 蜜蜂领域 ====================
+        if (ModList.get().isLoaded("the_bumblezone")) {
+            // -------------------- 物品 --------------------
+            basicItem(TheBumblezoneItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
+            // -------------------- 酒类 --------------------
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.SPRITE); // 雪碧
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.PEPSI); // 可乐
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.FANTA); // 芬达
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.POLLEN_NECTAR); // 花粉甜酿
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.HONEYTHORN_MEAD); // 蜜刺佳酿
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.BEESWAX_HONEY_WINE); // 蜂蜡陈酿
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.SWEET_CRYSTAL_HONEY); // 甜蜜水晶
+            compatTheBumblezoneDrinkItem(TheBumblezoneItems.ROYAL_HONEY_BREW); // 蜂王特酿
+        }
+
+
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------
         // -------------------- 物品 --------------------
@@ -126,5 +148,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/twilightforest/" + itemName));
+    }
+
+    /**
+     * 联动酒类 - 暮色森林（路径：item/drink/compat/the_bumblezone）
+     */
+    private void compatTheBumblezoneDrinkItem(DeferredHolder<Item, ? extends Item> item) {
+        String itemName = item.getId().getPath();
+        ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
+        builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/the_bumblezone/" + itemName));
     }
 }

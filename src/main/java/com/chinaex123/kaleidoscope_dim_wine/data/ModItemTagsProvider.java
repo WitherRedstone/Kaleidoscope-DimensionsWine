@@ -44,7 +44,6 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
                 .add(ModItems.WARPED_GRAPE.get()) // 诡异葡萄
                 .add(ModItems.DREAMFRUIT.get()); // 迷梦果
 
-
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
             // c:fruits/frostheart_fruit

@@ -1,0 +1,33 @@
+{
+  "parent": "kaleidoscope_dim_wine:the_end_dragon_blood_bucket",
+  "criteria": {
+    "has_dragon_blood_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:dragon_blood_bottle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dragon_blood_bottle.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_dim_wine:dragon_blood_bottle"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dragon_blood_bottle.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dragon_blood_bottle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

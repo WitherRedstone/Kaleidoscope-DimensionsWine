@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.tooltop;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import com.chinaex123.kaleidoscope_dim_wine.util.GradientTextHelper;
 import net.minecraft.network.chat.Component;
@@ -38,6 +39,13 @@ public class ModTooltop {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("block.kaleidoscope_dim_wine.doll_003.tooltip").getString();
             tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
+        }
+        if (stack.getItem() == ModBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get().asItem()) {
+            // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+            String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.1").getString();
+            tooltip.add(GradientTextHelper.createDreamyFourGradientText(text, false,  1.0, false, false, false, false, false));
+            String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.2").getString();
+            tooltip.add(GradientTextHelper.createDreamyFourGradientText(text2, false,  1.0, false, false, false, false, false));
         }
 
         // ==================== 次元维度 - 下界 ====================
@@ -94,6 +102,37 @@ public class ModTooltop {
             if (stack.getItem() == TwilightforestItems.GOBLIN_ESSENCE.get()) {
                 // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
                 String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.goblin_essence").getString();
+                tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
+            }
+        }
+
+        // ==================== 次元维度 - 蜜蜂领域 ====================
+        if (ModList.get().isLoaded("the_bumblezone")) {
+            // 蜜酒精华
+            if (stack.getItem() == TheBumblezoneItems.MEAD_ESSENCE.get()) {
+                // 检查耐久是否耗尽
+                if (stack.getDamageValue() >= stack.getMaxDamage()) {
+                    // 耗尽时的提示
+                    String depletedText = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.depleted").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(depletedText, false, 1.0, false, false, false, false, false));
+                } else {
+                    // 正常状态下的提示
+                    String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.1").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(text, false,  1.0, false, false, false, false, false));
+                    String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.2").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(text2, false,  1.0, false, false, false, false, false));
+                    String text3 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.3").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(text3, false,  1.0, false, false, false, false, false));
+                    String text4 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.4").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(text4, false,  1.0, false, false, false, false, false));
+                    String text5 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.5").getString();
+                    tooltip.add(GradientTextHelper.createDreamyFourGradientText(text5, false,  1.0, false, false, false, false, false));
+                }
+            }
+            // 凝碳粉
+            if (stack.getItem() == TheBumblezoneItems.CARBOCRETIN_POWDER.get()) {
+                // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+                String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder").getString();
                 tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
             }
         }

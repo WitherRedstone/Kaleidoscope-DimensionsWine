@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.compat.jei;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -99,6 +100,24 @@ public class ModJeiPlugin implements IModPlugin {
             itemInfos.put(TwilightforestItems.GOBLIN_ESSENCE.get(), new Component[]{
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.goblin_essence")
+            });
+        }
+
+        // ==================== 次元维度 - 蜜蜂领域 ====================
+        if (ModList.get().isLoaded("the_bumblezone")) {
+            // 蜜酒精华
+            itemInfos.put(TheBumblezoneItems.MEAD_ESSENCE.get(), new Component[]{
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info").withStyle(ChatFormatting.BOLD),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.1"),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.2"),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.3"),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.4"),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.5")
+            });
+            // 凝碳粉
+            itemInfos.put(TheBumblezoneItems.CARBOCRETIN_POWDER.get(), new Component[]{
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder")
             });
         }
 

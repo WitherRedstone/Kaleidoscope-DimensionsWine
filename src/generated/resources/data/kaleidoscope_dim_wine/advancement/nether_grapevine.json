@@ -1,0 +1,44 @@
+{
+  "parent": "kaleidoscope_dim_wine:nether_enter",
+  "criteria": {
+    "has_crimson_grape_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:crimson_grapevine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_warped_grape_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:warped_grapevine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.nether_grapevine.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_dim_wine:crimson_grapevine"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.nether_grapevine.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_crimson_grape_vine",
+      "has_warped_grape_vine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

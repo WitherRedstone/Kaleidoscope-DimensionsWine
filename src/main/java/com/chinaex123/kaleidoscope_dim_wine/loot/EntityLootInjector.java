@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -50,6 +51,18 @@ public class EntityLootInjector {
                         .build();
                 event.getTable().addPool(bonusPool);
             }
+        }
+
+        // 凋灵
+        if (tableId.equals(ResourceLocation.withDefaultNamespace("entities/wither"))) {
+            LootPool bonusPool = LootPool.lootPool()
+                    .setRolls(UniformGenerator.between(1.0f, 1.0f))
+                    .when(LootItemRandomChanceCondition.randomChance(ServerConfig.WITHER_COMMAND_LIGHTS_DROP_CHANCE.get().floatValue()))
+                    .add(LootItem.lootTableItem(ModBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()))
+                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
+                    .name("kaleidoscope_dim_wine:string_lights_block_command")
+                    .build();
+            event.getTable().addPool(bonusPool);
         }
     }
 }

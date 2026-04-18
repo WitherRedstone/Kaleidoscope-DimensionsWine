@@ -1,0 +1,24 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:string_lights_entity_shulker",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_white",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_orange",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_magenta",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_light_blue",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_yellow",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_lime",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_pink",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_gray",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_light_gray",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_cyan",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_purple",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_blue",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_brown",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_green",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_red",
+    "kaleidoscope_dim_wine:string_lights_entity_shulker_black",
+    "kaleidoscope_dim_wine:string_lights_entity_chicken",
+    "kaleidoscope_dim_wine:string_lights_block_command",
+    "kaleidoscope_dim_wine:string_lights_block_bedrock"
+  ]
+}

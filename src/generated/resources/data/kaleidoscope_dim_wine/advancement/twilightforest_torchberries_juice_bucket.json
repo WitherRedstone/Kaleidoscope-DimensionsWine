@@ -1,0 +1,33 @@
+{
+  "parent": "kaleidoscope_dim_wine:twilightforest_torchberries",
+  "criteria": {
+    "has_torchberries_juice_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twilightforest:torchberries"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_torchberries_juice_bucket.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_dim_wine:torchberries_juice_bucket"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_torchberries_juice_bucket.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_torchberries_juice_bucket"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -54,7 +54,7 @@
       },
       {
         "effect": "minecraft:night_vision",
-        "duration": 60,
+        "duration": 120,
         "amplifier": 0,
         "probability": 1.0
       }
@@ -68,7 +68,7 @@
       },
       {
         "effect": "minecraft:night_vision",
-        "duration": 120,
+        "duration": 240,
         "amplifier": 0,
         "probability": 1.0
       }
@@ -82,7 +82,7 @@
       },
       {
         "effect": "minecraft:night_vision",
-        "duration": 240,
+        "duration": 600,
         "amplifier": 0,
         "probability": 1.0
       }

@@ -1,0 +1,28 @@
+{
+  "values": {
+    "kaleidoscope_dim_wine:crimson_fungal_sap": {
+      "chance": 0.25
+    },
+    "kaleidoscope_dim_wine:crimson_grape": {
+      "chance": 0.65
+    },
+    "kaleidoscope_dim_wine:crimson_grapevine": {
+      "chance": 0.3
+    },
+    "kaleidoscope_dim_wine:dreamfruit": {
+      "chance": 0.65
+    },
+    "kaleidoscope_dim_wine:frostheart_fruit": {
+      "chance": 0.65
+    },
+    "kaleidoscope_dim_wine:warped_fungal_sap": {
+      "chance": 0.25
+    },
+    "kaleidoscope_dim_wine:warped_grape": {
+      "chance": 0.65
+    },
+    "kaleidoscope_dim_wine:warped_grapevine": {
+      "chance": 0.3
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "minecraft:tuff"
+    },
+    {
+      "tag": "c:tools/mining_tool"
+    }
+  ],
+  "results": [
+    {
+      "id": "kaleidoscope_dim_wine:carbocretin_powder",
+      "count": 6
+    }
+  ]
+}
