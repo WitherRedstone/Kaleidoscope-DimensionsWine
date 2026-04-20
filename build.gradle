@@ -34,6 +34,13 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
     // Add here additional repositories if required by some of the dependencies below.
 }
 
@@ -129,8 +136,12 @@ dependencies {
     implementation "curse.maven:kaleidoscope-tavern-1475175:7785542" // 森罗物语：酒馆
 
     // 联动
-    implementation "curse.maven:the-twilight-forest-227639:7797302" // 维度酒 - 暮色森林
-    implementation "curse.maven:the-bumblezone-forge-362479:7875914" // 维度酒 - 蜜蜂领域
+    localRuntime "curse.maven:the-twilight-forest-227639:7797302" // 维度酒 - 暮色森林
+    localRuntime "curse.maven:the-bumblezone-forge-362479:7875914" // 维度酒 - 蜜蜂领域
+    localRuntime "maven.modrinth:aether:1.21.1-1.5.10-neoforge" // 维度酒 - 天境
+    localRuntime "maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21" // 维度酒 - 天境前置
+    //localRuntime "curse.maven:eternal-starlight-1080592:7788339" // 维度酒 - 永恒星光
+    //localRuntime files("run/mods/eternalstarlight-0.7.0-hotfix+1.21.1+neoforge.jar") // 维度酒 - 永恒星光
 
     implementation "curse.maven:jei-238222:7420587" // jei
     localRuntime "curse.maven:create-328085:7408951" // 机械动力 6.0.9
@@ -141,15 +152,16 @@ dependencies {
     // 辅助
     localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
     localRuntime "curse.maven:jade-324717:7545219" // jade
-    localRuntime "curse.maven:appleskin-248787:7517379" // 苹果皮
+    //localRuntime "curse.maven:appleskin-248787:7517379" // 苹果皮
     localRuntime "curse.maven:kubejs-238086:7278501"
     localRuntime "curse.maven:rhino-416294:7104526"
-    localRuntime "curse.maven:functional-storage-556861:7061714"
-    localRuntime "curse.maven:titanium-287342:7662843"
-    localRuntime "curse.maven:placebo-283644:6926281"
-    localRuntime "curse.maven:apothic-attributes-898963:7445079"
-    localRuntime "curse.maven:mmmmmmmmmmmm-225738:7206981"
-    localRuntime "curse.maven:selene-499980:7822739"
+    implementation "curse.maven:accessories-938917:7583320" // Accessories
+    //localRuntime "curse.maven:functional-storage-556861:7061714" // 功能性存储
+    //localRuntime "curse.maven:titanium-287342:7662843" // 功能性存储前置
+    //localRuntime "curse.maven:placebo-283644:6926281"
+    //localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
+    //localRuntime "curse.maven:mmmmmmmmmmmm-225738:7206981" // 试炼假人
+    //localRuntime "curse.maven:selene-499980:7822739"
     
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

@@ -25,8 +25,8 @@ public class ModItems {
 
     // -------------------- 瓶装 --------------------
     // 空竹杯
-    public static final DeferredItem<Item> EMPTY_BAMBOO_CUP = ITEMS_REGISTER.register("empty_bamboo_cup", () ->
-            new BottleBlockItem(ModBlocks.EMPTY_BAMBOO_CUP.get(), new Item.Properties()));
+//    public static final DeferredItem<Item> EMPTY_BAMBOO_CUP = ITEMS_REGISTER.register("empty_bamboo_cup", () ->
+//            new BottleBlockItem(ModBlocks.EMPTY_BAMBOO_CUP.get(), new Item.Properties()));
     // 易拉罐
     public static final DeferredItem<Item> POP_CAN = ITEMS_REGISTER.register("pop_can", () ->
             new BottleBlockItem(ModBlocks.POP_CAN.get(), new Item.Properties()));

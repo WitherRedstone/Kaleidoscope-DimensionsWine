@@ -1,5 +1,8 @@
 {
   "values": [
-    "kaleidoscope_dim_wine:frostheart_fruit"
+    {
+      "id": "kaleidoscope_dim_wine:frostheart_fruit",
+      "required": false
+    }
   ]
 }

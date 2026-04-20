@@ -1,18 +1,19 @@
 package com.chinaex123.kaleidoscope_dim_wine.block;
 
-import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.BottleBlock;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
- * 空瓶方块碰撞箱
+ * 易拉罐方块
  */
 public class PopCanBlock extends BottleBlock {
+
+    private static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 8.0, 11.0);
 
     public PopCanBlock() {
         super();
@@ -20,19 +21,11 @@ public class PopCanBlock extends BottleBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        Direction direction = state.getValue(FACING);
-        int index = switch (direction) {
-            case NORTH -> 0;
-            case EAST -> 1;
-            case SOUTH -> 2;
-            case WEST -> 3;
-            default -> 4;
-        };
-        return DrinkShapes.SHORT_BOTTLE_SHAPES[index];
+        return SHAPE;
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return getShape(state, level, pos, context);
+        return SHAPE;
     }
 }

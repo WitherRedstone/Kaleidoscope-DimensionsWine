@@ -3,8 +3,11 @@ package com.chinaex123.kaleidoscope_dim_wine.data;
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlockTags;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.ModItemTags;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.fml.ModList;
@@ -115,11 +118,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
             // 静谧四季 - sereneseasons:winter_crops
-            this.tag(ModBlockTags.WINTER_CROPS_BLOCK).add(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get()); // 迷梦果丛
+            this.tag(ModBlockTags.WINTER_CROPS_BLOCK).addOptional(BuiltInRegistries.BLOCK.getKey(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get())); // 迷梦果丛
             // 节气 - eclipticseasons:crops/winter
-            this.tag(ModBlockTags.CROPS_WINTER).add(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get()); // 迷梦果丛
+            this.tag(ModBlockTags.CROPS_WINTER).addOptional(BuiltInRegistries.BLOCK.getKey(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get())); // 迷梦果丛
             // 节气 - eclipticseasons:crops/dry_average
-            this.tag(ModBlockTags.CROPS_DRY_AVERAGE).add(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get()); // 迷梦果丛
+            this.tag(ModBlockTags.CROPS_DRY_AVERAGE).addOptional(BuiltInRegistries.BLOCK.getKey(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get())); // 迷梦果丛
         }
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityStruckByLightningEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
@@ -70,7 +71,7 @@ public class ModCommonEvent {
 
         // 遍历玩家物品栏，清除所有蜜酒精华
         for (ItemStack stack : player.getInventory().items) {
-            if (stack.is(TheBumblezoneItems.MEAD_ESSENCE.get())) {
+            if (ModList.get().isLoaded("the_bumblezone") && stack.is(TheBumblezoneItems.MEAD_ESSENCE.get())) {
                 stack.setCount(0);
             }
         }
@@ -86,7 +87,7 @@ public class ModCommonEvent {
         // 从受影响的实体列表中移除蜜酒精华物品实体
         event.getAffectedEntities().removeIf(entity -> {
             if (entity instanceof ItemEntity itemEntity) {
-                return itemEntity.getItem().is(TheBumblezoneItems.MEAD_ESSENCE.get());
+                return ModList.get().isLoaded("the_bumblezone") && itemEntity.getItem().is(TheBumblezoneItems.MEAD_ESSENCE.get());
             }
             return false;
         });
@@ -101,7 +102,7 @@ public class ModCommonEvent {
     public static void onLightningStrike(EntityStruckByLightningEvent event) {
         // 如果被击中的实体是蜜酒精华物品，则取消事件
         if (event.getEntity() instanceof ItemEntity itemEntity) {
-            if (itemEntity.getItem().is(TheBumblezoneItems.MEAD_ESSENCE.get())) {
+            if (ModList.get().isLoaded("the_bumblezone") && itemEntity.getItem().is(TheBumblezoneItems.MEAD_ESSENCE.get())) {
                 event.setCanceled(true);
             }
         }

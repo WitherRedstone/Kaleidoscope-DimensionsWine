@@ -65,7 +65,7 @@ public class ModBlocks {
 
     // -------------------- 瓶装 --------------------
     // 空竹杯
-    public static final DeferredBlock<Block> EMPTY_BAMBOO_CUP = BLOCK_REGISTER.register("empty_bamboo_cup", () -> new BottleBlock());
+//    public static final DeferredBlock<Block> EMPTY_BAMBOO_CUP = BLOCK_REGISTER.register("empty_bamboo_cup", () -> new BottleBlock());
     // 易拉罐
     public static final DeferredBlock<Block> POP_CAN = BLOCK_REGISTER.register("pop_can", PopCanBlock::new);
 

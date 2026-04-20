@@ -3,6 +3,9 @@
     "kaleidoscope_dim_wine:crimson_grapevine_trellis",
     "kaleidoscope_dim_wine:crimson_grapevine_plant",
     "kaleidoscope_dim_wine:dreamfruit_vine_plant",
-    "kaleidoscope_dim_wine:frostheart_fruit_bush"
+    {
+      "id": "kaleidoscope_dim_wine:frostheart_fruit_bush",
+      "required": false
+    }
   ]
 }

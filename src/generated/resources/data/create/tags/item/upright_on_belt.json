@@ -1,0 +1,112 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:pop_can",
+    "kaleidoscope_dim_wine:crimson_crescendo",
+    "kaleidoscope_dim_wine:ethereal_noble",
+    "kaleidoscope_dim_wine:wart_hennessy",
+    "kaleidoscope_dim_wine:blaze_martell",
+    "kaleidoscope_dim_wine:magma_royal_salute",
+    "kaleidoscope_dim_wine:black_bone_lafite",
+    "kaleidoscope_dim_wine:chorus_cognac",
+    "kaleidoscope_dim_wine:dragons_breath_brandy",
+    "kaleidoscope_dim_wine:abyssal_porter",
+    "kaleidoscope_dim_wine:silent_sherry",
+    "kaleidoscope_dim_wine:forgotten_margarita",
+    "kaleidoscope_dim_wine:phantom_dream_bubble",
+    "kaleidoscope_dim_wine:end_starlight",
+    "kaleidoscope_dim_wine:divine_embryo_port",
+    "kaleidoscope_dim_wine:draconic_blood_wine",
+    {
+      "id": "kaleidoscope_dim_wine:cave_glowbrew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:cave_glowbrew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dawnlight_dew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dead_end_spittle",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:snakeskin_liqueur",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:frostvein_beastblood",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:rangers_satchel",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:embereye",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:thornheart",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:druids_secret_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:moorglow_birds_song",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:perennial_frost",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:giants_hymn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:goblins_stash",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sprite",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pepsi",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:fanta",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pollen_nectar",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:honeythorn_mead",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:beeswax_honey_wine",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sweet_crystal_honey",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:royal_honey_brew",
+      "required": false
+    }
+  ]
+}
