@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:pink_dye"
+    },
+    "B": {
+      "item": "kaleidoscope_dim_wine:string_lights_entity_shulker"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "item": "kaleidoscope_dim_wine:string_lights_entity_shulker_pink"
+  },
+  "show_notification": true
+}

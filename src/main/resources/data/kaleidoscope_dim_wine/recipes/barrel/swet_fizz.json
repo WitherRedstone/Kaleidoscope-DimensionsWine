@@ -1,0 +1,25 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "aether"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+  "ingredients": [
+    {
+      "item": "aether:swet_ball"
+    },
+    {
+      "item": "aether:blue_gummy_swet"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:swet_fizz"
+  },
+  "unit_time": 2400
+}

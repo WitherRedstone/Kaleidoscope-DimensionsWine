@@ -1,0 +1,9 @@
+// 1.20.1	2026-04-21T23:26:10.6364703	Tags for minecraft:block mod id kaleidoscope_dim_wine
+68f1a52c976d1cf02f5d7836f84ddb28d6137654 data/eclipticseasons/tags/blocks/crops/dry_average.json
+aaabba258db4cf7745786fa989661f1eaafa1996 data/eclipticseasons/tags/blocks/crops/winter.json
+510d9399b65b1e25bf5288efb420dd52564209e3 data/forge/tags/blocks/needs_wood_tool.json
+510d9399b65b1e25bf5288efb420dd52564209e3 data/kaleidoscope_tavern/tags/blocks/string_lights.json
+510d9399b65b1e25bf5288efb420dd52564209e3 data/minecraft/tags/blocks/mineable/pickaxe.json
+a9f38575570893701f47de6432b31c3906c9b87a data/sereneseasons/tags/blocks/crops/all_seasons.json
+aaabba258db4cf7745786fa989661f1eaafa1996 data/sereneseasons/tags/blocks/winter_crops.json
+74686b974ef1a04b91d8456dc60b6359acd3bca3 data/sereneseasons/tags/blocks/year_round_crops.json

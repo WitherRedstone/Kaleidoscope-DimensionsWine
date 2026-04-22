@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:orange_dye"
+    },
+    "B": {
+      "item": "kaleidoscope_dim_wine:string_lights_entity_shulker"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "item": "kaleidoscope_dim_wine:string_lights_entity_shulker_orange"
+  },
+  "show_notification": true
+}

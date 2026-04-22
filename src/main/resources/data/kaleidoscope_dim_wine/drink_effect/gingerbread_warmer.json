@@ -1,0 +1,61 @@
+{
+  "item": "kaleidoscope_dim_wine:abyssal_porter",
+  "effects": [
+    [
+      {
+        "effect": "minecraft:nausea",
+        "duration": 35,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:nausea",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:luck",
+        "duration": 15,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:luck",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:luck",
+        "duration": 60,
+        "amplifier": 1,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:luck",
+        "duration": 120,
+        "amplifier": 4,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:luck",
+        "duration": 240,
+        "amplifier": 9,
+        "probability": 1.0
+      }
+    ]
+  ]
+}

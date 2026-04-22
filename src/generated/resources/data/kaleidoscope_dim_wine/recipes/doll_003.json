@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:gems/diamond"
+    },
+    "B": {
+      "item": "minecraft:magenta_wool"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:doll_003"
+  },
+  "show_notification": true
+}

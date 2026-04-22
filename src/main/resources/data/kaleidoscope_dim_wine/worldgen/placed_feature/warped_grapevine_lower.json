@@ -1,0 +1,51 @@
+{
+  "feature": "kaleidoscope_dim_wine:warped_grapevine_lower",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 32
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 32
+        },
+        "max_inclusive": {
+          "absolute": 64
+        }
+      }
+    },
+    {
+      "type": "minecraft:environment_scan",
+      "direction_of_search": "up",
+      "max_steps": 32,
+      "target_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:warped_wart_block"
+      },
+      "allowed_search_condition": {
+        "type": "minecraft:matching_blocks",
+        "blocks": [
+          "minecraft:air",
+          "minecraft:lava",
+          "minecraft:netherrack",
+          "minecraft:warped_nylium",
+          "minecraft:glowstone"
+        ]
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": 0,
+      "y_spread": -1
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

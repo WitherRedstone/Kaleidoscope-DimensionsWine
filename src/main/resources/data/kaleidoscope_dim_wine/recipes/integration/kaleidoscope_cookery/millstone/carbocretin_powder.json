@@ -1,0 +1,16 @@
+{
+  "forge:conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "minecraft:tuff"
+  },
+  "result": {
+    "count": 6,
+    "item": "kaleidoscope_dim_wine:carbocretin_powder"
+  }
+}

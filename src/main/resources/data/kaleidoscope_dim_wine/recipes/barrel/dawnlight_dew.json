@@ -1,0 +1,31 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:torchberries_juice",
+  "ingredients": [
+    {
+      "item": "twilightforest:mayapple"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:dawnlight_dew"
+  },
+  "unit_time": 2400
+}

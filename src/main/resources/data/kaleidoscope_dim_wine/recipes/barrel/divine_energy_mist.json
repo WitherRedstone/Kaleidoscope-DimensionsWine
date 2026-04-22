@@ -1,0 +1,25 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "aether"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+  "ingredients": [
+    {
+      "item": "aether:ambrosium_shard"
+    },
+    {
+      "item": "aether:aechor_petal"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:divine_energy_mist"
+  },
+  "unit_time": 2400
+}

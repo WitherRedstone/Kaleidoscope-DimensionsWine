@@ -1,0 +1,28 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "the_bumblezone"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "the_bumblezone:honey_fluid_still",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "the_bumblezone:glistering_honey_crystal"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:sweet_crystal_honey"
+  },
+  "unit_time": 2400
+}

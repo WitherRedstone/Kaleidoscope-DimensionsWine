@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kaleidoscope_dim_wine:item/mead_essence"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:damaged": 1,
+        "minecraft:damage": 1.0
+      },
+      "model": "kaleidoscope_dim_wine:item/mead_essence_depleted"
+    }
+  ]
+}

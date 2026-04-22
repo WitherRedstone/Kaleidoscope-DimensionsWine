@@ -1,0 +1,21 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "feature": "kaleidoscope_dim_wine:frostheart_fruit_bush",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "forge:conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit"
+    }
+  ],
+  "results": [
+    {
+      "item": "kaleidoscope_dim_wine:dreamfruit_juice",
+      "amount": 1000
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:torchberries_juice",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_dim_wine:colossal_fragment"
+    },
+    {
+      "item": "twilightforest:magic_beans"
+    },
+    {
+      "tag": "kaleidoscope_dim_wine:wine/cloud"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:giants_hymn"
+  },
+  "unit_time": 2400
+}

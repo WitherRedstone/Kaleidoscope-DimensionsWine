@@ -1,0 +1,15 @@
+// 1.20.1	2026-04-22T20:57:38.5694399	Tags for minecraft:item mod id kaleidoscope_dim_wine
+76d3de88a5bafd666b2485ed95968cdd8b61de95 data/create/tags/items/upright_on_belt.json
+9b934094aa8de42ed050e729bb6cb22b10c670f0 data/diet/tags/items/fruits.json
+9b934094aa8de42ed050e729bb6cb22b10c670f0 data/forge/tags/items/fruits.json
+22c0cc5ece9e59ea8a6bb5fd904c7e7cb430e3b9 data/forge/tags/items/fruits/crimson_grape.json
+d7fcc0fc073a38290163524b2a41c190c6881d2c data/forge/tags/items/fruits/dreamfruit.json
+92d635577778cbc50100591bd4fcf7135d6f08c3 data/forge/tags/items/fruits/frostheart_fruit.json
+35ebd6b5e06bd02e32bca0d75682de007710abbe data/forge/tags/items/fruits/warped_grape.json
+6629410d602b8a135d5b331705256bba54f8c021 data/kaleidoscope_dim_wine/tags/items/colossal.json
+70369afc646ee6f6df578ea082164f392e65092d data/kaleidoscope_dim_wine/tags/items/wine/berry.json
+4c0a0d5b417dc50fbfd9ff6e14a38fd9a083a8dd data/kaleidoscope_dim_wine/tags/items/wine/cloud.json
+92d635577778cbc50100591bd4fcf7135d6f08c3 data/sereneseasons/tags/items/winter_crops.json
+f4ff1c3515414fb5746f3e482d472b9252664aeb data/vinery/tags/items/large_bottle.json
+51c5f0388a7e5b1a0ba0e526bc7ad0ea98ef5919 data/vinery/tags/items/small_bottle.json
+51c5f0388a7e5b1a0ba0e526bc7ad0ea98ef5919 data/youkaisfeasts/tags/items/wine.json

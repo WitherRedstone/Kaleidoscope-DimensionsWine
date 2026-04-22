@@ -1,0 +1,40 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:magma_royal_salute",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dawnlight_dew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dead_end_spittle",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:frostvein_beastblood",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:thornheart",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:giants_hymn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_offering_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:gingerbread_warmer",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:frostheart_fruit_juice",
+  "ingredients": [
+    {
+      "item": "twilightforest:arctic_fur"
+    },
+    {
+      "tag": "kaleidoscope_dim_wine:wine/berry"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:frostvein_beastblood"
+  },
+  "unit_time": 2400
+}

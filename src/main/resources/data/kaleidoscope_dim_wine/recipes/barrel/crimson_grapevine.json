@@ -1,0 +1,22 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:crimson_grape_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:weeping_vines"
+    },
+    {
+      "item": "kaleidoscope_dim_wine:crimson_fungal_sap"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:crimson_crescendo"
+  },
+  "unit_time": 2400
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:chain"
+    },
+    "B": {
+      "item": "minecraft:lantern"
+    },
+    "C": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "BBB",
+    "CCC"
+  ],
+  "result": {
+    "count": 8,
+    "item": "kaleidoscope_dim_wine:string_lights_entity_bee"
+  },
+  "show_notification": true
+}

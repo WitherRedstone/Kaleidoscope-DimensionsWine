@@ -1,0 +1,7 @@
+{
+  "parent": "kaleidoscope_dim_wine:block/doll/steve_doll",
+  "textures": {
+    "doll": "kaleidoscope_dim_wine:block/doll/doll_001",
+		"particle": "minecraft:block/white_wool"
+  }
+}

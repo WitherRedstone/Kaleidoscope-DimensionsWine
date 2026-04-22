@@ -1,0 +1,22 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:dragon_blood",
+  "ingredients": [
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:divine_embryo_port"
+  },
+  "unit_time": 2400
+}

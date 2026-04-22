@@ -1,0 +1,14 @@
+{
+  "forge:conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
+  "type": "kaleidoscope_tavern:pressing_tub",
+  "fluid": "kaleidoscope_dim_wine:torchberries_juice",
+  "fluid_amount": 125,
+  "ingredient": {
+    "item": "twilightforest:torchberries"
+  }
+}

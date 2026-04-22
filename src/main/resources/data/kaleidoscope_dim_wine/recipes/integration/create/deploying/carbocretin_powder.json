@@ -1,0 +1,23 @@
+{
+  "forge:conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "minecraft:tuff"
+    },
+    {
+      "tag": "forge:tools/pickaxes"
+    }
+  ],
+  "results": [
+    {
+      "item": "kaleidoscope_dim_wine:carbocretin_powder",
+      "count": 6
+    }
+  ]
+}

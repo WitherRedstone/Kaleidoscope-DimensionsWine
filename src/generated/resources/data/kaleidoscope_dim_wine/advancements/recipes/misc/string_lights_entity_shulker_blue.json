@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blue_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_string_lights_entity_shulker": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:string_lights_entity_shulker"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscope_dim_wine:string_lights_entity_shulker_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_string_lights_entity_shulker",
+      "has_blue_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscope_dim_wine:string_lights_entity_shulker_blue"
+    ]
+  },
+  "sends_telemetry_event": false
+}

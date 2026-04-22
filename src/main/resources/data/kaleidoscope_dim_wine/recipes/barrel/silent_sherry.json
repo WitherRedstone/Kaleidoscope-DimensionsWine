@@ -1,0 +1,22 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:dreamfruit_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:chorus_flower"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "item": "minecraft:end_rod"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:silent_sherry"
+  },
+  "unit_time": 2400
+}

@@ -1,0 +1,31 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:frostheart_fruit_juice",
+  "ingredients": [
+    {
+      "item": "twilightforest:arctic_fur"
+    },
+    {
+      "item": "twilightforest:borer_essence"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:snow_block"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:perennial_frost"
+  },
+  "unit_time": 2400
+}

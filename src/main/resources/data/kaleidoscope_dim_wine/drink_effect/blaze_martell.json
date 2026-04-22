@@ -1,0 +1,91 @@
+{
+  "item": "kaleidoscope_dim_wine:blaze_martell",
+  "effects": [
+    [
+      {
+        "effect": "minecraft:nausea",
+        "duration": 35,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:nausea",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 15,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:rage",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:rage",
+        "duration": 15,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:rage",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 120,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:rage",
+        "duration": 60,
+        "amplifier": 2,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 240,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:rage",
+        "duration": 120,
+        "amplifier": 4,
+        "probability": 1.0
+      }
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "kaleidoscope_dim_wine:block/string_lights/string_lights_entity_chicken",
+      "y": 270
+    }
+  }
+}

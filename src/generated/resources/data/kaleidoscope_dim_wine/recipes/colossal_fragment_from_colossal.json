@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "twilightforest"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "kaleidoscope_dim_wine:colossal"
+          }
+        ],
+        "result": {
+          "count": 16,
+          "item": "kaleidoscope_dim_wine:colossal_fragment"
+        }
+      }
+    }
+  ]
+}

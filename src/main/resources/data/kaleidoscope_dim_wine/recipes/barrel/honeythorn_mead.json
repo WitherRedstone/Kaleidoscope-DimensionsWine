@@ -1,0 +1,25 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "the_bumblezone"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "the_bumblezone:honey_fluid_still",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:bee_stinger"
+    },
+    {
+      "item": "the_bumblezone:pollen_puff"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:honeythorn_mead"
+  },
+  "unit_time": 2400
+}

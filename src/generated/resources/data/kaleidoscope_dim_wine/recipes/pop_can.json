@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:glass_bottle"
+    },
+    "B": {
+      "tag": "forge:nuggets/iron"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:pop_can"
+  },
+  "show_notification": true
+}

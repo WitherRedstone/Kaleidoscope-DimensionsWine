@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.chinaex123.kaleidoscope_dim_wine.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "kaleidoscope_dim_wine.refmap.json",
+  "mixins": [
+    "EntityMixin"
+  ],
+  "client": [],
+  "server": []
+}

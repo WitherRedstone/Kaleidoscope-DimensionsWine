@@ -1,0 +1,28 @@
+{
+	"forge:conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "twilightforest"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:torchberries_juice",
+  "ingredients": [
+    {
+      "item": "twilightforest:firefly"
+    },
+    {
+      "item": "twilightforest:liveroot"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:cave_glowbrew"
+  },
+  "unit_time": 2400
+}

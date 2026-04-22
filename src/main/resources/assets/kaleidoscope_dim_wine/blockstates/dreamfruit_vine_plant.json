@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "has_fruit=false": {
+      "model": "kaleidoscope_dim_wine:block/crops/dreamfruit_vine/dreamfruit_vine_plant"
+    },
+    "has_fruit=true": {
+      "model": "kaleidoscope_dim_wine:block/crops/dreamfruit_vine/dreamfruit_vine_plant_lit"
+    }
+  }
+}
