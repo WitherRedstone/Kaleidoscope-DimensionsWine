@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "type": "kaleidoscope_tavern:pressing_tub",
+  "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+  "ingredient": {
+    "item": "aether:enchanted_berry"
+  }
+}

@@ -3,7 +3,8 @@
   "package": "com.chinaex123.kaleidoscope_dim_wine.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "StringLightsBlockMixin"
+    "StringLightsBlockMixin",
+    "EntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

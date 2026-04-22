@@ -23,7 +23,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         // ==================== 小彩蛋 ====================
         // 玩偶 - ChinaEX123_BILI
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.DOLL_001.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DOLL_001.get())
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -32,7 +32,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_doll_1", has(Items.LIGHT_BLUE_WOOL))
                 .save(recipeOutput);
         // 玩偶 - Fvue233
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.DOLL_002.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DOLL_002.get())
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -41,7 +41,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_doll_2", has(Items.PINK_WOOL))
                 .save(recipeOutput);
         // 玩偶 - Agens_Eland
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.DOLL_003.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.DOLL_003.get())
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -52,7 +52,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
 
         // ==================== 次元维度 - 小装饰 ====================
         // 小灯串（潜影贝-无色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER.get(),8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER.get(),8)
                 .pattern("AAA")
                 .pattern("BBB")
                 .pattern("CCC")
@@ -64,7 +64,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_string_lights_entity_shulker_chorus_fruit", has(Items.CHORUS_FRUIT))
                 .save(recipeOutput);
         // 小灯串（潜影贝-白色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -74,7 +74,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_white_dye", has(Items.WHITE_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-橙色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_ORANGE.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_ORANGE.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -84,7 +84,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_orange_dye", has(Items.ORANGE_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-品红色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_MAGENTA.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_MAGENTA.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -94,7 +94,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_magenta_dye", has(Items.MAGENTA_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-淡蓝色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -104,7 +104,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_light_blue_dye", has(Items.LIGHT_BLUE_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-黄色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_YELLOW.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_YELLOW.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -114,7 +114,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_yellow_dye", has(Items.YELLOW_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-黄绿色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIME.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIME.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -124,7 +124,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_lime_dye", has(Items.LIME_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-粉红色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PINK.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PINK.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -134,7 +134,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_pink_dye", has(Items.PINK_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-灰色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GRAY.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GRAY.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -144,7 +144,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_gray_dye", has(Items.GRAY_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-淡灰色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -154,7 +154,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_light_gray_dye", has(Items.LIGHT_GRAY_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-青色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_CYAN.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_CYAN.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -164,7 +164,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_cyan_dye", has(Items.CYAN_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-紫色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PURPLE.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PURPLE.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -174,7 +174,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_purple_dye", has(Items.PURPLE_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-蓝色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLUE.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLUE.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -184,7 +184,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_blue_dye", has(Items.BLUE_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-棕色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BROWN.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BROWN.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -194,7 +194,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_brown_dye", has(Items.BROWN_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-绿色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GREEN.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GREEN.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -204,7 +204,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_green_dye", has(Items.GREEN_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-红色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_RED.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_RED.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -214,7 +214,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_red_dye", has(Items.RED_DYE))
                 .save(recipeOutput);
         // 小灯串（潜影贝-黑色）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLACK.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLACK.get(), 8)
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")
@@ -224,7 +224,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_black_dye", has(Items.BLACK_DYE))
                 .save(recipeOutput);
         // 小灯串（小鸡仔）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_CHICKEN.get(),8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_CHICKEN.get(),8)
                 .pattern("AAA")
                 .pattern("BBB")
                 .pattern("CCC")
@@ -236,7 +236,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_string_lights_entity_chicken_feather", has(Items.FEATHER))
                 .save(recipeOutput);
         // 小灯串（蜜蜂）
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.STRING_LIGHTS_ENTITY_BEE.get(),8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRING_LIGHTS_ENTITY_BEE.get(),8)
                 .pattern("AAA")
                 .pattern("BBB")
                 .pattern("CCC")
@@ -256,12 +256,17 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_dragon_blood_bucket", has(ModItems.DRAGON_BLOOD_BUCKET.get()))
                 .save(recipeOutput);
         // 巨物碎片
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, TwilightforestItems.COLOSSAL_FRAGMENT.get(),16)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, TwilightforestItems.COLOSSAL_FRAGMENT.get(),16)
                 .requires(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "colossal")))
                 .unlockedBy("has_colossal", has(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "colossal"))))
                 .save(recipeOutput.withConditions(modLoaded("twilightforest")));
+        // 天使之羽
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ANGEL_FEATHER.get(),8)
+                .requires(ModItems.ANGEL_WINGS)
+                .unlockedBy("has_angel_wings", has(ModItems.ANGEL_WINGS))
+                .save(recipeOutput);
         // 易拉罐
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.POP_CAN.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.POP_CAN.get())
                 .pattern("BBB")
                 .pattern("BAB")
                 .pattern("BBB")

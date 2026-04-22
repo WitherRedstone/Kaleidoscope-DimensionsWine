@@ -94,18 +94,6 @@ public class AdvancementTwilightforest implements AdvancementProvider.Advancemen
                 .addCriterion("has_colossal_fragment", InventoryChangeTrigger.TriggerInstance.hasItems(TwilightforestItems.COLOSSAL_FRAGMENT.get())) // 巨物碎片
                 .requirements(AdvancementRequirements.Strategy.OR)
                 .save(saver, getNameId("twilightforest_colossal_fragment"));
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     /**

@@ -28,6 +28,12 @@ public interface ModItemTags {
     // 让物品呈现直立状态
     TagKey<Item> UPRIGHT_ON_BELT = createItemTag("upright_on_belt"); // create:upright_on_belt
 
+    // 葡园酒香柜子
+    TagKey<Item> VINERY_LARGE_BOTTLE = vineryItemTag("large_bottle"); // vinery:large_bottle
+    TagKey<Item> VINERY_SMALL_BOTTLE = vineryItemTag("small_bottle"); // vinery:small_bottle
+    // 幻想乡乐事柜子
+    TagKey<Item> YOUKAISFEASTS_WINE = youkaisfeastsItemTag("wine"); // youkaisfeasts:wine
+
 
     private static TagKey<Item> bind(String name) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, name));
@@ -47,5 +53,15 @@ public interface ModItemTags {
 
     static TagKey<Item> createItemTag(String name) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("create", name));
+    }
+
+    // 葡园酒香柜子
+    static TagKey<Item> vineryItemTag(String name) {
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("vinery", name));
+    }
+
+    // 幻想乡乐事柜子
+    static TagKey<Item> youkaisfeastsItemTag(String name) {
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("youkaisfeasts", name));
     }
 }

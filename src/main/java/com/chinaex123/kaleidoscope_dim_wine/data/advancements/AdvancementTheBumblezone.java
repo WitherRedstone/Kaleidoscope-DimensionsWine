@@ -29,7 +29,6 @@ public class AdvancementTheBumblezone implements AdvancementProvider.Advancement
     @Override
     public void generate(@NotNull HolderLookup.Provider registries, @NotNull Consumer<AdvancementHolder> saver, @NotNull ExistingFileHelper existingFileHelper) {
 
-        // 如果没有安装蜜蜂领域模组，则不生成成就
         if (!ModList.get().isLoaded("the_bumblezone")) {
             return;
         }
@@ -82,12 +81,6 @@ public class AdvancementTheBumblezone implements AdvancementProvider.Advancement
                 .rewards(AdvancementRewards.Builder.loot(ResourceKey.create(Registries.LOOT_TABLE,
                         ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "advancements/mead_essence"))))
                 .save(saver, getNameId("the_bumblezone_mead_essence"));
-
-
-
-
-
-
     }
 
     /**

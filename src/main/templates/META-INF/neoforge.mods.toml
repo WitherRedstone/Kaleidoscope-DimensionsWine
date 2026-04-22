@@ -104,11 +104,16 @@ config="${mod_id}.mixins.json"
     versionRange = "[4.8.3345,)"
     ordering = "AFTER"
     side = "BOTH"
-
 [[dependencies."${mod_id}"]]
     modId = "the_bumblezone"
     type = "optional"
     versionRange = "[7.13.0,)"
+    ordering = "AFTER"
+    side = "BOTH"
+[[dependencies."${mod_id}"]]
+    modId = "aether"
+    type = "optional"
+    versionRange = "[1.5.10,)"
     ordering = "AFTER"
     side = "BOTH"
 

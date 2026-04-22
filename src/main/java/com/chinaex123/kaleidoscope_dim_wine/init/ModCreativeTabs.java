@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.core.registries.Registries;
@@ -29,6 +30,8 @@ public class ModCreativeTabs {
                         // -------------------- 瓶装 --------------------
 //                        output.accept(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
                         output.accept(ModItems.POP_CAN.get()); // 易拉罐
+                        output.accept(ModItems.ANGEL_WINGS.get()); // 天使之翼
+                        output.accept(ModItems.ANGEL_FEATHER.get()); // 天使之羽
                         // -------------------- 流体桶 --------------------
                         output.accept(ModItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
                         output.accept(ModItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
@@ -107,10 +110,19 @@ public class ModCreativeTabs {
                         }
 
 
-                        // -------------------- 流体桶 --------------------
-                        // -------------------- 作物 --------------------
-                        // -------------------- 物品 --------------------
-                        // -------------------- 酒类 --------------------
+                        // ==================== 次元维度 - 天境 ====================
+                        if (ModList.get().isLoaded("aether")) {
+                            // -------------------- 物品 --------------------
+                            output.accept(AetherItems.ENCHANTED_BERRY_JUICE_BUCKET.get()); // 神饯蓝莓汁桶
+                            // -------------------- 酒类 --------------------
+                            output.accept(AetherItems.DIVINE_OFFERING_BREW.get()); // 神饯紫晶酿
+                            output.accept(AetherItems.DIVINE_ENERGY_MIST.get()); // 神能迷雾
+                            output.accept(AetherItems.SWET_FIZZ.get()); // 史维特菲士
+                            output.accept(AetherItems.GRAVITITE_DRUNK.get()); // 重力醉
+                            output.accept(AetherItems.HEALING_ELIXIR.get()); // 治愈灵药
+                            output.accept(AetherItems.GINGERBREAD_WARMER.get()); // 姜饼暖饮
+                            output.accept(AetherItems.UNBOUND_SKYBORN.get()); // 无界苍穹
+                        }
 
 
 

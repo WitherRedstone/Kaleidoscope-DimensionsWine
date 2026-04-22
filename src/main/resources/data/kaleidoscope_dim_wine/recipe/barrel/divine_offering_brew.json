@@ -1,0 +1,25 @@
+{
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "aether"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+  "ingredients": [
+    {
+      "item": "aether:zanite_gemstone"
+    },
+    {
+      "item": "aether:golden_amber"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_dim_wine:divine_offering_brew"
+  }
+}

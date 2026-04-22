@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
@@ -22,6 +23,8 @@ public class ModItemModelsProvider extends ItemModelProvider {
     protected void registerModels() {
 
         basicItem(ModItems.MOD_LOGO.get()); // 模组logo
+        basicItem(ModItems.ANGEL_WINGS.get()); // 天使之翼
+        basicItem(ModItems.ANGEL_FEATHER.get()); // 天使之羽
         // ==================== 瓶装 ====================
 //        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
         basicItem(ModItems.POP_CAN.get()); // 易拉罐
@@ -111,6 +114,21 @@ public class ModItemModelsProvider extends ItemModelProvider {
         }
 
 
+        // ==================== 次元维度 - 天境 ====================
+        if (ModList.get().isLoaded("aether")) {
+            // -------------------- 物品 --------------------
+            basicItem(AetherItems.ENCHANTED_BERRY_JUICE_BUCKET.get()); // 神饯蓝莓汁桶
+            // -------------------- 酒类 --------------------
+            compatAetherDrinkItem(AetherItems.DIVINE_OFFERING_BREW); // 神饯紫晶酿
+            compatAetherDrinkItem(AetherItems.DIVINE_ENERGY_MIST); // 神能迷雾
+            compatAetherDrinkItem(AetherItems.SWET_FIZZ); // 史维特菲士
+            compatAetherDrinkItem(AetherItems.GRAVITITE_DRUNK); // 重力醉
+            compatAetherDrinkItem(AetherItems.HEALING_ELIXIR); // 治愈灵药
+            compatAetherDrinkItem(AetherItems.GINGERBREAD_WARMER); // 姜饼暖饮
+            compatAetherDrinkItem(AetherItems.UNBOUND_SKYBORN); // 无界苍穹
+        }
+
+
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------
         // -------------------- 物品 --------------------
@@ -151,11 +169,20 @@ public class ModItemModelsProvider extends ItemModelProvider {
     }
 
     /**
-     * 联动酒类 - 暮色森林（路径：item/drink/compat/the_bumblezone）
+     * 联动酒类 - 蜜蜂领域（路径：item/drink/compat/the_bumblezone）
      */
     private void compatTheBumblezoneDrinkItem(DeferredHolder<Item, ? extends Item> item) {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/the_bumblezone/" + itemName));
+    }
+
+    /**
+     * 联动酒类 - 天境（路径：item/drink/compat/aether）
+     */
+    private void compatAetherDrinkItem(DeferredHolder<Item, ? extends Item> item) {
+        String itemName = item.getId().getPath();
+        ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
+        builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/aether/" + itemName));
     }
 }

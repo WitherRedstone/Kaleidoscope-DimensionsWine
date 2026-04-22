@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_angel_wings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:angel_wings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscope_dim_wine:angel_feather"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_angel_wings"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscope_dim_wine:angel_feather"
+    ]
+  }
+}

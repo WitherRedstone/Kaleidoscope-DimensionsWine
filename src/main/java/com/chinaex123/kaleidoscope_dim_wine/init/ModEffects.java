@@ -46,6 +46,12 @@ public class ModEffects {
     // 高兴：增加移动速度，攻击或受伤时移除
     public static final DeferredHolder<MobEffect, MobEffect> HAPPY = EFFECTS.register("happy", () -> new Happy(0xFFD700));
 
+    // ==================== 次元维度 - 天境 ====================
+    // 苍穹之赐：增加移动速度并可以鞘翅飞行
+    public static final DeferredHolder<MobEffect, MobEffect> SKYBORN_GRACE = EFFECTS.register("skyborn_grace", () -> new SkybornGrace(0x97CAE4));
+    // 无界之赐：启用创造飞行并在空中时移除挖掘惩罚
+    public static final DeferredHolder<MobEffect, MobEffect> UNBOUND_GRACE = EFFECTS.register("unbound_grace", () -> new UnboundGrace(0x97CAE4));
+
     public static void register(IEventBus modEventBus) {
         EFFECTS.register(modEventBus);
     }

@@ -5,6 +5,9 @@ import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.event.EffectAttributeRemoveHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
@@ -50,6 +53,14 @@ public class KaleidoscopeDimensionsWine {
         if (ModList.get().isLoaded("the_bumblezone")) {
             TheBumblezoneBlocks.register(modEventBus);
             TheBumblezoneItems.register(modEventBus);
+        }
+
+        // ==================== 次元维度 - 天境 ====================
+        if (ModList.get().isLoaded("aether")) {
+            AetherBlocks.register(modEventBus);
+            AetherItems.register(modEventBus);
+            AetherFluids.FLUID_TYPES.register(modEventBus);
+            AetherFluids.FLUIDS.register(modEventBus);
         }
     }
 }

@@ -14,7 +14,8 @@ public class ModAdvancements extends AdvancementProvider {
         super(output, registries, existingFileHelper, List.of(
                 new AdvancementMinecraft(),
                 new AdvancementTwilightforest(),
-                new AdvancementTheBumblezone()
+                new AdvancementTheBumblezone(),
+                new AdvancementAether()
         ));
     }
 }

@@ -2,12 +2,14 @@ package com.chinaex123.kaleidoscope_dim_wine.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+import java.util.List;
+
 public class ServerConfig {
-    public static final ModConfigSpec.DoubleValue REDCAP_GOBLIN_ESSENCE_CHANCE_0;
-    public static final ModConfigSpec.DoubleValue REDCAP_GOBLIN_ESSENCE_CHANCE_1;
-    public static final ModConfigSpec.DoubleValue REDCAP_GOBLIN_ESSENCE_CHANCE_2;
-    public static final ModConfigSpec.DoubleValue REDCAP_GOBLIN_ESSENCE_CHANCE_3;
+    public static final ModConfigSpec.ConfigValue<List<? extends Double>> REDCAP_GOBLIN_ESSENCE_LOOTING_CHANCES;
     public static final ModConfigSpec.DoubleValue WITHER_COMMAND_LIGHTS_DROP_CHANCE;
+    public static final ModConfigSpec.DoubleValue ANGEL_WINGS_DROP_CHANCE;
+    public static final ModConfigSpec.IntValue ANGEL_WINGS_DROP_MIN;
+    public static final ModConfigSpec.IntValue ANGEL_WINGS_DROP_MAX;
 
     public static final ModConfigSpec.IntValue REDCAP_LOOTING_BONUS_MIN;
     public static final ModConfigSpec.IntValue REDCAP_LOOTING_BONUS_MAX;
@@ -17,36 +19,28 @@ public class ServerConfig {
 
     public static final ModConfigSpec.DoubleValue BEDROCK_FALL_DROP_CHANCE;
 
+    public static final ModConfigSpec.ConfigValue<List<? extends Double>> CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES;
+    public static final ModConfigSpec.IntValue CRIMSON_NYLIUM_FUNGAL_SAP_COUNT;
+    public static final ModConfigSpec.ConfigValue<List<? extends Double>> WARPED_NYLIUM_FUNGAL_SAP_CHANCES;
+    public static final ModConfigSpec.IntValue WARPED_NYLIUM_FUNGAL_SAP_COUNT;
+
+
     public static final ModConfigSpec SPEC;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
+        builder.push("Entity Loot");
+
         builder.push("Twilightforest Entity Loot");
-        REDCAP_GOBLIN_ESSENCE_CHANCE_0 = builder
+        REDCAP_GOBLIN_ESSENCE_LOOTING_CHANCES = builder
                 .comment(
-                        "Chance for Redcap to drop Goblin Essence with no Looting (0.0 to 1.0)",
-                        "红帽矮人和红帽工兵无抢夺时掉落哥布林精华的概率（0.0 到 1.0）"
+                        "Drop chances for Goblin Essence from Redcap [no Looting, Looting I, Looting II, Looting III]",
+                        "红帽矮人和红帽工兵掉落哥布林精华的概率 [无抢夺, 抢夺I, 抢夺II, 抢夺III]"
                 )
-                .defineInRange("redcapGoblinEssenceChanceLevel0", 0.15, 0.0, 1.0);
-        REDCAP_GOBLIN_ESSENCE_CHANCE_1 = builder
-                .comment(
-                        "Chance for Redcap to drop Goblin Essence with Looting I (0.0 to 1.0)",
-                        "红帽矮人和红帽工兵抢夺 I 时掉落哥布林精华的概率（0.0 到 1.0）"
-                )
-                .defineInRange("redcapGoblinEssenceChanceLevel1", 0.20, 0.0, 1.0);
-        REDCAP_GOBLIN_ESSENCE_CHANCE_2 = builder
-                .comment(
-                        "Chance for Redcap to drop Goblin Essence with Looting II (0.0 to 1.0)",
-                        "红帽矮人和红帽工兵抢夺 II 时掉落哥布林精华的概率（0.0 到 1.0）"
-                )
-                .defineInRange("redcapGoblinEssenceChanceLevel2", 0.25, 0.0, 1.0);
-        REDCAP_GOBLIN_ESSENCE_CHANCE_3 = builder
-                .comment(
-                        "Chance for Redcap to drop Goblin Essence with Looting III (0.0 to 1.0)",
-                        "红帽矮人和红帽工兵抢夺 III 时掉落哥布林精华的概率（0.0 到 1.0）"
-                )
-                .defineInRange("redcapGoblinEssenceChanceLevel3", 0.30, 0.0, 1.0);
+                .defineList("redcapGoblinEssenceLootingChances",
+                        java.util.Arrays.asList(0.15, 0.20, 0.25, 0.30),
+                        obj -> obj instanceof Double && (Double) obj >= 0.0 && (Double) obj <= 1.0);
         REDCAP_LOOTING_BONUS_MIN = builder
                 .comment(
                         "Minimum bonus drops per Looting level for Redcap and Redcap Sapper",
@@ -60,6 +54,64 @@ public class ServerConfig {
                 )
                 .defineInRange("redcapLootingBonusMax", 1, 0, 10);
         builder.pop();
+
+        builder.push("Aether Entity Loot");
+        ANGEL_WINGS_DROP_CHANCE = builder
+                .comment(
+                        "Chance for Valkyrie Queen to drop Angel Wings (0.0 to 1.0)",
+                        "武神女王掉落天使之翼的概率（0.0 到 1.0）"
+                )
+                .defineInRange("angelWingsDropChance", 1.0, 0.0, 1.0);
+        ANGEL_WINGS_DROP_MIN = builder
+                .comment(
+                        "Minimum number of Angel Wings dropped by Valkyrie Queen",
+                        "武神女王掉落天使之翼的最小数量"
+                )
+                .defineInRange("angelWingsDropMin", 1, 0, 64);
+        ANGEL_WINGS_DROP_MAX = builder
+                .comment(
+                        "Maximum number of Angel Wings dropped by Valkyrie Queen",
+                        "武神女王掉落天使之翼的最大数量"
+                )
+                .defineInRange("angelWingsDropMax", 1, 0, 64);
+        builder.pop();
+
+        builder.pop();
+
+
+        builder.push("Block Loot");
+        builder.push("Nether Nylium Loot");
+        CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES = builder
+                .comment(
+                        "Chances for Crimson Nylium to drop Crimson Fungal Sap [no Fortune, Fortune I, Fortune II, Fortune III]",
+                        "绯红菌核掉落绯红菌露的概率 [无时运, 时运I, 时运II, 时运III]"
+                )
+                .defineList("crimsonNyliumFungalSapChances",
+                        List.of(0.05, 0.075, 0.10, 0.15),
+                        obj -> obj instanceof Double && (Double) obj >= 0.0 && (Double) obj <= 1.0);
+        CRIMSON_NYLIUM_FUNGAL_SAP_COUNT = builder
+                .comment(
+                        "Base count of Crimson Fungal Sap dropped from Crimson Nylium",
+                        "绯红菌核掉落绯红菌露的基础数量"
+                )
+                .defineInRange("crimsonNyliumFungalSapCount", 1, 0, 64);
+
+        WARPED_NYLIUM_FUNGAL_SAP_CHANCES = builder
+                .comment(
+                        "Chances for Warped Nylium to drop Warped Fungal Sap [no Fortune, Fortune I, Fortune II, Fortune III]",
+                        "诡异菌核掉落诡影菌髓的概率 [无时运, 时运I, 时运II, 时运III]"
+                )
+                .defineList("warpedNyliumFungalSapChances",
+                        List.of(0.05, 0.075, 0.10, 0.15),
+                        obj -> obj instanceof Double && (Double) obj >= 0.0 && (Double) obj <= 1.0);
+        WARPED_NYLIUM_FUNGAL_SAP_COUNT = builder
+                .comment(
+                        "Base count of Warped Fungal Sap dropped from Warped Nylium",
+                        "诡异菌核掉落诡影菌髓的基础数量"
+                )
+                .defineInRange("warpedNyliumFungalSapCount", 1, 0, 64);
+        builder.pop();
+
 
         builder.push("Anvil Drop Recipes");
         ANVIL_TUFF_TO_CARBOCRETIN_MIN_OUTPUT = builder

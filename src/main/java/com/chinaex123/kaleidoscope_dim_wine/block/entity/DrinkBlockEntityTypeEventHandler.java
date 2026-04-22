@@ -1,5 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.entity;
 
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
@@ -68,6 +69,18 @@ public final class DrinkBlockEntityTypeEventHandler {
                 blocks.add(TheBumblezoneBlocks.BEESWAX_HONEY_WINE.get()); // 蜂蜡陈酿
                 blocks.add(TheBumblezoneBlocks.SWEET_CRYSTAL_HONEY.get()); // 甜蜜水晶
                 blocks.add(TheBumblezoneBlocks.ROYAL_HONEY_BREW.get()); // 蜂王特酿
+            }
+
+            // ==================== 次元维度 - 天境 ====================
+            if (ModList.get().isLoaded("aether")) {
+                // -------------------- 酒类 --------------------
+                blocks.add(AetherBlocks.DIVINE_OFFERING_BREW.get()); // 神饯紫晶酿
+                blocks.add(AetherBlocks.DIVINE_ENERGY_MIST.get()); // 神能迷雾
+                blocks.add(AetherBlocks.SWET_FIZZ.get()); // 史维特菲士
+                blocks.add(AetherBlocks.GRAVITITE_DRUNK.get()); // 重力醉
+                blocks.add(AetherBlocks.HEALING_ELIXIR.get()); // 治愈灵药
+                blocks.add(AetherBlocks.GINGERBREAD_WARMER.get()); // 姜饼暖饮
+                blocks.add(AetherBlocks.UNBOUND_SKYBORN.get()); // 无界苍穹
             }
 
             event.modify(drinkType, blocks.toArray(new Block[0]));

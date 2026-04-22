@@ -10,12 +10,13 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+/**
+ * 暮色森林联动 - 方块注册
+ */
 public class TwilightforestBlocks {
     public static final DeferredRegister.Blocks BLOCK_REGISTER =
             DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
 
-    // ==================== 次元维度 - 暮色森林 ====================
-    // -------------------- 流体 --------------------
     // -------------------- 作物 --------------------
     // 霜心果丛 - 类似甜浆果种下后的方块
     public static final DeferredBlock<Block> FROSTHEART_FRUIT_BUSH = BLOCK_REGISTER.register("frostheart_fruit_bush", FrostheartFruitBushBlock::new);

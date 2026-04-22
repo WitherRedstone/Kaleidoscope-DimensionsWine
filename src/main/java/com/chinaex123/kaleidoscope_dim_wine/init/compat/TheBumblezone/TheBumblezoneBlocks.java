@@ -8,11 +8,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+/**
+ * 蜜蜂领域联动 - 方块注册
+ */
 public class TheBumblezoneBlocks {
     public static final DeferredRegister.Blocks BLOCK_REGISTER =
             DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
 
-    // ==================== 次元维度 - 蜜蜂领域 ====================
     // -------------------- 酒类 --------------------
     // 雪碧
     public static final DeferredHolder<Block, Block> SPRITE = BLOCK_REGISTER.register("sprite", () ->

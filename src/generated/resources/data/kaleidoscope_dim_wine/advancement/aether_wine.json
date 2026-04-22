@@ -1,0 +1,102 @@
+{
+  "parent": "kaleidoscope_dim_wine:aether_enchanted_berry_juice_bucket",
+  "criteria": {
+    "has_divine_energy_mist": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:divine_energy_mist"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_divine_offering_brew": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:divine_offering_brew"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gingerbread_warmer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:gingerbread_warmer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gravitite_drunk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:gravitite_drunk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_healing_elixir": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:healing_elixir"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_swet_fizz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_dim_wine:swet_fizz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.aether_wine.desc"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_dim_wine:divine_offering_brew"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.aether_wine.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_divine_offering_brew"
+    ],
+    [
+      "has_divine_energy_mist"
+    ],
+    [
+      "has_swet_fizz"
+    ],
+    [
+      "has_gravitite_drunk"
+    ],
+    [
+      "has_healing_elixir"
+    ],
+    [
+      "has_gingerbread_warmer"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  },
+  "sends_telemetry_event": true
+}

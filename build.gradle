@@ -158,8 +158,8 @@ dependencies {
     implementation "curse.maven:accessories-938917:7583320" // Accessories
     //localRuntime "curse.maven:functional-storage-556861:7061714" // 功能性存储
     //localRuntime "curse.maven:titanium-287342:7662843" // 功能性存储前置
-    //localRuntime "curse.maven:placebo-283644:6926281"
-    //localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
+    localRuntime "curse.maven:placebo-283644:6926281"
+    localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
     //localRuntime "curse.maven:mmmmmmmmmmmm-225738:7206981" // 试炼假人
     //localRuntime "curse.maven:selene-499980:7822739"
     

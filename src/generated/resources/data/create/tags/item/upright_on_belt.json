@@ -21,10 +21,6 @@
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:cave_glowbrew",
-      "required": false
-    },
-    {
       "id": "kaleidoscope_dim_wine:dawnlight_dew",
       "required": false
     },
@@ -106,6 +102,34 @@
     },
     {
       "id": "kaleidoscope_dim_wine:royal_honey_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_offering_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_energy_mist",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:swet_fizz",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:gravitite_drunk",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:healing_elixir",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:gingerbread_warmer",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:unbound_skyborn",
       "required": false
     }
   ]

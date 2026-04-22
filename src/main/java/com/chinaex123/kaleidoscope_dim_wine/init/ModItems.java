@@ -7,7 +7,6 @@ import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
-import com.github.ysbbbbbb.kaleidoscopetavern.item.StringLightsBlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,6 +21,10 @@ public class ModItems {
             DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
     public static final DeferredItem<Item> MOD_LOGO = ITEMS_REGISTER.register("mod_logo", () -> new Item(new Item.Properties()));
+    // 天使之翼
+    public static final DeferredItem<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties()));
+        // 天使之羽
+    public static final DeferredItem<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties()));
 
     // -------------------- 瓶装 --------------------
     // 空竹杯

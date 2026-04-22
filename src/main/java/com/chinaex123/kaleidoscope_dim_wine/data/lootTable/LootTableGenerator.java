@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 public class LootTableGenerator extends LootTableProvider {
     public LootTableGenerator(PackOutput pack, CompletableFuture<HolderLookup.Provider> registries) {
         super(pack, Set.of(), List.of(
-                new SubProviderEntry(BlockLootTable::new, LootContextParamSets.BLOCK),
+                new SubProviderEntry(ModBlockLootTablesProvider::new, LootContextParamSets.BLOCK),
                 new SubProviderEntry(ModLootTableProvider::new, LootContextParamSets.ADVANCEMENT_REWARD)
         ), registries);
     }

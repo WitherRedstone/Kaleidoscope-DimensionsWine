@@ -9,11 +9,13 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+/**
+ * 蜜蜂领域联动 - 物品注册
+ */
 public class TheBumblezoneItems {
     public static final DeferredRegister.Items ITEMS_REGISTER =
             DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
-    // ==================== 次元维度 - 蜜蜂领域 ====================
     // -------------------- 物品 --------------------
     // 蜜酒精华
     public static final DeferredItem<Item> MEAD_ESSENCE = ITEMS_REGISTER.register("mead_essence", MeadEssence::new);

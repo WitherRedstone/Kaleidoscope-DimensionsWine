@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -18,6 +19,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.LootTableLoadEvent;
 
+import java.util.List;
+
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class BlockLootInjector {
 
@@ -32,12 +35,18 @@ public class BlockLootInjector {
 
         // 绯红菌核 掉落池
         if (tableId.equals(ResourceLocation.withDefaultNamespace("blocks/crimson_nylium"))) {
-            // 绯红菌露
+            List<? extends Double> chances = ServerConfig.CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES.get();
+            int baseCount = ServerConfig.CRIMSON_NYLIUM_FUNGAL_SAP_COUNT.get();
+
             LootPool bonusPool = LootPool.lootPool()
                     .setRolls(ConstantValue.exactly(1.0f))
-                    .when(BonusLevelTableCondition.bonusLevelFlatChance(fortuneHolder, 0.05f, 0.075f, 0.10f, 0.15f))
+                    .when(BonusLevelTableCondition.bonusLevelFlatChance(fortuneHolder,
+                            chances.get(0).floatValue(),
+                            chances.get(1).floatValue(),
+                            chances.get(2).floatValue(),
+                            chances.get(3).floatValue()))
                     .add(LootItem.lootTableItem(ModItems.CRIMSON_FUNGAL_SAP.get()))
-                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(baseCount)))
                     .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
                     .name("kaleidoscope_dim_wine:crimson_fungal_sap_from_weeping_vines")
                     .build();
@@ -46,12 +55,18 @@ public class BlockLootInjector {
 
         // 诡异菌核 掉落池
         if (tableId.equals(ResourceLocation.withDefaultNamespace("blocks/warped_nylium"))) {
-            // 诡影菌髓
+            List<? extends Double> chances = ServerConfig.WARPED_NYLIUM_FUNGAL_SAP_CHANCES.get();
+            int baseCount = ServerConfig.WARPED_NYLIUM_FUNGAL_SAP_COUNT.get();
+
             LootPool bonusPool = LootPool.lootPool()
                     .setRolls(ConstantValue.exactly(1.0f))
-                    .when(BonusLevelTableCondition.bonusLevelFlatChance(fortuneHolder, 0.05f, 0.075f, 0.10f, 0.15f))
+                    .when(BonusLevelTableCondition.bonusLevelFlatChance(fortuneHolder,
+                            chances.get(0).floatValue(),
+                            chances.get(1).floatValue(),
+                            chances.get(2).floatValue(),
+                            chances.get(3).floatValue()))
                     .add(LootItem.lootTableItem(ModItems.WARPED_FUNGAL_SAP.get()))
-                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)))
+                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(baseCount)))
                     .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
                     .name("kaleidoscope_dim_wine:warped_fungal_sap_from_weeping_vines")
                     .build();

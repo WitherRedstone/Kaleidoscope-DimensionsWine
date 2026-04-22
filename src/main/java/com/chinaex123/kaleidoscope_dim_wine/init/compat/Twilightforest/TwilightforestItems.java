@@ -12,11 +12,13 @@ import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 
+/**
+ * 暮色森林联动 - 物品注册
+ */
 public class TwilightforestItems {
     public static final DeferredRegister.Items ITEMS_REGISTER =
             DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
-    // ==================== 次元维度 - 暮色森林 ====================
     // -------------------- 作物 --------------------
     // 霜心果
     public static final DeferredItem<Item> FROSTHEART_FRUIT = ITEMS_REGISTER.register("frostheart_fruit", () ->
@@ -28,13 +30,11 @@ public class TwilightforestItems {
     public static final DeferredItem<Item> GOBLIN_ESSENCE = ITEMS_REGISTER.register("goblin_essence", () -> new Item(new Item.Properties()));
     // -------------------- 流体 --------------------
     // 火炬浆果汁桶
-    public static final DeferredItem<Item> TORCHBERRIES_JUICE_BUCKET =
-            ITEMS_REGISTER.register("torchberries_juice_bucket", () -> new BucketItem(TwilightforestFluids.TORCHBERRIES_JUICE.get(),
-                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> TORCHBERRIES_JUICE_BUCKET = ITEMS_REGISTER.register("torchberries_juice_bucket", () -> new
+            BucketItem(TwilightforestFluids.TORCHBERRIES_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // 霜心果汁桶
-    public static final DeferredItem<Item> FROSTHEART_FRUIT_JUICE_BUCKET =
-            ITEMS_REGISTER.register("frostheart_fruit_juice_bucket", () -> new BucketItem(TwilightforestFluids.FROSTHEART_FRUIT_JUICE.get(),
-                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final DeferredItem<Item> FROSTHEART_FRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("frostheart_fruit_juice_bucket", () ->
+            new BucketItem(TwilightforestFluids.FROSTHEART_FRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
     // 洞窟萤火酿
     public static final DeferredHolder<Item, DrinkBlockItem> CAVE_GLOWBREW = ITEMS_REGISTER.register("cave_glowbrew", () ->

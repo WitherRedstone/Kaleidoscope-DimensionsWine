@@ -23,10 +23,10 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BlockLootTable extends BlockLootSubProvider {
+public class ModBlockLootTablesProvider extends BlockLootSubProvider {
     public final Set<Block> knownBlocks = new HashSet<>();
 
-    public BlockLootTable(HolderLookup.Provider registries) {
+    public ModBlockLootTablesProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 

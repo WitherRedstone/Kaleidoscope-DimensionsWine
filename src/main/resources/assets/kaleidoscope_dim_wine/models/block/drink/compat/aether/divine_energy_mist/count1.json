@@ -1,0 +1,47 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"0": "kaleidoscope_dim_wine:block/drink/compat/aether/divine_energy_mist",
+		"particle": "kaleidoscope_dim_wine:block/drink/compat/aether/divine_energy_mist"
+	},
+	"elements": [
+		{
+			"name": "count1",
+			"from": [6.25, 0, 6.25],
+			"to": [9.75, 10, 9.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 0, 8.25]},
+			"faces": {
+				"north": {"uv": [0, 6, 4, 16], "texture": "#0"},
+				"east": {"uv": [0, 6, 4, 16], "texture": "#0"},
+				"south": {"uv": [0, 6, 4, 16], "texture": "#0"},
+				"west": {"uv": [0, 6, 4, 16], "texture": "#0"},
+				"up": {"uv": [11, 16, 8, 13], "texture": "#0"},
+				"down": {"uv": [8, 13, 11, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "count1",
+			"from": [7.25, 10, 7.25],
+			"to": [8.75, 16, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.25, 0, 8.25]},
+			"faces": {
+				"north": {"uv": [5, 10, 7, 16], "texture": "#0"},
+				"east": {"uv": [5, 10, 7, 16], "texture": "#0"},
+				"south": {"uv": [5, 10, 7, 16], "texture": "#0"},
+				"west": {"uv": [5, 10, 7, 16], "texture": "#0"},
+				"up": {"uv": [12, 14, 14, 16], "texture": "#0"},
+				"down": {"uv": [7, 5, 9, 7], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "count1",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}
