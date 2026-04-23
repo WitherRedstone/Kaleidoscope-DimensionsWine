@@ -4,10 +4,12 @@ import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
 import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -37,6 +39,7 @@ public class KaleidoscopeDimensionsWine {
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
+            TwilightforestFluids.register(modEventBus);
             TwilightforestBlocks.register(modEventBus);
             TwilightforestItems.register(modEventBus);
         }
@@ -49,6 +52,7 @@ public class KaleidoscopeDimensionsWine {
 
         // ==================== 次元维度 - 天境 ====================
         if (ModList.get().isLoaded("aether")) {
+            AetherFluids.register(modEventBus);
             AetherBlocks.register(modEventBus);
             AetherItems.register(modEventBus);
         }

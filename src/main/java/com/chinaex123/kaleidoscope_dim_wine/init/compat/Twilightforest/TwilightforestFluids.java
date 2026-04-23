@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModFluidTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Properties;
@@ -19,7 +20,6 @@ import static net.minecraftforge.registries.ForgeRegistries.Keys.FLUID_TYPES;
 /**
  * 暮色联动 - 流体注册
  */
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TwilightforestFluids {
     // -------------------- 流体 ID --------------------
     // 火炬浆果汁
@@ -40,7 +40,7 @@ public class TwilightforestFluids {
     public static final RegistryObject<Fluid> FLOWING_FROSTHEART_FRUIT_JUICE = RegistryObject.create(FLOWING_FROSTHEART_FRUIT_JUICE_ID, FLUIDS);
 
     @SubscribeEvent
-    public static void register(RegisterEvent event) {
+    public static void registerFluids(RegisterEvent event) {
         event.register(FLUID_TYPES, helper -> {
             // 火炬浆果汁
             helper.register(TORCHBERRIES_JUICE_ID, new ModFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
@@ -64,5 +64,9 @@ public class TwilightforestFluids {
 
     public static ResourceLocation modLoc(String name) {
         return ResourceLocation.tryBuild(KaleidoscopeDimensionsWine.MOD_ID, name);
+    }
+
+    public static void register(IEventBus eventBus) {
+        eventBus.addListener(TwilightforestFluids::registerFluids);
     }
 }

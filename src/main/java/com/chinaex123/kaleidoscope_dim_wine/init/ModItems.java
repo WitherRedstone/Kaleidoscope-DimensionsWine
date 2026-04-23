@@ -7,6 +7,7 @@ import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -48,10 +49,10 @@ public class ModItems {
     // -------------------- 流体 --------------------
     // 绯红葡萄汁桶
     public static final RegistryObject<Item> CRIMSON_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("crimson_grape_juice_bucket", () ->
-            new BucketItem(ModFluids.CRIMSON_GRAPE_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+            new JuiceBucketItem(ModFluids.CRIMSON_GRAPE_JUICE));
     // 诡异葡萄汁桶
     public static final RegistryObject<Item> WARPED_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("warped_grape_juice_bucket", () ->
-            new BucketItem(ModFluids.WARPED_GRAPE_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+            new JuiceBucketItem(ModFluids.WARPED_GRAPE_JUICE));
     // -------------------- 酒类 --------------------
     // 绯红绝响
     public static final RegistryObject<DrinkBlockItem> CRIMSON_CRESCENDO = ITEMS_REGISTER.register("crimson_crescendo", () ->
@@ -84,13 +85,11 @@ public class ModItems {
             new DrinkableItem(new Item.Properties().food(ModFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
     // -------------------- 流体 --------------------
     // 迷梦果汁桶
-    public static final RegistryObject<Item> DREAMFRUIT_JUICE_BUCKET =
-            ITEMS_REGISTER.register("dreamfruit_juice_bucket", () -> new BucketItem(ModFluids.DREAMFRUIT_JUICE.get(),
-                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final RegistryObject<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
+            new JuiceBucketItem(ModFluids.DREAMFRUIT_JUICE));
     // 龙血桶
-    public static final RegistryObject<Item> DRAGON_BLOOD_BUCKET =
-            ITEMS_REGISTER.register("dragon_blood_bucket", () -> new BucketItem(ModFluids.DRAGON_BLOOD.get(),
-                    new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    public static final RegistryObject<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
+            new BucketItem(ModFluids.DRAGON_BLOOD, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
     // 紫颂干邑
     public static final RegistryObject<DrinkBlockItem> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () ->

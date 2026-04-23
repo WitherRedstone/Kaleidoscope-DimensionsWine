@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -20,7 +21,7 @@ public class AetherItems {
     // -------------------- 物品 --------------------
     // 神饯蓝莓汁桶
     public static final RegistryObject<Item> ENCHANTED_BERRY_JUICE_BUCKET = ITEMS_REGISTER.register("enchanted_berry_juice_bucket", () ->
-            new BucketItem(AetherFluids.ENCHANTED_BERRY_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+            new JuiceBucketItem(AetherFluids.ENCHANTED_BERRY_JUICE));
     // -------------------- 酒类 --------------------
     // 神饯紫晶酿
     public static final RegistryObject<DrinkBlockItem> DIVINE_OFFERING_BREW = ITEMS_REGISTER.register("divine_offering_brew", () ->

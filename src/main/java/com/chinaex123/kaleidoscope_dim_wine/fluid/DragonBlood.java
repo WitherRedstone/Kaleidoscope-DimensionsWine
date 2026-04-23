@@ -22,7 +22,7 @@ public class DragonBlood {
     private static final String DRAGON_BLOOD_NBT_KEY = "DragonBloodData"; // 这个功能的数据
     private static final String TIME_IN_FLUID_KEY = "TimeInFluid"; // 再留体内的时间
     private static final String HAS_REWARD_KEY = "HasReward"; // 是否已经获得过奖励
-    private static final int REWARD_TIME_TICKS = 20 * 60 * 3; // 坚持的时间
+    private static final int REWARD_TIME_TICKS = 20 * 20; // 坚持的时间
     private static final int CLEAR_SIZE = 3; // 流体消失的半径
 
     /**
@@ -130,12 +130,10 @@ public class DragonBlood {
     public static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
         Player player = event.getEntity();
 
-        // 客户端不处理
         if (player.level().isClientSide()) {
             return;
         }
 
-        // 检查是否已获得奖励，如果是则应用效果
         CompoundTag dragonBloodData = player.getPersistentData().getCompound(DRAGON_BLOOD_NBT_KEY);
         if (dragonBloodData.getBoolean(HAS_REWARD_KEY)) {
             applyHealthBoost(player);
@@ -158,17 +156,15 @@ public class DragonBlood {
     public static void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event) {
         Player player = event.getEntity();
 
-        // 客户端不处理
         if (player.level().isClientSide()) {
             return;
         }
 
-        // 检查是否已获得奖励，如果是则应用效果并设为满血
         CompoundTag dragonBloodData = player.getPersistentData().getCompound(DRAGON_BLOOD_NBT_KEY);
         if (dragonBloodData.getBoolean(HAS_REWARD_KEY)) {
             applyHealthBoost(player);
-            player.setHealth(player.getMaxHealth());
         }
+        player.setHealth(player.getMaxHealth());
     }
 
     /**
@@ -207,20 +203,24 @@ public class DragonBlood {
      * @param player 要应用效果的玩家
      */
     private static void applyHealthBoost(Player player) {
-        // 获取最大生命值属性
         var healthAttr = player.getAttribute(Attributes.MAX_HEALTH);
         if (healthAttr != null) {
-            // 创建唯一的修饰器 ID
             String modifierId = KaleidoscopeDimensionsWine.MOD_ID + ":dragon_blood_health";
 
-            // 如果尚未添加该修饰器，则永久添加
-            AttributeModifier modifier = new AttributeModifier(
-                    modifierId,
-                    10.0,
-                    AttributeModifier.Operation.ADDITION
-            );
+            boolean hasModifier = false;
+            for (AttributeModifier existing : healthAttr.getModifiers()) {
+                if (existing.getName().equals(modifierId)) {
+                    hasModifier = true;
+                    break;
+                }
+            }
 
-            if (!healthAttr.hasModifier(modifier)) {
+            if (!hasModifier) {
+                AttributeModifier modifier = new AttributeModifier(
+                        modifierId,
+                        10.0,
+                        AttributeModifier.Operation.ADDITION
+                );
                 healthAttr.addPermanentModifier(modifier);
             }
         }
