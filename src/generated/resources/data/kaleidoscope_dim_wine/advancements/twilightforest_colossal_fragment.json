@@ -1,0 +1,38 @@
+{
+  "parent": "kaleidoscope_dim_wine:twilightforest_goblin_essence",
+  "criteria": {
+    "has_colossal_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:colossal_fragment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_colossal_fragment.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:colossal_fragment"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_colossal_fragment.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_colossal_fragment"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

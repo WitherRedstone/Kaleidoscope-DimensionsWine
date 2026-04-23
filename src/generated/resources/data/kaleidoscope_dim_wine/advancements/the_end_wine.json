@@ -1,0 +1,161 @@
+{
+  "parent": "kaleidoscope_dim_wine:the_end_dreamfruit_juice_bucket",
+  "criteria": {
+    "has_abyssal_porter": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:abyssal_porter"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_chorus_cognac": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:chorus_cognac"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_divine_embryo_port": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:divine_embryo_port"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_draconic_blood_wine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:draconic_blood_wine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dragons_breath_brandy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:dragons_breath_brandy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_end_starlight": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:end_starlight"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_forgotten_margarita": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:forgotten_margarita"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_phantom_dream_bubble": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:phantom_dream_bubble"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_silent_sherry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:silent_sherry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_wine.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:chorus_cognac"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_wine.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_chorus_cognac"
+    ],
+    [
+      "has_dragons_breath_brandy"
+    ],
+    [
+      "has_abyssal_porter"
+    ],
+    [
+      "has_silent_sherry"
+    ],
+    [
+      "has_forgotten_margarita"
+    ],
+    [
+      "has_phantom_dream_bubble"
+    ],
+    [
+      "has_end_starlight"
+    ],
+    [
+      "has_divine_embryo_port"
+    ],
+    [
+      "has_draconic_blood_wine"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "sends_telemetry_event": true
+}

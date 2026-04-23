@@ -1,0 +1,38 @@
+{
+  "parent": "kaleidoscope_dim_wine:the_end_dreamfruit",
+  "criteria": {
+    "has_dragon_blood_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:dragon_blood_bucket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dragon_blood_bucket.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:dragon_blood_bucket"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.the_end_dragon_blood_bucket.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_dragon_blood_bucket"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

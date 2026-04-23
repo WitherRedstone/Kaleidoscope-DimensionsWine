@@ -7,10 +7,7 @@ import com.chinaex123.kaleidoscope_dim_wine.item.Crop.WarpedGrapevineItem;
 import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,9 +19,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MOD_LOGO = ITEMS_REGISTER.register("mod_logo", () -> new Item(new Item.Properties()));
     // 天使之翼
-    public static final RegistryObject<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     // 天使之羽
-    public static final RegistryObject<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
     // -------------------- 瓶装 --------------------
     // 易拉罐

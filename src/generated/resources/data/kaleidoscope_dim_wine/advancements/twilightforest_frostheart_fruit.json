@@ -1,0 +1,38 @@
+{
+  "parent": "kaleidoscope_dim_wine:twilightforest_enter",
+  "criteria": {
+    "has_frostheart_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:frostheart_fruit"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_frostheart_fruit.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:frostheart_fruit"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.twilightforest_frostheart_fruit.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_frostheart_fruit"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

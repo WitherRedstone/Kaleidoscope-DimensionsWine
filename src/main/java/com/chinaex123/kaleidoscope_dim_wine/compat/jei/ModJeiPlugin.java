@@ -28,6 +28,21 @@ public class ModJeiPlugin implements IModPlugin {
     public void registerRecipes(@NotNull IRecipeRegistration registration) {
         Map<Item, Component[]> itemInfos = new HashMap<>();
 
+        // ==================== 次元维度 - 小装饰 ====================
+        // 小灯串（基岩）
+        itemInfos.put(ModItems.ANGEL_WINGS.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.1"),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.2")
+        });
+
+        // ==================== 次元维度 - 本体 ====================
+        // 天使之翼
+        itemInfos.put(ModItems.ANGEL_WINGS.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.angel_wings")
+        });
+
         // ==================== 次元维度 - 下界 ====================
         // 绯红葡萄藤
         itemInfos.put(ModItems.CRIMSON_GRAPEVINE.get(), new Component[]{

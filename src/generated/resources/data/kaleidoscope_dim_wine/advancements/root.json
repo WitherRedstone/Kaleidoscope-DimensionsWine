@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "tick": {
+      "conditions": {},
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/smooth_stone.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.root.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:mod_logo"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

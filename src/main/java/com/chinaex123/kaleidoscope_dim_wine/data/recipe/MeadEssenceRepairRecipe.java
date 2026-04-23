@@ -95,12 +95,12 @@ public class MeadEssenceRepairRecipe extends CustomRecipe {
     }
 
     private boolean hasBrewLevel(ItemStack stack) {
-        return stack.hasTag() && stack.getTag().contains("brew_level");
+        return stack.hasTag() && stack.getTag().contains("BrewLevel");
     }
 
     private int getBrewLevel(ItemStack stack) {
-        if (stack.hasTag() && stack.getTag().contains("brew_level")) {
-            return stack.getTag().getInt("brew_level");
+        if (stack.hasTag() && stack.getTag().contains("BrewLevel")) {
+            return stack.getTag().getInt("BrewLevel");
         }
         return 0;
     }

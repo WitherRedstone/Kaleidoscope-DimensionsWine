@@ -16,6 +16,9 @@ import net.minecraftforge.registries.RegistryObject;
 import static net.minecraftforge.registries.ForgeRegistries.FLUIDS;
 import static net.minecraftforge.registries.ForgeRegistries.Keys.FLUID_TYPES;
 
+/**
+ * 暮色联动 - 流体注册
+ */
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TwilightforestFluids {
     // -------------------- 流体 ID --------------------

@@ -1,0 +1,38 @@
+{
+  "parent": "kaleidoscope_dim_wine:aether_enter",
+  "criteria": {
+    "has_divine_offering_brew": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscope_dim_wine:enchanted_berry_juice_bucket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.kaleidoscope_dim_wine.aether_enchanted_berry_juice_bucket.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "kaleidoscope_dim_wine:enchanted_berry_juice_bucket"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.kaleidoscope_dim_wine.aether_enchanted_berry_juice_bucket.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_divine_offering_brew"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

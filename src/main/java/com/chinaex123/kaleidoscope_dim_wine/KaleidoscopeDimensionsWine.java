@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
 import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
@@ -8,7 +9,6 @@ import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblez
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
-import com.github.ysbbbbbb.kaleidoscopetavern.init.ModRecipes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;

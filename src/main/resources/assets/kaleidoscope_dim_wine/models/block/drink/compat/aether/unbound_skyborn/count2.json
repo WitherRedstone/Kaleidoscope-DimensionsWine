@@ -4,8 +4,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "kaleidoscope_dim_wine:unbound_skyborn",
-		"particle": "kaleidoscope_dim_wine:unbound_skyborn"
+		"0": "kaleidoscope_dim_wine:block/drink/compat/aether/unbound_skyborn",
+		"particle": "kaleidoscope_dim_wine:block/drink/compat/aether/unbound_skyborn"
 	},
 	"elements": [
 		{

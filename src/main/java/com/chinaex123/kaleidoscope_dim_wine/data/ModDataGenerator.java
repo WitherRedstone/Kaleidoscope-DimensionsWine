@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 //import com.chinaex123.kaleidoscope_dim_wine.data.advancements.ModAdvancements;
 //import com.chinaex123.kaleidoscope_dim_wine.data.lootTable.LootTableGenerator;
 //import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipesProvider;
+import com.chinaex123.kaleidoscope_dim_wine.data.advancements.ModAdvancements;
 import com.chinaex123.kaleidoscope_dim_wine.data.lootTable.LootTableGenerator;
 import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipesProvider;
 import net.minecraft.core.HolderLookup;
@@ -33,6 +34,6 @@ public class ModDataGenerator {
                 CompletableFuture.completedFuture(TagsProvider.TagLookup.empty()), existingFileHelper));
         generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModRecipesProvider(packOutput));
-//        generator.addProvider(event.includeServer(), new ModAdvancements(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new ModAdvancements(packOutput, lookupProvider, existingFileHelper));
     }
 }

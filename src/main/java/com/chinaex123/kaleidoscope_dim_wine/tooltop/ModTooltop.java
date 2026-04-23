@@ -22,30 +22,44 @@ public class ModTooltop {
         ItemStack stack = event.getItemStack();
         List<Component> tooltip = event.getToolTip();
 
+        // ==================== 次元维度 - 小彩蛋 ====================
         // 玩偶 - ChinaEX123_BILI
         if (stack.getItem() == ModBlocks.DOLL_001.get().asItem()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("block.kaleidoscope_dim_wine.doll_001.tooltip").getString();
             tooltip.add(GradientTextHelper.createFullRainbowText(text, false,  0.25, false, false, false, false, false));
         }
+
         // 玩偶 - Fvue233
         if (stack.getItem() == ModBlocks.DOLL_002.get().asItem()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("block.kaleidoscope_dim_wine.doll_002.tooltip").getString();
             tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
         }
+
         // 玩偶 - Agens_Eland
         if (stack.getItem() == ModBlocks.DOLL_003.get().asItem()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("block.kaleidoscope_dim_wine.doll_003.tooltip").getString();
             tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
         }
+
+        // ==================== 次元维度 - 装饰 ====================
+        // 小灯串（基岩）
         if (stack.getItem() == ModBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get().asItem()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.1").getString();
             tooltip.add(GradientTextHelper.createDreamyFourGradientText(text, false,  1.0, false, false, false, false, false));
             String text2 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.2").getString();
             tooltip.add(GradientTextHelper.createDreamyFourGradientText(text2, false,  1.0, false, false, false, false, false));
+        }
+
+        // ==================== 次元维度 - 本体 ====================
+        // 天使之翼
+        if (stack.getItem() == ModItems.ANGEL_WINGS.get()) {
+            // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+            String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.angel_wings").getString();
+            tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
         }
 
         // ==================== 次元维度 - 下界 ====================
