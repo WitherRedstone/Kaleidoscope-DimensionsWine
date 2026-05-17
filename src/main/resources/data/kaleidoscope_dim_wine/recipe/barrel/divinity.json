@@ -1,0 +1,31 @@
+{
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "eternal_starlight"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "eternal_starlight:ether",
+  "ingredients": [
+    {
+      "item": "eternal_starlight:mana_crystal"
+    },
+    {
+      "item": "eternal_starlight:mana_crystal"
+    },
+    {
+      "item": "eternal_starlight:starfire"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_dim_wine:divinity"
+  }
+}

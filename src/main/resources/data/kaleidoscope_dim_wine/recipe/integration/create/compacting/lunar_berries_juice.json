@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "eternal_starlight"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    },
+    {
+      "item": "eternal_starlight:lunar_berries"
+    }
+  ],
+  "results": [
+    {
+      "id": "kaleidoscope_dim_wine:lunar_berries_juice",
+      "amount": 1000
+    }
+  ]
+}

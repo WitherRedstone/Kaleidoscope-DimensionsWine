@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.entity;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.EternalStarlightBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
@@ -81,6 +82,21 @@ public final class DrinkBlockEntityTypeEventHandler {
                 blocks.add(AetherBlocks.HEALING_ELIXIR.get()); // 治愈灵药
                 blocks.add(AetherBlocks.GINGERBREAD_WARMER.get()); // 姜饼暖饮
                 blocks.add(AetherBlocks.UNBOUND_SKYBORN.get()); // 无界苍穹
+            }
+
+            // ==================== 次元维度 - 永恒星光 ====================
+            if (ModList.get().isLoaded("eternal_starlight")) {
+                // -------------------- 酒类 --------------------
+                blocks.add(EternalStarlightBlocks.DIVINITY.get()); // 神圣裁决
+                blocks.add(EternalStarlightBlocks.STAR_TRAIL.get()); // 星轨
+                blocks.add(EternalStarlightBlocks.AURORA.get()); // 极光
+                blocks.add(EternalStarlightBlocks.ECLIPSE.get()); // 日蚀
+                blocks.add(EternalStarlightBlocks.LUNAR_ECLIPSE.get()); // 月蚀
+                blocks.add(EternalStarlightBlocks.DEEP_FREEZE.get()); // 深寒
+                blocks.add(EternalStarlightBlocks.BLOOD_MOON.get()); // 血月
+                blocks.add(EternalStarlightBlocks.ABYSS.get()); // 深渊
+                blocks.add(EternalStarlightBlocks.BLAZING_SUN.get()); // 烈阳
+                blocks.add(EternalStarlightBlocks.WIND_TRACE.get()); // 风痕
             }
 
             event.modify(drinkType, blocks.toArray(new Block[0]));

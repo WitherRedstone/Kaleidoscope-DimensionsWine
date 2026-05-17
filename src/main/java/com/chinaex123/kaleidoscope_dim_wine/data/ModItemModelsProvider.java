@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.EternalStarlightItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
@@ -129,25 +130,26 @@ public class ModItemModelsProvider extends ItemModelProvider {
         }
 
 
-        // ==================== 次元维度 - 下界 ====================
-        // -------------------- 作物 --------------------
-        // -------------------- 物品 --------------------
-        // -------------------- 流体 --------------------
-        // -------------------- 酒类 --------------------
+        // ==================== 次元维度 - 永恒星光 ====================
+        if (ModList.get().isLoaded("eternal_starlight")) {
+            // -------------------- 物品 --------------------
+            basicItem(EternalStarlightItems.LUNAR_BERRIES_JUICE_BUCKET.get()); // 月辉浆果汁桶
+            basicItem(EternalStarlightItems.ABYSSAL_FRUIT_JUICE_BUCKET.get()); // 渊海果汁桶
+            basicItem(EternalStarlightItems.SILVER_PUNGENCY_FRUIT_JUICE_BUCKET.get()); // 银辛果汁桶
+            // -------------------- 酒类 --------------------
+            compatEternalStarlightDrinkItem(EternalStarlightItems.DIVINITY); // 神圣裁决
+            compatEternalStarlightDrinkItem(EternalStarlightItems.STAR_TRAIL); // 星轨
+            compatEternalStarlightDrinkItem(EternalStarlightItems.AURORA); // 极光
+            compatEternalStarlightDrinkItem(EternalStarlightItems.ECLIPSE); // 日蚀
+            compatEternalStarlightDrinkItem(EternalStarlightItems.LUNAR_ECLIPSE); // 月蚀
+            compatEternalStarlightDrinkItem(EternalStarlightItems.DEEP_FREEZE); // 深寒
+            compatEternalStarlightDrinkItem(EternalStarlightItems.BLOOD_MOON); // 血月
+            compatEternalStarlightDrinkItem(EternalStarlightItems.ABYSS); // 深渊
+            compatEternalStarlightDrinkItem(EternalStarlightItems.BLAZING_SUN); // 烈阳
+            compatEternalStarlightDrinkItem(EternalStarlightItems.WIND_TRACE); // 风痕
+        }
 
 
-        // ==================== 次元维度 - 下界 ====================
-        // -------------------- 作物 --------------------
-        // -------------------- 物品 --------------------
-        // -------------------- 流体 --------------------
-        // -------------------- 酒类 --------------------
-
-
-        // ==================== 次元维度 - 下界 ====================
-        // -------------------- 作物 --------------------
-        // -------------------- 物品 --------------------
-        // -------------------- 流体 --------------------
-        // -------------------- 酒类 --------------------
     }
 
     /**
@@ -184,5 +186,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/aether/" + itemName));
+    }
+
+    /**
+     * 联动酒类 - 永恒星光（路径：item/drink/compat/eternal_starlight）
+     */
+    private void compatEternalStarlightDrinkItem(DeferredHolder<Item, ? extends Item> item) {
+        String itemName = item.getId().getPath();
+        ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
+        builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/eternal_starlight/" + itemName));
     }
 }

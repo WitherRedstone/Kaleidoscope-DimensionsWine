@@ -1,37 +1,35 @@
 {
-	"neoforge:conditions": [
-		{
-			"type": "neoforge:mod_loaded",
-			"modid": "twilightforest"
-		}
-	],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "twilightforest"
+    }
+  ],
   "item": "kaleidoscope_dim_wine:goblins_stash",
   "effects": [
     [
       {
         "effect": "minecraft:nausea",
-        "duration": 35,
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:nausea",
-        "duration": 10,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "kaleidoscope_dim_wine:minify",
-        "duration": 15,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
-      }
-    ],
-    [
+      },
       {
         "effect": "kaleidoscope_dim_wine:minify",
         "duration": 30,
@@ -41,25 +39,43 @@
     ],
     [
       {
-        "effect": "kaleidoscope_dim_wine:minify",
-        "duration": 60,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:minify",
+        "duration": 120,
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "kaleidoscope_dim_wine:minify",
-        "duration": 120,
+        "duration": 240,
         "amplifier": 2,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "kaleidoscope_dim_wine:minify",
-        "duration": 240,
-        "amplifier": 4,
+        "duration": 360,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]

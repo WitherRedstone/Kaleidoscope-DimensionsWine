@@ -4,36 +4,26 @@
     [
       {
         "effect": "minecraft:nausea",
-        "duration": 35,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:nausea",
-        "duration": 10,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:invisibility",
-        "duration": 10,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:invisibility",
         "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
       {
         "effect": "minecraft:invisibility",
         "duration": 60,
@@ -43,16 +33,42 @@
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:invisibility",
-        "duration": 120,
+        "duration": 180,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:invisibility",
-        "duration": 240,
+        "duration": 300,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:invisibility",
+        "duration": 600,
         "amplifier": 0,
         "probability": 1.0
       }

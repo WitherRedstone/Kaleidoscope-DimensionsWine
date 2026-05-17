@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.item.Crop;
+package com.chinaex123.kaleidoscope_dim_wine.item.Crop.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import net.minecraft.core.BlockPos;

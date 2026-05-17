@@ -1,52 +1,38 @@
 {
-	"neoforge:conditions": [
-		{
-			"type": "neoforge:mod_loaded",
-			"modid": "aether"
-		}
-	],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
   "item": "kaleidoscope_dim_wine:divine_energy_mist",
   "effects": [
     [
       {
         "effect": "minecraft:nausea",
-        "duration": 35,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:nausea",
-        "duration": 10,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:speed",
-        "duration": 15,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:invisibility",
-        "duration": 15,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:hunger",
-        "duration": 5,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "effect": "minecraft:speed",
         "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:speed",
+        "duration": 60,
         "amplifier": 0,
         "probability": 1.0
       },
@@ -58,36 +44,22 @@
       },
       {
         "effect": "minecraft:hunger",
-        "duration": 5,
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:speed",
-        "duration": 60,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
         "probability": 1.0
       },
       {
-        "effect": "minecraft:invisibility",
-        "duration": 60,
-        "amplifier": 0,
-        "probability": 1.0
-      },
-      {
-        "effect": "minecraft:hunger",
-        "duration": 10,
-        "amplifier": 0,
-        "probability": 1.0
-      }
-    ],
-    [
-      {
         "effect": "minecraft:speed",
-        "duration": 120,
-        "amplifier": 2,
+        "duration": 180,
+        "amplifier": 1,
         "probability": 1.0
       },
       {
@@ -98,16 +70,22 @@
       },
       {
         "effect": "minecraft:hunger",
-        "duration": 30,
-        "amplifier": 2,
+        "duration": 20,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:speed",
-        "duration": 240,
-        "amplifier": 4,
+        "duration": 300,
+        "amplifier": 2,
         "probability": 1.0
       },
       {
@@ -118,8 +96,34 @@
       },
       {
         "effect": "minecraft:hunger",
-        "duration": 30,
-        "amplifier": 2,
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:speed",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:invisibility",
+        "duration": 360,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:hunger",
+        "duration": 5,
+        "amplifier": 0,
         "probability": 1.0
       }
     ]

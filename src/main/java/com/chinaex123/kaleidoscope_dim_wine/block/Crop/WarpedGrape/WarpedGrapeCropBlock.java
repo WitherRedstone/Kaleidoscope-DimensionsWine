@@ -1,7 +1,5 @@
 package com.chinaex123.kaleidoscope_dim_wine.block.Crop.WarpedGrape;
 
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapeCropBlock;
 import net.minecraft.core.BlockPos;

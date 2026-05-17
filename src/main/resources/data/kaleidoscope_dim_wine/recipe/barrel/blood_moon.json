@@ -1,0 +1,31 @@
+{
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "eternal_starlight"
+		}
+	],
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_dim_wine:silver_pungency_fruit_juice",
+  "ingredients": [
+    {
+      "item": "eternal_starlight:red_starlight_crystal_shard"
+    },
+    {
+      "tag": "c:ingots/amaramber"
+    },
+    {
+      "tag": "c:foods/cooked_meat"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_dim_wine:blood_moon"
+  }
+}

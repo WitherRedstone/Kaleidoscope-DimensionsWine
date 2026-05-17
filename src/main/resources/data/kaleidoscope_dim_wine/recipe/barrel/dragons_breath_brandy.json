@@ -12,6 +12,9 @@
       "item": "minecraft:blaze_powder"
     },
     {
+      "tag": "c:gems/amethyst"
+    },
+    {
       "item": "minecraft:sugar"
     }
   ],

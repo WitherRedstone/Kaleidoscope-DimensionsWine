@@ -84,15 +84,26 @@ Kaleidoscope: Dimensions Wine is an expansion mod for Kaleidoscope: Tavern, brin
 - **Unbound Skyborn** Ultimate sky gift from Wings to boundless flight.
 - **Aether** Added related wines.
 
+### Eternal Starlight Integration
+#### Brewable Wines
+- **Divinity** A judgment wine bathed in holy light;
+- **Star Trail** A cosmic brew crafted along stellar trajectories;
+- **Aurora** Capturing the dazzling lights of the polar night sky;
+- **Eclipse** The forbidden power at the moment of solar eclipse;
+- **Lunar Eclipse** Mysterious whispers under the blood moon;
+- **Deep Freeze** Extreme cold sealed in permafrost layers;
+- **Blood Moon** A frenzied drink soaked in crimson moonlight;
+- **Abyss** A gazing wine from the bottomless darkness;
+- **Blazing Sun** The blazing essence of a stellar core;
+- **Wind Trace** The invisible trail of wind sweeping across the starry sky.
+
+
 ### Mod Compatibility
 - **JEI** - Full recipe display support and item acquisition hints
 - **Kaleidoscope: Doll** - Limited developer doll blocks
 - **Create** Added compatibility recipes;
 - **The Twilight Forest** Added related crops and wines.
 - **The Bumblezone** Added related wines.
-
-## Future Plans
-Add compatibility with dimensional mods such as Eternal Starlight.
 
 **Raise your cup to invite the moon, with three people including your shadow. Travel between dimensions and savor unique fine wines!**
 
@@ -174,6 +185,19 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 - **姜饼暖饮** 天境节日特制的温暖饮品；
 - **无界苍穹** 从苍穹之翼到无界之赐的终极天空之酒。
 
+### 联动：永恒星光
+#### 可酿造酒类
+- **神圣裁决** 沐浴圣光的审判之酒；
+- **星轨** 沿星辰轨迹酿制的宇宙佳酿；
+- **极光** 捕捉极夜天幕的绚烂光影；
+- **日蚀** 日月交替瞬间的禁忌之力；
+- **月蚀** 血月笼罩下的神秘低语；
+- **深寒** 封印永冻冰层的极致低温；
+- **血月** 猩红月光浸染的狂乱之饮；
+- **深渊** 来自无底黑暗的凝视之酒；
+- **烈阳** 恒星核心燃烧的炽热精华；
+- **风痕** 掠过星空疾风的无形痕迹。
+
 ### 模组联动
 - **JEI** 完整的配方分类显示支持和物品获取提示；
 - **森罗物语：玩偶** 限定开发者玩偶方块；
@@ -181,9 +205,7 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 - **暮色森林** 添加相关作物和酒类。
 - **蜜蜂领域** 添加相关酒类。
 - **天境** 添加相关酒类。
-
-## 未来计划
-添加对 永恒星光等维度模组的联动。
+- **永恒星光** 添加相关酒类。
 
 **举杯邀明月，对影成三人。在各个维度间穿梭，品味独一无二的佳酿吧！**
 
@@ -192,56 +214,68 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 ### 酒类的颜色代码
 
 #### 本体
-绯红绝响[crimson_crescendo]：#72231e - 0x72231e
-诡影尊爵[ethereal_noble]：#1e555a - 0x1e555a
-疣域轩尼诗[wart_hennessy]：#9a3b3b - 0x9a3b3b
-烈焰马爹利[blaze_martell]：#db7f31 - 0xdb7f31
-岩浆皇家礼炮[magma_royal_salute]：#982c2c - 0x982c2c
-黑骨拉菲[black_bone_lafite]：#504949 - 0x504949
-紫颂干邑[chorus_cognac]：#4b337f - 0x4b337f
-龙息白兰地[dragons_breath_brandy]：#6d029b - 0x6d029b
-深渊波特[abyssal_porter]：#755e5e - 0x755e5e
-静默雪莉[silent_sherry]：#9e4fc0 - 0x9e4fc0
-遗忘玛格丽特[forgotten_margarita]：#9a54ba - 0x9a54ba
-幻梦泡影[phantom_dream_bubble]：#ad77a5 - 0xad77a5
-终末星光[end_starlight]：#3c3c3d - 0x3c3c3d
-神血波尔多[divine_embryo_port]：#d4871a - 0xd4871a
-龙血酒[draconic_blood_wine]：#9810d3 - 0x9810d3
+绯红绝响[crimson_crescendo]：0x72231e
+诡影尊爵[ethereal_noble]：0x1e555a
+疣域轩尼诗[wart_hennessy]：0x9a3b3b
+烈焰马爹利[blaze_martell]：0xdb7f31
+岩浆皇家礼炮[magma_royal_salute]：0x982c2c
+黑骨拉菲[black_bone_lafite]：0x504949
+紫颂干邑[chorus_cognac]：0x4b337f
+龙息白兰地[dragons_breath_brandy]：0x6d029b
+深渊波特[abyssal_porter]：0x755e5e
+静默雪莉[silent_sherry]：0x9e4fc0
+遗忘玛格丽特[forgotten_margarita]：0x9a54ba
+幻梦泡影[phantom_dream_bubble]：0xad77a5
+终末星光[end_starlight]：0x3c3c3d
+神血波尔多[divine_embryo_port]：0xd4871a
+龙血酒[draconic_blood_wine]：0x9810d3
 
 #### 暮色联动
-洞窟萤火酿[cave_glowbrew]：#695c63 - 0x695c63
-林隙晨露[dawnlight_dew]：#b86260 - 0xb86260
-死巷之唾[dead_end_spittle]：#a1cdb6 - 0xa1cdb6
-蛇蜕利口酒[snakeskin_liqueur]：#b1713d - 0xb1713d
-霜脉兽血[frostvein_beastblood]：#64a3d7 - 0x64a3d7
-巡林客的背囊[rangers_satchel]：#9d582b - 0x9d582b
-烬瞳[embereye]：#ffdf43 - 0xffdf43
-鹿鸣季风[stagcall_monsoon]：#71e5d2 - 0x71e5d2
-荆棘之心[thornheart]：#da757c - 0xda757c
-德鲁伊的秘酿[druids_secret_brew]：#b488c8 - 0xb488c8
-辉夜鸟之歌[moorglow_birds_song]：#94744e - 0x94744e
-终年冻土[perennial_frost]：#8ec4fd - 0x8ec4fd
-巨人赞歌[giants_hymn]：#ea6950 - 0xea6950
-地精的私藏[goblins_stash]：#423f9b - 0x423f9b
+洞窟萤火酿[cave_glowbrew]：0x695c63
+林隙晨露[dawnlight_dew]：0xb86260
+死巷之唾[dead_end_spittle]：0xa1cdb6
+蛇蜕利口酒[snakeskin_liqueur]：0xb1713d
+霜脉兽血[frostvein_beastblood]：0x64a3d7
+巡林客的背囊[rangers_satchel]：0x9d582b
+烬瞳[embereye]：0xffdf43
+鹿鸣季风[stagcall_monsoon]：0x71e5d2
+荆棘之心[thornheart]：0xda757c
+德鲁伊的秘酿[druids_secret_brew]：0xb488c8
+辉夜鸟之歌[moorglow_birds_song]：0x94744e
+终年冻土[perennial_frost]：0x8ec4fd
+巨人赞歌[giants_hymn]：0xea6950
+地精的私藏[goblins_stash]：0x423f9b
 
 #### 蜜蜂领域联动
-雪碧[sprite]：#7dab8a - 0x7dab8a
-可乐[pepsi]：#d6e6f3 - 0xd6e6f3
-芬达[fanta]：#ffb031 - 0xffb031
-花粉甜酿[pollen_nectar]：#f58d00 - 0xf58d00
-蜜刺佳酿[honeythorn_mead]：#f8b75c - 0xf8b75c
-蜂蜡陈酿[beeswax_honey_wine]：#f9ab1c - 0xf9ab1c
-甜蜜水晶[sweet_crystal_honey]：#ffce5d - 0xffce5d
-蜂王特酿[royal_honey_brew]：#ad69cc - 0xad69cc
+雪碧[sprite]：0x7dab8a
+可乐[pepsi]：0xd6e6f3
+芬达[fanta]：0xffb031
+花粉甜酿[pollen_nectar]：0xf58d00
+蜜刺佳酿[honeythorn_mead]：0xf8b75c
+蜂蜡陈酿[beeswax_honey_wine]：0xf9ab1c
+甜蜜水晶[sweet_crystal_honey]：0xffce5d
+蜂王特酿[royal_honey_brew]：0xad69cc
 
 #### 天境联动
-神饯紫晶酿[divine_offering_brew]：#c3d1d1 - 0xc3d1d1
-神能迷雾[divine_energy_mist]：#caac62 - 0xcaac62
-史维特菲士[swet_fizz]：#fffc67 - 0xfffc67
-重力醉[gravitite_drunk]：#e3a2c2 - 0xe3a2c2
-治愈灵药[healing_elixir]：#d9d9d9 - 0xd9d9d9
-姜饼暖饮[gingerbread_warmer]：#737460 - 0x737460
-无界苍穹[unbound_skyborn]：#b8bce3 - 0xb8bce3
+神饯紫晶酿[divine_offering_brew]：0xc3d1d1
+神能迷雾[divine_energy_mist]：0xcaac62
+史维特菲士[swet_fizz]：0xfffc67
+重力醉[gravitite_drunk]：0xe3a2c2
+治愈灵药[healing_elixir]：0xd9d9d9
+姜饼暖饮[gingerbread_warmer]：0x737460
+无界苍穹[unbound_skyborn]：0xb8bce3
+
+#### 永恒星光联动
+神圣裁决[divinity]：0xb3926e
+星轨[star_trail]：0x938f8f
+极光[aurora]：0x68209a
+日蚀[eclipse]：0x892a12
+月蚀[lunar_eclipse]：0x2a334a
+深寒[deep_freeze]：0xc1c4cd
+血月[blood_moon]：0xc81616
+深渊[abyss]：0x88180c
+烈阳[blazing_sun]：0xff660e
+风痕[wind_trace]：0x6582ae
 
 
 

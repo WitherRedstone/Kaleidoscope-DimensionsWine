@@ -30,7 +30,10 @@ import net.neoforged.neoforge.common.ItemAbilities;
 public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
 
     public WarpedGrapevineTrellisBlock() {
-        super();
+        super(
+                (state, level, pos, random) -> 0.25F,
+                () -> ModBlocks.WARPED_GRAPE_CROP.get().defaultBlockState()
+        );
     }
 
     /**
@@ -136,22 +139,24 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
     }
 
     /**
-     * 检查诡异葡萄藤架下方的方块是否支持其生长
+     * 检查诡异葡萄藤架是否可以生长
      * <p>
-     * 验证下方方块是否为以下类型之一：
-     * - 已成熟的诡异葡萄藤架（达到最大年龄）
-     * - 诡异菌岩（WARPED_NYLIUM）
-     * <p>
-     * 只有满足条件时，藤蔓才能从藤架向下延伸生长
+     * 验证条件：
+     * - SINGLE类型且未成熟时，下方必须为诡异菌岩
+     * - 其他情况使用父类默认生长检查逻辑
      *
-     * @param belowState 下方方块的状态
-     * @return 如果下方方块支持生长则返回 true，否则返回 false
+     * @param level 世界读取器
+     * @param pos   方块位置
+     * @param state 当前方块状态
+     * @return 如果可以生长则返回 true，否则返回 false
      */
     @Override
-    public boolean belowSupportGrow(BlockState belowState) {
-        // 诡异菌岩作为支撑方块
-        return belowState.is(this) ? this.isMaxAge(belowState) :
-                belowState.is(Blocks.WARPED_NYLIUM);
+    public boolean canGrow(LevelReader level, BlockPos pos, BlockState state) {
+        if (state.getValue(TYPE) == TrellisType.SINGLE && !this.isMaxAge(state)) {
+            // 检查下方是否为诡异菌岩
+            return level.getBlockState(pos.below()).is(Blocks.WARPED_NYLIUM);
+        }
+        return super.canGrow(level, pos, state);
     }
 
     /**
@@ -178,18 +183,15 @@ public class WarpedGrapevineTrellisBlock extends GrapevineTrellisBlock {
     @Override
     public void doGrow(Level level, BlockPos pos, BlockState state) {
         // 如果是 single 状态
-        if (state.getValue(TYPE) == TrellisType.SINGLE) {
-            // 先检查下方是否满足生长条件
+        if (state.getValue(TYPE) == TrellisType.SINGLE && !this.isMaxAge(state)) {
             BlockState belowState = level.getBlockState(pos.below());
-            if (!belowSupportGrow(belowState)) {
+            // 先检查下方是否满足生长条件
+            if (!belowState.is(Blocks.WARPED_NYLIUM)) {
                 return;
             }
             // 如果没有达到最大年龄，直接增加年龄
-            if (!isMaxAge(state)) {
-                level.setBlockAndUpdate(pos, state.cycle(AGE));
-                CommonHooks.fireCropGrowPost(level, pos, state);
-                return;
-            }
+            level.setBlockAndUpdate(pos, state.cycle(AGE));
+            return;
         }
 
         // 如果已经达到最大年龄，此时尝试往各个方向检查

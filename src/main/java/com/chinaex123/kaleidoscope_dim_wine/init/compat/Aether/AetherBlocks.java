@@ -36,7 +36,7 @@ public class AetherBlocks {
             DrinkBlock.create().maxCount(2).irregular().shapes(DrinkShapes.getShortBottleShapes()).build().get());
     // 无界苍穹
     public static final DeferredHolder<Block, Block> UNBOUND_SKYBORN = BLOCK_REGISTER.register("unbound_skyborn", () ->
-            DrinkBlock.create().maxCount(4).irregular().shapes(DrinkShapes.getShortBottleShapes()).build().get());
+            DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
 
     public static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

@@ -52,24 +52,16 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-    // Specify the version of NeoForge to use.
     version = project.neo_version
 
     parchment {
         mappingsVersion = project.parchment_mappings_version
         minecraftVersion = project.parchment_minecraft_version
     }
-
-    // This line is optional. Access Transformers are automatically detected
-    // accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
-
-    // Default run configurations.
-    // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
             client()
 
-            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
@@ -123,71 +115,38 @@ neoForge {
     }
 }
 
-// Sets up a dependency configuration called 'localRuntime'.
-// This configuration should be used instead of 'runtimeOnly' to declare
-// a dependency that will be present for runtime testing but that is
-// "optional", meaning it will not be pulled by dependents of this mod.
 configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
 dependencies {
     // 前置
-    implementation "curse.maven:kaleidoscope-tavern-1475175:7785542" // 森罗物语：酒馆
+    implementation "curse.maven:kaleidoscope-tavern-1475175:8091783" // 森罗物语：酒馆
 
     // 联动
     localRuntime "curse.maven:the-twilight-forest-227639:7797302" // 维度酒 - 暮色森林
     localRuntime "curse.maven:the-bumblezone-forge-362479:7875914" // 维度酒 - 蜜蜂领域
     localRuntime "maven.modrinth:aether:1.21.1-1.5.10-neoforge" // 维度酒 - 天境
     localRuntime "maven.modrinth:owo-lib:0.12.15.5-beta.1+1.21" // 维度酒 - 天境前置
-    //localRuntime "curse.maven:eternal-starlight-1080592:7788339" // 维度酒 - 永恒星光
-    //localRuntime files("run/mods/eternalstarlight-0.7.0-hotfix+1.21.1+neoforge.jar") // 维度酒 - 永恒星光
+    localRuntime "curse.maven:eternal-starlight-1080592:7788339" // 维度酒 - 永恒星光
 
     implementation "curse.maven:jei-238222:7420587" // jei
-    localRuntime "curse.maven:create-328085:7408951" // 机械动力 6.0.9
-    localRuntime "curse.maven:farmers-delight-398521:7801529" // 农夫乐事
-    implementation "curse.maven:kaleidoscope-doll-1233277:7738926" // 森罗物语：玩偶
-    localRuntime "curse.maven:kaleidoscope-cookery-1309203:7738871" // 森罗物语：厨房
+    //localRuntime "curse.maven:create-328085:7408951" // 机械动力 6.0.9
+    //localRuntime "curse.maven:farmers-delight-398521:7801529" // 农夫乐事
+    //localRuntime "curse.maven:kaleidoscope-doll-1233277:7738926" // 森罗物语：玩偶
+    //localRuntime "curse.maven:kaleidoscope-cookery-1309203:7966281" // 森罗物语：厨房
 
     // 辅助
-    localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
+    //localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
     localRuntime "curse.maven:jade-324717:7545219" // jade
-    //localRuntime "curse.maven:appleskin-248787:7517379" // 苹果皮
     localRuntime "curse.maven:kubejs-238086:7278501"
     localRuntime "curse.maven:rhino-416294:7104526"
-    implementation "curse.maven:accessories-938917:7583320" // Accessories
-    //localRuntime "curse.maven:functional-storage-556861:7061714" // 功能性存储
-    //localRuntime "curse.maven:titanium-287342:7662843" // 功能性存储前置
-    localRuntime "curse.maven:placebo-283644:6926281"
-    localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
-    //localRuntime "curse.maven:mmmmmmmmmmmm-225738:7206981" // 试炼假人
-    //localRuntime "curse.maven:selene-499980:7822739"
-    
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    localRuntime "curse.maven:accessories-938917:7583320" // Accessories
+    //localRuntime "curse.maven:placebo-283644:6926281"
+    //localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
 
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
-
-    // Example mod dependency using a file as dependency
-    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
-
-    // Example project dependency using a sister or child project:
-    // implementation project(":myproject")
-
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
-// This block of code expands all declared replace properties in the specified resource targets.
-// A missing property will result in an error. Properties are expanded using ${} Groovy notation.
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [
             minecraft_version      : minecraft_version,

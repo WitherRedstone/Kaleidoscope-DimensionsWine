@@ -8,6 +8,9 @@ import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEve
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.EternalStarlightBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.EternalStarlightFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.EternalStarlightItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
@@ -61,6 +64,14 @@ public class KaleidoscopeDimensionsWine {
             AetherItems.register(modEventBus);
             AetherFluids.FLUID_TYPES.register(modEventBus);
             AetherFluids.FLUIDS.register(modEventBus);
+        }
+
+        // ==================== 次元维度 - 永恒星光 ====================
+        if (ModList.get().isLoaded("eternal_starlight")) {
+            EternalStarlightBlocks.register(modEventBus);
+            EternalStarlightItems.register(modEventBus);
+            EternalStarlightFluids.FLUID_TYPES.register(modEventBus);
+            EternalStarlightFluids.FLUIDS.register(modEventBus);
         }
     }
 }

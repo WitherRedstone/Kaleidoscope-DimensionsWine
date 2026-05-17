@@ -1,37 +1,35 @@
 {
-	"neoforge:conditions": [
-		{
-			"type": "neoforge:mod_loaded",
-			"modid": "aether"
-		}
-	],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
   "item": "kaleidoscope_dim_wine:swet_fizz",
   "effects": [
     [
       {
         "effect": "minecraft:nausea",
-        "duration": 35,
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:nausea",
-        "duration": 10,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
         "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "effect": "minecraft:regeneration",
-        "duration": 15,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
         "amplifier": 0,
         "probability": 1.0
-      }
-    ],
-    [
+      },
       {
         "effect": "minecraft:regeneration",
         "duration": 30,
@@ -41,13 +39,11 @@
     ],
     [
       {
-        "effect": "minecraft:regeneration",
-        "duration": 60,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
         "probability": 1.0
-      }
-    ],
-    [
+      },
       {
         "effect": "minecraft:regeneration",
         "duration": 120,
@@ -57,9 +53,29 @@
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 10,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:regeneration",
         "duration": 240,
         "amplifier": 2,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 5,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:regeneration",
+        "duration": 360,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]
