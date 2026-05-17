@@ -38,46 +38,46 @@ public class TwilightforestItems {
             new JuiceBucketItem(TwilightforestFluids.FROSTHEART_FRUIT_JUICE));
     // -------------------- 酒类 --------------------
     // 洞窟萤火酿
-    public static final RegistryObject<DrinkBlockItem> CAVE_GLOWBREW = ITEMS_REGISTER.register("cave_glowbrew", () ->
+    public static final RegistryObject<Item> CAVE_GLOWBREW = ITEMS_REGISTER.register("cave_glowbrew", () ->
             new DrinkBlockItem(TwilightforestBlocks.CAVE_GLOWBREW.get()));
     // 林隙晨露
-    public static final RegistryObject<DrinkBlockItem> DAWNLIGHT_DEW = ITEMS_REGISTER.register("dawnlight_dew", () ->
+    public static final RegistryObject<Item> DAWNLIGHT_DEW = ITEMS_REGISTER.register("dawnlight_dew", () ->
             new DrinkBlockItem(TwilightforestBlocks.DAWNLIGHT_DEW.get()));
     // 死巷之唾
-    public static final RegistryObject<DrinkBlockItem> DEAD_END_SPITTLE = ITEMS_REGISTER.register("dead_end_spittle", () ->
+    public static final RegistryObject<Item> DEAD_END_SPITTLE = ITEMS_REGISTER.register("dead_end_spittle", () ->
             new DrinkBlockItem(TwilightforestBlocks.DEAD_END_SPITTLE.get()));
     // 蛇蜕利口酒
-    public static final RegistryObject<DrinkBlockItem> SNAKESKIN_LIQUEUR = ITEMS_REGISTER.register("snakeskin_liqueur", () ->
+    public static final RegistryObject<Item> SNAKESKIN_LIQUEUR = ITEMS_REGISTER.register("snakeskin_liqueur", () ->
             new DrinkBlockItem(TwilightforestBlocks.SNAKESKIN_LIQUEUR.get()));
     // 霜脉兽血
-    public static final RegistryObject<DrinkBlockItem> FROSTVEIN_BEASTBLOOD = ITEMS_REGISTER.register("frostvein_beastblood", () ->
+    public static final RegistryObject<Item> FROSTVEIN_BEASTBLOOD = ITEMS_REGISTER.register("frostvein_beastblood", () ->
             new DrinkBlockItem(TwilightforestBlocks.FROSTVEIN_BEASTBLOOD.get()));
     // 巡林客的背囊
-    public static final RegistryObject<DrinkBlockItem> RANGERS_SATCHEL = ITEMS_REGISTER.register("rangers_satchel", () ->
+    public static final RegistryObject<Item> RANGERS_SATCHEL = ITEMS_REGISTER.register("rangers_satchel", () ->
             new DrinkBlockItem(TwilightforestBlocks.RANGERS_SATCHEL.get()));
     // 烬瞳
-    public static final RegistryObject<DrinkBlockItem> EMBEREYE = ITEMS_REGISTER.register("embereye", () ->
+    public static final RegistryObject<Item> EMBEREYE = ITEMS_REGISTER.register("embereye", () ->
             new DrinkBlockItem(TwilightforestBlocks.EMBEREYE.get()));
     // 鹿鸣季风
-    public static final RegistryObject<DrinkBlockItem> STAGCALL_MONSOON = ITEMS_REGISTER.register("stagcall_monsoon", () ->
+    public static final RegistryObject<Item> STAGCALL_MONSOON = ITEMS_REGISTER.register("stagcall_monsoon", () ->
             new DrinkBlockItem(TwilightforestBlocks.STAGCALL_MONSOON.get()));
     // 荆棘之心
-    public static final RegistryObject<DrinkBlockItem> THORNHEART = ITEMS_REGISTER.register("thornheart", () ->
+    public static final RegistryObject<Item> THORNHEART = ITEMS_REGISTER.register("thornheart", () ->
             new DrinkBlockItem(TwilightforestBlocks.THORNHEART.get()));
     // 德鲁伊的秘酿
-    public static final RegistryObject<DrinkBlockItem> DRUIDS_SECRET_BREW = ITEMS_REGISTER.register("druids_secret_brew", () ->
+    public static final RegistryObject<Item> DRUIDS_SECRET_BREW = ITEMS_REGISTER.register("druids_secret_brew", () ->
             new DrinkBlockItem(TwilightforestBlocks.DRUIDS_SECRET_BREW.get()));
     // 辉夜鸟之歌
-    public static final RegistryObject<DrinkBlockItem> MOORGLOW_BIRDS_SONG = ITEMS_REGISTER.register("moorglow_birds_song", () ->
+    public static final RegistryObject<Item> MOORGLOW_BIRDS_SONG = ITEMS_REGISTER.register("moorglow_birds_song", () ->
             new DrinkBlockItem(TwilightforestBlocks.MOORGLOW_BIRDS_SONG.get()));
     // 终年冻土
-    public static final RegistryObject<DrinkBlockItem> PERENNIAL_FROST = ITEMS_REGISTER.register("perennial_frost", () ->
+    public static final RegistryObject<Item> PERENNIAL_FROST = ITEMS_REGISTER.register("perennial_frost", () ->
             new DrinkBlockItem(TwilightforestBlocks.PERENNIAL_FROST.get()));
     // 巨人赞歌
-    public static final RegistryObject<DrinkBlockItem> GIANTS_HYMN = ITEMS_REGISTER.register("giants_hymn", () ->
+    public static final RegistryObject<Item> GIANTS_HYMN = ITEMS_REGISTER.register("giants_hymn", () ->
             new DrinkBlockItem(TwilightforestBlocks.GIANTS_HYMN.get()));
     // 地精的私藏
-    public static final RegistryObject<DrinkBlockItem> GOBLINS_STASH = ITEMS_REGISTER.register("goblins_stash", () ->
+    public static final RegistryObject<Item> GOBLINS_STASH = ITEMS_REGISTER.register("goblins_stash", () ->
             new DrinkBlockItem(TwilightforestBlocks.GOBLINS_STASH.get()));
 
     public static void register(IEventBus eventBus){

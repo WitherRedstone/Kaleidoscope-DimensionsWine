@@ -101,17 +101,23 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         // 静谧四季 - sereneseasons:year_round_crops
         this.tag(ModBlockTags.YEAR_ROUND_CROPS_BLOCK)
                 .add(ModBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 诡异葡萄藤
+                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
+                .add(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
+                .add(ModBlocks.WARPED_GRAPEVINE_PLANT.get()) // 野生诡异葡萄藤植物
                 .add(ModBlocks.DREAMFRUIT_VINE_PLANT.get()); // 迷梦果
 
         // 节气 - eclipticseasons:crops/all_seasons
         this.tag(ModBlockTags.CROPS_ALL_SEASONS_BLOCK)
                 .add(ModBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()); // 诡异葡萄藤
+                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
+                .add(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
+                .add(ModBlocks.WARPED_GRAPEVINE_PLANT.get()); // 野生诡异葡萄藤植物
         // 节气 - eclipticseasons:crops/dry_average
         this.tag(ModBlockTags.CROPS_DRY_AVERAGE)
                 .add(ModBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 诡异葡萄藤
+                .add(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
+                .add(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
+                .add(ModBlocks.WARPED_GRAPEVINE_PLANT.get()) // 野生诡异葡萄藤植物
                 .add(ModBlocks.DREAMFRUIT_VINE_PLANT.get()); // 迷梦果
 
         // ==================== 次元维度 - 暮色森林 ====================

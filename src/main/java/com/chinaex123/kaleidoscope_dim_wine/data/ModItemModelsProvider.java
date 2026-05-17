@@ -5,9 +5,9 @@ import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
-import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -133,7 +133,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
     /**
      * 酒类物品贴图路径（路径：textures/item/drink）
      */
-    private void basicDrinkItem(@UnknownNullability RegistryObject<DrinkBlockItem> item) {
+    private void basicDrinkItem(@UnknownNullability RegistryObject<Item> item) {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/" + itemName));
@@ -142,7 +142,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
     /**
      * 联动酒类 - 暮色森林（路径：item/drink/compat/twilightforest）
      */
-    private void compatTwilightforestDrinkItem(RegistryObject<DrinkBlockItem> item) {
+    private void compatTwilightforestDrinkItem(RegistryObject<Item> item) {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/twilightforest/" + itemName));
@@ -151,7 +151,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
     /**
      * 联动酒类 - 蜜蜂领域（路径：item/drink/compat/the_bumblezone）
      */
-    private void compatTheBumblezoneDrinkItem(RegistryObject<DrinkBlockItem> item) {
+    private void compatTheBumblezoneDrinkItem(RegistryObject<Item> item) {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/the_bumblezone/" + itemName));
@@ -160,7 +160,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
     /**
      * 联动酒类 - 天境（路径：item/drink/compat/aether）
      */
-    private void compatAetherDrinkItem(RegistryObject<DrinkBlockItem> item) {
+    private void compatAetherDrinkItem(RegistryObject<Item> item) {
         String itemName = item.getId().getPath();
         ItemModelBuilder builder = withExistingParent(itemName, ResourceLocation.withDefaultNamespace("item/generated"));
         builder.texture("layer0", ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "item/drink/compat/aether/" + itemName));

@@ -74,7 +74,7 @@ repositories {
 dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     // 前置
-    implementation fg.deobf("curse.maven:kaleidoscope-tavern-1475175:7785541") // 森罗物语：酒馆
+    implementation fg.deobf("curse.maven:kaleidoscope-tavern-1475175:8091780") // 森罗物语：酒馆
 
     // 联动
     runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648") // 维度酒 - 暮色森林

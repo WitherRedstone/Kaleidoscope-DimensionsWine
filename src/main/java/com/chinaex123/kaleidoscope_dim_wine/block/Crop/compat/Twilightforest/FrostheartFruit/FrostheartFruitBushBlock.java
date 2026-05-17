@@ -133,14 +133,6 @@ public class FrostheartFruitBushBlock extends SweetBerryBushBlock {
     }
 
     /**
-     * 获取霜心果灌木在中键选取（Pick Block）时返回的物品堆栈
-     */
-    @Override
-    public ItemStack getCloneItemStack(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
-        return new ItemStack(TwilightforestItems.FROSTHEART_FRUIT.get());
-    }
-
-    /**
      * 执行骨粉对霜心果灌木的催熟效果
      * <p>
      * **催熟逻辑**：
@@ -160,5 +152,13 @@ public class FrostheartFruitBushBlock extends SweetBerryBushBlock {
         if (age < 3) {
             level.setBlock(pos, state.setValue(AGE, age + 1), 2);
         }
+    }
+
+    /**
+     * 获取霜心果灌木在中键选取（Pick Block）时返回的物品堆栈
+     */
+    @Override
+    public ItemStack getCloneItemStack(BlockGetter pLevel, BlockPos pPos, BlockState pState) {
+        return new ItemStack(TwilightforestItems.FROSTHEART_FRUIT.get());
     }
 }

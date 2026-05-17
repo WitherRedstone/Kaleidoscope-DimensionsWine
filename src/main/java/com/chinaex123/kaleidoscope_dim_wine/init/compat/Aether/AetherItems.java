@@ -24,25 +24,25 @@ public class AetherItems {
             new JuiceBucketItem(AetherFluids.ENCHANTED_BERRY_JUICE));
     // -------------------- 酒类 --------------------
     // 神饯紫晶酿
-    public static final RegistryObject<DrinkBlockItem> DIVINE_OFFERING_BREW = ITEMS_REGISTER.register("divine_offering_brew", () ->
+    public static final RegistryObject<Item> DIVINE_OFFERING_BREW = ITEMS_REGISTER.register("divine_offering_brew", () ->
             new DrinkBlockItem(AetherBlocks.DIVINE_OFFERING_BREW.get()));
     // 神能迷雾
-    public static final RegistryObject<DrinkBlockItem> DIVINE_ENERGY_MIST = ITEMS_REGISTER.register("divine_energy_mist", () ->
+    public static final RegistryObject<Item> DIVINE_ENERGY_MIST = ITEMS_REGISTER.register("divine_energy_mist", () ->
             new DrinkBlockItem(AetherBlocks.DIVINE_ENERGY_MIST.get()));
     // 史维特菲士
-    public static final RegistryObject<DrinkBlockItem> SWET_FIZZ = ITEMS_REGISTER.register("swet_fizz", () ->
+    public static final RegistryObject<Item> SWET_FIZZ = ITEMS_REGISTER.register("swet_fizz", () ->
             new DrinkBlockItem(AetherBlocks.SWET_FIZZ.get()));
     // 重力醉
-    public static final RegistryObject<DrinkBlockItem> GRAVITITE_DRUNK = ITEMS_REGISTER.register("gravitite_drunk", () ->
+    public static final RegistryObject<Item> GRAVITITE_DRUNK = ITEMS_REGISTER.register("gravitite_drunk", () ->
             new DrinkBlockItem(AetherBlocks.GRAVITITE_DRUNK.get()));
     // 治愈灵药
-    public static final RegistryObject<DrinkBlockItem> HEALING_ELIXIR = ITEMS_REGISTER.register("healing_elixir", () ->
+    public static final RegistryObject<Item> HEALING_ELIXIR = ITEMS_REGISTER.register("healing_elixir", () ->
             new DrinkBlockItem(AetherBlocks.HEALING_ELIXIR.get()));
     // 姜饼暖饮
-    public static final RegistryObject<DrinkBlockItem> GINGERBREAD_WARMER = ITEMS_REGISTER.register("gingerbread_warmer", () ->
+    public static final RegistryObject<Item> GINGERBREAD_WARMER = ITEMS_REGISTER.register("gingerbread_warmer", () ->
             new DrinkBlockItem(AetherBlocks.GINGERBREAD_WARMER.get()));
     // 无界苍穹
-    public static final RegistryObject<DrinkBlockItem> UNBOUND_SKYBORN = ITEMS_REGISTER.register("unbound_skyborn", () ->
+    public static final RegistryObject<Item> UNBOUND_SKYBORN = ITEMS_REGISTER.register("unbound_skyborn", () ->
             new DrinkBlockItem(AetherBlocks.UNBOUND_SKYBORN.get()));
 
     public static void register(IEventBus eventBus) {

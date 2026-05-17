@@ -55,22 +55,22 @@ public class ModItems {
             new JuiceBucketItem(ModFluids.WARPED_GRAPE_JUICE));
     // -------------------- 酒类 --------------------
     // 绯红绝响
-    public static final RegistryObject<DrinkBlockItem> CRIMSON_CRESCENDO = ITEMS_REGISTER.register("crimson_crescendo", () ->
+    public static final RegistryObject<Item> CRIMSON_CRESCENDO = ITEMS_REGISTER.register("crimson_crescendo", () ->
             new DrinkBlockItem(ModBlocks.CRIMSON_CRESCENDO.get()));
     // 诡影尊爵
-    public static final RegistryObject<DrinkBlockItem> ETHEREAL_NOBLE = ITEMS_REGISTER.register("ethereal_noble", () ->
+    public static final RegistryObject<Item> ETHEREAL_NOBLE = ITEMS_REGISTER.register("ethereal_noble", () ->
             new DrinkBlockItem(ModBlocks.ETHEREAL_NOBLE.get()));
     // 疣域轩尼诗
-    public static final RegistryObject<DrinkBlockItem> WART_HENNESSY = ITEMS_REGISTER.register("wart_hennessy", () ->
+    public static final RegistryObject<Item> WART_HENNESSY = ITEMS_REGISTER.register("wart_hennessy", () ->
             new DrinkBlockItem(ModBlocks.WART_HENNESSY.get()));
     // 烈焰马爹利
-    public static final RegistryObject<DrinkBlockItem> BLAZE_MARTELL = ITEMS_REGISTER.register("blaze_martell", () ->
+    public static final RegistryObject<Item> BLAZE_MARTELL = ITEMS_REGISTER.register("blaze_martell", () ->
             new DrinkBlockItem(ModBlocks.BLAZE_MARTELL.get()));
     // 岩浆皇家礼炮
-    public static final RegistryObject<DrinkBlockItem> MAGMA_ROYAL_SALUTE = ITEMS_REGISTER.register("magma_royal_salute", () ->
+    public static final RegistryObject<Item> MAGMA_ROYAL_SALUTE = ITEMS_REGISTER.register("magma_royal_salute", () ->
             new DrinkBlockItem(ModBlocks.MAGMA_ROYAL_SALUTE.get()));
     // 黑骨拉菲
-    public static final RegistryObject<DrinkBlockItem> BLACK_BONE_LAFITE = ITEMS_REGISTER.register("black_bone_lafite", () ->
+    public static final RegistryObject<Item> BLACK_BONE_LAFITE = ITEMS_REGISTER.register("black_bone_lafite", () ->
             new DrinkBlockItem(ModBlocks.BLACK_BONE_LAFITE.get()));
 
 
@@ -92,31 +92,31 @@ public class ModItems {
             new BucketItem(ModFluids.DRAGON_BLOOD, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     // -------------------- 酒类 --------------------
     // 紫颂干邑
-    public static final RegistryObject<DrinkBlockItem> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () ->
+    public static final RegistryObject<Item> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () ->
             new DrinkBlockItem(ModBlocks.CHORUS_COGNAC.get()));
     // 龙息白兰地
-    public static final RegistryObject<DrinkBlockItem> DRAGONS_BREATH_BRANDY = ITEMS_REGISTER.register("dragons_breath_brandy", () ->
+    public static final RegistryObject<Item> DRAGONS_BREATH_BRANDY = ITEMS_REGISTER.register("dragons_breath_brandy", () ->
             new DrinkBlockItem(ModBlocks.DRAGONS_BREATH_BRANDY.get()));
     // 深渊波特
-    public static final RegistryObject<DrinkBlockItem> ABYSSAL_PORTER = ITEMS_REGISTER.register("abyssal_porter", () ->
+    public static final RegistryObject<Item> ABYSSAL_PORTER = ITEMS_REGISTER.register("abyssal_porter", () ->
             new DrinkBlockItem(ModBlocks.ABYSSAL_PORTER.get()));
     // 静默雪莉
-    public static final RegistryObject<DrinkBlockItem> SILENT_SHERRY = ITEMS_REGISTER.register("silent_sherry", () ->
+    public static final RegistryObject<Item> SILENT_SHERRY = ITEMS_REGISTER.register("silent_sherry", () ->
             new DrinkBlockItem(ModBlocks.SILENT_SHERRY.get()));
     // 遗忘玛格丽特
-    public static final RegistryObject<DrinkBlockItem> FORGOTTEN_MARGARITA = ITEMS_REGISTER.register("forgotten_margarita", () ->
+    public static final RegistryObject<Item> FORGOTTEN_MARGARITA = ITEMS_REGISTER.register("forgotten_margarita", () ->
             new DrinkBlockItem(ModBlocks.FORGOTTEN_MARGARITA.get()));
     // 幻梦泡影
-    public static final RegistryObject<DrinkBlockItem> PHANTOM_DREAM_BUBBLE = ITEMS_REGISTER.register("phantom_dream_bubble", () ->
+    public static final RegistryObject<Item> PHANTOM_DREAM_BUBBLE = ITEMS_REGISTER.register("phantom_dream_bubble", () ->
             new DrinkBlockItem(ModBlocks.PHANTOM_DREAM_BUBBLE.get()));
     // 终末星光
-    public static final RegistryObject<DrinkBlockItem> END_STARLIGHT = ITEMS_REGISTER.register("end_starlight", () ->
+    public static final RegistryObject<Item> END_STARLIGHT = ITEMS_REGISTER.register("end_starlight", () ->
             new DrinkBlockItem(ModBlocks.END_STARLIGHT.get()));
     // 神血波尔多
-    public static final RegistryObject<DrinkBlockItem> DIVINE_EMBRYO_PORT = ITEMS_REGISTER.register("divine_embryo_port", () ->
+    public static final RegistryObject<Item> DIVINE_EMBRYO_PORT = ITEMS_REGISTER.register("divine_embryo_port", () ->
             new DrinkBlockItem(ModBlocks.DIVINE_EMBRYO_PORT.get()));
     // 龙血酒
-    public static final RegistryObject<DrinkBlockItem> DRACONIC_BLOOD_WINE = ITEMS_REGISTER.register("draconic_blood_wine", () ->
+    public static final RegistryObject<Item> DRACONIC_BLOOD_WINE = ITEMS_REGISTER.register("draconic_blood_wine", () ->
             new DrinkBlockItem(ModBlocks.DRACONIC_BLOOD_WINE.get()));
 
     public static void register(IEventBus eventBus){

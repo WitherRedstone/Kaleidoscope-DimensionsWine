@@ -23,28 +23,28 @@ public class TheBumblezoneItems {
     public static final RegistryObject<Item> CARBOCRETIN_POWDER = ITEMS_REGISTER.register("carbocretin_powder", () -> new Item(new Item.Properties()));
     // -------------------- 酒类 --------------------
     // 雪碧
-    public static final RegistryObject<DrinkBlockItem> SPRITE = ITEMS_REGISTER.register("sprite", () ->
+    public static final RegistryObject<Item> SPRITE = ITEMS_REGISTER.register("sprite", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.SPRITE.get()));
     // 可乐
-    public static final RegistryObject<DrinkBlockItem> PEPSI = ITEMS_REGISTER.register("pepsi", () ->
+    public static final RegistryObject<Item> PEPSI = ITEMS_REGISTER.register("pepsi", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.PEPSI.get()));
     // 芬达
-    public static final RegistryObject<DrinkBlockItem> FANTA = ITEMS_REGISTER.register("fanta", () ->
+    public static final RegistryObject<Item> FANTA = ITEMS_REGISTER.register("fanta", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.FANTA.get()));
     // 花粉甜酿
-    public static final RegistryObject<DrinkBlockItem> POLLEN_NECTAR = ITEMS_REGISTER.register("pollen_nectar", () ->
+    public static final RegistryObject<Item> POLLEN_NECTAR = ITEMS_REGISTER.register("pollen_nectar", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.POLLEN_NECTAR.get()));
     // 蜜刺佳酿
-    public static final RegistryObject<DrinkBlockItem> HONEYTHORN_MEAD = ITEMS_REGISTER.register("honeythorn_mead", () ->
+    public static final RegistryObject<Item> HONEYTHORN_MEAD = ITEMS_REGISTER.register("honeythorn_mead", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.HONEYTHORN_MEAD.get()));
     // 蜂蜡陈酿
-    public static final RegistryObject<DrinkBlockItem> BEESWAX_HONEY_WINE = ITEMS_REGISTER.register("beeswax_honey_wine", () ->
+    public static final RegistryObject<Item> BEESWAX_HONEY_WINE = ITEMS_REGISTER.register("beeswax_honey_wine", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.BEESWAX_HONEY_WINE.get()));
     // 甜蜜水晶
-    public static final RegistryObject<DrinkBlockItem> SWEET_CRYSTAL_HONEY = ITEMS_REGISTER.register("sweet_crystal_honey", () ->
+    public static final RegistryObject<Item> SWEET_CRYSTAL_HONEY = ITEMS_REGISTER.register("sweet_crystal_honey", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.SWEET_CRYSTAL_HONEY.get()));
     // 蜂王特酿
-    public static final RegistryObject<DrinkBlockItem> ROYAL_HONEY_BREW = ITEMS_REGISTER.register("royal_honey_brew", () ->
+    public static final RegistryObject<Item> ROYAL_HONEY_BREW = ITEMS_REGISTER.register("royal_honey_brew", () ->
             new DrinkBlockItem(TheBumblezoneBlocks.ROYAL_HONEY_BREW.get()));
 
     public static void register(IEventBus eventBus) {

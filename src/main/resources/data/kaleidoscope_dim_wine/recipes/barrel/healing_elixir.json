@@ -1,7 +1,7 @@
 {
-	"forge:conditions": [
+	"neoforge:conditions": [
 		{
-			"type": "forge:mod_loaded",
+			"type": "neoforge:mod_loaded",
 			"modid": "aether"
 		}
 	],
@@ -16,10 +16,13 @@
     },
     {
       "item": "aether:white_apple"
+    },
+    {
+      "tag": "minecraft:flowers"
     }
   ],
   "result": {
-    "item": "kaleidoscope_dim_wine:healing_elixir"
-  },
-  "unit_time": 2400
+    "count": 1,
+    "id": "kaleidoscope_dim_wine:healing_elixir"
+  }
 }

@@ -76,7 +76,7 @@ description='''${mod_description}'''
 [[dependencies."${mod_id}"]]
     modId = "kaleidoscope_tavern"
     mandatory=true
-    versionRange = "[1.0.1,)"
+    versionRange = "[1.1.2,)"
     ordering = "AFTER"
     side = "BOTH"
 [[dependencies."${mod_id}"]]

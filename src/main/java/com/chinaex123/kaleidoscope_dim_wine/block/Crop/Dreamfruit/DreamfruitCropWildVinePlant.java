@@ -194,14 +194,6 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
     }
 
     /**
-     * 获取玩家中键拾取此方块时获得的物品
-     */
-    @Override
-    public ItemStack getCloneItemStack(net.minecraft.world.level.BlockGetter pLevel, BlockPos pPos, BlockState pState) {
-        return new ItemStack(ModItems.DREAMFRUIT.get());
-    }
-
-    /**
      * 迷梦果藤身体方块的随机刻逻辑
      * <p>
      * 当藤蔓未结果时，有 20% 的概率（1/5）自然结果
@@ -228,5 +220,13 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
                 .instabreak()
                 .sound(SoundType.CAVE_VINES)
                 .pushReaction(PushReaction.DESTROY);
+    }
+
+    /**
+     * 获取玩家中键拾取此方块时获得的物品
+     */
+    @Override
+    public ItemStack getCloneItemStack(net.minecraft.world.level.BlockGetter pLevel, BlockPos pPos, BlockState pState) {
+        return new ItemStack(ModItems.DREAMFRUIT.get());
     }
 }

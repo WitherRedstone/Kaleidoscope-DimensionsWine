@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
+import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -48,21 +49,21 @@ public class ModCreativeTabs {
                         output.accept(ModItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
                         output.accept(ModItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
                         // -------------------- 酒类 --------------------
-                        output.accept(ModItems.CRIMSON_CRESCENDO.get()); // 绯红绝响
-                        output.accept(ModItems.ETHEREAL_NOBLE.get()); // 诡影尊爵
-                        output.accept(ModItems.WART_HENNESSY.get()); // 疣域轩尼诗
-                        output.accept(ModItems.BLAZE_MARTELL.get()); // 烈焰马爹利
-                        output.accept(ModItems.MAGMA_ROYAL_SALUTE.get()); // 岩浆皇家礼炮
-                        output.accept(ModItems.BLACK_BONE_LAFITE.get()); // 黑骨拉菲
-                        output.accept(ModItems.CHORUS_COGNAC.get()); // 紫颂干邑
-                        output.accept(ModItems.DRAGONS_BREATH_BRANDY.get()); // 龙息白兰地
-                        output.accept(ModItems.ABYSSAL_PORTER.get()); // 深渊波特
-                        output.accept(ModItems.SILENT_SHERRY.get()); // 静默雪莉
-                        output.accept(ModItems.FORGOTTEN_MARGARITA.get()); // 遗忘玛格丽特
-                        output.accept(ModItems.PHANTOM_DREAM_BUBBLE.get()); // 幻梦泡影
-                        output.accept(ModItems.END_STARLIGHT.get()); // 终末星光
-                        output.accept(ModItems.DIVINE_EMBRYO_PORT.get()); // 神血波尔多
-                        output.accept(ModItems.DRACONIC_BLOOD_WINE.get()); // 龙血酒
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.CRIMSON_CRESCENDO)); // 绯红绝响
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.ETHEREAL_NOBLE)); // 诡影尊爵
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.WART_HENNESSY)); // 疣域轩尼诗
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.BLAZE_MARTELL)); // 烈焰马爹利
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.MAGMA_ROYAL_SALUTE)); // 岩浆皇家礼炮
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.BLACK_BONE_LAFITE)); // 黑骨拉菲
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.CHORUS_COGNAC)); // 紫颂干邑
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.DRAGONS_BREATH_BRANDY)); // 龙息白兰地
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.ABYSSAL_PORTER)); // 深渊波特
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.SILENT_SHERRY)); // 静默雪莉
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.FORGOTTEN_MARGARITA)); // 遗忘玛格丽特
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.PHANTOM_DREAM_BUBBLE)); // 幻梦泡影
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.END_STARLIGHT)); // 终末星光
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.DIVINE_EMBRYO_PORT)); // 神血波尔多
+                        output.accept(BottleBlockItem.getMaxLevelDrink(ModItems.DRACONIC_BLOOD_WINE)); // 龙血酒
 
 
                         // ==================== 次元维度 - 暮色森林 ====================
@@ -76,20 +77,20 @@ public class ModCreativeTabs {
                             output.accept(TwilightforestItems.COLOSSAL_FRAGMENT.get()); // 巨物碎片
                             output.accept(TwilightforestItems.GOBLIN_ESSENCE.get()); // 哥布林精华
                             // -------------------- 酒类 --------------------
-                            output.accept(TwilightforestItems.CAVE_GLOWBREW.get()); // 洞窟萤火酿
-                            output.accept(TwilightforestItems.DAWNLIGHT_DEW.get()); // 林隙晨露
-                            output.accept(TwilightforestItems.DEAD_END_SPITTLE.get()); // 死巷之唾
-                            output.accept(TwilightforestItems.SNAKESKIN_LIQUEUR.get()); // 蛇蜕利口酒
-                            output.accept(TwilightforestItems.FROSTVEIN_BEASTBLOOD.get()); // 霜脉兽血
-                            output.accept(TwilightforestItems.RANGERS_SATCHEL.get()); // 巡林客的背囊
-                            output.accept(TwilightforestItems.EMBEREYE.get()); // 烬瞳
-                            output.accept(TwilightforestItems.STAGCALL_MONSOON.get()); // 鹿鸣季风
-                            output.accept(TwilightforestItems.THORNHEART.get()); // 荆棘之心
-                            output.accept(TwilightforestItems.DRUIDS_SECRET_BREW.get()); // 德鲁伊的秘酿
-                            output.accept(TwilightforestItems.MOORGLOW_BIRDS_SONG.get()); // 辉夜鸟之歌
-                            output.accept(TwilightforestItems.PERENNIAL_FROST.get()); // 终年冻土
-                            output.accept(TwilightforestItems.GIANTS_HYMN.get()); // 巨人赞歌
-                            output.accept(TwilightforestItems.GOBLINS_STASH.get()); // 地精的私藏
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.CAVE_GLOWBREW)); // 洞窟萤火酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.DAWNLIGHT_DEW)); // 林隙晨露
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.DEAD_END_SPITTLE)); // 死巷之唾
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.SNAKESKIN_LIQUEUR)); // 蛇蜕利口酒
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.FROSTVEIN_BEASTBLOOD)); // 霜脉兽血
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.RANGERS_SATCHEL)); // 巡林客的背囊
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.EMBEREYE)); // 烬瞳
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.STAGCALL_MONSOON)); // 鹿鸣季风
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.THORNHEART)); // 荆棘之心
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.DRUIDS_SECRET_BREW)); // 德鲁伊的秘酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.MOORGLOW_BIRDS_SONG)); // 辉夜鸟之歌
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.PERENNIAL_FROST)); // 终年冻土
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.GIANTS_HYMN)); // 巨人赞歌
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TwilightforestItems.GOBLINS_STASH)); // 地精的私藏
                         }
 
 
@@ -99,14 +100,14 @@ public class ModCreativeTabs {
                             output.accept(TheBumblezoneItems.MEAD_ESSENCE.get()); // 蜜酒精华
                             output.accept(TheBumblezoneItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
                             // -------------------- 酒类 --------------------
-                            output.accept(TheBumblezoneItems.SPRITE.get()); // 雪碧
-                            output.accept(TheBumblezoneItems.PEPSI.get()); // 可乐
-                            output.accept(TheBumblezoneItems.FANTA.get()); // 芬达
-                            output.accept(TheBumblezoneItems.POLLEN_NECTAR.get()); // 花粉甜酿
-                            output.accept(TheBumblezoneItems.HONEYTHORN_MEAD.get()); // 蜜刺佳酿
-                            output.accept(TheBumblezoneItems.BEESWAX_HONEY_WINE.get()); // 蜂蜡陈酿
-                            output.accept(TheBumblezoneItems.SWEET_CRYSTAL_HONEY.get()); // 甜蜜水晶
-                            output.accept(TheBumblezoneItems.ROYAL_HONEY_BREW.get()); // 蜂王特酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.SPRITE)); // 雪碧
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.PEPSI)); // 可乐
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.FANTA)); // 芬达
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.POLLEN_NECTAR)); // 花粉甜酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.HONEYTHORN_MEAD)); // 蜜刺佳酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.BEESWAX_HONEY_WINE)); // 蜂蜡陈酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.SWEET_CRYSTAL_HONEY)); // 甜蜜水晶
+                            output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.ROYAL_HONEY_BREW)); // 蜂王特酿
                         }
 
 
@@ -115,13 +116,13 @@ public class ModCreativeTabs {
                             // -------------------- 物品 --------------------
                             output.accept(AetherItems.ENCHANTED_BERRY_JUICE_BUCKET.get()); // 神饯蓝莓汁桶
                             // -------------------- 酒类 --------------------
-                            output.accept(AetherItems.DIVINE_OFFERING_BREW.get()); // 神饯紫晶酿
-                            output.accept(AetherItems.DIVINE_ENERGY_MIST.get()); // 神能迷雾
-                            output.accept(AetherItems.SWET_FIZZ.get()); // 史维特菲士
-                            output.accept(AetherItems.GRAVITITE_DRUNK.get()); // 重力醉
-                            output.accept(AetherItems.HEALING_ELIXIR.get()); // 治愈灵药
-                            output.accept(AetherItems.GINGERBREAD_WARMER.get()); // 姜饼暖饮
-                            output.accept(AetherItems.UNBOUND_SKYBORN.get()); // 无界苍穹
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.DIVINE_OFFERING_BREW)); // 神饯紫晶酿
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.DIVINE_ENERGY_MIST)); // 神能迷雾
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.SWET_FIZZ)); // 史维特菲士
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.GRAVITITE_DRUNK)); // 重力醉
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.HEALING_ELIXIR)); // 治愈灵药
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.GINGERBREAD_WARMER)); // 姜饼暖饮
+                            output.accept(BottleBlockItem.getMaxLevelDrink(AetherItems.UNBOUND_SKYBORN)); // 无界苍穹
                         }
 
 
