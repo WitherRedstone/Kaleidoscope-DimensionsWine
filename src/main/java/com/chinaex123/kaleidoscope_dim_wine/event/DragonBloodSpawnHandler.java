@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
@@ -83,7 +83,7 @@ public class DragonBloodSpawnHandler {
 
             if (groundPos != null) {
                 // 放置龙血流体方块
-                level.setBlock(groundPos, ModBlocks.DRAGON_BLOOD_FLUID.get().defaultBlockState(),
+                level.setBlock(groundPos, KDWBlocks.DRAGON_BLOOD_FLUID.get().defaultBlockState(),
                         Block.UPDATE_ALL);
             }
         }

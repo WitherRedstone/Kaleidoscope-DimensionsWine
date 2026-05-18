@@ -1,8 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFoods;
-import com.chinaex123.kaleidoscope_dim_wine.item.Crop.compat.Twilightforest.FrostheartFruitItem;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFoods;
+import com.chinaex123.kaleidoscope_dim_wine.item.crop.compat.Twilightforest.FrostheartFruitItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.world.item.BucketItem;
@@ -21,7 +21,7 @@ public class TwilightforestItems {
     // -------------------- 作物 --------------------
     // 霜心果
     public static final DeferredItem<Item> FROSTHEART_FRUIT = ITEMS_REGISTER.register("frostheart_fruit", () ->
-            new FrostheartFruitItem(new Item.Properties().food(ModFoods.FROSTHEART_FRUIT)));
+            new FrostheartFruitItem(new Item.Properties().food(KDWFoods.FROSTHEART_FRUIT)));
     // -------------------- 物品 --------------------
     // 巨物碎片
     public static final DeferredItem<Item> COLOSSAL_FRAGMENT = ITEMS_REGISTER.register("colossal_fragment", () -> new Item(new Item.Properties()));

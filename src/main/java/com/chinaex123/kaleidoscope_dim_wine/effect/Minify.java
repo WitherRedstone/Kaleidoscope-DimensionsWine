@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
@@ -103,9 +103,9 @@ public class Minify extends MobEffect {
         Player player = event.getEntity();
         if (player.level().isClientSide()) return;
 
-        var effect = player.getEffect(ModEffects.MINIFY);
+        var effect = player.getEffect(KDWEffects.MINIFY);
         if (effect != null) {
-            Minify minify = (Minify) ModEffects.MINIFY.get();
+            Minify minify = (Minify) KDWEffects.MINIFY.get();
             minify.applyEffectTick(player, effect.getAmplifier());
             player.setHealth(player.getMaxHealth());
         }

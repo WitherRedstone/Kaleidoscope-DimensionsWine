@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -28,8 +28,8 @@ public class Bloodthirsty extends MobEffect {
             int amplifier = 0;
 
             // 检查攻击者是否有嗜血效果
-            if (attacker.hasEffect(ModEffects.BLOODTHIRSTY)) {
-                amplifier = attacker.getEffect(ModEffects.BLOODTHIRSTY).getAmplifier();
+            if (attacker.hasEffect(KDWEffects.BLOODTHIRSTY)) {
+                amplifier = attacker.getEffect(KDWEffects.BLOODTHIRSTY).getAmplifier();
             }
 
             if (amplifier >= 0) {

@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.*;
@@ -101,9 +101,9 @@ public class Maximization extends MobEffect {
         Player player = event.getEntity();
         if (player.level().isClientSide()) return;
 
-        var effect = player.getEffect(ModEffects.MAXIMIZATION);
+        var effect = player.getEffect(KDWEffects.MAXIMIZATION);
         if (effect != null) {
-            Maximization maximization = (Maximization) ModEffects.MAXIMIZATION.get();
+            Maximization maximization = (Maximization) KDWEffects.MAXIMIZATION.get();
             maximization.applyEffectTick(player, effect.getAmplifier());
             player.setHealth(player.getMaxHealth());
         }

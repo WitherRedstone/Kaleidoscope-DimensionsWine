@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -33,7 +33,7 @@ public class Payback extends MobEffect {
     public static void onLivingDamageReceived(LivingDamageEvent.Pre event) {
         LivingEntity target = event.getEntity();
 
-        if (target instanceof Player player && player.hasEffect(ModEffects.PAYBACK)) {
+        if (target instanceof Player player && player.hasEffect(KDWEffects.PAYBACK)) {
             // 如果已经标记过，不再抵消
             if (paybackPlayers.contains(player)) {
                 return;
@@ -61,7 +61,7 @@ public class Payback extends MobEffect {
                 event.setNewDamage(newDamage);
 
                 // 移除状态效果
-                player.removeEffect(ModEffects.PAYBACK);
+                player.removeEffect(KDWEffects.PAYBACK);
 
                 // 清除标记
                 paybackPlayers.remove(player);

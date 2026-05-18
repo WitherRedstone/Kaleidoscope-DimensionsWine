@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluidTypes;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluidTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
@@ -37,10 +37,10 @@ public class TwilightforestFluids {
     // -------------------- 次元维度 - 暮色森林 --------------------
     // 火炬浆果汁
     public static final Supplier<FluidType> TORCHBERRIES_JUICE_TYPE =
-            FLUID_TYPES.register("torchberries_juice", () -> new ModFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
+            FLUID_TYPES.register("torchberries_juice", () -> new KDWFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
     // 霜心果汁
     public static final Supplier<FluidType> FROSTHEART_FRUIT_JUICE_TYPE =
-            FLUID_TYPES.register("frostheart_fruit_juice", () -> new ModFluidTypes(FROSTHEART_FRUIT_JUICE_ID, 0, 0, false, false));
+            FLUID_TYPES.register("frostheart_fruit_juice", () -> new KDWFluidTypes(FROSTHEART_FRUIT_JUICE_ID, 0, 0, false, false));
 
 
     // ==================== 流体 属性 ====================

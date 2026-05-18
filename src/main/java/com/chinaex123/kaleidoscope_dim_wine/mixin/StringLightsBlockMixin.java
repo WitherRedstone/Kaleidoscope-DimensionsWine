@@ -61,7 +61,7 @@ public class StringLightsBlockMixin {
 
     private static StringLightsBlock getBlockByName(String name) {
         try {
-            Class<?> modBlocksClass = Class.forName("com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks");
+            Class<?> modBlocksClass = Class.forName("com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks");
             Object block = modBlocksClass.getField(name.toUpperCase()).get(null);
             return (StringLightsBlock) ((net.neoforged.neoforge.registries.DeferredBlock<?>) block).get();
         } catch (Exception e) {

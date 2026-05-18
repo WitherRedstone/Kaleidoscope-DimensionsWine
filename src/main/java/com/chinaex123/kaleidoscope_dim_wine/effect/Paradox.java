@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -34,7 +34,7 @@ public class Paradox extends MobEffect {
     public static void onLivingDamage(LivingDamageEvent.Pre event) {
         LivingEntity target = event.getEntity();
 
-        if (target.hasEffect(ModEffects.PARADOX) && !processingEntities.contains(target)) {
+        if (target.hasEffect(KDWEffects.PARADOX) && !processingEntities.contains(target)) {
             float damage = event.getOriginalDamage();
 
             // 抵消伤害
@@ -58,7 +58,7 @@ public class Paradox extends MobEffect {
     public static void onLivingHeal(LivingHealEvent event) {
         LivingEntity target = event.getEntity();
 
-        if (target.hasEffect(ModEffects.PARADOX) && !processingEntities.contains(target)) {
+        if (target.hasEffect(KDWEffects.PARADOX) && !processingEntities.contains(target)) {
             float healAmount = event.getAmount();
 
             // 取消治疗
@@ -82,7 +82,7 @@ public class Paradox extends MobEffect {
     public static void onLivingDeath(LivingDeathEvent event) {
         LivingEntity target = event.getEntity();
 
-        if (target.hasEffect(ModEffects.PARADOX)) {
+        if (target.hasEffect(KDWEffects.PARADOX)) {
             // 取消死亡
             event.setCanceled(true);
 
@@ -90,7 +90,7 @@ public class Paradox extends MobEffect {
             target.setHealth(1.0F);
 
             // 清除效果
-            target.removeEffect(ModEffects.PARADOX);
+            target.removeEffect(KDWEffects.PARADOX);
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -55,7 +55,7 @@ public class Frostbite extends MobEffect {
     @SubscribeEvent
     public static void onEntityTick(EntityTickEvent.Post event) {
         if (event.getEntity() instanceof LivingEntity entity) {
-            var effect = entity.getEffect(ModEffects.FROSTBITE);
+            var effect = entity.getEffect(KDWEffects.FROSTBITE);
 
             if (effect != null && !entity.level().isClientSide()) {
                 UUID entityId = entity.getUUID();

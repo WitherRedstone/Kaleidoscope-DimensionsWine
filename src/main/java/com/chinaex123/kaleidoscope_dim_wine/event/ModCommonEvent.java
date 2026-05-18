@@ -1,8 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -47,8 +47,8 @@ public class ModCommonEvent {
         BlockPos belowPos = player.blockPosition().below();
         if (player.level().getBlockState(belowPos).is(Blocks.BEDROCK)) {
             // 根据配置文件概率生成基岩小灯串物品
-            if (player.getRandom().nextFloat() < ServerConfig.BEDROCK_FALL_DROP_CHANCE.get()) {
-                ItemStack stack = new ItemStack(ModBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get());
+            if (player.getRandom().nextFloat() < KDWConfig.BEDROCK_FALL_DROP_CHANCE.get()) {
+                ItemStack stack = new ItemStack(KDWBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get());
                 player.spawnAtLocation(stack);
             }
         }

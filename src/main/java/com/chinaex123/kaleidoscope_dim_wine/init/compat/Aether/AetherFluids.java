@@ -1,8 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluidTypes;
-import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluidTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
@@ -35,7 +34,7 @@ public class AetherFluids {
     // -------------------- 次元维度 - 暮色森林 --------------------
     // 神饯蓝莓汁
     public static final Supplier<FluidType> ENCHANTED_BERRY_JUICE_TYPE =
-            FLUID_TYPES.register("enchanted_berry_juice", () -> new ModFluidTypes(ENCHANTED_BERRY_JUICE_ID, 0, 6, false, false));
+            FLUID_TYPES.register("enchanted_berry_juice", () -> new KDWFluidTypes(ENCHANTED_BERRY_JUICE_ID, 0, 6, false, false));
 
 
     // ==================== 流体 属性 ====================

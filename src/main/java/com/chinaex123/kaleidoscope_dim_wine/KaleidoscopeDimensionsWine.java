@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
 import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.event.EffectAttributeRemoveHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
@@ -31,17 +31,17 @@ public class KaleidoscopeDimensionsWine {
     public static final Logger LOGGER = LoggerFactory.getLogger(KaleidoscopeDimensionsWine.class);
 
     public KaleidoscopeDimensionsWine(IEventBus modEventBus, ModContainer modContainer) {
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModFluids.FLUID_TYPES.register(modEventBus);
-        ModFluids.FLUIDS.register(modEventBus);
+        KDWBlocks.register(modEventBus);
+        KDWItems.register(modEventBus);
+        KDWFluids.FLUID_TYPES.register(modEventBus);
+        KDWFluids.FLUIDS.register(modEventBus);
         modEventBus.addListener(DrinkBlockEntityTypeEventHandler::onBlockEntityTypeAddBlocks);
 
-        ModEffects.register(modEventBus);
+        KDWEffects.register(modEventBus);
         NeoForge.EVENT_BUS.register(EffectAttributeRemoveHandler.class);
 
-        ModCreativeTabs.register(modEventBus);
-        modContainer.registerConfig(Type.COMMON, ServerConfig.SPEC);
+        KDWCreativeTabs.register(modEventBus);
+        modContainer.registerConfig(Type.COMMON, KDWConfig.SPEC);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
 
         // ==================== 次元维度 - 暮色森林 ====================

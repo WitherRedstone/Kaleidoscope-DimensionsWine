@@ -1,10 +1,9 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -34,7 +33,7 @@ public class UnboundGrace extends MobEffect {
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         var player = event.getEntity();
-        if (player.hasEffect(ModEffects.UNBOUND_GRACE)) {
+        if (player.hasEffect(KDWEffects.UNBOUND_GRACE)) {
             var instance = player.getAttribute(Attributes.BLOCK_BREAK_SPEED);
             if (instance != null) {
                 if (!player.onGround()) {
@@ -56,9 +55,9 @@ public class UnboundGrace extends MobEffect {
     public static void onEffectAdded(MobEffectEvent.Added event) {
         if (event.getEffectInstance() != null && event.getEffectInstance().getEffect().value() instanceof UnboundGrace) {
             var entity = event.getEntity();
-            var skybornEffect = entity.getEffect(ModEffects.SKYBORN_GRACE);
+            var skybornEffect = entity.getEffect(KDWEffects.SKYBORN_GRACE);
             if (skybornEffect != null) {
-                entity.removeEffect(ModEffects.SKYBORN_GRACE);
+                entity.removeEffect(KDWEffects.SKYBORN_GRACE);
             }
         }
     }

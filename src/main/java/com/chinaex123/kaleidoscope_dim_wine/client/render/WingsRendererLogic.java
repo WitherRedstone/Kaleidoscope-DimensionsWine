@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.client.render;
 
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.PlayerModel;
@@ -122,7 +122,7 @@ public class WingsRendererLogic {
      * 获取翅膀物品堆叠
      */
     private static ItemStack getWingItemStack() {
-        return new ItemStack(ModItems.ANGEL_WINGS.get());
+        return new ItemStack(KDWItems.ANGEL_WINGS.get());
     }
 
     /**
@@ -137,7 +137,7 @@ public class WingsRendererLogic {
      * 检查玩家是否有翅膀效果
      */
     public static boolean checkWingsBuff(Player player) {
-        return player.hasEffect(ModEffects.SKYBORN_GRACE) ||
-                player.hasEffect(ModEffects.UNBOUND_GRACE);
+        return player.hasEffect(KDWEffects.SKYBORN_GRACE) ||
+                player.hasEffect(KDWEffects.UNBOUND_GRACE);
     }
 }

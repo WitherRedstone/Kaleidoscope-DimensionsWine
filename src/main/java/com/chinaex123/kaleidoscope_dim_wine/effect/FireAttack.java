@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -30,7 +30,7 @@ public class FireAttack extends MobEffect {
             return;
         }
 
-        var effectInstance = attacker.getEffect(ModEffects.FIRE_ATTACK);
+        var effectInstance = attacker.getEffect(KDWEffects.FIRE_ATTACK);
         if (effectInstance != null && !event.getEntity().level().isClientSide()) {
             LivingEntity target = event.getEntity();
             int amplifier = effectInstance.getAmplifier(); // 效果等级

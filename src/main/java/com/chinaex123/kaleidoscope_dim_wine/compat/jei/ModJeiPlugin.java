@@ -1,8 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.compat.jei;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import mezz.jei.api.IModPlugin;
@@ -31,7 +30,7 @@ public class ModJeiPlugin implements IModPlugin {
 
         // ==================== 次元维度 - 小装饰 ====================
         // 小灯串（基岩）
-        itemInfos.put(ModItems.ANGEL_WINGS.get(), new Component[]{
+        itemInfos.put(KDWItems.ANGEL_WINGS.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.1"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.string_lights_block_bedrock.2")
@@ -39,14 +38,14 @@ public class ModJeiPlugin implements IModPlugin {
 
         // ==================== 次元维度 - 本体 ====================
         // 天使之翼
-        itemInfos.put(ModItems.ANGEL_WINGS.get(), new Component[]{
+        itemInfos.put(KDWItems.ANGEL_WINGS.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.angel_wings")
         });
 
         // ==================== 次元维度 - 下界 ====================
         // 绯红葡萄藤
-        itemInfos.put(ModItems.CRIMSON_GRAPEVINE.get(), new Component[]{
+        itemInfos.put(KDWItems.CRIMSON_GRAPEVINE.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.the_nether"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
@@ -57,7 +56,7 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.crimson_grapevine")
         });
         // 诡异葡萄藤
-        itemInfos.put(ModItems.WARPED_GRAPEVINE.get(), new Component[]{
+        itemInfos.put(KDWItems.WARPED_GRAPEVINE.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.the_nether"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
@@ -68,19 +67,19 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.warped_grapevine")
         });
         // 绯红菌露
-        itemInfos.put(ModItems.CRIMSON_FUNGAL_SAP.get(), new Component[]{
+        itemInfos.put(KDWItems.CRIMSON_FUNGAL_SAP.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.crimson_fungal_sap")
         });
         // 诡影菌髓
-        itemInfos.put(ModItems.WARPED_FUNGAL_SAP.get(), new Component[]{
+        itemInfos.put(KDWItems.WARPED_FUNGAL_SAP.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.warped_fungal_sap")
         });
 
         // ==================== 次元维度 - 末地 ====================
         // 迷梦果
-        itemInfos.put(ModItems.DREAMFRUIT.get(), new Component[]{
+        itemInfos.put(KDWItems.DREAMFRUIT.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.the_end"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.dimensions.biome").withStyle(ChatFormatting.BOLD),
@@ -92,7 +91,7 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.growing_environment.dreamfruit")
         });
         // 龙血桶
-        itemInfos.put(ModItems.DRAGON_BLOOD_BUCKET.get(), new Component[]{
+        itemInfos.put(KDWItems.DRAGON_BLOOD_BUCKET.get(), new Component[]{
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.dragon_blood_bucket"),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.special_features").withStyle(ChatFormatting.BOLD),
