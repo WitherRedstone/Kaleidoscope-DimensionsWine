@@ -4,18 +4,15 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
-public class KDWFoods {
+public interface KDWFoods {
 
-    // 绯红葡萄
-    public static final FoodProperties CRIMSON_GRAPE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f).build();
-    // 诡异葡萄
-    public static final FoodProperties WARPED_GRAPE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f).build();
-    // 迷梦果
-    public static final FoodProperties DREAMFRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.4f).build();
+    // 葡萄
+    FoodProperties GRAPE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f).build();
+    // 水果
+    FoodProperties FRUITS = new FoodProperties.Builder().nutrition(4).saturationModifier(0.4f).build();
+
     // 龙血瓶
-    public static final FoodProperties DRAGON_BLOOD_BOTTLE = new FoodProperties.Builder()
+    FoodProperties DRAGON_BLOOD_BOTTLE = new FoodProperties.Builder()
             .effect(() -> new MobEffectInstance(MobEffects.WITHER, 20 * 5, 3), 1.0f) // 凋零
             .alwaysEdible().build();
-    // 霜心果
-    public static final FoodProperties FROSTHEART_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.4f).build();
 }
