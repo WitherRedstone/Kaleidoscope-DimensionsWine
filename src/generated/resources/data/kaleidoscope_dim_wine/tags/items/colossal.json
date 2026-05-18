@@ -1,11 +1,11 @@
 {
   "values": [
     {
-      "id": "twilightforest:giant_sword",
+      "id": "kaleidoscope_dim_wine:giant_sword",
       "required": false
     },
     {
-      "id": "twilightforest:giant_pickaxe",
+      "id": "kaleidoscope_dim_wine:giant_pickaxe",
       "required": false
     }
   ]

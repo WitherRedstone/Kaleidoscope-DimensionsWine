@@ -1,0 +1,17 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:dreamfruit_juice",
+    {
+      "id": "kaleidoscope_dim_wine:frostheart_fruit_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:torchberries_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:enchanted_berry_juice",
+      "required": false
+    }
+  ]
+}

@@ -1,19 +1,19 @@
 {
   "values": [
     {
-      "id": "twilightforest:wispy_cloud",
+      "id": "kaleidoscope_dim_wine:wispy_cloud",
       "required": false
     },
     {
-      "id": "twilightforest:fluffy_cloud",
+      "id": "kaleidoscope_dim_wine:fluffy_cloud",
       "required": false
     },
     {
-      "id": "twilightforest:rainy_cloud",
+      "id": "kaleidoscope_dim_wine:rainy_cloud",
       "required": false
     },
     {
-      "id": "twilightforest:snowy_cloud",
+      "id": "kaleidoscope_dim_wine:snowy_cloud",
       "required": false
     }
   ]
