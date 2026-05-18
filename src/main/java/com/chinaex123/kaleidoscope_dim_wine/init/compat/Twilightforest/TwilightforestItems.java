@@ -1,16 +1,14 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFoods;
-import com.chinaex123.kaleidoscope_dim_wine.item.Crop.FrostheartFruitItem;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFoods;
+import com.chinaex123.kaleidoscope_dim_wine.item.crop.FrostheartFruitItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.JuiceBucketItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.RegistryObject;
 
 /**
@@ -23,7 +21,7 @@ public class TwilightforestItems {
     // -------------------- 作物 --------------------
     // 霜心果
     public static final RegistryObject<Item> FROSTHEART_FRUIT = ITEMS_REGISTER.register("frostheart_fruit", () ->
-            new FrostheartFruitItem(new Item.Properties().food(ModFoods.FROSTHEART_FRUIT)));
+            new FrostheartFruitItem(new Item.Properties().food(KDWFoods.FROSTHEART_FRUIT)));
     // -------------------- 物品 --------------------
     // 巨物碎片
     public static final RegistryObject<Item> COLOSSAL_FRAGMENT = ITEMS_REGISTER.register("colossal_fragment", () -> new Item(new Item.Properties()));

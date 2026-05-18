@@ -1,8 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.fluid;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluids;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -88,8 +88,8 @@ public class DragonBlood {
 
         // 检测是否在龙血流体中
         BlockPos playerPos = player.blockPosition();
-        boolean isInDragonBlood = level.getBlockState(playerPos).getBlock() == ModBlocks.DRAGON_BLOOD_FLUID.get() ||
-                level.getFluidState(playerPos).is(ModFluids.DRAGON_BLOOD.get());
+        boolean isInDragonBlood = level.getBlockState(playerPos).getBlock() == KDWBlocks.DRAGON_BLOOD_FLUID.get() ||
+                level.getFluidState(playerPos).is(KDWFluids.DRAGON_BLOOD.get());
 
         CompoundTag dragonBloodData = player.getPersistentData().getCompound(DRAGON_BLOOD_NBT_KEY);
 
@@ -252,7 +252,7 @@ public class DragonBlood {
                     BlockPos currentPos = centerPos.offset(x, y, z);
 
                     // 如果是龙血流体方块，则清除
-                    if (level.getBlockState(currentPos).getBlock() == ModBlocks.DRAGON_BLOOD_FLUID.get()) {
+                    if (level.getBlockState(currentPos).getBlock() == KDWBlocks.DRAGON_BLOOD_FLUID.get()) {
                         level.setBlockAndUpdate(currentPos, Blocks.AIR.defaultBlockState());
                     }
                 }

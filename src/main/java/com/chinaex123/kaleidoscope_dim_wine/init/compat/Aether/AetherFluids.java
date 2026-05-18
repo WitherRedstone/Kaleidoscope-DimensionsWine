@@ -1,8 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluidTypes;
-import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluidTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -10,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Properties;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
@@ -38,7 +36,7 @@ public class AetherFluids {
     public static void registerFluids(RegisterEvent event) {
         event.register(FLUID_TYPES, helper -> {
             // 神饯蓝莓汁
-            helper.register(ENCHANTED_BERRY_JUICE_ID, new ModFluidTypes(ENCHANTED_BERRY_JUICE_ID, 0, 6, false, false));
+            helper.register(ENCHANTED_BERRY_JUICE_ID, new KDWFluidTypes(ENCHANTED_BERRY_JUICE_ID, 0, 6, false, false));
         });
         event.register(ForgeRegistries.Keys.FLUIDS, helper -> {
             Properties enchantedBerryJuice = new Properties(ENCHANTED_BERRY_JUICE_TYPE, ENCHANTED_BERRY_JUICE, FLOWING_ENCHANTED_BERRY_JUICE)

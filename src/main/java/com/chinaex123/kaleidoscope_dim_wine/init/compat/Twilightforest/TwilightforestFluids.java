@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModFluidTypes;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluidTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Flowing;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Properties;
 import net.minecraftforge.fluids.ForgeFlowingFluid.Source;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
@@ -43,9 +42,9 @@ public class TwilightforestFluids {
     public static void registerFluids(RegisterEvent event) {
         event.register(FLUID_TYPES, helper -> {
             // 火炬浆果汁
-            helper.register(TORCHBERRIES_JUICE_ID, new ModFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
+            helper.register(TORCHBERRIES_JUICE_ID, new KDWFluidTypes(TORCHBERRIES_JUICE_ID, 0, 6, false, false));
             // 霜心果汁
-            helper.register(FROSTHEART_FRUIT_JUICE_ID, new ModFluidTypes(FROSTHEART_FRUIT_JUICE_ID, 0, 0, false, false));
+            helper.register(FROSTHEART_FRUIT_JUICE_ID, new KDWFluidTypes(FROSTHEART_FRUIT_JUICE_ID, 0, 0, false, false));
         });
         event.register(ForgeRegistries.Keys.FLUIDS, helper -> {
             Properties torchberriesJuice = new Properties(TORCHBERRIES_JUICE_TYPE, TORCHBERRIES_JUICE, FLOWING_TORCHBERRIES_JUICE)

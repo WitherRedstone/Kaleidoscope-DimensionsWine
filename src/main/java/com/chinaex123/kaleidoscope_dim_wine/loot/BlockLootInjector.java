@@ -1,8 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -26,8 +26,8 @@ public class BlockLootInjector {
 
         // 绯红菌核 掉落池
         if (tableId.equals(ResourceLocation.withDefaultNamespace("blocks/crimson_nylium"))) {
-            List<? extends Double> chances = ServerConfig.CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES.get();
-            int baseCount = ServerConfig.CRIMSON_NYLIUM_FUNGAL_SAP_COUNT.get();
+            List<? extends Double> chances = KDWConfig.CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES.get();
+            int baseCount = KDWConfig.CRIMSON_NYLIUM_FUNGAL_SAP_COUNT.get();
 
             LootPool bonusPool = LootPool.lootPool()
                     .setRolls(ConstantValue.exactly(1.0f))
@@ -36,7 +36,7 @@ public class BlockLootInjector {
                             chances.get(1).floatValue(),
                             chances.get(2).floatValue(),
                             chances.get(3).floatValue()))
-                    .add(LootItem.lootTableItem(ModItems.CRIMSON_FUNGAL_SAP.get())
+                    .add(LootItem.lootTableItem(KDWItems.CRIMSON_FUNGAL_SAP.get())
                             .apply(SetItemCountFunction.setCount(ConstantValue.exactly(baseCount)))
                             .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
                     )
@@ -47,8 +47,8 @@ public class BlockLootInjector {
 
         // 诡异菌核 掉落池
         if (tableId.equals(ResourceLocation.withDefaultNamespace("blocks/warped_nylium"))) {
-            List<? extends Double> chances = ServerConfig.WARPED_NYLIUM_FUNGAL_SAP_CHANCES.get();
-            int baseCount = ServerConfig.WARPED_NYLIUM_FUNGAL_SAP_COUNT.get();
+            List<? extends Double> chances = KDWConfig.WARPED_NYLIUM_FUNGAL_SAP_CHANCES.get();
+            int baseCount = KDWConfig.WARPED_NYLIUM_FUNGAL_SAP_COUNT.get();
 
             LootPool bonusPool = LootPool.lootPool()
                     .setRolls(ConstantValue.exactly(1.0f))
@@ -57,7 +57,7 @@ public class BlockLootInjector {
                             chances.get(1).floatValue(),
                             chances.get(2).floatValue(),
                             chances.get(3).floatValue()))
-                    .add(LootItem.lootTableItem(ModItems.WARPED_FUNGAL_SAP.get())
+                    .add(LootItem.lootTableItem(KDWItems.WARPED_FUNGAL_SAP.get())
                             .apply(SetItemCountFunction.setCount(ConstantValue.exactly(baseCount)))
                             .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))
                     )

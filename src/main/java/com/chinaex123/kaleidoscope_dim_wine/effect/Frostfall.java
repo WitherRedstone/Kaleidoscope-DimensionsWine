@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -23,12 +23,12 @@ public class Frostfall extends MobEffect {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
-            var effect = attacker.getEffect(ModEffects.FROSTFALL.get());
+            var effect = attacker.getEffect(KDWEffects.FROSTFALL.get());
             if (effect != null) {
                 int amplifier = effect.getAmplifier();
                 LivingEntity target = event.getEntity();
 
-                target.addEffect(new MobEffectInstance(ModEffects.FROSTBITE.get(), 100, amplifier));
+                target.addEffect(new MobEffectInstance(KDWEffects.FROSTBITE.get(), 100, amplifier));
             }
         }
     }

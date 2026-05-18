@@ -1,9 +1,9 @@
 package com.chinaex123.kaleidoscope_dim_wine.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -30,7 +30,7 @@ public class EntityLootInjector {
 
         if (ModList.get().isLoaded("twilightforest")) {
             if (tableId.equals(ResourceLocation.fromNamespaceAndPath("twilightforest", "entities/redcap"))) {
-                List<? extends Double> chances = ServerConfig.REDCAP_GOBLIN_ESSENCE_LOOTING_CHANCES.get();
+                List<? extends Double> chances = KDWConfig.REDCAP_GOBLIN_ESSENCE_LOOTING_CHANCES.get();
 
                 LootPool bonusPool = LootPool.lootPool()
                         .setRolls(UniformGenerator.between(1.0f, 1.0f))
@@ -51,8 +51,8 @@ public class EntityLootInjector {
         if (tableId.equals(ResourceLocation.withDefaultNamespace("entities/wither"))) {
             LootPool bonusPool = LootPool.lootPool()
                     .setRolls(UniformGenerator.between(1.0f, 1.0f))
-                    .when(LootItemRandomChanceCondition.randomChance(ServerConfig.WITHER_COMMAND_LIGHTS_DROP_CHANCE.get().floatValue()))
-                    .add(LootItem.lootTableItem(ModBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()))
+                    .when(LootItemRandomChanceCondition.randomChance(KDWConfig.WITHER_COMMAND_LIGHTS_DROP_CHANCE.get().floatValue()))
+                    .add(LootItem.lootTableItem(KDWBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()))
                     .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 1)))
                     .name("kaleidoscope_dim_wine:string_lights_block_command")
                     .build();
@@ -63,9 +63,9 @@ public class EntityLootInjector {
             if (tableId.equals(ResourceLocation.fromNamespaceAndPath("aether","entities/valkyrie"))) {
                 LootPool bonusPool = LootPool.lootPool()
                         .setRolls(UniformGenerator.between(1.0f, 1.0f))
-                        .when(LootItemRandomChanceCondition.randomChance(ServerConfig.ANGEL_WINGS_DROP_CHANCE.get().floatValue()))
-                        .add(LootItem.lootTableItem(ModItems.ANGEL_WINGS.get()))
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(ServerConfig.ANGEL_WINGS_DROP_MIN.get(), ServerConfig.ANGEL_WINGS_DROP_MAX.get())))
+                        .when(LootItemRandomChanceCondition.randomChance(KDWConfig.ANGEL_WINGS_DROP_CHANCE.get().floatValue()))
+                        .add(LootItem.lootTableItem(KDWItems.ANGEL_WINGS.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(KDWConfig.ANGEL_WINGS_DROP_MIN.get(), KDWConfig.ANGEL_WINGS_DROP_MAX.get())))
                         .name("kaleidoscope_dim_wine:angel_wings")
                         .build();
                 event.getTable().addPool(bonusPool);

@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import com.chinaex123.kaleidoscope_dim_wine.mixin.EntityMixin;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -35,9 +35,9 @@ public class SkybornGrace extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
         if (entity instanceof net.minecraft.world.entity.player.Player player) {
-            var unboundEffect = player.getEffect(ModEffects.UNBOUND_GRACE.get());
+            var unboundEffect = player.getEffect(KDWEffects.UNBOUND_GRACE.get());
             if (unboundEffect != null) {
-                player.removeEffect(ModEffects.UNBOUND_GRACE.get());
+                player.removeEffect(KDWEffects.UNBOUND_GRACE.get());
             }
         }
 
@@ -64,7 +64,7 @@ public class SkybornGrace extends MobEffect {
         }
 
         var player = event.player;
-        if (player.hasEffect(ModEffects.SKYBORN_GRACE.get())) {
+        if (player.hasEffect(KDWEffects.SKYBORN_GRACE.get())) {
             UUID playerId = player.getUUID();
 
             if (!player.onGround() && player.getDeltaMovement().y < -0.1) {

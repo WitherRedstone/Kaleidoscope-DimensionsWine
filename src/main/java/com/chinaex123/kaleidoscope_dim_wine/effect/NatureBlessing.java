@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -42,7 +42,7 @@ public class NatureBlessing extends MobEffect {
             return;
         }
 
-        var effect = entity.getEffect(ModEffects.NATURE_BLESSING.get());
+        var effect = entity.getEffect(KDWEffects.NATURE_BLESSING.get());
         if (effect == null) {
             playerTickMap.remove(entity.getUUID());
             return;

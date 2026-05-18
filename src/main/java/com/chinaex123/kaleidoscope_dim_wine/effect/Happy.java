@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -57,9 +57,9 @@ public class Happy extends MobEffect {
     @SubscribeEvent
     public static void onLivingDamage(net.minecraftforge.event.entity.living.LivingDamageEvent event) {
         LivingEntity entity = event.getEntity();
-        if (entity.hasEffect(ModEffects.HAPPY.get())) {
+        if (entity.hasEffect(KDWEffects.HAPPY.get())) {
             removeBonus(entity, entity.getAttribute(Attributes.MOVEMENT_SPEED));
-            entity.removeEffect(ModEffects.HAPPY.get());
+            entity.removeEffect(KDWEffects.HAPPY.get());
         }
     }
 
@@ -69,9 +69,9 @@ public class Happy extends MobEffect {
     @SubscribeEvent
     public static void onPlayerAttack(net.minecraftforge.event.entity.living.LivingDamageEvent event) {
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
-            if (attacker.hasEffect(ModEffects.HAPPY.get())) {
+            if (attacker.hasEffect(KDWEffects.HAPPY.get())) {
                 removeBonus(attacker, attacker.getAttribute(Attributes.MOVEMENT_SPEED));
-                attacker.removeEffect(ModEffects.HAPPY.get());
+                attacker.removeEffect(KDWEffects.HAPPY.get());
             }
         }
     }

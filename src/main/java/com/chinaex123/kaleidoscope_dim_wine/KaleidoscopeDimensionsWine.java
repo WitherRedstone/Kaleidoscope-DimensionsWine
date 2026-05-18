@@ -1,6 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine;
 
-import com.chinaex123.kaleidoscope_dim_wine.config.ServerConfig;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
 import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
@@ -27,13 +27,13 @@ public class KaleidoscopeDimensionsWine {
 
     public KaleidoscopeDimensionsWine(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
+        KDWBlocks.register(modEventBus);
+        KDWItems.register(modEventBus);
 
-        ModEffects.register(modEventBus);
+        KDWEffects.register(modEventBus);
 
-        ModCreativeTabs.register(modEventBus);
-        context.registerConfig(ModConfig.Type.COMMON, ServerConfig.SPEC);
+        KDWCreativeTabs.register(modEventBus);
+        context.registerConfig(ModConfig.Type.COMMON, KDWConfig.SPEC);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
         modEventBus.addListener(this::onCommonSetup);
 
@@ -59,6 +59,6 @@ public class KaleidoscopeDimensionsWine {
     }
 
     private void onCommonSetup(FMLCommonSetupEvent event) {
-        ModCompostables.setup(event);
+        KDWCompostables.setup(event);
     }
 }

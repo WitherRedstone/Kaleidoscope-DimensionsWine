@@ -1,8 +1,8 @@
 package com.chinaex123.kaleidoscope_dim_wine.data;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItemTags;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItemTags;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
@@ -31,94 +31,94 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
         // -------------------- 作物 --------------------
         // c:fruits
-        this.tag(ModItemTags.FRUITS)
-                .add(ModItems.CRIMSON_GRAPE.get()) // 绯红葡萄
-                .add(ModItems.WARPED_GRAPE.get()) // 诡异葡萄
-                .add(ModItems.DREAMFRUIT.get()); // 迷梦果
+        this.tag(KDWItemTags.FRUITS)
+                .add(KDWItems.CRIMSON_GRAPE.get()) // 绯红葡萄
+                .add(KDWItems.WARPED_GRAPE.get()) // 诡异葡萄
+                .add(KDWItems.DREAMFRUIT.get()); // 迷梦果
         // c:fruits/crimson_grape
-        this.tag(ModItemTags.FRUITS_CRIMSON_GRAPE).add(ModItems.CRIMSON_GRAPE.get()); // 绯红葡萄
+        this.tag(KDWItemTags.FRUITS_CRIMSON_GRAPE).add(KDWItems.CRIMSON_GRAPE.get()); // 绯红葡萄
         // c:fruits/warped_grape
-        this.tag(ModItemTags.FRUITS_WARPED_GRAPE).add(ModItems.WARPED_GRAPE.get()); // 诡异葡萄
+        this.tag(KDWItemTags.FRUITS_WARPED_GRAPE).add(KDWItems.WARPED_GRAPE.get()); // 诡异葡萄
         // c:fruits/warped_grape
-        this.tag(ModItemTags.FRUITS_DREAMFRUIT).add(ModItems.DREAMFRUIT.get()); // 迷梦果
+        this.tag(KDWItemTags.FRUITS_DREAMFRUIT).add(KDWItems.DREAMFRUIT.get()); // 迷梦果
 
         // diet:fruits
-        this.tag(ModItemTags.FRUITS_DIET)
-                .add(ModItems.CRIMSON_GRAPE.get()) // 绯红葡萄
-                .add(ModItems.WARPED_GRAPE.get()) // 诡异葡萄
-                .add(ModItems.DREAMFRUIT.get()); // 迷梦果
+        this.tag(KDWItemTags.FRUITS_DIET)
+                .add(KDWItems.CRIMSON_GRAPE.get()) // 绯红葡萄
+                .add(KDWItems.WARPED_GRAPE.get()) // 诡异葡萄
+                .add(KDWItems.DREAMFRUIT.get()); // 迷梦果
 
         // 让物品呈现直立状态
         // create:upright_on_belt
-        this.tag(ModItemTags.UPRIGHT_ON_BELT)
-                .add(ModItems.POP_CAN.get()) // 易拉罐
-                .add(ModItems.CRIMSON_CRESCENDO.get()) // 绯红绝响
-                .add(ModItems.ETHEREAL_NOBLE.get()) // 诡影尊爵
-                .add(ModItems.WART_HENNESSY.get()) // 疣域轩尼诗
-                .add(ModItems.BLAZE_MARTELL.get()) // 烈焰马爹利
-                .add(ModItems.MAGMA_ROYAL_SALUTE.get()) // 岩浆皇家礼炮
-                .add(ModItems.BLACK_BONE_LAFITE.get()) // 黑骨拉菲
-                .add(ModItems.CHORUS_COGNAC.get()) // 紫颂干邑
-                .add(ModItems.DRAGONS_BREATH_BRANDY.get()) // 龙息白兰地
-                .add(ModItems.ABYSSAL_PORTER.get()) // 深渊波特
-                .add(ModItems.SILENT_SHERRY.get()) // 静默雪莉
-                .add(ModItems.FORGOTTEN_MARGARITA.get()) // 遗忘玛格丽特
-                .add(ModItems.PHANTOM_DREAM_BUBBLE.get()) // 幻梦泡影
-                .add(ModItems.END_STARLIGHT.get()) // 终末星光
-                .add(ModItems.DIVINE_EMBRYO_PORT.get()) // 神血波尔多
-                .add(ModItems.DRACONIC_BLOOD_WINE.get()); // 龙血酒
+        this.tag(KDWItemTags.UPRIGHT_ON_BELT)
+                .add(KDWItems.POP_CAN.get()) // 易拉罐
+                .add(KDWItems.CRIMSON_CRESCENDO.get()) // 绯红绝响
+                .add(KDWItems.ETHEREAL_NOBLE.get()) // 诡影尊爵
+                .add(KDWItems.WART_HENNESSY.get()) // 疣域轩尼诗
+                .add(KDWItems.BLAZE_MARTELL.get()) // 烈焰马爹利
+                .add(KDWItems.MAGMA_ROYAL_SALUTE.get()) // 岩浆皇家礼炮
+                .add(KDWItems.BLACK_BONE_LAFITE.get()) // 黑骨拉菲
+                .add(KDWItems.CHORUS_COGNAC.get()) // 紫颂干邑
+                .add(KDWItems.DRAGONS_BREATH_BRANDY.get()) // 龙息白兰地
+                .add(KDWItems.ABYSSAL_PORTER.get()) // 深渊波特
+                .add(KDWItems.SILENT_SHERRY.get()) // 静默雪莉
+                .add(KDWItems.FORGOTTEN_MARGARITA.get()) // 遗忘玛格丽特
+                .add(KDWItems.PHANTOM_DREAM_BUBBLE.get()) // 幻梦泡影
+                .add(KDWItems.END_STARLIGHT.get()) // 终末星光
+                .add(KDWItems.DIVINE_EMBRYO_PORT.get()) // 神血波尔多
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get()); // 龙血酒
 
         // 葡园酒香柜子
         // vinery:small_bottle
-        this.tag(ModItemTags.VINERY_SMALL_BOTTLE)
-                .addOptional(ModItems.CRIMSON_CRESCENDO.getId()) // 绯红绝响
-                .addOptional(ModItems.ETHEREAL_NOBLE.getId()) // 诡影尊爵
-                .addOptional(ModItems.WART_HENNESSY.getId()) // 疣域轩尼诗
-                .addOptional(ModItems.BLAZE_MARTELL.getId()) // 烈焰马爹利
-                .addOptional(ModItems.BLACK_BONE_LAFITE.getId()) // 黑骨拉菲
-                .addOptional(ModItems.CHORUS_COGNAC.getId()) // 紫颂干邑
-                .addOptional(ModItems.DRAGONS_BREATH_BRANDY.getId()) // 龙息白兰地
-                .addOptional(ModItems.ABYSSAL_PORTER.getId()) // 深渊波特
-                .addOptional(ModItems.SILENT_SHERRY.getId()) // 静默雪莉
-                .addOptional(ModItems.FORGOTTEN_MARGARITA.getId()) // 遗忘玛格丽特
-                .addOptional(ModItems.PHANTOM_DREAM_BUBBLE.getId()) // 幻梦泡影
-                .addOptional(ModItems.END_STARLIGHT.getId()) // 终末星光
-                .addOptional(ModItems.DIVINE_EMBRYO_PORT.getId()) // 神血波尔多
-                .addOptional(ModItems.DRACONIC_BLOOD_WINE.getId()) // 龙血酒
-                .addOptional(ModItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
+        this.tag(KDWItemTags.VINERY_SMALL_BOTTLE)
+                .addOptional(KDWItems.CRIMSON_CRESCENDO.getId()) // 绯红绝响
+                .addOptional(KDWItems.ETHEREAL_NOBLE.getId()) // 诡影尊爵
+                .addOptional(KDWItems.WART_HENNESSY.getId()) // 疣域轩尼诗
+                .addOptional(KDWItems.BLAZE_MARTELL.getId()) // 烈焰马爹利
+                .addOptional(KDWItems.BLACK_BONE_LAFITE.getId()) // 黑骨拉菲
+                .addOptional(KDWItems.CHORUS_COGNAC.getId()) // 紫颂干邑
+                .addOptional(KDWItems.DRAGONS_BREATH_BRANDY.getId()) // 龙息白兰地
+                .addOptional(KDWItems.ABYSSAL_PORTER.getId()) // 深渊波特
+                .addOptional(KDWItems.SILENT_SHERRY.getId()) // 静默雪莉
+                .addOptional(KDWItems.FORGOTTEN_MARGARITA.getId()) // 遗忘玛格丽特
+                .addOptional(KDWItems.PHANTOM_DREAM_BUBBLE.getId()) // 幻梦泡影
+                .addOptional(KDWItems.END_STARLIGHT.getId()) // 终末星光
+                .addOptional(KDWItems.DIVINE_EMBRYO_PORT.getId()) // 神血波尔多
+                .addOptional(KDWItems.DRACONIC_BLOOD_WINE.getId()) // 龙血酒
+                .addOptional(KDWItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
         // vinery:large_bottle
-        this.tag(ModItemTags.VINERY_LARGE_BOTTLE)
-                .addOptional(ModItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
+        this.tag(KDWItemTags.VINERY_LARGE_BOTTLE)
+                .addOptional(KDWItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
 
         // 幻想乡乐事柜子
         // youkaisfeasts:wine
-        this.tag(ModItemTags.YOUKAISFEASTS_WINE)
-                .addOptional(ModItems.CRIMSON_CRESCENDO.getId()) // 绯红绝响
-                .addOptional(ModItems.ETHEREAL_NOBLE.getId()) // 诡影尊爵
-                .addOptional(ModItems.WART_HENNESSY.getId()) // 疣域轩尼诗
-                .addOptional(ModItems.BLAZE_MARTELL.getId()) // 烈焰马爹利
-                .addOptional(ModItems.BLACK_BONE_LAFITE.getId()) // 黑骨拉菲
-                .addOptional(ModItems.CHORUS_COGNAC.getId()) // 紫颂干邑
-                .addOptional(ModItems.DRAGONS_BREATH_BRANDY.getId()) // 龙息白兰地
-                .addOptional(ModItems.ABYSSAL_PORTER.getId()) // 深渊波特
-                .addOptional(ModItems.SILENT_SHERRY.getId()) // 静默雪莉
-                .addOptional(ModItems.FORGOTTEN_MARGARITA.getId()) // 遗忘玛格丽特
-                .addOptional(ModItems.PHANTOM_DREAM_BUBBLE.getId()) // 幻梦泡影
-                .addOptional(ModItems.END_STARLIGHT.getId()) // 终末星光
-                .addOptional(ModItems.DIVINE_EMBRYO_PORT.getId()) // 神血波尔多
-                .addOptional(ModItems.DRACONIC_BLOOD_WINE.getId()) // 龙血酒
-                .addOptional(ModItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
+        this.tag(KDWItemTags.YOUKAISFEASTS_WINE)
+                .addOptional(KDWItems.CRIMSON_CRESCENDO.getId()) // 绯红绝响
+                .addOptional(KDWItems.ETHEREAL_NOBLE.getId()) // 诡影尊爵
+                .addOptional(KDWItems.WART_HENNESSY.getId()) // 疣域轩尼诗
+                .addOptional(KDWItems.BLAZE_MARTELL.getId()) // 烈焰马爹利
+                .addOptional(KDWItems.BLACK_BONE_LAFITE.getId()) // 黑骨拉菲
+                .addOptional(KDWItems.CHORUS_COGNAC.getId()) // 紫颂干邑
+                .addOptional(KDWItems.DRAGONS_BREATH_BRANDY.getId()) // 龙息白兰地
+                .addOptional(KDWItems.ABYSSAL_PORTER.getId()) // 深渊波特
+                .addOptional(KDWItems.SILENT_SHERRY.getId()) // 静默雪莉
+                .addOptional(KDWItems.FORGOTTEN_MARGARITA.getId()) // 遗忘玛格丽特
+                .addOptional(KDWItems.PHANTOM_DREAM_BUBBLE.getId()) // 幻梦泡影
+                .addOptional(KDWItems.END_STARLIGHT.getId()) // 终末星光
+                .addOptional(KDWItems.DIVINE_EMBRYO_PORT.getId()) // 神血波尔多
+                .addOptional(KDWItems.DRACONIC_BLOOD_WINE.getId()) // 龙血酒
+                .addOptional(KDWItems.MAGMA_ROYAL_SALUTE.getId()); // 岩浆皇家礼炮
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
             // c:fruits
-            this.tag(ModItemTags.FRUITS).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 迷梦果
+            this.tag(KDWItemTags.FRUITS).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 迷梦果
             // c:fruits/frostheart_fruit
-            this.tag(ModItemTags.FRUITS_FROSTHEART).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
+            this.tag(KDWItemTags.FRUITS_FROSTHEART).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
             // diet:fruits
-            this.tag(ModItemTags.FRUITS_DIET).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
+            this.tag(KDWItemTags.FRUITS_DIET).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
             // 静谧四季 - sereneseasons:winter_crops
-            this.tag(ModItemTags.WINTER_CROPS).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
+            this.tag(KDWItemTags.WINTER_CROPS).addOptional(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
             // 巨物碎片
             this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "colossal")))
                     .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword")) // 巨人剑
@@ -138,7 +138,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 让物品呈现直立状态
             // create:upright_on_belt
-            this.tag(ModItemTags.UPRIGHT_ON_BELT)
+            this.tag(KDWItemTags.UPRIGHT_ON_BELT)
                     .addOptional(TwilightforestItems.CAVE_GLOWBREW.getId()) // 洞窟萤火酿
                     .addOptional(TwilightforestItems.DAWNLIGHT_DEW.getId()) // 林隙晨露
                     .addOptional(TwilightforestItems.DEAD_END_SPITTLE.getId()) // 死巷之唾
@@ -156,7 +156,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 葡园酒香柜子
             // vinery:small_bottle
-            this.tag(ModItemTags.VINERY_SMALL_BOTTLE)
+            this.tag(KDWItemTags.VINERY_SMALL_BOTTLE)
                     .addOptional(TwilightforestItems.CAVE_GLOWBREW.getId()) // 洞窟萤火酿
                     .addOptional(TwilightforestItems.SNAKESKIN_LIQUEUR.getId()) // 蛇蜕利口酒
                     .addOptional(TwilightforestItems.RANGERS_SATCHEL.getId()) // 巡林客的背囊
@@ -166,7 +166,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
                     .addOptional(TwilightforestItems.PERENNIAL_FROST.getId()) // 终年冻土
                     .addOptional(TwilightforestItems.GOBLINS_STASH.getId()); // 地精的私藏
             // vinery:large_bottle
-            this.tag(ModItemTags.VINERY_LARGE_BOTTLE)
+            this.tag(KDWItemTags.VINERY_LARGE_BOTTLE)
                     .addOptional(TwilightforestItems.DAWNLIGHT_DEW.getId()) // 林隙晨露
                     .addOptional(TwilightforestItems.DEAD_END_SPITTLE.getId()) // 死巷之唾
                     .addOptional(TwilightforestItems.FROSTVEIN_BEASTBLOOD.getId()) // 霜脉兽血
@@ -176,7 +176,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 幻想乡乐事柜子
             // youkaisfeasts:wine
-            this.tag(ModItemTags.YOUKAISFEASTS_WINE)
+            this.tag(KDWItemTags.YOUKAISFEASTS_WINE)
                     .addOptional(TwilightforestItems.CAVE_GLOWBREW.getId()) // 洞窟萤火酿
                     .addOptional(TwilightforestItems.SNAKESKIN_LIQUEUR.getId()) // 蛇蜕利口酒
                     .addOptional(TwilightforestItems.RANGERS_SATCHEL.getId()) // 巡林客的背囊
@@ -192,7 +192,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
         if (ModList.get().isLoaded("the_bumblezone")) {
             // 让物品呈现直立状态
             // create:upright_on_belt
-            this.tag(ModItemTags.UPRIGHT_ON_BELT)
+            this.tag(KDWItemTags.UPRIGHT_ON_BELT)
                     .addOptional(TheBumblezoneItems.SPRITE.getId()) // 雪碧
                     .addOptional(TheBumblezoneItems.PEPSI.getId()) // 可乐
                     .addOptional(TheBumblezoneItems.FANTA.getId()) // 芬达
@@ -204,7 +204,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 葡园酒香柜子
             // vinery:small_bottle
-            this.tag(ModItemTags.VINERY_SMALL_BOTTLE)
+            this.tag(KDWItemTags.VINERY_SMALL_BOTTLE)
                     .addOptional(TheBumblezoneItems.SPRITE.getId()) // 雪碧
                     .addOptional(TheBumblezoneItems.PEPSI.getId()) // 可乐
                     .addOptional(TheBumblezoneItems.FANTA.getId()) // 芬达
@@ -216,7 +216,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 幻想乡乐事柜子
             // youkaisfeasts:wine
-            this.tag(ModItemTags.YOUKAISFEASTS_WINE)
+            this.tag(KDWItemTags.YOUKAISFEASTS_WINE)
                     .addOptional(TheBumblezoneItems.SPRITE.getId()) // 雪碧
                     .addOptional(TheBumblezoneItems.PEPSI.getId()) // 可乐
                     .addOptional(TheBumblezoneItems.FANTA.getId()) // 芬达
@@ -232,7 +232,7 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
         if (ModList.get().isLoaded("aether")) {
             // 让物品呈现直立状态
             // create:upright_on_belt
-            this.tag(ModItemTags.UPRIGHT_ON_BELT)
+            this.tag(KDWItemTags.UPRIGHT_ON_BELT)
                     .addOptional(AetherItems.DIVINE_OFFERING_BREW.getId()) // 神饯紫晶酿
                     .addOptional(AetherItems.DIVINE_ENERGY_MIST.getId()) // 神能迷雾
                     .addOptional(AetherItems.SWET_FIZZ.getId()) // 史维特菲士
@@ -243,20 +243,20 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
 
             // 葡园酒香柜子
             // vinery:small_bottle
-            this.tag(ModItemTags.VINERY_SMALL_BOTTLE)
+            this.tag(KDWItemTags.VINERY_SMALL_BOTTLE)
                     .addOptional(AetherItems.DIVINE_ENERGY_MIST.getId()) // 神能迷雾
                     .addOptional(AetherItems.SWET_FIZZ.getId()) // 史维特菲士
                     .addOptional(AetherItems.GRAVITITE_DRUNK.getId()) // 重力醉
                     .addOptional(AetherItems.HEALING_ELIXIR.getId()) // 治愈灵药
                     .addOptional(AetherItems.UNBOUND_SKYBORN.getId()); // 无界苍穹
             // vinery:large_bottle
-            this.tag(ModItemTags.VINERY_LARGE_BOTTLE)
+            this.tag(KDWItemTags.VINERY_LARGE_BOTTLE)
                     .addOptional(AetherItems.DIVINE_OFFERING_BREW.getId()) // 神饯紫晶酿
                     .addOptional(AetherItems.GINGERBREAD_WARMER.getId()); // 姜饼暖饮
 
             // 幻想乡乐事柜子
             // youkaisfeasts:wine
-            this.tag(ModItemTags.YOUKAISFEASTS_WINE)
+            this.tag(KDWItemTags.YOUKAISFEASTS_WINE)
                     .addOptional(AetherItems.DIVINE_ENERGY_MIST.getId()) // 神能迷雾
                     .addOptional(AetherItems.SWET_FIZZ.getId()) // 史维特菲士
                     .addOptional(AetherItems.GRAVITITE_DRUNK.getId()) // 重力醉

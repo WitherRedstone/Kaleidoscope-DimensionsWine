@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,7 +22,7 @@ public class Hardened extends MobEffect {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         LivingEntity entity = event.getEntity();
-        var effect = entity.getEffect(ModEffects.HARDENED.get());
+        var effect = entity.getEffect(KDWEffects.HARDENED.get());
 
         if (effect != null) {
             int amplifier = effect.getAmplifier();

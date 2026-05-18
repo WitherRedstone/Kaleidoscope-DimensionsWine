@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -29,7 +29,7 @@ public class WitheredSlash extends MobEffect {
         }
 
         // 检查玩家是否拥有 枯斩 效果
-        var effectInstance = attacker.getEffect(ModEffects.WITHERED_SLASH.get());
+        var effectInstance = attacker.getEffect(KDWEffects.WITHERED_SLASH.get());
         if (effectInstance != null) {
             LivingEntity target = event.getEntity();
             int amplifier = effectInstance.getAmplifier(); // 效果等级

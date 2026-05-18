@@ -1,9 +1,9 @@
 package com.chinaex123.kaleidoscope_dim_wine.data.lootTable;
 
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.DreamfruitCropWildVineHead;
-import com.chinaex123.kaleidoscope_dim_wine.block.Crop.Dreamfruit.DreamfruitCropWildVinePlant;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModBlocks;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModItems;
+import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.DreamfruitCropWildVineHead;
+import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.DreamfruitCropWildVinePlant;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -43,57 +43,57 @@ public class ModBlockLootTablesProvider extends BlockLootSubProvider {
     @Override
     public void generate() {
         // ==================== 小彩蛋 ====================
-        dropSelf(ModBlocks.DOLL_001.get());
-        dropSelf(ModBlocks.DOLL_002.get());
-        dropSelf(ModBlocks.DOLL_003.get());
+        dropSelf(KDWBlocks.DOLL_001.get());
+        dropSelf(KDWBlocks.DOLL_002.get());
+        dropSelf(KDWBlocks.DOLL_003.get());
         // ==================== 小彩蛋 ====================
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER.get()); // 小灯串（潜影贝-无色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get()); // 小灯串（潜影贝-白色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_ORANGE.get()); // 小灯串（潜影贝-橙色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_MAGENTA.get()); // 小灯串（潜影贝-品红色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE.get()); // 小灯串（潜影贝-淡蓝色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_YELLOW.get()); // 小灯串（潜影贝-黄色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIME.get()); // 小灯串（潜影贝-黄绿色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PINK.get()); // 小灯串（潜影贝-粉红色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GRAY.get()); // 小灯串（潜影贝-灰色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY.get()); // 小灯串（潜影贝-淡灰色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_CYAN.get()); // 小灯串（潜影贝-青色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_PURPLE.get()); // 小灯串（潜影贝-紫色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLUE.get()); // 小灯串（潜影贝-蓝色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BROWN.get()); // 小灯串（潜影贝-棕色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_GREEN.get()); // 小灯串（潜影贝-绿色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_RED.get()); // 小灯串（潜影贝-红色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLACK.get()); // 小灯串（潜影贝-黑色）
-        dropSelf(ModBlocks.STRING_LIGHTS_ENTITY_CHICKEN.get()); // 小灯串（小鸡仔）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER.get()); // 小灯串（潜影贝-无色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get()); // 小灯串（潜影贝-白色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_ORANGE.get()); // 小灯串（潜影贝-橙色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_MAGENTA.get()); // 小灯串（潜影贝-品红色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_BLUE.get()); // 小灯串（潜影贝-淡蓝色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_YELLOW.get()); // 小灯串（潜影贝-黄色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIME.get()); // 小灯串（潜影贝-黄绿色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_PINK.get()); // 小灯串（潜影贝-粉红色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_GRAY.get()); // 小灯串（潜影贝-灰色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_LIGHT_GRAY.get()); // 小灯串（潜影贝-淡灰色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_CYAN.get()); // 小灯串（潜影贝-青色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_PURPLE.get()); // 小灯串（潜影贝-紫色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLUE.get()); // 小灯串（潜影贝-蓝色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_BROWN.get()); // 小灯串（潜影贝-棕色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_GREEN.get()); // 小灯串（潜影贝-绿色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_RED.get()); // 小灯串（潜影贝-红色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_BLACK.get()); // 小灯串（潜影贝-黑色）
+        dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_CHICKEN.get()); // 小灯串（小鸡仔）
 
-        dropSelf(ModBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()); // 小灯串（命令方块）
-        dropSelf(ModBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get()); // 小灯串（基岩）
+        dropSelf(KDWBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()); // 小灯串（命令方块）
+        dropSelf(KDWBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get()); // 小灯串（基岩）
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------
         // 绯红葡萄藤 - 绯红葡萄藤架生长的果实
-        add(ModBlocks.CRIMSON_GRAPE_CROP.get(), this.createItemWithCountTable(ModItems.CRIMSON_GRAPE.get(), UniformGenerator.between(1, 2)));
+        add(KDWBlocks.CRIMSON_GRAPE_CROP.get(), this.createItemWithCountTable(KDWItems.CRIMSON_GRAPE.get(), UniformGenerator.between(1, 2)));
         // 绯红葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
-        add(ModBlocks.CRIMSON_GRAPEVINE_TRELLIS.get(), this.createMultiItemTable(com.github.ysbbbbbb.kaleidoscopetavern.init.ModItems.TRELLIS.get(), ModItems.CRIMSON_GRAPEVINE.get()));
+        add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get(), this.createMultiItemTable(com.github.ysbbbbbb.kaleidoscopetavern.init.ModItems.TRELLIS.get(), KDWItems.CRIMSON_GRAPEVINE.get()));
         // 野生绯红葡萄藤 - 向下生长的藤蔓植物顶部方块
-        dropOther(ModBlocks.CRIMSON_GRAPEVINE.get(), ModItems.CRIMSON_GRAPEVINE.get());
+        dropOther(KDWBlocks.CRIMSON_GRAPEVINE.get(), KDWItems.CRIMSON_GRAPEVINE.get());
         // 野生绯红葡萄藤植物 - 向下生长的藤蔓植物主体方块
-        dropOther(ModBlocks.CRIMSON_GRAPEVINE_PLANT.get(), ModItems.CRIMSON_GRAPEVINE.get());
+        dropOther(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get(), KDWItems.CRIMSON_GRAPEVINE.get());
 
         // 诡异葡萄藤 - 诡异葡萄藤架生长的果实
-        add(ModBlocks.WARPED_GRAPE_CROP.get(), this.createItemWithCountTable(ModItems.WARPED_GRAPE.get(), UniformGenerator.between(1, 2)));
+        add(KDWBlocks.WARPED_GRAPE_CROP.get(), this.createItemWithCountTable(KDWItems.WARPED_GRAPE.get(), UniformGenerator.between(1, 2)));
         // 诡异葡萄藤架 - 替换藤架的方块，也就相当于酒馆葡萄藤右键藤架替换的方块
-        add(ModBlocks.WARPED_GRAPEVINE_TRELLIS.get(), this.createMultiItemTable(com.github.ysbbbbbb.kaleidoscopetavern.init.ModItems.TRELLIS.get(), ModItems.WARPED_GRAPEVINE.get()));
+        add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get(), this.createMultiItemTable(com.github.ysbbbbbb.kaleidoscopetavern.init.ModItems.TRELLIS.get(), KDWItems.WARPED_GRAPEVINE.get()));
         // 野生诡异葡萄藤 - 向下生长的藤蔓植物顶部方块
-        dropOther(ModBlocks.WARPED_GRAPEVINE.get(), ModItems.WARPED_GRAPEVINE.get());
+        dropOther(KDWBlocks.WARPED_GRAPEVINE.get(), KDWItems.WARPED_GRAPEVINE.get());
         // 野生诡异葡萄藤植物 - 向下生长的藤蔓植物主体方块
-        dropOther(ModBlocks.WARPED_GRAPEVINE_PLANT.get(), ModItems.WARPED_GRAPEVINE.get());
+        dropOther(KDWBlocks.WARPED_GRAPEVINE_PLANT.get(), KDWItems.WARPED_GRAPEVINE.get());
 
         // ==================== 次元维度 - 末地 ====================
         // 野生迷梦果藤 - 向下生长的藤蔓植物顶部方块
-        this.vinesWithBerries(ModBlocks.DREAMFRUIT_VINE.get(), ModItems.DREAMFRUIT.get(), DreamfruitCropWildVineHead.HAS_FRUIT);
+        this.vinesWithBerries(KDWBlocks.DREAMFRUIT_VINE.get(), KDWItems.DREAMFRUIT.get(), DreamfruitCropWildVineHead.HAS_FRUIT);
         // 野生迷梦果藤植物 - 向下生长的藤蔓植物主体方块
-        this.vinesWithBerries(ModBlocks.DREAMFRUIT_VINE_PLANT.get(), ModItems.DREAMFRUIT.get(), DreamfruitCropWildVinePlant.HAS_FRUIT);
+        this.vinesWithBerries(KDWBlocks.DREAMFRUIT_VINE_PLANT.get(), KDWItems.DREAMFRUIT.get(), DreamfruitCropWildVinePlant.HAS_FRUIT);
 
     }
 

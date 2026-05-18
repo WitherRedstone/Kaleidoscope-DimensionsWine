@@ -1,7 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.ModEffects;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,10 +36,10 @@ public class UnboundGrace extends MobEffect {
         }
 
         var player = event.player;
-        if (player.hasEffect(ModEffects.UNBOUND_GRACE.get())) {
-            var skybornEffect = player.getEffect(ModEffects.SKYBORN_GRACE.get());
+        if (player.hasEffect(KDWEffects.UNBOUND_GRACE.get())) {
+            var skybornEffect = player.getEffect(KDWEffects.SKYBORN_GRACE.get());
             if (skybornEffect != null) {
-                player.removeEffect(ModEffects.SKYBORN_GRACE.get());
+                player.removeEffect(KDWEffects.SKYBORN_GRACE.get());
             }
 
             UUID playerId = player.getUUID();
