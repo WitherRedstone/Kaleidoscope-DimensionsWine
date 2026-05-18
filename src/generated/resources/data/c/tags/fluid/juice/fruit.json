@@ -1,0 +1,29 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:dreamfruit_juice",
+    {
+      "id": "kaleidoscope_dim_wine:frostheart_fruit_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:torchberries_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:enchanted_berry_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_berries_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:abyssal_fruit_juice",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:silver_pungency_fruit_juice",
+      "required": false
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "values": [
-    "twilightforest:raspberry",
-    "twilightforest:blueberry",
-    "twilightforest:blackberry",
-    "twilightforest:maloberry"
+    "minecraft:air",
+    "minecraft:air",
+    "minecraft:air",
+    "minecraft:air"
   ]
 }

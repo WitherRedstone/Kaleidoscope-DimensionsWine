@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 public interface KDWItemTags {
 
     // -------------------- 作物 --------------------
+    TagKey<Item> GRAPES = neoforgeItemTag("grapes"); // c:grapes
     TagKey<Item> FRUITS = neoforgeItemTag("fruits"); // c:fruits
     TagKey<Item> FRUITS_CRIMSON_GRAPE = neoforgeItemTag("fruits/crimson_grape"); // c:fruits/crimson_grape
     TagKey<Item> FRUITS_WARPED_GRAPE = neoforgeItemTag("fruits/warped_grape"); // c:fruits/warped_grape

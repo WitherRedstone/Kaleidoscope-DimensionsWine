@@ -1,21 +1,66 @@
 {
   "values": [
     "kaleidoscope_dim_wine:pop_can",
-    "kaleidoscope_dim_wine:crimson_crescendo",
-    "kaleidoscope_dim_wine:ethereal_noble",
-    "kaleidoscope_dim_wine:wart_hennessy",
-    "kaleidoscope_dim_wine:blaze_martell",
-    "kaleidoscope_dim_wine:magma_royal_salute",
-    "kaleidoscope_dim_wine:black_bone_lafite",
-    "kaleidoscope_dim_wine:chorus_cognac",
-    "kaleidoscope_dim_wine:dragons_breath_brandy",
-    "kaleidoscope_dim_wine:abyssal_porter",
-    "kaleidoscope_dim_wine:silent_sherry",
-    "kaleidoscope_dim_wine:forgotten_margarita",
-    "kaleidoscope_dim_wine:phantom_dream_bubble",
-    "kaleidoscope_dim_wine:end_starlight",
-    "kaleidoscope_dim_wine:divine_embryo_port",
-    "kaleidoscope_dim_wine:draconic_blood_wine",
+    {
+      "id": "kaleidoscope_dim_wine:crimson_crescendo",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:ethereal_noble",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:wart_hennessy",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blaze_martell",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:magma_royal_salute",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:black_bone_lafite",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:chorus_cognac",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dragons_breath_brandy",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:abyssal_porter",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:silent_sherry",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:forgotten_margarita",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:phantom_dream_bubble",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:end_starlight",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_embryo_port",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:draconic_blood_wine",
+      "required": false
+    },
     {
       "id": "kaleidoscope_dim_wine:cave_glowbrew",
       "required": false
@@ -130,6 +175,46 @@
     },
     {
       "id": "kaleidoscope_dim_wine:unbound_skyborn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divinity",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:star_trail",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:aurora",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:deep_freeze",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blood_moon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:abyss",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blazing_sun",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:wind_trace",
       "required": false
     }
   ]

@@ -139,6 +139,46 @@
     {
       "id": "kaleidoscope_dim_wine:unbound_skyborn",
       "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divinity",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:star_trail",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:aurora",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:deep_freeze",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blood_moon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:abyss",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blazing_sun",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:wind_trace",
+      "required": false
     }
   ]
 }
