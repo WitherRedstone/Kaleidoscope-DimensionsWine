@@ -1,14 +1,11 @@
 package com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
-import com.chinaex123.kaleidoscope_dim_wine.init.KDWFluids;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import static com.chinaex123.kaleidoscope_dim_wine.init.KDWItems.registerFluidBucket;
 
 /**
  * 天境联动 - 物品注册
@@ -17,7 +14,8 @@ public interface AetherItems {
     DeferredRegister.Items ITEMS_REGISTER = DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
     // 流体
-    DeferredItem<Item> ENCHANTED_BERRY_JUICE_BUCKET = registerFluidBucket("enchanted_berry_juice_bucket", AetherFluids.ENCHANTED_BERRY_JUICE);
+    DeferredItem<Item> ENCHANTED_BERRY_JUICE_BUCKET = ITEMS_REGISTER.register("enchanted_berry_juice_bucket", () ->
+            new BucketItem(AetherFluids.ENCHANTED_BERRY_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     DeferredItem<Item> DIVINE_OFFERING_BREW = ITEMS_REGISTER.register("divine_offering_brew", () -> new DrinkBlockItem(AetherBlocks.DIVINE_OFFERING_BREW.get()));

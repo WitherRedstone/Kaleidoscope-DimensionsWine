@@ -1,8 +1,8 @@
 {
   "values": [
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air",
-    "minecraft:air"
+    "twilightforest:wispy_cloud",
+    "twilightforest:fluffy_cloud",
+    "twilightforest:rainy_cloud",
+    "twilightforest:snowy_cloud"
   ]
 }

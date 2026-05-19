@@ -10,8 +10,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.chinaex123.kaleidoscope_dim_wine.init.KDWItems.registerFluidBucket;
-
 /**
  * 永恒星光联动 - 物品注册
  */
@@ -19,9 +17,12 @@ public interface EternalStarlightItems {
     DeferredRegister.Items ITEMS_REGISTER = DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
 
     // 流体
-    DeferredItem<Item> LUNAR_BERRIES_JUICE_BUCKET = registerFluidBucket("lunar_berries_juice_bucket", EternalStarlightFluids.LUNAR_BERRIES_JUICE);
-    DeferredItem<Item> ABYSSAL_FRUIT_JUICE_BUCKET = registerFluidBucket("abyssal_fruit_juice_bucket", EternalStarlightFluids.ABYSSAL_FRUIT_JUICE);
-    DeferredItem<Item> SILVER_PUNGENCY_FRUIT_JUICE_BUCKET = registerFluidBucket("silver_pungency_fruit_juice_bucket", EternalStarlightFluids.SILVER_PUNGENCY_FRUIT_JUICE);
+    DeferredItem<Item> LUNAR_BERRIES_JUICE_BUCKET = ITEMS_REGISTER.register("lunar_berries_juice_bucket", () ->
+            new BucketItem(EternalStarlightFluids.LUNAR_BERRIES_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    DeferredItem<Item> ABYSSAL_FRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("abyssal_fruit_juice_bucket", () ->
+            new BucketItem(EternalStarlightFluids.ABYSSAL_FRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    DeferredItem<Item> SILVER_PUNGENCY_FRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("silver_pungency_fruit_juice_bucket", () ->
+            new BucketItem(EternalStarlightFluids.SILVER_PUNGENCY_FRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     DeferredItem<Item> DIVINITY = ITEMS_REGISTER.register("divinity", () -> new DrinkBlockItem(EternalStarlightBlocks.DIVINITY.get()));

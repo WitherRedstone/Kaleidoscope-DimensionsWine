@@ -10,6 +10,7 @@ import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -43,8 +44,10 @@ public interface KDWItems {
     DeferredItem<Item> WARPED_FUNGAL_SAP = ITEMS_REGISTER.register("warped_fungal_sap", () -> new Item(new Item.Properties()));
 
      // 流体
-    DeferredItem<Item> CRIMSON_GRAPE_JUICE_BUCKET = registerFluidBucket("crimson_grape_juice_bucket", KDWFluids.CRIMSON_GRAPE_JUICE);
-    DeferredItem<Item> WARPED_GRAPE_JUICE_BUCKET = registerFluidBucket("warped_grape_juice_bucket", KDWFluids.WARPED_GRAPE_JUICE);
+     DeferredItem<Item> CRIMSON_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("crimson_grape_juice_bucket", () ->
+             new BucketItem(KDWFluids.CRIMSON_GRAPE_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    DeferredItem<Item> WARPED_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("warped_grape_juice_bucket", () ->
+            new BucketItem(KDWFluids.WARPED_GRAPE_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     DeferredItem<Item> CRIMSON_CRESCENDO = ITEMS_REGISTER.register("crimson_crescendo", () -> new DrinkBlockItem(KDWBlocks.CRIMSON_CRESCENDO.get()));
@@ -63,8 +66,10 @@ public interface KDWItems {
             new DrinkableItem(new Item.Properties().food(KDWFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
 
     // 流体
-    DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET = registerFluidBucket("dreamfruit_juice_bucket", KDWFluids.DREAMFRUIT_JUICE);
-    DeferredItem<Item> DRAGON_BLOOD_BUCKET = registerFluidBucket("dragon_blood_bucket", KDWFluids.DRAGON_BLOOD);
+    DeferredItem<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
+            new BucketItem(KDWFluids.DREAMFRUIT_JUICE.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    DeferredItem<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
+            new BucketItem(KDWFluids.DRAGON_BLOOD.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     DeferredItem<Item> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () -> new DrinkBlockItem(KDWBlocks.CHORUS_COGNAC.get()));
@@ -76,17 +81,6 @@ public interface KDWItems {
     DeferredItem<Item> END_STARLIGHT = ITEMS_REGISTER.register("end_starlight", () -> new DrinkBlockItem(KDWBlocks.END_STARLIGHT.get()));
     DeferredItem<Item> DIVINE_EMBRYO_PORT = ITEMS_REGISTER.register("divine_embryo_port", () -> new DrinkBlockItem(KDWBlocks.DIVINE_EMBRYO_PORT.get()));
     DeferredItem<Item> DRACONIC_BLOOD_WINE = ITEMS_REGISTER.register("draconic_blood_wine", () -> new DrinkBlockItem(KDWBlocks.DRACONIC_BLOOD_WINE.get()));
-
-    /**
-     * 注册流体桶物品
-     *
-     * @param name  物品注册名
-     * @param fluid 流体供应器
-     * @return 注册的桶物品
-     */
-    static DeferredItem<Item> registerFluidBucket(String name, Supplier<? extends Fluid> fluid) {
-        return ITEMS_REGISTER.register(name, () -> new BucketItem(fluid.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
-    }
 
     static void register(IEventBus eventBus){
         ITEMS_REGISTER.register(eventBus);
