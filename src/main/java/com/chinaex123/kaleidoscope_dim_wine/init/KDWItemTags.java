@@ -16,6 +16,10 @@ public interface KDWItemTags {
     TagKey<Item> FRUITS_DREAMFRUIT = forgeItemTag("fruits/dreamfruit"); // forge:fruits/dreamfruit
     TagKey<Item> FRUITS_FROSTHEART = forgeItemTag("fruits/frostheart_fruit"); // forge:fruits/frostheart_fruit
 
+    TagKey<Item> COLOSSAL = bind("colossal"); // kaleidoscope_dim_wine:colossal
+    TagKey<Item> WINE_BERRY = bind("wine/berry"); // kaleidoscope_dim_wine:wine/berry
+    TagKey<Item> WINE_CLOUD = bind("wine/cloud"); // kaleidoscope_dim_wine:wine/cloud
+
     // 均衡饮食
     TagKey<Item> FRUITS_DIET = dietTag("fruits"); // diet:fruits
 

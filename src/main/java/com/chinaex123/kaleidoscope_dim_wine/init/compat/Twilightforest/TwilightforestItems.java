@@ -4,13 +4,13 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWFoods;
 import com.chinaex123.kaleidoscope_dim_wine.item.crop.FrostheartFruitItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
-
-import static com.chinaex123.kaleidoscope_dim_wine.init.KDWItems.registerFluidBucket;
 
 /**
  * 暮色森林联动 - 物品注册
@@ -26,8 +26,10 @@ public interface TwilightforestItems {
     RegistryObject<Item> GOBLIN_ESSENCE = ITEMS_REGISTER.register("goblin_essence", () -> new Item(new Item.Properties()));
 
     // 流体
-    RegistryObject<Item> TORCHBERRIES_JUICE_BUCKET = registerFluidBucket("torchberries_juice_bucket", TwilightforestFluids.TORCHBERRIES_JUICE);
-    RegistryObject<Item> FROSTHEART_FRUIT_JUICE_BUCKET = registerFluidBucket("frostheart_fruit_juice_bucket", TwilightforestFluids.FROSTHEART_FRUIT_JUICE);
+    RegistryObject<Item> TORCHBERRIES_JUICE_BUCKET = ITEMS_REGISTER.register("torchberries_juice_bucket", () ->
+            new BucketItem(TwilightforestFluids.TORCHBERRIES_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    RegistryObject<Item> FROSTHEART_FRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("frostheart_fruit_juice_bucket", () ->
+            new BucketItem(TwilightforestFluids.FROSTHEART_FRUIT_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     RegistryObject<Item> CAVE_GLOWBREW = ITEMS_REGISTER.register("cave_glowbrew", () -> new DrinkBlockItem(TwilightforestBlocks.CAVE_GLOWBREW.get()));

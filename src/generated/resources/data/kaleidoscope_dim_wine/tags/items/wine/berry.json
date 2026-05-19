@@ -1,19 +1,23 @@
 {
   "values": [
     {
-      "id": "kaleidoscope_dim_wine:raspberry",
+      "id": "twilightforest:raspberry",
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:blueberry",
+      "id": "twilightforest:blueberry",
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:blackberry",
+      "id": "twilightforest:blackberry",
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:maloberry",
+      "id": "twilightforest:maloberry",
+      "required": false
+    },
+    {
+      "id": "twilightforest:torchberries",
       "required": false
     }
   ]

@@ -8,13 +8,10 @@ import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Supplier;
 
 public interface KDWItems {
     DeferredRegister<Item> ITEMS_REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, KaleidoscopeDimensionsWine.MOD_ID);
@@ -29,14 +26,10 @@ public interface KDWItems {
     RegistryObject<Item> POP_CAN = ITEMS_REGISTER.register("pop_can", () -> new BottleBlockItem(KDWBlocks.POP_CAN.get(), new Item.Properties()));
 
     // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // 绯红葡萄藤 - 相当于作物的种子
+    // 作物
     RegistryObject<Item> CRIMSON_GRAPEVINE = ITEMS_REGISTER.register("crimson_grapevine", CrimsonGrapevineItem::new);
-     // 绯红葡萄 - 结出的果实
     RegistryObject<Item> CRIMSON_GRAPE = ITEMS_REGISTER.register("crimson_grape", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
-    // 诡异葡萄藤 - 相当于作物的种子
     RegistryObject<Item> WARPED_GRAPEVINE = ITEMS_REGISTER.register("warped_grapevine", WarpedGrapevineItem::new);
-    // 诡异葡萄 - 结出的果实
     RegistryObject<Item> WARPED_GRAPE = ITEMS_REGISTER.register("warped_grape", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
 
     // 物品
@@ -44,8 +37,10 @@ public interface KDWItems {
     RegistryObject<Item> WARPED_FUNGAL_SAP = ITEMS_REGISTER.register("warped_fungal_sap", () -> new Item(new Item.Properties()));
 
     // 流体
-    RegistryObject<Item> CRIMSON_GRAPE_JUICE_BUCKET = registerFluidBucket("crimson_grape_juice_bucket", KDWFluids.CRIMSON_GRAPE_JUICE);
-    RegistryObject<Item> WARPED_GRAPE_JUICE_BUCKET = registerFluidBucket("warped_grape_juice_bucket", KDWFluids.WARPED_GRAPE_JUICE);
+    RegistryObject<Item> CRIMSON_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("crimson_grape_juice_bucket", () ->
+            new BucketItem(KDWFluids.CRIMSON_GRAPE_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    RegistryObject<Item> WARPED_GRAPE_JUICE_BUCKET = ITEMS_REGISTER.register("warped_grape_juice_bucket", () ->
+            new BucketItem(KDWFluids.WARPED_GRAPE_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     RegistryObject<Item> CRIMSON_CRESCENDO = ITEMS_REGISTER.register("crimson_crescendo", () -> new DrinkBlockItem(KDWBlocks.CRIMSON_CRESCENDO.get()));
@@ -65,8 +60,10 @@ public interface KDWItems {
             new DrinkableItem(new Item.Properties().food(KDWFoods.DRAGON_BLOOD_BOTTLE), new ItemStack(Items.GLASS_BOTTLE)));
 
     // 流体
-    RegistryObject<Item> DREAMFRUIT_JUICE_BUCKET = registerFluidBucket("dreamfruit_juice_bucket", KDWFluids.DREAMFRUIT_JUICE);
-    RegistryObject<Item> DRAGON_BLOOD_BUCKET = registerFluidBucket("dragon_blood_bucket", KDWFluids.DRAGON_BLOOD);
+    RegistryObject<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
+            new BucketItem(KDWFluids.DREAMFRUIT_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+    RegistryObject<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
+            new BucketItem(KDWFluids.DRAGON_BLOOD, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
 
     // 酒类
     RegistryObject<Item> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () -> new DrinkBlockItem(KDWBlocks.CHORUS_COGNAC.get()));
@@ -78,17 +75,6 @@ public interface KDWItems {
     RegistryObject<Item> END_STARLIGHT = ITEMS_REGISTER.register("end_starlight", () -> new DrinkBlockItem(KDWBlocks.END_STARLIGHT.get()));
     RegistryObject<Item> DIVINE_EMBRYO_PORT = ITEMS_REGISTER.register("divine_embryo_port", () -> new DrinkBlockItem(KDWBlocks.DIVINE_EMBRYO_PORT.get()));
     RegistryObject<Item> DRACONIC_BLOOD_WINE = ITEMS_REGISTER.register("draconic_blood_wine", () -> new DrinkBlockItem(KDWBlocks.DRACONIC_BLOOD_WINE.get()));
-
-    /**
-     * 注册流体桶物品
-     *
-     * @param name  物品注册名
-     * @param fluid 流体供应器
-     * @return 注册的桶物品
-     */
-    static RegistryObject<Item> registerFluidBucket(String name, Supplier<? extends Fluid> fluid) {
-        return ITEMS_REGISTER.register(name, () -> new BucketItem(fluid.get(), new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
-    }
 
     static void register(IEventBus eventBus){
         ITEMS_REGISTER.register(eventBus);

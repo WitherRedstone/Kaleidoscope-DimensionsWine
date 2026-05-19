@@ -190,20 +190,21 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
                 .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "unbound_skyborn"));
 
         // 巨物碎片
-        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "colossal")))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "giant_sword"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "giant_pickaxe"));
+        tag(KDWItemTags.COLOSSAL)
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_pickaxe"));
         // 酿酒的水果 - kaleidoscope_dim_wine:wine/berry
-        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "wine/berry")))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "raspberry"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "blueberry"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "blackberry"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "maloberry"));
+        tag(KDWItemTags.WINE_BERRY)
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "raspberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blueberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blackberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "maloberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "torchberries"));
         // 酿酒的云 - kaleidoscope_dim_wine:wine/cloud
-        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "wine/cloud")))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "wispy_cloud"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "fluffy_cloud"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "rainy_cloud"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "snowy_cloud"));
+        tag(KDWItemTags.WINE_CLOUD)
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "wispy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "fluffy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "rainy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "snowy_cloud"));
     }
 }
