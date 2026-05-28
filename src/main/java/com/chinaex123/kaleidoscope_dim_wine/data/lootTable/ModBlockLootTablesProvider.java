@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.data.lootTable;
 
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.DreamfruitCropWildVineHead;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.DreamfruitCropWildVinePlant;
+import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Hop.HopCrop;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -16,6 +17,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -58,6 +60,17 @@ public class ModBlockLootTablesProvider extends BlockLootSubProvider {
 
         dropSelf(KDWBlocks.STRING_LIGHTS_BLOCK_COMMAND.get()); // 小灯串（命令方块）
         dropSelf(KDWBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get()); // 小灯串（基岩）
+
+
+        // ==================== 次元维度 - 主世界 ====================
+        // 啤酒花
+        LootItemCondition.Builder builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(KDWBlocks.HOP_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(HopCrop.AGE, 6));
+        add(KDWBlocks.HOP_CROP.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .when(builder2)
+                        .add(LootItem.lootTableItem(KDWItems.HOP.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 8)))));
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------

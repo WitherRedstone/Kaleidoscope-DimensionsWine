@@ -5,6 +5,7 @@ import com.chinaex123.kaleidoscope_dim_wine.block.DollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.block.PopCanBlock;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.CrimsonGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.*;
+import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Hop.HopCrop;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.compat.kaleidoscope_doll.KaleidoscopeDollBlock;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -57,6 +59,11 @@ public interface KDWBlocks {
     DeferredBlock<Block> STRING_LIGHTS_ENTITY_SHULKER_BLACK = registerStringLights("string_lights_entity_shulker_black", () -> new StringLightsBlock(null));
     DeferredBlock<Block> STRING_LIGHTS_ENTITY_CHICKEN = registerStringLights("string_lights_entity_chicken", () -> new StringLightsBlock(null));
     DeferredBlock<Block> STRING_LIGHTS_ENTITY_BEE = registerStringLights("string_lights_entity_bee", () -> new StringLightsBlock(null));
+
+
+    // ==================== 次元维度 - 主世界 ====================
+    // 作物
+    DeferredBlock<HopCrop> HOP_CROP = BLOCK_REGISTER.register("hop_crop", () -> new HopCrop(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     // 瓶装
     DeferredBlock<Block> POP_CAN = BLOCK_REGISTER.register("pop_can", PopCanBlock::new);

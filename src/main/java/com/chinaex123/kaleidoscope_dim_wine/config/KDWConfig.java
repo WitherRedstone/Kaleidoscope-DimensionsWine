@@ -23,7 +23,7 @@ public class KDWConfig {
     public static final ModConfigSpec.IntValue CRIMSON_NYLIUM_FUNGAL_SAP_COUNT;
     public static final ModConfigSpec.ConfigValue<List<? extends Double>> WARPED_NYLIUM_FUNGAL_SAP_CHANCES;
     public static final ModConfigSpec.IntValue WARPED_NYLIUM_FUNGAL_SAP_COUNT;
-
+    public static final ModConfigSpec.DoubleValue GRASS_HOP_SEED_DROP_CHANCE;
 
     public static final ModConfigSpec SPEC;
 
@@ -48,7 +48,7 @@ public class KDWConfig {
 
         builder.push("aether_entity_loot");
         ANGEL_WINGS_DROP_CHANCE = builder
-                .comment("Chance for Valkyrie Queen to drop Angel Wings (0.0 to 1.0)")
+                .comment("Chance for Valkyrie Queen to drop Angel Wings")
                 .defineInRange("angelWingsDropChance", 1.0, 0.0, 1.0);
         ANGEL_WINGS_DROP_MIN = builder
                 .comment("Minimum number of Angel Wings dropped by Valkyrie Queen")
@@ -70,7 +70,6 @@ public class KDWConfig {
         CRIMSON_NYLIUM_FUNGAL_SAP_COUNT = builder
                 .comment("Base count of Crimson Fungal Sap dropped from Crimson Nylium")
                 .defineInRange("crimsonNyliumFungalSapCount", 1, 0, 64);
-
         WARPED_NYLIUM_FUNGAL_SAP_CHANCES = builder
                 .comment("Chances for Warped Nylium to drop Warped Fungal Sap [no Fortune, Fortune I, Fortune II, Fortune III]")
                 .defineList("warpedNyliumFungalSapChances",
@@ -79,6 +78,9 @@ public class KDWConfig {
         WARPED_NYLIUM_FUNGAL_SAP_COUNT = builder
                 .comment("Base count of Warped Fungal Sap dropped from Warped Nylium")
                 .defineInRange("warpedNyliumFungalSapCount", 1, 0, 64);
+        GRASS_HOP_SEED_DROP_CHANCE = builder
+                .comment("Chance for grass to drop Hop Seed when broken")
+                .defineInRange("grassHopSeedDropChance", 0.05, 0.0, 1.0);
         builder.pop();
 
 
@@ -93,10 +95,10 @@ public class KDWConfig {
 
         builder.push("easter_eggs");
         BEDROCK_FALL_DROP_CHANCE = builder
-                .comment("Chance to drop String Lights(Bedrock) when falling on Bedrock (0.0 to 1.0)")
+                .comment("Chance to drop String Lights(Bedrock) when falling on Bedrock")
                 .defineInRange("bedrockFallDropChance", 0.015, 0.0, 1.0);
         WITHER_COMMAND_LIGHTS_DROP_CHANCE = builder
-                .comment("Chance for Wither to drop String Lights(Command Block) (0.0 to 1.0)")
+                .comment("Chance for Wither to drop String Lights(Command Block)")
                 .defineInRange("witherCommandLightsDropChance", 0.015, 0.0, 1.0);
         builder.pop();
 

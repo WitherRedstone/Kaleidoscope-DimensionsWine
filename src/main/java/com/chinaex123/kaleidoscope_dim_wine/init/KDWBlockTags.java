@@ -10,6 +10,9 @@ public interface KDWBlockTags {
     // 小彩灯
     TagKey<Block> STRING_LIGHTS = kaleidoscopeTavernTag("string_lights");
 
+    // 作物
+    TagKey<Block> CROPS = mcBlockTag("crops");
+
     // 静谧四季
     TagKey<Block> SPRING_CROPS_BLOCK = seasonsBlockTag("spring_crops");
     TagKey<Block> SUMMER_CROPS_BLOCK = seasonsBlockTag("summer_crops");
@@ -28,6 +31,10 @@ public interface KDWBlockTags {
     TagKey<Block> CROPS_MOIST_HUMID = eclipticSeasonsTag("crops/moist_humid"); // 湿润
     TagKey<Block> CROPS_HUMID_HUMID = eclipticSeasonsTag("crops/humid_humid"); // 潮湿
 
+
+    static TagKey<Block> mcBlockTag(String name) {
+        return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("minecraft", name));
+    }
 
     static TagKey<Block> seasonsBlockTag(String name) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("sereneseasons", name));

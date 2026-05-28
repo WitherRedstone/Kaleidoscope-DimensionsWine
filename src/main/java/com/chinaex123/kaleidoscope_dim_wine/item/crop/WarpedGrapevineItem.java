@@ -3,6 +3,7 @@ package com.chinaex123.kaleidoscope_dim_wine.item.crop;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.WarpedGrape.WarpedGrapevineTrellisBlock;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
+import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
@@ -116,7 +117,7 @@ public class WarpedGrapevineItem extends Item {
         }
 
         // 如果点击的是普通藤架
-        if (state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get())) {
+        if (state.is(ModBlocks.TRELLIS.get())) {
             // 检查藤架下方是否是草方块
             BlockState belowTrellis = level.getBlockState(pos.below());
             if (!belowTrellis.is(Blocks.WARPED_NYLIUM)) {

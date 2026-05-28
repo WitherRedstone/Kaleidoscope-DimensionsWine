@@ -14,6 +14,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -69,6 +70,19 @@ public class BlockLootInjector {
                     .apply(SetItemCountFunction.setCount(ConstantValue.exactly(baseCount)))
                     .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
                     .name("kaleidoscope_dim_wine:warped_fungal_sap_from_weeping_vines")
+                    .build();
+            event.getTable().addPool(bonusPool);
+        }
+
+        // 草 掉落池
+        if (tableId.equals(ResourceLocation.withDefaultNamespace("blocks/short_grass"))) {
+            double chance = KDWConfig.GRASS_HOP_SEED_DROP_CHANCE.get();
+
+            LootPool bonusPool = LootPool.lootPool()
+                    .setRolls(ConstantValue.exactly(1.0f))
+                    .when(LootItemRandomChanceCondition.randomChance((float) chance))
+                    .add(LootItem.lootTableItem(KDWItems.HOP_SEED.get()))
+                    .name("kaleidoscope_dim_wine:hop_seed_from_grass")
                     .build();
             event.getTable().addPool(bonusPool);
         }

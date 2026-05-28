@@ -145,6 +145,9 @@ dependencies {
     //localRuntime "curse.maven:placebo-283644:6926281"
     //localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性
 
+    //localRuntime "curse.maven:functional-storage-556861:7061714"
+    //localRuntime "curse.maven:titanium-287342:7951516"
+
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

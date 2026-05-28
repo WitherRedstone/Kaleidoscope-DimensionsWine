@@ -30,7 +30,6 @@ public class KDWCreativeTabs {
                         output.accept(KDWBlocks.DOLL_002.get()); // 玩偶 - Fvue233
                         output.accept(KDWBlocks.DOLL_003.get()); // 玩偶 - Agens_Eland
                         // -------------------- 瓶装 --------------------
-//                        output.accept(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
                         output.accept(KDWItems.POP_CAN.get()); // 易拉罐
                         output.accept(KDWItems.ANGEL_WINGS.get()); // 天使之翼
                         output.accept(KDWItems.ANGEL_FEATHER.get()); // 天使之羽
@@ -40,6 +39,8 @@ public class KDWCreativeTabs {
                         output.accept(KDWItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
                         output.accept(KDWItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
                         // -------------------- 作物 --------------------
+                        output.accept(KDWItems.HOP.get()); // 啤酒花
+                        output.accept(KDWItems.HOP_SEED.get()); // 啤酒花种子
                         output.accept(KDWItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
                         output.accept(KDWItems.WARPED_GRAPEVINE.get()); // 诡异葡萄藤
                         output.accept(KDWItems.CRIMSON_GRAPE.get()); // 绯红葡萄

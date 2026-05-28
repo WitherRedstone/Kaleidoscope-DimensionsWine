@@ -2,6 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.CrimsonGrape;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
+import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -138,7 +139,7 @@ public class CrimsonGrapeCropWildGrapevineHead extends GrowingPlantHeadBlock imp
     @Override
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
-                state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
+                state.is(ModBlocks.TRELLIS.get()) ||
                 state.getBlock() instanceof GrapevineTrellisBlock;
     }
 

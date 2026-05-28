@@ -8,13 +8,9 @@ import com.chinaex123.kaleidoscope_dim_wine.item.DrinkableItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.BottleBlockItem;
 import com.github.ysbbbbbb.kaleidoscopetavern.item.DrinkBlockItem;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.material.Fluid;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 public interface KDWItems {
     DeferredRegister.Items ITEMS_REGISTER = DeferredRegister.createItems(KaleidoscopeDimensionsWine.MOD_ID);
@@ -25,18 +21,18 @@ public interface KDWItems {
     DeferredItem<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     DeferredItem<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
+    // 作物
+    DeferredItem<Item> HOP = ITEMS_REGISTER.register("hop", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
+    DeferredItem<Item> HOP_SEED = ITEMS_REGISTER.register("hop_seed", () -> new ItemNameBlockItem(KDWBlocks.HOP_CROP.get(), new Item.Properties()));
+
     // 瓶装
     DeferredItem<Item> POP_CAN = ITEMS_REGISTER.register("pop_can", () -> new BottleBlockItem(KDWBlocks.POP_CAN.get(), new Item.Properties()));
 
     // ==================== 次元维度 - 下界 ====================
-    // -------------------- 作物 --------------------
-    // 绯红葡萄藤 - 相当于作物的种子
+    // 作物
     DeferredItem<Item> CRIMSON_GRAPEVINE = ITEMS_REGISTER.register("crimson_grapevine", CrimsonGrapevineItem::new);
-    // 绯红葡萄 - 结出的果实
     DeferredItem<Item> CRIMSON_GRAPE = ITEMS_REGISTER.register("crimson_grape", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
-    // 诡异葡萄藤 - 相当于作物的种子
     DeferredItem<Item> WARPED_GRAPEVINE = ITEMS_REGISTER.register("warped_grapevine", WarpedGrapevineItem::new);
-    // 诡异葡萄 - 结出的果实
     DeferredItem<Item> WARPED_GRAPE = ITEMS_REGISTER.register("warped_grape", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
 
     // 物品

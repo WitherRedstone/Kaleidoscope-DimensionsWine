@@ -16,6 +16,10 @@ public interface KDWItemTags {
     TagKey<Item> FRUITS_DREAMFRUIT = neoforgeItemTag("fruits/dreamfruit"); // c:fruits/dreamfruit
     TagKey<Item> FRUITS_FROSTHEART = neoforgeItemTag("fruits/frostheart_fruit"); // c:fruits/frostheart_fruit
 
+    TagKey<Item> HOPS = neoforgeItemTag("hops"); // c:hops
+    TagKey<Item> CROPS_HOP = neoforgeItemTag("crops/hop"); // c:crops/hop
+    TagKey<Item> SEEDS_HOP = neoforgeItemTag("seeds/hop"); // c:seeds/hop
+
     TagKey<Item> COLOSSAL = bind("colossal"); // kaleidoscope_dim_wine:colossal
     TagKey<Item> WINE_BERRY = bind("wine/berry"); // kaleidoscope_dim_wine:wine/berry
     TagKey<Item> WINE_CLOUD = bind("wine/cloud"); // kaleidoscope_dim_wine:wine/cloud

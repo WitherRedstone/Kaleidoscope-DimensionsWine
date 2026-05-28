@@ -24,25 +24,30 @@ public class ModItemModelsProvider extends ItemModelProvider {
     protected void registerModels() {
 
         basicItem(KDWItems.MOD_LOGO.get()); // 模组logo
+
+        // ==================== 次元维度 - 主世界 ====================
+        // 物品
         basicItem(KDWItems.ANGEL_WINGS.get()); // 天使之翼
         basicItem(KDWItems.ANGEL_FEATHER.get()); // 天使之羽
-        // ==================== 瓶装 ====================
-//        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
+        // 瓶装
         basicItem(KDWItems.POP_CAN.get()); // 易拉罐
+        // 作物
+        basicItem(KDWItems.HOP.get()); // 啤酒花
+        basicItem(KDWItems.HOP_SEED.get()); // 啤酒花种子
 
         // ==================== 次元维度 - 下界 ====================
-        // -------------------- 流体 --------------------
+        // 流体
         basicItem(KDWItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
         basicItem(KDWItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
-        // -------------------- 作物 --------------------
+        // 作物
         basicItem(KDWItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
         basicItem(KDWItems.CRIMSON_GRAPE.get()); // 绯红葡萄
         basicItem(KDWItems.WARPED_GRAPEVINE.get()); // 诡异葡萄藤
         basicItem(KDWItems.WARPED_GRAPE.get()); // 诡异葡萄
-        // -------------------- 物品 --------------------
+        // 物品
         basicItem(KDWItems.CRIMSON_FUNGAL_SAP.get()); // 绯红菌露
         basicItem(KDWItems.WARPED_FUNGAL_SAP.get()); // 诡影菌髓
-        // -------------------- 酒类 --------------------
+        // 酒类
         basicDrinkItem(KDWItems.CRIMSON_CRESCENDO); // 绯红绝响
         basicDrinkItem(KDWItems.ETHEREAL_NOBLE); // 诡影尊爵
         basicDrinkItem(KDWItems.WART_HENNESSY); // 疣域轩尼诗
@@ -52,14 +57,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
 
         // ==================== 次元维度 - 末地 ====================
-        // -------------------- 流体 --------------------
+        // 流体
         basicItem(KDWItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
         basicItem(KDWItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
-        // -------------------- 作物 --------------------
+        // 作物
         basicItem(KDWItems.DREAMFRUIT.get()); // 迷梦果
-        // -------------------- 物品 --------------------
+        // 物品
         basicItem(KDWItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
-        // -------------------- 酒类 --------------------
+        // 酒类
         basicDrinkItem(KDWItems.CHORUS_COGNAC); // 紫颂干邑
         basicDrinkItem(KDWItems.DRAGONS_BREATH_BRANDY); // 龙息白兰地
         basicDrinkItem(KDWItems.ABYSSAL_PORTER); // 深渊波特
@@ -73,15 +78,15 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 暮色森林 ====================
         if (ModList.get().isLoaded("twilightforest")) {
-            // -------------------- 流体 --------------------
+            // 流体
             basicItem(TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.getId()); // 火炬浆果汁桶
             basicItem(TwilightforestItems.FROSTHEART_FRUIT_JUICE_BUCKET.getId()); // 霜心果汁桶
-            // -------------------- 作物 --------------------
+            // 作物
             basicItem(TwilightforestItems.FROSTHEART_FRUIT.getId()); // 霜心果
-            // -------------------- 物品 --------------------
+            // 物品
             basicItem(TwilightforestItems.COLOSSAL_FRAGMENT.getId()); // 巨物碎片
             basicItem(TwilightforestItems.GOBLIN_ESSENCE.getId()); // 哥布林精华
-            // -------------------- 酒类 --------------------
+            // 酒类
             compatTwilightforestDrinkItem(TwilightforestItems.CAVE_GLOWBREW); // 洞窟萤火酿
             compatTwilightforestDrinkItem(TwilightforestItems.DAWNLIGHT_DEW); // 林隙晨露
             compatTwilightforestDrinkItem(TwilightforestItems.DEAD_END_SPITTLE); // 死巷之唾
@@ -101,9 +106,9 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 蜜蜂领域 ====================
         if (ModList.get().isLoaded("the_bumblezone")) {
-            // -------------------- 物品 --------------------
+            // 物品
             basicItem(TheBumblezoneItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
-            // -------------------- 酒类 --------------------
+            // 酒类
             compatTheBumblezoneDrinkItem(TheBumblezoneItems.SPRITE); // 雪碧
             compatTheBumblezoneDrinkItem(TheBumblezoneItems.PEPSI); // 可乐
             compatTheBumblezoneDrinkItem(TheBumblezoneItems.FANTA); // 芬达
@@ -117,9 +122,9 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 天境 ====================
         if (ModList.get().isLoaded("aether")) {
-            // -------------------- 物品 --------------------
+            // 物品
             basicItem(AetherItems.ENCHANTED_BERRY_JUICE_BUCKET.get()); // 神饯蓝莓汁桶
-            // -------------------- 酒类 --------------------
+            // 酒类
             compatAetherDrinkItem(AetherItems.DIVINE_OFFERING_BREW); // 神饯紫晶酿
             compatAetherDrinkItem(AetherItems.DIVINE_ENERGY_MIST); // 神能迷雾
             compatAetherDrinkItem(AetherItems.SWET_FIZZ); // 史维特菲士
@@ -132,11 +137,11 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 永恒星光 ====================
         if (ModList.get().isLoaded("eternal_starlight")) {
-            // -------------------- 物品 --------------------
+            // 物品
             basicItem(EternalStarlightItems.LUNAR_BERRIES_JUICE_BUCKET.get()); // 月辉浆果汁桶
             basicItem(EternalStarlightItems.ABYSSAL_FRUIT_JUICE_BUCKET.get()); // 渊海果汁桶
             basicItem(EternalStarlightItems.SILVER_PUNGENCY_FRUIT_JUICE_BUCKET.get()); // 银辛果汁桶
-            // -------------------- 酒类 --------------------
+            // 酒类
             compatEternalStarlightDrinkItem(EternalStarlightItems.DIVINITY); // 神圣裁决
             compatEternalStarlightDrinkItem(EternalStarlightItems.STAR_TRAIL); // 星轨
             compatEternalStarlightDrinkItem(EternalStarlightItems.AURORA); // 极光
