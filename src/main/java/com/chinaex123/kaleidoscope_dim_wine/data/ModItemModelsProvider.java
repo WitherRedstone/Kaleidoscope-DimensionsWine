@@ -24,11 +24,16 @@ public class ModItemModelsProvider extends ItemModelProvider {
     protected void registerModels() {
 
         basicItem(KDWItems.MOD_LOGO.get()); // 模组logo
+
+        // ==================== 次元维度 - 主世界 ====================
+        // 物品
         basicItem(KDWItems.ANGEL_WINGS.get()); // 天使之翼
         basicItem(KDWItems.ANGEL_FEATHER.get()); // 天使之羽
-        // ==================== 瓶装 ====================
-//        basicItem(ModItems.EMPTY_BAMBOO_CUP.get()); // 空竹杯
+        // 瓶装
         basicItem(KDWItems.POP_CAN.get()); // 易拉罐
+        // 作物
+        basicItem(KDWItems.HOP.get()); // 啤酒花
+        basicItem(KDWItems.HOP_SEED.get()); // 啤酒花种子
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 流体 --------------------

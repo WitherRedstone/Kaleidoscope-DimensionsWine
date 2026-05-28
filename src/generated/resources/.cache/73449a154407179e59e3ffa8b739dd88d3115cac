@@ -1,4 +1,4 @@
-// 1.20.1	2026-04-22T12:48:54.5711761	Item Models: kaleidoscope_dim_wine
+// 1.20.1	2026-05-21T10:06:41.4830693	Item Models: kaleidoscope_dim_wine
 28039b7536043d7a6b6243358af095e0a294c19a assets/kaleidoscope_dim_wine/models/item/abyssal_porter.json
 793f8e3bbd769903a062c5760cbd70d9e3242b15 assets/kaleidoscope_dim_wine/models/item/angel_feather.json
 abdfed4c45c9d11f1583bef8238f74416b761d51 assets/kaleidoscope_dim_wine/models/item/angel_wings.json
@@ -42,6 +42,8 @@ c38dfceb9f5dfc1a7033e054389f0bf77a00b8f4 assets/kaleidoscope_dim_wine/models/ite
 8fca187d16a57ba0bd8d39296800a932e776e184 assets/kaleidoscope_dim_wine/models/item/gravitite_drunk.json
 f284dfd0020beda85e2dc022f0900440a3d6b1a0 assets/kaleidoscope_dim_wine/models/item/healing_elixir.json
 1fdabcad1b0132bae8161b221c898a23a029e57f assets/kaleidoscope_dim_wine/models/item/honeythorn_mead.json
+19f48281710385c0b8f14abaa33aec7cdf76d2ca assets/kaleidoscope_dim_wine/models/item/hop.json
+ac58529209f373d034d491688a5562ff98c9945c assets/kaleidoscope_dim_wine/models/item/hop_seed.json
 a1b2e3183f16a607efc365963da97e99d7536a77 assets/kaleidoscope_dim_wine/models/item/magma_royal_salute.json
 894858001551d4334aed5e8877e6ff216e8fb595 assets/kaleidoscope_dim_wine/models/item/mod_logo.json
 62a836842ef8db58e4813c708bb6bdb8b76caa37 assets/kaleidoscope_dim_wine/models/item/moorglow_birds_song.json

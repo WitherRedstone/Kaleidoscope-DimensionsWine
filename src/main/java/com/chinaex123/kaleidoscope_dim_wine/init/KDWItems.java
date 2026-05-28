@@ -22,6 +22,10 @@ public interface KDWItems {
     RegistryObject<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     RegistryObject<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
 
+    // 作物
+    RegistryObject<Item> HOP = ITEMS_REGISTER.register("hop", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));
+    RegistryObject<Item> HOP_SEED = ITEMS_REGISTER.register("hop_seed", () -> new ItemNameBlockItem(KDWBlocks.HOP_CROP.get(), new Item.Properties()));
+
     // 瓶装
     RegistryObject<Item> POP_CAN = ITEMS_REGISTER.register("pop_can", () -> new BottleBlockItem(KDWBlocks.POP_CAN.get(), new Item.Properties()));
 
@@ -63,7 +67,7 @@ public interface KDWItems {
     RegistryObject<Item> DREAMFRUIT_JUICE_BUCKET = ITEMS_REGISTER.register("dreamfruit_juice_bucket", () ->
             new BucketItem(KDWFluids.DREAMFRUIT_JUICE, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
     RegistryObject<Item> DRAGON_BLOOD_BUCKET = ITEMS_REGISTER.register("dragon_blood_bucket", () ->
-            new BucketItem(KDWFluids.DRAGON_BLOOD, new Item.Properties().stacksTo(16).craftRemainder(Items.BUCKET)));
+            new BucketItem(KDWFluids.DRAGON_BLOOD, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     // 酒类
     RegistryObject<Item> CHORUS_COGNAC = ITEMS_REGISTER.register("chorus_cognac", () -> new DrinkBlockItem(KDWBlocks.CHORUS_COGNAC.get()));

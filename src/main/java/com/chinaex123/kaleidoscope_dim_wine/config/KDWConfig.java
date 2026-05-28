@@ -23,6 +23,7 @@ public class KDWConfig {
     public static final ForgeConfigSpec.IntValue CRIMSON_NYLIUM_FUNGAL_SAP_COUNT;
     public static final ForgeConfigSpec.ConfigValue<List<? extends Double>> WARPED_NYLIUM_FUNGAL_SAP_CHANCES;
     public static final ForgeConfigSpec.IntValue WARPED_NYLIUM_FUNGAL_SAP_COUNT;
+    public static final ForgeConfigSpec.DoubleValue GRASS_HOP_SEED_DROP_CHANCE;
 
     public static final ForgeConfigSpec SPEC;
 
@@ -57,8 +58,8 @@ public class KDWConfig {
         builder.push("Aether Entity Loot");
         ANGEL_WINGS_DROP_CHANCE = builder
                 .comment(
-                        "Chance for Valkyrie Queen to drop Angel Wings (0.0 to 1.0)",
-                        "武神女王掉落天使之翼的概率（0.0 到 1.0）"
+                        "Chance for Valkyrie Queen to drop Angel Wings",
+                        "武神女王掉落天使之翼的概率"
                 )
                 .defineInRange("angelWingsDropChance", 1.0, 0.0, 1.0);
         ANGEL_WINGS_DROP_MIN = builder
@@ -79,6 +80,7 @@ public class KDWConfig {
 
 
         builder.push("Block Loot");
+
         builder.push("Nether Nylium Loot");
         CRIMSON_NYLIUM_FUNGAL_SAP_CHANCES = builder
                 .comment(
@@ -94,7 +96,6 @@ public class KDWConfig {
                         "绯红菌核掉落绯红菌露的基础数量"
                 )
                 .defineInRange("crimsonNyliumFungalSapCount", 1, 0, 64);
-
         WARPED_NYLIUM_FUNGAL_SAP_CHANCES = builder
                 .comment(
                         "Chances for Warped Nylium to drop Warped Fungal Sap [no Fortune, Fortune I, Fortune II, Fortune III]",
@@ -125,19 +126,25 @@ public class KDWConfig {
                         "铁砧掉落将凝灰岩转换为凝碳粉时的最大产出数量（将最小和最大都设为0可禁用该配方）"
                 )
                 .defineInRange("anvilTuffToCarbocretinMaxOutput", 3, 0, 64);
+        GRASS_HOP_SEED_DROP_CHANCE = builder
+                .comment(
+                        "Chance for grass to drop Hop Seed when broken",
+                        "破坏草类时掉落啤酒花种子的概率"
+                )
+                .defineInRange("grassHopSeedDropChance", 0.05, 0.0, 1.0);
         builder.pop();
 
         builder.push("Easter Eggs");
         BEDROCK_FALL_DROP_CHANCE = builder
                 .comment(
-                        "Chance to drop String Lights(Bedrock) when falling on Bedrock (0.0 to 1.0)",
-                        "摔落在基岩上掉落小灯串(基岩)的概率（0.0 到 1.0）"
+                        "Chance to drop String Lights(Bedrock) when falling on Bedrock",
+                        "摔落在基岩上掉落小灯串(基岩)的概率"
                 )
                 .defineInRange("bedrockFallDropChance", 0.015, 0.0, 1.0);
         WITHER_COMMAND_LIGHTS_DROP_CHANCE = builder
                 .comment(
-                        "Chance for Wither to drop String Lights(Command Block) (0.0 to 1.0)",
-                        "凋灵掉落小灯串(命令方块)的概率（0.0 到 1.0）"
+                        "Chance for Wither to drop String Lights(Command Block)",
+                        "凋灵掉落小灯串(命令方块)的概率"
                 )
                 .defineInRange("witherCommandLightsDropChance", 0.015, 0.0, 1.0);
         builder.pop();

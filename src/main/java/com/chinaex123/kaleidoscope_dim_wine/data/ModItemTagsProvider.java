@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagsProvider  extends ItemTagsProvider {
+public class ModItemTagsProvider extends ItemTagsProvider {
     public ModItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                                CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, KaleidoscopeDimensionsWine.MOD_ID, existingFileHelper);
@@ -39,6 +39,10 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
         tag(KDWItemTags.FRUITS_DREAMFRUIT).add(KDWItems.DREAMFRUIT.get());
         tag(KDWItemTags.FRUITS_FROSTHEART).addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit"));
 
+        tag(KDWItemTags.HOPS).add(KDWItems.HOP.get());
+        tag(KDWItemTags.CROPS_HOP).add(KDWItems.HOP.get());
+        tag(KDWItemTags.SEEDS_HOP).add(KDWItems.HOP_SEED.get());
+
         // 均衡饮食
         tag(KDWItemTags.FRUITS_DIET)
                 .add(KDWItems.CRIMSON_GRAPE.get())
@@ -51,6 +55,8 @@ public class ModItemTagsProvider  extends ItemTagsProvider {
                 .add(KDWItems.CRIMSON_GRAPE.get())
                 .add(KDWItems.WARPED_GRAPE.get())
                 .add(KDWItems.DREAMFRUIT.get());
+        tag(KDWItemTags.SUMMER_CROPS)
+                .add(KDWItems.HOP_SEED.get());
         tag(KDWItemTags.WINTER_CROPS)
                 .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit"));
 

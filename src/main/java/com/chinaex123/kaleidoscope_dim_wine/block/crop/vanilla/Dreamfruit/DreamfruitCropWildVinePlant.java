@@ -3,6 +3,7 @@ package com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
+import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -99,7 +100,7 @@ public class DreamfruitCropWildVinePlant extends GrowingPlantBodyBlock implement
     @Override
     protected boolean canAttachTo(BlockState state) {
         return state.is(BlockTags.LEAVES) ||
-                state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
+                state.is(ModBlocks.TRELLIS.get()) ||
                 state.getBlock() instanceof GrapevineTrellisBlock;
     }
 

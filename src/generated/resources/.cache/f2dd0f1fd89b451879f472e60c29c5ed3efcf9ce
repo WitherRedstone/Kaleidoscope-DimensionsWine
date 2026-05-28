@@ -1,9 +1,12 @@
-// 1.20.1	2026-05-19T12:57:21.1945721	Tags for minecraft:block mod id kaleidoscope_dim_wine
-17180f0037d7ec03dc682ec53d98cec939e60d42 data/eclipticseasons/tags/blocks/crops/dry_average.json
+// 1.20.1	2026-05-28T14:48:54.390189	Tags for minecraft:block mod id kaleidoscope_dim_wine
+3e5dbe155ad74e9248501855f77d3819fa5fd3f3 data/eclipticseasons/tags/blocks/crops/dry_average.json
+09a36bdb839eae5699c8b58ceef876043a182c6f data/eclipticseasons/tags/blocks/crops/summer.json
 aaabba258db4cf7745786fa989661f1eaafa1996 data/eclipticseasons/tags/blocks/crops/winter.json
 510d9399b65b1e25bf5288efb420dd52564209e3 data/forge/tags/blocks/needs_wood_tool.json
 510d9399b65b1e25bf5288efb420dd52564209e3 data/kaleidoscope_tavern/tags/blocks/string_lights.json
+09a36bdb839eae5699c8b58ceef876043a182c6f data/minecraft/tags/blocks/crops.json
 510d9399b65b1e25bf5288efb420dd52564209e3 data/minecraft/tags/blocks/mineable/pickaxe.json
 3ffe00bb84eb732d9bcaaa180e3d13f739840e52 data/sereneseasons/tags/blocks/crops/all_seasons.json
+09a36bdb839eae5699c8b58ceef876043a182c6f data/sereneseasons/tags/blocks/summer_crops.json
 aaabba258db4cf7745786fa989661f1eaafa1996 data/sereneseasons/tags/blocks/winter_crops.json
 9453e028d3d4f73c51270f3e544924f243b2f9a9 data/sereneseasons/tags/blocks/year_round_crops.json

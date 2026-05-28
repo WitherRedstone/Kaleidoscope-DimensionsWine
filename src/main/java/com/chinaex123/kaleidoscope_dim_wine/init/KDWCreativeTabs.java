@@ -38,6 +38,8 @@ public class KDWCreativeTabs {
                         output.accept(KDWItems.DREAMFRUIT_JUICE_BUCKET.get()); // 迷梦果汁桶
                         output.accept(KDWItems.DRAGON_BLOOD_BUCKET.get()); // 龙血桶
                         // -------------------- 作物 --------------------
+                        output.accept(KDWItems.HOP.get()); // 啤酒花
+                        output.accept(KDWItems.HOP_SEED.get()); // 啤酒花种子
                         output.accept(KDWItems.CRIMSON_GRAPEVINE.get()); // 绯红葡萄藤
                         output.accept(KDWItems.WARPED_GRAPEVINE.get()); // 诡异葡萄藤
                         output.accept(KDWItems.CRIMSON_GRAPE.get()); // 绯红葡萄

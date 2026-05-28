@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.plant.GrapevineTrellisBlock;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.properties.TrellisType;
+import com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -58,7 +59,7 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
         ItemStack itemInHand = player.getItemInHand(hand);
         if (itemInHand.is(Items.SHEARS)) {
             // 恢复为普通藤架并保留属性
-            BlockState newState = com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()
+            BlockState newState = ModBlocks.TRELLIS.get()
                     .defaultBlockState()
                     .setValue(TYPE, state.getValue(TYPE))
                     .setValue(WATERLOGGED, state.getValue(WATERLOGGED));
@@ -90,7 +91,7 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
         // 检查周围是否有藤架类方块
         for (Direction dir : Direction.values()) {
             BlockState neighbor = level.getBlockState(pos.relative(dir));
-            if (neighbor.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
+            if (neighbor.is(ModBlocks.TRELLIS.get()) ||
                     neighbor.getBlock() instanceof GrapevineTrellisBlock) {
                 return true;
             }
@@ -131,8 +132,7 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
     @Override
     public boolean sameType(BlockState state) {
         // 允许与普通藤架、其他绯红葡萄藤藤架连接
-        return state.is(com.github.ysbbbbbb.kaleidoscopetavern.init.ModBlocks.TRELLIS.get()) ||
-                state.is(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get());
+        return state.is(ModBlocks.TRELLIS.get()) || state.is(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get());
     }
 
     /**
@@ -150,10 +150,31 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
     @Override
     public boolean canGrow(LevelReader level, BlockPos pos, BlockState state) {
         if (state.getValue(TYPE) == TrellisType.SINGLE && !this.isMaxAge(state)) {
-            // 检查下方是否为绯红菌岩
-            return level.getBlockState(pos.below()).is(Blocks.CRIMSON_NYLIUM);
+            // 检查下方是否为绯红菌岩或其上方的绯红葡萄藤架
+            BlockState belowState = level.getBlockState(pos.below());
+            return belowState.is(Blocks.CRIMSON_NYLIUM) || belowState.is(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get());
         }
         return super.canGrow(level, pos, state);
+    }
+
+    /**
+     * 获取绯红葡萄藤架生长到相邻位置后的方块状态
+     * <p>
+     * 根据生长方向和目标位置的普通藤架状态，生成对应的绯红葡萄藤架状态：
+     * - 向上生长时，AGE设为0（未成熟）
+     * - 其他方向生长时，AGE设为3（成熟）
+     * - TYPE和WATERLOGGED属性继承自目标位置的普通藤架
+     *
+     * @param direction   生长方向
+     * @param checkState  目标位置的普通藤架状态
+     * @return 生成的绯红葡萄藤架方块状态
+     */
+    @Override
+    public BlockState getGrowIntoState(Direction direction, BlockState checkState) {
+        TrellisType type = checkState.getOptionalValue(TYPE).orElse(TrellisType.SINGLE);
+        boolean waterlogged = checkState.getOptionalValue(WATERLOGGED).orElse(false);
+        int age = direction == Direction.UP ? 0 : 3;
+        return this.defaultBlockState().setValue(TYPE, type).setValue(AGE, age).setValue(WATERLOGGED, waterlogged);
     }
 
     /**
@@ -161,17 +182,17 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
      * <p>
      * 生长流程：
      * 1. **SINGLE 类型处理**：
-     *    - 检查下方方块是否满足生长条件
+     *    - 检查下方方块是否满足生长条件（绯红菌岩或绯红葡萄藤架）
      *    - 未成熟时增加年龄值
      *    - 成熟后进入多方向生长阶段
      * <p>
      * 2. **成熟阶段（MAX_AGE）**：
-     *    - 遍历预设方向（东西南北）尝试延伸藤蔓
+     *    - 遍历预设方向（上东西南北）尝试延伸藤蔓
      *    - 找到可生长的位置后生成新的藤架节段
      *    - 若无法延伸，则在下方生成绯红葡萄果实作物
      * <p>
      * 3. **非 SINGLE 类型**：
-     *    - 直接设置为最大年龄
+     *    - 未成熟时逐步增加年龄
      *
      * @param level 游戏世界
      * @param pos   藤架方块位置
@@ -182,8 +203,8 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
         // 如果是 single 状态
         if (state.getValue(TYPE) == TrellisType.SINGLE && !this.isMaxAge(state)) {
             BlockState belowState = level.getBlockState(pos.below());
-            // 先检查下方是否满足生长条件
-            if (!belowState.is(Blocks.CRIMSON_NYLIUM)) {
+            // 先检查下方是否满足生长条件（绯红菌岩或绯红葡萄藤架）
+            if (!belowState.is(Blocks.CRIMSON_NYLIUM) && !belowState.is(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get())) {
                 return;
             }
             // 如果没有达到最大年龄，直接增加年龄
@@ -209,8 +230,8 @@ public class CrimsonGrapevineTrellisBlock extends GrapevineTrellisBlock {
                 level.setBlockAndUpdate(pos.below(), KDWBlocks.CRIMSON_GRAPE_CROP.get().defaultBlockState());
             }
         } else {
-            // 其他朝向的，直接加满
-            level.setBlockAndUpdate(pos, state.setValue(AGE, MAX_AGE));
+            // 非SINGLE类型且未成熟，直接增加年龄
+            level.setBlockAndUpdate(pos, state.cycle(AGE));
         }
     }
 

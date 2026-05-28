@@ -95,35 +95,46 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(KDWBlocks.STRING_LIGHTS_BLOCK_COMMAND.get())
                 .add(KDWBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get());
 
+        // 作物
+        tag(KDWBlockTags.CROPS)
+                .add(KDWBlocks.HOP_CROP.get());
+
         // 静谧四季 - 全年
         tag(KDWBlockTags.YEAR_ROUND_CROPS_BLOCK)
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
-                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
-                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get()) // 野生诡异葡萄藤植物
-                .add(KDWBlocks.DREAMFRUIT_VINE_PLANT.get()); // 迷梦果
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get())
+                .add(KDWBlocks.DREAMFRUIT_VINE_PLANT.get());
+        // 静谧四季 - 夏天
+        tag(KDWBlockTags.SUMMER_CROPS_BLOCK)
+                .add(KDWBlocks.HOP_CROP.get());
         // 静谧四季 - 冬天
         tag(KDWBlockTags.WINTER_CROPS_BLOCK)
-                .addOptional(BuiltInRegistries.BLOCK.getKey(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get())); // 霜心果丛
+                .addOptional(BuiltInRegistries.BLOCK.getKey(TwilightforestBlocks.FROSTHEART_FRUIT_BUSH.get()));
 
         // 节气 - 所有季节
         tag(KDWBlockTags.CROPS_ALL_SEASONS_BLOCK)
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
-                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
-                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get()); // 野生诡异葡萄藤植物
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get());
+        // 节气 - 夏天
+        tag(KDWBlockTags.CROPS_SUMMER)
+                .add(KDWBlocks.HOP_CROP.get());
         // 节气 - 冬天
         tag(KDWBlockTags.CROPS_WINTER)
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush")); // 霜心果丛
+                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush"));
 
         // 节气 - 干旱环境
         tag(KDWBlockTags.CROPS_DRY_AVERAGE)
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get()) // 绯红葡萄藤
-                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get()) // 野生绯红葡萄藤植物
-                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get()) // 诡异葡萄藤
-                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get()) // 野生诡异葡萄藤植物
-                .add(KDWBlocks.DREAMFRUIT_VINE.get()) // 迷梦果藤
-                .add(KDWBlocks.DREAMFRUIT_VINE_PLANT.get()) // 迷梦果藤植物
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush")); // 霜心果
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.CRIMSON_GRAPEVINE_PLANT.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_TRELLIS.get())
+                .add(KDWBlocks.WARPED_GRAPEVINE_PLANT.get())
+                .add(KDWBlocks.DREAMFRUIT_VINE.get())
+                .add(KDWBlocks.DREAMFRUIT_VINE_PLANT.get())
+                .add(KDWBlocks.HOP_CROP.get())
+                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush"));
     }
 }

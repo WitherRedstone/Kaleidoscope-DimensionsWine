@@ -93,13 +93,15 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:rhino-416294:6186971") // Kubejs前置
     runtimeOnly fg.deobf("curse.maven:jade-324717:6855440") // Jade
     runtimeOnly fg.deobf("curse.maven:advanced-loot-info-1205426:7767313") // 高级战利品线束
-    runtimeOnly fg.deobf("curse.maven:apothic-attributes-898963:5634071")  // 神化属性
-    runtimeOnly fg.deobf("curse.maven:placebo-283644:6274231") // 神化属性前置
+    //runtimeOnly fg.deobf("curse.maven:apothic-attributes-898963:5634071")  // 神化属性
+    //runtimeOnly fg.deobf("curse.maven:placebo-283644:6274231") // 神化属性前置
     runtimeOnly fg.deobf("curse.maven:athena-841890:5176879")
     runtimeOnly fg.deobf("curse.maven:curios-309927:6418456")
-    runtimeOnly fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6860192")
+    //runtimeOnly fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6860192")
     runtimeOnly fg.deobf("curse.maven:selene-499980:7945711")
 
+    //runtimeOnly fg.deobf("curse.maven:functional-storage-556861:6702553")
+    //runtimeOnly fg.deobf("curse.maven:titanium-287342:7949783")
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
