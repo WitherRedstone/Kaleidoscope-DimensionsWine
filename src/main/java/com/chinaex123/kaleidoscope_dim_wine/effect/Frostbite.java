@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * 霜寒：使生物冻结
+ */
 @Mod.EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Frostbite extends MobEffect {
 

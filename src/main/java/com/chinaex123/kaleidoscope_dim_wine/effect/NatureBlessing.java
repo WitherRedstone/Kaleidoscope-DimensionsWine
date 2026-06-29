@@ -7,10 +7,12 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -24,15 +26,19 @@ import java.util.UUID;
 @Mod.EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class NatureBlessing extends MobEffect {
 
-    private static final Map<UUID, Integer> playerTickMap = new HashMap<>();
+    private static final int BASE_INTERVAL_TICKS = 100; // 基础间隔100 tick
+    private static final int INTERVAL_REDUCTION_PER_LEVEL = 10; // 每级减少10 tick
+    private static final int EFFECT_RADIUS = 2; // 影响范围半径 (块)
+
+    private static final Map<UUID, Integer> playerTickMap = new HashMap<>(); // 玩家tick映射
 
     public NatureBlessing(int color) {
-        super(MobEffectCategory.BENEFICIAL, color);
+        super(MobEffectCategory.NEUTRAL, color);
     }
 
     @SubscribeEvent
-    public static void onPlayerTick(net.minecraftforge.event.TickEvent.PlayerTickEvent event) {
-        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END) {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) {
             return;
         }
 
@@ -42,14 +48,14 @@ public class NatureBlessing extends MobEffect {
             return;
         }
 
-        var effect = entity.getEffect(KDWEffects.NATURE_BLESSING.get());
+        MobEffectInstance effect = entity.getEffect(KDWEffects.NATURE_BLESSING.get());
         if (effect == null) {
             playerTickMap.remove(entity.getUUID());
             return;
         }
 
         int amplifier = effect.getAmplifier();
-        int intervalTicks = 100 - (amplifier + 1) * 10;
+        int intervalTicks = BASE_INTERVAL_TICKS - (amplifier + 1) * INTERVAL_REDUCTION_PER_LEVEL;
 
         UUID playerId = entity.getUUID();
         int ticks = playerTickMap.getOrDefault(playerId, 0) + 1;
@@ -61,18 +67,23 @@ public class NatureBlessing extends MobEffect {
 
         playerTickMap.put(playerId, 0);
 
-        ServerLevel level = (ServerLevel) entity.level();
+        if (!(entity.level() instanceof ServerLevel level)) {
+            return;
+        }
+
         BlockPos centerPos = entity.blockPosition();
-        AABB area = new AABB(centerPos).inflate(2);
+        AABB area = new AABB(centerPos).inflate(EFFECT_RADIUS);
 
         BlockPos.betweenClosedStream(area).forEach(pos -> {
             BlockState state = level.getBlockState(pos);
             if (state.getBlock() instanceof BonemealableBlock bonemealable) {
                 if (bonemealable.isValidBonemealTarget(level, pos, state, false)) {
-                    bonemealable.performBonemeal(level, level.random, pos, state);
-                    level.sendParticles(ParticleTypes.HAPPY_VILLAGER,
-                            pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
-                            5, 0.3, 0.3, 0.3, 0.02);
+                    if (bonemealable.isBonemealSuccess(level, level.random, pos, state)) {
+                        bonemealable.performBonemeal(level, level.random, pos, state);
+                        level.sendParticles(ParticleTypes.HAPPY_VILLAGER,
+                                pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                                5, 0.3, 0.3, 0.3, 0.02);
+                    }
                 }
             }
         });

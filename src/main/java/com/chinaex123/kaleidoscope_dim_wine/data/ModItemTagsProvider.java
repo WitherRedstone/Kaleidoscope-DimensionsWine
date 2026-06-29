@@ -199,14 +199,14 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(KDWItemTags.COLOSSAL)
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_pickaxe"));
-        // 酿酒的水果 - kaleidoscope_dim_wine:wine/berry
+        // 酿酒的水果
         tag(KDWItemTags.WINE_BERRY)
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "raspberry"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blueberry"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blackberry"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "maloberry"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "torchberries"));
-        // 酿酒的云 - kaleidoscope_dim_wine:wine/cloud
+        // 酿酒的云
         tag(KDWItemTags.WINE_CLOUD)
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "wispy_cloud"))
                 .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "fluffy_cloud"))

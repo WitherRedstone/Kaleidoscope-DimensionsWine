@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +16,9 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Hardened extends MobEffect {
 
+    private static final float REDUCTION_PER_LEVEL = 0.10f; // 每级额外减免伤害
+    private static final float MAX_REDUCTION = 0.90f; // 最大减免伤害
+
     public Hardened(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
     }
@@ -22,11 +26,17 @@ public class Hardened extends MobEffect {
     @SubscribeEvent
     public static void onLivingDamage(LivingDamageEvent event) {
         LivingEntity entity = event.getEntity();
-        var effect = entity.getEffect(KDWEffects.HARDENED.get());
+
+        if (entity.level().isClientSide()) {
+            return;
+        }
+
+        MobEffectInstance effect = entity.getEffect(KDWEffects.HARDENED.get());
 
         if (effect != null) {
             int amplifier = effect.getAmplifier();
-            float damageReduction = Math.min((amplifier + 1) * 0.05F, 2.0F);
+            // 计算减伤百分比，最高 90%
+            float damageReduction = Math.min((amplifier + 1) * REDUCTION_PER_LEVEL, MAX_REDUCTION);
 
             if (damageReduction > 0) {
                 float originalDamage = event.getAmount();

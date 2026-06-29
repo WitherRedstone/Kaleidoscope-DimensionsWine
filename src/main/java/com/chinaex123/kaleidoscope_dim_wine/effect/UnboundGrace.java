@@ -20,6 +20,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+/**
+ * 无界之赐：启用创造飞行并在空中时移除挖掘惩罚
+ */
 @Mod.EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class UnboundGrace extends MobEffect {
 
