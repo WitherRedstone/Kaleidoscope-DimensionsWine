@@ -227,19 +227,19 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         // 巨物碎片
         tag(KDWItemTags.COLOSSAL)
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_pickaxe")));
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_sword"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "giant_pickaxe"));
         // 酿酒的水果
         tag(KDWItemTags.WINE_BERRY)
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "raspberry")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "blueberry")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "blackberry")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "maloberry")));
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "raspberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blueberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "blackberry"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "maloberry"));
         // 酿酒的云
         tag(KDWItemTags.WINE_CLOUD)
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "wispy_cloud")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "fluffy_cloud")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "rainy_cloud")))
-                .add(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "snowy_cloud")));
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "wispy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "fluffy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "rainy_cloud"))
+                .addOptional(ResourceLocation.fromNamespaceAndPath("twilightforest", "snowy_cloud"));
     }
 }

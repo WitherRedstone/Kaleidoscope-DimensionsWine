@@ -1,5 +1,6 @@
 package com.chinaex123.kaleidoscope_dim_wine.effect;
 
+import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -12,23 +13,28 @@ import org.jetbrains.annotations.NotNull;
  * 狂怒：增加攻击速度和伤害
  */
 public class Rage extends MobEffect {
+
+    private static final ResourceLocation ATTACK_SPEED_MODIFIER = ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "amplified_speed");
+    private static final ResourceLocation ATTACK_DAMAGE_MODIFIER = ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "amplified_damage");
+
+    private static final float BASE_ATTACK_SPEED_MODIFIER = 0.1f; // 基础攻击速度增加
+    private static final float BASE_ATTACK_DAMAGE_MODIFIER = 0.15f; // 基础攻击力增加
+
     public Rage(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
 
-        // 添加攻击速度属性修饰符：每级 +1.0
         this.addAttributeModifier(
                 Attributes.ATTACK_SPEED,
-                ResourceLocation.parse("d684d262-e6f8-fd39-6aa7-b4fabdf297c7"),
-                1.0,
-                AttributeModifier.Operation.ADD_VALUE)
-        ;
+                ATTACK_SPEED_MODIFIER,
+                BASE_ATTACK_SPEED_MODIFIER,
+                AttributeModifier.Operation.ADD_MULTIPLIED_BASE
+        );
 
-        // 添加攻击力属性修饰符：每级 +1.5
         this.addAttributeModifier(
                 Attributes.ATTACK_DAMAGE,
-                ResourceLocation.parse("7d0a92b7-a0cb-9e6b-2c79-0ac244f9053b"),
-                1.5,
-                AttributeModifier.Operation.ADD_VALUE
+                ATTACK_DAMAGE_MODIFIER,
+                BASE_ATTACK_DAMAGE_MODIFIER,
+                AttributeModifier.Operation.ADD_MULTIPLIED_BASE
         );
     }
 

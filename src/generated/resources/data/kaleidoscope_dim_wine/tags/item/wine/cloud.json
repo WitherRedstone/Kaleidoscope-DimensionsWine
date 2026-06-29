@@ -1,8 +1,20 @@
 {
   "values": [
-    "twilightforest:wispy_cloud",
-    "twilightforest:fluffy_cloud",
-    "twilightforest:rainy_cloud",
-    "twilightforest:snowy_cloud"
+    {
+      "id": "twilightforest:wispy_cloud",
+      "required": false
+    },
+    {
+      "id": "twilightforest:fluffy_cloud",
+      "required": false
+    },
+    {
+      "id": "twilightforest:rainy_cloud",
+      "required": false
+    },
+    {
+      "id": "twilightforest:snowy_cloud",
+      "required": false
+    }
   ]
 }

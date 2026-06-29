@@ -19,12 +19,13 @@ import java.util.Set;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Payback extends MobEffect {
 
+    private static final float DAMAGE_MULTIPLIER = 3.0F;  // 下次攻击伤害倍率
+
+    private static final Set<Player> paybackPlayers = new HashSet<>(); // 记录已抵消伤害的玩家
+
     public Payback(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
     }
-
-    // 存储可以增伤的玩家
-    private static final Set<Player> paybackPlayers = new HashSet<>();
 
     /**
      * 处理受到伤害事件 - 抵消伤害
@@ -55,9 +56,9 @@ public class Payback extends MobEffect {
         if (event.getSource().getEntity() instanceof Player player) {
             if (paybackPlayers.contains(player)) {
                 float originalDamage = event.getOriginalDamage();
-                float newDamage = originalDamage * 3.0F;
+                float newDamage = originalDamage * DAMAGE_MULTIPLIER;
 
-                // 设置 3 倍伤害
+                // 设置倍率伤害
                 event.setNewDamage(newDamage);
 
                 // 移除状态效果

@@ -4,6 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWEffects;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -17,6 +18,11 @@ import org.jetbrains.annotations.NotNull;
  */
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class WitheredSlash extends MobEffect {
+
+    private static final int WITHER_BASE_DURATION_TICKS = 60; // 基础3秒
+    private static final int WITHER_EXTRA_DURATION_PER_LEVEL = 20; // 每级增加1秒
+    private static final int WEAKNESS_BASE_DURATION_TICKS = 100; // 基础5秒
+
     public WitheredSlash(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
     }
@@ -34,15 +40,10 @@ public class WitheredSlash extends MobEffect {
             LivingEntity target = event.getEntity();
             int amplifier = effectInstance.getAmplifier(); // 效果等级
 
-            // 应用凋零效果（等级随效果等级提升，持续时间也增加）
-            target.addEffect(new net.minecraft.world.effect.MobEffectInstance(
-                    MobEffects.WITHER, 20 * (3 + amplifier), amplifier, false, false
-            ));
-
-            // 应用虚弱效果（等级随效果等级提升）
-            target.addEffect(new net.minecraft.world.effect.MobEffectInstance(
-                    MobEffects.WEAKNESS, 20 * 5, amplifier, false, false
-            ));
+            // 应用效果
+            int witherDuration = WITHER_BASE_DURATION_TICKS + (amplifier * WITHER_EXTRA_DURATION_PER_LEVEL);
+            target.addEffect(new MobEffectInstance(MobEffects.WITHER, witherDuration, amplifier, false, false));
+            target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, WEAKNESS_BASE_DURATION_TICKS, amplifier, false, false));
         }
     }
 

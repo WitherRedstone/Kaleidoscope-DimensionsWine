@@ -49,7 +49,7 @@ public class AnvilDropRecipe {
     }
 
     /**
-     * 条件注册配方（配置为0时不注册）
+     * 条件注册配方
      */
     private static void registerRecipeIfEnabled(Item input, int minInput, int maxInput, Supplier<Item> output,
                                                 ModConfigSpec.IntValue minOutputConfig, ModConfigSpec.IntValue maxOutputConfig) {

@@ -25,10 +25,14 @@ import java.util.UUID;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class NatureBlessing extends MobEffect {
 
-    private static final Map<UUID, Integer> playerTickMap = new HashMap<>();
+    private static final int BASE_INTERVAL_TICKS = 100; // 基础间隔100 tick
+    private static final int INTERVAL_REDUCTION_PER_LEVEL = 10; // 每级减少10 tick
+    private static final int EFFECT_RADIUS = 2; // 影响范围半径 (块)
+
+    private static final Map<UUID, Integer> playerTickMap = new HashMap<>(); // 玩家tick映射
 
     public NatureBlessing(int color) {
-        super(MobEffectCategory.BENEFICIAL, color);
+        super(MobEffectCategory.NEUTRAL, color);
     }
 
     @SubscribeEvent
@@ -46,7 +50,7 @@ public class NatureBlessing extends MobEffect {
         }
 
         int amplifier = effect.getAmplifier();
-        int intervalTicks = 100 - (amplifier + 1) * 10;
+        int intervalTicks = BASE_INTERVAL_TICKS - (amplifier + 1) * INTERVAL_REDUCTION_PER_LEVEL;
 
         UUID playerId = entity.getUUID();
         int ticks = playerTickMap.getOrDefault(playerId, 0) + 1;
@@ -60,7 +64,7 @@ public class NatureBlessing extends MobEffect {
 
         ServerLevel level = (ServerLevel) entity.level();
         BlockPos centerPos = entity.blockPosition();
-        AABB area = new AABB(centerPos).inflate(2);
+        AABB area = new AABB(centerPos).inflate(EFFECT_RADIUS);
 
         BlockPos.betweenClosedStream(area).forEach(pos -> {
             BlockState state = level.getBlockState(pos);

@@ -1,8 +1,20 @@
 {
   "values": [
-    "twilightforest:raspberry",
-    "twilightforest:blueberry",
-    "twilightforest:blackberry",
-    "twilightforest:maloberry"
+    {
+      "id": "twilightforest:raspberry",
+      "required": false
+    },
+    {
+      "id": "twilightforest:blueberry",
+      "required": false
+    },
+    {
+      "id": "twilightforest:blackberry",
+      "required": false
+    },
+    {
+      "id": "twilightforest:maloberry",
+      "required": false
+    }
   ]
 }

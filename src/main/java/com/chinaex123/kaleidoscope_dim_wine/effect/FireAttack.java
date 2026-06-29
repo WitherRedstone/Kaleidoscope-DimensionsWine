@@ -17,8 +17,14 @@ import org.jetbrains.annotations.NotNull;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class FireAttack extends MobEffect {
 
+    private static final int BASE_BURN_TICKS = 300; // 基础15秒
+    private static final int EXTRA_BURN_TICKS_PER_LEVEL = 100; // 每级增加5秒
+
+    private static final float BASE_FIRE_DAMAGE = 2.0f; // 基础火焰伤害
+    private static final float EXTRA_FIRE_DAMAGE_PER_LEVEL = 1.0f; // 每级额外火焰伤害
+
     public FireAttack(int color) {
-        super(MobEffectCategory.BENEFICIAL, color);
+        super(MobEffectCategory.NEUTRAL, color);
     }
 
     /**
@@ -37,7 +43,7 @@ public class FireAttack extends MobEffect {
 
             // 如果目标免疫火焰，只生成粒子效果
             if (target.fireImmune()) {
-                // 生成火焰粒子（等级越高，粒子越多）
+                // 生成火焰粒子
                 int particleCount = 20 + (amplifier * 10);
                 for (int i = 0; i < particleCount; ++i) {
                     double px = target.getX() + (double) (target.level().getRandom().nextFloat() * target.getBbWidth() * 2.0F) - (double) target.getBbWidth();
@@ -47,11 +53,11 @@ public class FireAttack extends MobEffect {
                 }
             } else {
                 // 使目标燃烧：基础 15 秒，每级增加 5 秒
-                int burnTicks = 300 + (amplifier * 100);
+                int burnTicks = BASE_BURN_TICKS + (amplifier * EXTRA_BURN_TICKS_PER_LEVEL);
                 target.setRemainingFireTicks(burnTicks);
 
-                // 立即造成额外的火焰伤害（等级越高，伤害越高）
-                float fireDamage = 2.0f + (amplifier * 1.0f); // 等级 I=2 伤害，等级 II=3 伤害，等级 III=4 伤害
+                // 立即造成额外的火焰伤害
+                float fireDamage = BASE_FIRE_DAMAGE + (amplifier * EXTRA_FIRE_DAMAGE_PER_LEVEL);
                 target.hurt(target.damageSources().onFire(), fireDamage);
             }
         }

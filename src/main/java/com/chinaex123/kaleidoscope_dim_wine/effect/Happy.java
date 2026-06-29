@@ -21,8 +21,11 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Happy extends MobEffect {
 
-    private static final ResourceLocation HAPPY_SPEED_MODIFIER =
-            ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "happy_speed");
+    // 移动速度配置
+    private static final ResourceLocation HAPPY_SPEED_MODIFIER = ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "happy_speed");
+
+    private static final float BASE_SPEED_BONUS = 0.15f; // 基础速度加成
+    private static final float EXTRA_SPEED_PER_LEVEL = 0.15f; // 每级额外速度加成
 
     public Happy(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
@@ -34,9 +37,10 @@ public class Happy extends MobEffect {
             var instance = entity.getAttribute(Attributes.MOVEMENT_SPEED);
             if (instance != null) {
                 instance.removeModifier(HAPPY_SPEED_MODIFIER);
+                float speedBonus = BASE_SPEED_BONUS + (amplifier * EXTRA_SPEED_PER_LEVEL);
                 instance.addTransientModifier(new AttributeModifier(
                         HAPPY_SPEED_MODIFIER,
-                        0.15 * (amplifier + 1),
+                        speedBonus,
                         AttributeModifier.Operation.ADD_MULTIPLIED_BASE
                 ));
             }

@@ -26,8 +26,13 @@ import java.util.UUID;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Frostbite extends MobEffect {
 
-    private static final ResourceLocation FROSTBITE_MODIFIER = ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostbite_slowdown");
-    private static final Map<UUID, Integer> entityTickMap = new HashMap<>();
+    private static final ResourceLocation FROSTBITE_MODIFIER = ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostbite_slowdown");
+
+    private static final float SPEED_REDUCTION = -0.15f; // 减速15%
+    private static final int BASE_FROZEN_TICKS = 40; // 基础冰冻tick增量
+    private static final int EXTRA_FROZEN_PER_LEVEL = 40; // 每级额外冰冻tick
+
+    private static final Map<UUID, Integer> entityTickMap = new HashMap<>(); // 记录每个生物的冻结tick计数
 
     public Frostbite(int color) {
         super(MobEffectCategory.HARMFUL, color);
@@ -41,13 +46,14 @@ public class Frostbite extends MobEffect {
                 movementSpeed.removeModifier(FROSTBITE_MODIFIER);
                 movementSpeed.addPermanentModifier(new AttributeModifier(
                         FROSTBITE_MODIFIER,
-                        -0.15,
+                        SPEED_REDUCTION,
                         AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL
                 ));
             }
         } else if (entity.canFreeze()) {
             entity.setIsInPowderSnow(true);
-            entity.setTicksFrozen(entity.getTicksFrozen() + (amplifier + 1) * 40);
+            int frozenIncrease = BASE_FROZEN_TICKS + (amplifier * EXTRA_FROZEN_PER_LEVEL);
+            entity.setTicksFrozen(entity.getTicksFrozen() + frozenIncrease);
         }
         return true;
     }

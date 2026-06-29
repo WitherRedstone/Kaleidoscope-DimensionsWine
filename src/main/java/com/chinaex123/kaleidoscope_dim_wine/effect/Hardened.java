@@ -15,6 +15,9 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 @EventBusSubscriber(modid = KaleidoscopeDimensionsWine.MOD_ID)
 public class Hardened extends MobEffect {
 
+    private static final float REDUCTION_PER_LEVEL = 0.10f; // 每级额外减免伤害
+    private static final float MAX_REDUCTION = 0.90f; // 最大减免伤害
+
     public Hardened(int color) {
         super(MobEffectCategory.BENEFICIAL, color);
     }
@@ -26,7 +29,8 @@ public class Hardened extends MobEffect {
 
         if (effect != null) {
             int amplifier = effect.getAmplifier();
-            float damageReduction = Math.min((amplifier + 1) * 0.05F, 2.0F);
+            // 计算减伤百分比，最高60%
+            float damageReduction = Math.min((amplifier + 1) * REDUCTION_PER_LEVEL, MAX_REDUCTION);
 
             if (damageReduction > 0) {
                 float originalDamage = event.getOriginalDamage();
