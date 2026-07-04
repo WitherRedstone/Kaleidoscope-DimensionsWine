@@ -38,7 +38,7 @@
   ],
   "results": [
     {
-      "item": "kaleidoscope_dim_wine:torchberries_juice",
+      "fluid": "kaleidoscope_dim_wine:torchberries_juice",
       "amount": 1000
     }
   ]

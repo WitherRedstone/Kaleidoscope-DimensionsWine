@@ -1,0 +1,26 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:crimson_grape",
+    "kaleidoscope_dim_wine:magma_royal_salute",
+    {
+      "id": "kaleidoscope_dim_wine:crimson_crescendo",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dawnlight_dew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:thornheart",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:giants_hymn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:rangers_satchel",
+      "required": false
+    }
+  ]
+}

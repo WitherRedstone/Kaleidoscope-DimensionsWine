@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:swet_fizz",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:frostvein_beastblood",
+      "required": false
+    }
+  ]
+}

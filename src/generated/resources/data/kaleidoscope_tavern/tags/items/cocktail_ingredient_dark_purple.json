@@ -1,0 +1,11 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:chorus_cognac",
+    "kaleidoscope_dim_wine:dragons_breath_brandy",
+    "kaleidoscope_dim_wine:draconic_blood_wine",
+    {
+      "id": "kaleidoscope_dim_wine:druids_secret_brew",
+      "required": false
+    }
+  ]
+}

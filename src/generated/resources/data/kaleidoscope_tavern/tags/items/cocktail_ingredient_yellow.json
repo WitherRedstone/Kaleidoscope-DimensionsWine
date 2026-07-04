@@ -1,0 +1,32 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:embereye",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pollen_nectar",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:honeythorn_mead",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:beeswax_honey_wine",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:royal_honey_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sweet_crystal_honey",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_energy_mist",
+      "required": false
+    }
+  ]
+}

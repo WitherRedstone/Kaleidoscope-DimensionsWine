@@ -34,7 +34,7 @@
   ],
   "results": [
     {
-      "item": "kaleidoscope_dim_wine:crimson_grape_juice",
+      "fluid": "kaleidoscope_dim_wine:crimson_grape_juice",
       "amount": 1000
     }
   ]
