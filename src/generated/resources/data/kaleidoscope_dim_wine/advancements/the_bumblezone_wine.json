@@ -139,8 +139,5 @@
       "has_royal_honey_brew"
     ]
   ],
-  "rewards": {
-    "experience": 500
-  },
   "sends_telemetry_event": true
 }

@@ -154,8 +154,5 @@
       "has_draconic_blood_wine"
     ]
   ],
-  "rewards": {
-    "experience": 300
-  },
   "sends_telemetry_event": true
 }

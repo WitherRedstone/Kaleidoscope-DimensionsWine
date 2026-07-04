@@ -55,7 +55,6 @@ public class AdvancementAether implements ForgeAdvancementProvider.AdvancementGe
                 .addCriterion("has_healing_elixir", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.HEALING_ELIXIR.get()))
                 .addCriterion("has_gingerbread_warmer", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.GINGERBREAD_WARMER.get()))
                 .requirements(RequirementsStrategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(500).build())
                 .save(saver, getNameId("aether_wine"));
     }
 

@@ -30,7 +30,7 @@ public class AdvancementMinecraft implements ForgeAdvancementProvider.Advancemen
                         TextUtils.getTranslation("root.title"),
                         TextUtils.getTranslation("root.desc"),
                         ResourceLocation.withDefaultNamespace("textures/block/smooth_stone.png"),
-                        FrameType.TASK, true, true, false)
+                        FrameType.TASK, false, false, false)
                 .addCriterion("tick", PlayerTrigger.TriggerInstance.tick())
                 .save(saver, getNameId("root"));
 
@@ -63,7 +63,7 @@ public class AdvancementMinecraft implements ForgeAdvancementProvider.Advancemen
                 .addCriterion("has_magma_royal", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.MAGMA_ROYAL_SALUTE.get()))
                 .addCriterion("has_black_bone", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.BLACK_BONE_LAFITE.get()))
                 .requirements(RequirementsStrategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(500).build())
+                //.rewards(AdvancementRewards.Builder.experience(500).build())
                 .save(saver, getNameId("nether_wine"));
 
 
@@ -90,7 +90,7 @@ public class AdvancementMinecraft implements ForgeAdvancementProvider.Advancemen
                 .addCriterion("has_divine_embryo_port", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.DIVINE_EMBRYO_PORT.get()))
                 .addCriterion("has_draconic_blood_wine", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.DRACONIC_BLOOD_WINE.get()))
                 .requirements(RequirementsStrategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(300).build())
+                //.rewards(AdvancementRewards.Builder.experience(300).build())
                 .save(saver, getNameId("the_end_wine"));
 
         Advancement TheEndDragonBloodBucket = getAdvancement(TheEndDreamfruit, KDWItems.DRAGON_BLOOD_BUCKET.get(), "the_end_dragon_blood_bucket", FrameType.TASK, true, true, false)
