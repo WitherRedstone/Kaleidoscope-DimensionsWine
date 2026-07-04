@@ -60,7 +60,6 @@ public class AdvancementTheBumblezone implements AdvancementProvider.Advancement
                 .addCriterion("has_sweet_crystal_honey", InventoryChangeTrigger.TriggerInstance.hasItems(TheBumblezoneItems.SWEET_CRYSTAL_HONEY.get())) // 甜蜜水晶
                 .addCriterion("has_royal_honey_brew", InventoryChangeTrigger.TriggerInstance.hasItems(TheBumblezoneItems.ROYAL_HONEY_BREW.get())) // 蜂王特酿
                 .requirements(AdvancementRequirements.Strategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(500))
                 .save(saver, getNameId("the_bumblezone_wine"));
 
         // 进入蜜蜂领域 → 凝碳粉

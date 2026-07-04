@@ -32,7 +32,7 @@ public class AdvancementMinecraft implements AdvancementProvider.AdvancementGene
                         TextUtils.getTranslation("root.title"),
                         TextUtils.getTranslation("root.desc"),
                         ResourceLocation.withDefaultNamespace("textures/block/smooth_stone.png"),
-                        AdvancementType.TASK, true, true, false)
+                        AdvancementType.TASK, false, false, false)
                 .addCriterion("tick", PlayerTrigger.TriggerInstance.tick())
                 .save(saver, getNameId("root"));
 
@@ -70,7 +70,7 @@ public class AdvancementMinecraft implements AdvancementProvider.AdvancementGene
                 .addCriterion("has_magma_royal", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.MAGMA_ROYAL_SALUTE.get())) // 岩浆皇家礼炮
                 .addCriterion("has_black_bone", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.BLACK_BONE_LAFITE.get())) // 黑骨拉菲
                 .requirements(AdvancementRequirements.Strategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(500))
+                //.rewards(AdvancementRewards.Builder.experience(500))
                 .save(saver, getNameId("nether_wine"));
 
 
@@ -101,7 +101,7 @@ public class AdvancementMinecraft implements AdvancementProvider.AdvancementGene
                 .addCriterion("has_divine_embryo_port", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.DIVINE_EMBRYO_PORT.get())) // 神血波尔多
                 .addCriterion("has_draconic_blood_wine", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.DRACONIC_BLOOD_WINE.get())) // 龙血酒
                 .requirements(AdvancementRequirements.Strategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(300))
+                //.rewards(AdvancementRewards.Builder.experience(300))
                 .save(saver, getNameId("the_end_wine"));
 
         // 迷梦果 → 龙血

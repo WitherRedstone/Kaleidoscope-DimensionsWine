@@ -56,7 +56,6 @@ public class AdvancementAether implements AdvancementProvider.AdvancementGenerat
                 .addCriterion("has_healing_elixir", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.HEALING_ELIXIR.get())) // 治愈灵药
                 .addCriterion("has_gingerbread_warmer", InventoryChangeTrigger.TriggerInstance.hasItems(AetherItems.GINGERBREAD_WARMER.get())) // 姜饼暖饮
                 .requirements(AdvancementRequirements.Strategy.AND)
-                .rewards(AdvancementRewards.Builder.experience(500))
                 .save(saver, getNameId("aether_wine"));
     }
 
