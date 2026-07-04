@@ -121,7 +121,7 @@ configurations {
 
 dependencies {
     // 前置
-    implementation "curse.maven:kaleidoscope-tavern-1475175:8091783" // 森罗物语：酒馆
+    implementation "curse.maven:kaleidoscope-tavern-1475175:8350856" // 森罗物语：酒馆
 
     // 联动
     localRuntime "curse.maven:the-twilight-forest-227639:7797302" // 维度酒 - 暮色森林
@@ -139,8 +139,8 @@ dependencies {
     // 辅助
     //localRuntime "curse.maven:advanced-loot-info-1205426:7767452" // 高级战利品信息显示
     localRuntime "curse.maven:jade-324717:7545219" // jade
-    localRuntime "curse.maven:kubejs-238086:7278501"
-    localRuntime "curse.maven:rhino-416294:7104526"
+    //localRuntime "curse.maven:kubejs-238086:7278501"
+    //localRuntime "curse.maven:rhino-416294:7104526"
     localRuntime "curse.maven:accessories-938917:7583320" // Accessories
     //localRuntime "curse.maven:placebo-283644:6926281"
     //localRuntime "curse.maven:apothic-attributes-898963:7445079" // 神化属性

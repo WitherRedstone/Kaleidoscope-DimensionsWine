@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:star_trail",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:eclipse",
+      "required": false
+    }
+  ]
+}

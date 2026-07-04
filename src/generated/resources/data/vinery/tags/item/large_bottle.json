@@ -1,9 +1,6 @@
 {
   "values": [
-    {
-      "id": "kaleidoscope_dim_wine:magma_royal_salute",
-      "required": false
-    },
+    "kaleidoscope_dim_wine:magma_royal_salute",
     {
       "id": "kaleidoscope_dim_wine:dawnlight_dew",
       "required": false

@@ -1,0 +1,26 @@
+{
+  "values": [
+    "kaleidoscope_dim_wine:blaze_martell",
+    "kaleidoscope_dim_wine:divine_embryo_port",
+    {
+      "id": "kaleidoscope_dim_wine:snakeskin_liqueur",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:moorglow_birds_song",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:unbound_skyborn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:fanta",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divinity",
+      "required": false
+    }
+  ]
+}

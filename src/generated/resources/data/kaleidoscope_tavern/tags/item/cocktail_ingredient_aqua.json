@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:perennial_frost",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_offering_brew",
+      "required": false
+    }
+  ]
+}

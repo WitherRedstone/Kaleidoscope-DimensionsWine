@@ -125,7 +125,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(KDWBlocks.HOP_CROP.get());
         // 节气 - 冬天
         tag(KDWBlockTags.CROPS_WINTER)
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush"));
+                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit_bush"));
 
         // 节气 - 干旱环境
         tag(KDWBlockTags.CROPS_DRY_AVERAGE)
@@ -136,6 +136,6 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(KDWBlocks.DREAMFRUIT_VINE.get())
                 .add(KDWBlocks.DREAMFRUIT_VINE_PLANT.get())
                 .add(KDWBlocks.HOP_CROP.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "frostheart_fruit_bush"));
+                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit_bush"));
     }
 }

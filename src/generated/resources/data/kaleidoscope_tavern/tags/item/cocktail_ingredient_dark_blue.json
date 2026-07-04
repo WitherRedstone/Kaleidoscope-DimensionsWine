@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:goblins_stash",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:deep_freeze",
+      "required": false
+    }
+  ]
+}

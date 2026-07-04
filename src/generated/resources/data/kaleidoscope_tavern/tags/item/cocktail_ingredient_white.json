@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:healing_elixir",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pepsi",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:wind_trace",
+      "required": false
+    }
+  ]
+}

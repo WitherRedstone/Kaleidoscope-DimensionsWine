@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "kaleidoscope_dim_wine:dead_end_spittle",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sprite",
+      "required": false
+    }
+  ]
+}
