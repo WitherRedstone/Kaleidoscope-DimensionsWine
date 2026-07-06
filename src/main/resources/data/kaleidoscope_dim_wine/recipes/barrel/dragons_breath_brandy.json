@@ -12,14 +12,14 @@
       "item": "minecraft:blaze_powder"
     },
     {
-      "tag": "c:gems/amethyst"
+      "tag": "forge:gems/amethyst"
     },
     {
       "item": "minecraft:sugar"
     }
   ],
   "result": {
-    "count": 1,
-    "id": "kaleidoscope_dim_wine:dragons_breath_brandy"
-  }
+    "item": "kaleidoscope_dim_wine:dragons_breath_brandy"
+  },
+  "unit_time": 2400
 }

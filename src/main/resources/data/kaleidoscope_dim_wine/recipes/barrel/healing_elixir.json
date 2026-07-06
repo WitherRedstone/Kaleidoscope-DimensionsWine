@@ -1,7 +1,7 @@
 {
-	"neoforge:conditions": [
+	"forge:conditions": [
 		{
-			"type": "neoforge:mod_loaded",
+			"type": "forge:mod_loaded",
 			"modid": "aether"
 		}
 	],
@@ -22,7 +22,7 @@
     }
   ],
   "result": {
-    "count": 1,
-    "id": "kaleidoscope_dim_wine:healing_elixir"
-  }
+    "item": "kaleidoscope_dim_wine:healing_elixir"
+  },
+  "unit_time": 2400
 }

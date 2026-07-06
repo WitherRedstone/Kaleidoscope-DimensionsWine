@@ -12,7 +12,7 @@
   "fluid": "kaleidoscope_dim_wine:torchberries_juice",
   "ingredients": [
     {
-      "item": "twilightforest:maze_slime_ball"
+      "tag": "forge:slimeballs"
     },
     {
       "tag": "forge:ingots/knightmetal"
