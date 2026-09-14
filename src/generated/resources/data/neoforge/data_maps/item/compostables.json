@@ -15,6 +15,12 @@
     "kaleidoscope_dim_wine:frostheart_fruit": {
       "chance": 0.65
     },
+    "kaleidoscope_dim_wine:hop": {
+      "chance": 0.65
+    },
+    "kaleidoscope_dim_wine:hop_seed": {
+      "chance": 0.3
+    },
     "kaleidoscope_dim_wine:warped_fungal_sap": {
       "chance": 0.25
     },

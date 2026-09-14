@@ -48,7 +48,7 @@ public class AdvancementTwilightforest implements AdvancementProvider.Advancemen
                 .save(saver, getNameId("twilightforest_torchberries"));
         // 火炬浆果 → 火炬浆果汁桶
         AdvancementHolder TwilightforestTorchberriesJuiceBucket = getAdvancement(TwilightforestTorchberries, TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.get(), "twilightforest_torchberries_juice_bucket", AdvancementType.TASK, true, true, false)
-                .addCriterion("has_torchberries_juice_bucket", InventoryChangeTrigger.TriggerInstance.hasItems(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "torchberries")))) // 火炬浆果
+                .addCriterion("has_torchberries_juice_bucket", InventoryChangeTrigger.TriggerInstance.hasItems(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "torchberries_juice_bucket")))) // 火炬浆果汁桶
                 .requirements(AdvancementRequirements.Strategy.OR)
                 .save(saver, getNameId("twilightforest_torchberries_juice_bucket"));
         // 火炬浆果汁桶 → 所有暮色酒

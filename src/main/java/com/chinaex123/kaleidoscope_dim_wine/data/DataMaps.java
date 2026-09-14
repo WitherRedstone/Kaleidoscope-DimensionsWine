@@ -23,6 +23,9 @@ public class DataMaps extends DataMapProvider {
     protected void gather() {
         // 堆肥
         builder(NeoForgeDataMaps.COMPOSTABLES)
+                // ==================== 次元维度 - 主世界 ====================
+                .add(KDWItems.HOP.get().builtInRegistryHolder(), new Compostable(0.65F), false) // 啤酒花
+                .add(KDWItems.HOP_SEED.get().builtInRegistryHolder(), new Compostable(0.3F), false) // 啤酒花种子
                 // ==================== 次元维度 - 下界 ====================
                 // -------------------- 作物 --------------------
                 .add(KDWItems.CRIMSON_GRAPEVINE.get().builtInRegistryHolder(), new Compostable(0.3F), false) // 绯红葡萄藤 - 相当于作物的种子

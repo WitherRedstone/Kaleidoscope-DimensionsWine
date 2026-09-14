@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.loot;
+package com.chinaex123.kaleidoscope_dim_wine.event.loot;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
