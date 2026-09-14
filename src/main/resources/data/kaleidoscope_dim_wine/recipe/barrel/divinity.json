@@ -12,10 +12,10 @@
   "fluid": "eternal_starlight:ether",
   "ingredients": [
     {
-      "item": "eternal_starlight:mana_crystal"
+      "item": "eternal_starlight:soul_dew"
     },
     {
-      "item": "eternal_starlight:mana_crystal"
+      "item": "eternal_starlight:starlit_diamond"
     },
     {
       "item": "eternal_starlight:starfire"

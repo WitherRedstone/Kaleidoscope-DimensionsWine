@@ -65,13 +65,13 @@
       {
         "effect": "minecraft:strength",
         "duration": 120,
-        "amplifier": 0,
+        "amplifier": 1,
         "probability": 1.0
       },
       {
         "effect": "minecraft:regeneration",
         "duration": 120,
-        "amplifier": 0,
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
@@ -91,13 +91,13 @@
       {
         "effect": "minecraft:strength",
         "duration": 240,
-        "amplifier": 1,
+        "amplifier": 2,
         "probability": 1.0
       },
       {
         "effect": "minecraft:regeneration",
         "duration": 240,
-        "amplifier": 1,
+        "amplifier": 2,
         "probability": 1.0
       }
     ],
@@ -117,13 +117,13 @@
       {
         "effect": "minecraft:strength",
         "duration": 360,
-        "amplifier": 2,
+        "amplifier": 3,
         "probability": 1.0
       },
       {
         "effect": "minecraft:regeneration",
         "duration": 360,
-        "amplifier": 2,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]
