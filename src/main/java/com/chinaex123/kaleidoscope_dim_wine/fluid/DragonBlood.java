@@ -12,6 +12,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -32,8 +33,6 @@ public class DragonBlood {
      * - 复制持久化数据中的 DRAGON_BLOOD_NBT_KEY 标签
      * - 如果已获得奖励（HAS_REWARD_KEY=true），立即应用生命值提升效果
      * - 将新玩家的生命值设置为最大值
-     *
-     * **注意**：仅在服务端执行实际的效果应用逻辑
      *
      * @param event 玩家克隆事件
      */
@@ -60,7 +59,7 @@ public class DragonBlood {
      * 处理玩家刻事件，检测玩家在龙血流体中的状态
      * <p>
      * **服务端专用**：客户端直接返回，不执行任何逻辑
-     *
+     * <p>
      * **检测流程**：
      * 1. 检测玩家当前位置是否处于龙血流体中（方块或流体状态）
      * 2. **在流体中**：
@@ -70,11 +69,11 @@ public class DragonBlood {
      * 3. **离开流体**：
      *    - 重置停留时间为 0
      *
-     * @param event 玩家刻事件（Post）
+     * @param event 玩家刻事件
      */
     @SubscribeEvent
-    public static void onPlayerTick(net.minecraftforge.event.TickEvent.PlayerTickEvent event) {
-        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END) {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) {
             return;
         }
 
@@ -118,7 +117,7 @@ public class DragonBlood {
      * 处理玩家登录事件，应用已获得的龙血奖励效果
      * <p>
      * **服务端专用**：客户端直接返回，不执行任何逻辑
-     *
+     * <p>
      * **检测流程**：
      * - 读取玩家的龙血 NBT 数据
      * - 如果已获得奖励（HAS_REWARD_KEY=true），立即应用生命值提升效果
@@ -144,7 +143,7 @@ public class DragonBlood {
      * 处理玩家复活事件，应用已获得的龙血奖励效果
      * <p>
      * **服务端专用**：客户端直接返回，不执行任何逻辑
-     *
+     * <p>
      * **检测流程**：
      * - 读取玩家的龙血 NBT 数据
      * - 如果已获得奖励（HAS_REWARD_KEY=true），立即应用生命值提升效果
@@ -196,10 +195,6 @@ public class DragonBlood {
      * - 使用模组的唯一 ID（dragon_blood_health）标识修饰器
      * - 检查是否已存在该修饰器，避免重复叠加
      *
-     * **注意事项**：
-     * - 该效果是永久性的，即使玩家死亡也会保留
-     * - 通过 PlayerClone 事件在死亡时复制数据
-     *
      * @param player 要应用效果的玩家
      */
     private static void applyHealthBoost(Player player) {
@@ -233,10 +228,6 @@ public class DragonBlood {
      * - 以给定位置为中心，形成 CLEAR_SIZE×CLEAR_SIZE×CLEAR_SIZE 的立方体区域
      * - 遍历区域内的所有方块位置
      * - 将检测到的龙血流体方块替换为空气
-     *
-     * **用途**：
-     * - 在玩家获得龙血奖励后清理现场
-     * - 防止龙血流体无限存在或被滥用
      *
      * @param level      游戏世界
      * @param centerPos 中心位置（清除区域的中心点）

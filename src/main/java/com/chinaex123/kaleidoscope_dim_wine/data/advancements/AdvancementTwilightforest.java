@@ -23,6 +23,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+/**
+ * 暮色森林联动相关成就
+ */
 public class AdvancementTwilightforest implements ForgeAdvancementProvider.AdvancementGenerator {
 
     @Override
@@ -48,7 +51,7 @@ public class AdvancementTwilightforest implements ForgeAdvancementProvider.Advan
                 .save(saver, getNameId("twilightforest_torchberries"));
         // 火炬浆果 → 火炬浆果汁桶
         Advancement TwilightforestTorchberriesJuiceBucket = getAdvancement(TwilightforestTorchberries, TwilightforestItems.TORCHBERRIES_JUICE_BUCKET.get(), "twilightforest_torchberries_juice_bucket", FrameType.TASK, true, true, false)
-                .addCriterion("has_torchberries_juice_bucket", InventoryChangeTrigger.TriggerInstance.hasItems(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("twilightforest", "torchberries"))))
+                .addCriterion("has_torchberries_juice_bucket", InventoryChangeTrigger.TriggerInstance.hasItems(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("kaleidoscope_dim_wine", "torchberries_juice_bucket"))))
                 .requirements(RequirementsStrategy.OR)
                 .save(saver, getNameId("twilightforest_torchberries_juice_bucket"));
         // 火炬浆果汁桶 → 所有暮色酒

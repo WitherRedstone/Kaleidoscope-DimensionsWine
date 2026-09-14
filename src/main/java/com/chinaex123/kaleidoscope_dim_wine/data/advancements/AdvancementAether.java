@@ -23,6 +23,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+/**
+ * 天境联动相关成就
+ */
 public class AdvancementAether implements ForgeAdvancementProvider.AdvancementGenerator {
 
     @Override

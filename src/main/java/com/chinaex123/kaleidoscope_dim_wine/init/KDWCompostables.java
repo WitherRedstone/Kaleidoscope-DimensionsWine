@@ -7,8 +7,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class KDWCompostables {
     public static void setup(FMLCommonSetupEvent event) {
+        // 注册堆肥
         event.enqueueWork(() -> {
-            // 注册堆肥
+            // ==================== 次元维度 - 主世界 ====================
+            ComposterBlock.COMPOSTABLES.put(KDWItems.HOP.get(), 0.65F); // 啤酒花
+            ComposterBlock.COMPOSTABLES.put(KDWItems.HOP_SEED.get(), 0.3F); // 啤酒花种子
+            // ==================== 次元维度 - 下界 ====================
             ComposterBlock.COMPOSTABLES.put(KDWItems.CRIMSON_GRAPEVINE.get(), 0.3F); // 绯红葡萄藤 - 相当于作物的种子
             ComposterBlock.COMPOSTABLES.put(KDWItems.CRIMSON_GRAPE.get(), 0.65F); // 绯红葡萄 - 结出的果实
             ComposterBlock.COMPOSTABLES.put(KDWItems.WARPED_GRAPEVINE.get(), 0.3F); // 诡异葡萄藤 - 相当于作物的种子

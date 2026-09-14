@@ -20,6 +20,9 @@ import net.minecraftforge.common.data.ForgeAdvancementProvider;
 
 import java.util.function.Consumer;
 
+/**
+ * 本体相关成就
+ */
 public class AdvancementMinecraft implements ForgeAdvancementProvider.AdvancementGenerator {
 
     @Override

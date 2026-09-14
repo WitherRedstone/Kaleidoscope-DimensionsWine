@@ -24,6 +24,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
+/**
+ * 蜜蜂领域联动相关成就
+ */
 public class AdvancementTheBumblezone implements ForgeAdvancementProvider.AdvancementGenerator {
 
     @Override
