@@ -2,7 +2,7 @@ package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
 import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
-import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -13,7 +13,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -38,10 +37,8 @@ public class AnvilDropRecipe {
     private static void initRecipes() {
         if (!initialized) {
             // 格式：registerRecipe(输入物品，最小输入数量，最大输入数量，输出物品，每个产出最小值，每个产出最大值)
-            if (ModList.get().isLoaded("the_bumblezone")) {
-                registerRecipeIfEnabled(Items.TUFF, 1, 1, TheBumblezoneItems.CARBOCRETIN_POWDER,
-                        KDWConfig.ANVIL_TUFF_TO_CARBOCRETIN_MIN_OUTPUT, KDWConfig.ANVIL_TUFF_TO_CARBOCRETIN_MAX_OUTPUT);
-            }
+            registerRecipeIfEnabled(Items.TUFF, 1, 1, KDWItems.CARBOCRETIN_POWDER,
+                    KDWConfig.ANVIL_TUFF_TO_CARBOCRETIN_MIN_OUTPUT, KDWConfig.ANVIL_TUFF_TO_CARBOCRETIN_MAX_OUTPUT);
 
 
 

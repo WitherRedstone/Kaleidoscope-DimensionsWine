@@ -29,10 +29,11 @@ public class KDWCreativeTabs {
                         output.accept(KDWBlocks.DOLL_001.get()); // 玩偶 - ChinaEX123_BILI
                         output.accept(KDWBlocks.DOLL_002.get()); // 玩偶 - Fvue233
                         output.accept(KDWBlocks.DOLL_003.get()); // 玩偶 - Agens_Eland
-                        // -------------------- 瓶装 --------------------
+                        // -------------------- 物品 --------------------
                         output.accept(KDWItems.POP_CAN.get()); // 易拉罐
                         output.accept(KDWItems.ANGEL_WINGS.get()); // 天使之翼
                         output.accept(KDWItems.ANGEL_FEATHER.get()); // 天使之羽
+                        output.accept(KDWItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
                         // -------------------- 流体桶 --------------------
                         output.accept(KDWItems.CRIMSON_GRAPE_JUICE_BUCKET.get()); // 绯红葡萄汁桶
                         output.accept(KDWItems.WARPED_GRAPE_JUICE_BUCKET.get()); // 诡异葡萄汁桶
@@ -100,7 +101,6 @@ public class KDWCreativeTabs {
                         if (ModList.get().isLoaded("the_bumblezone")) {
                             // -------------------- 物品 --------------------
                             output.accept(TheBumblezoneItems.MEAD_ESSENCE.get()); // 蜜酒精华
-                            output.accept(TheBumblezoneItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
                             // -------------------- 酒类 --------------------
                             output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.SPRITE)); // 雪碧
                             output.accept(BottleBlockItem.getMaxLevelDrink(TheBumblezoneItems.PEPSI)); // 可乐
