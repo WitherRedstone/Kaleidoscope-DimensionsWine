@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.data.advancements;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.init.KDWItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.util.TextUtils;
 import net.minecraft.advancements.Advancement;
@@ -66,8 +67,8 @@ public class AdvancementTheBumblezone implements ForgeAdvancementProvider.Advanc
                 .save(saver, getNameId("the_bumblezone_wine"));
 
         // 进入蜜蜂领域 → 凝碳粉
-        Advancement TheBumblezoneCarbocretinPowder = getAdvancement(EnterTheBumblezone, TheBumblezoneItems.CARBOCRETIN_POWDER.get(), "the_bumblezone_carbocretin_powder", FrameType.TASK, true, true, false)
-                .addCriterion("has_rangers_satchel", InventoryChangeTrigger.TriggerInstance.hasItems(TheBumblezoneItems.CARBOCRETIN_POWDER.get()))
+        Advancement TheBumblezoneCarbocretinPowder = getAdvancement(EnterTheBumblezone, KDWItems.CARBOCRETIN_POWDER.get(), "the_bumblezone_carbocretin_powder", FrameType.TASK, true, true, false)
+                .addCriterion("has_rangers_satchel", InventoryChangeTrigger.TriggerInstance.hasItems(KDWItems.CARBOCRETIN_POWDER.get()))
                 .requirements(RequirementsStrategy.OR)
                 .save(saver, getNameId("the_bumblezone_carbocretin_powder"));
 

@@ -21,6 +21,7 @@ public interface KDWItems {
     // 物品
     RegistryObject<Item> ANGEL_WINGS = ITEMS_REGISTER.register("angel_wings", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     RegistryObject<Item> ANGEL_FEATHER = ITEMS_REGISTER.register("angel_feather", () -> new Item(new Item.Properties().rarity(Rarity.RARE)));
+    RegistryObject<Item> CARBOCRETIN_POWDER = ITEMS_REGISTER.register("carbocretin_powder", () -> new Item(new Item.Properties()));
 
     // 作物
     RegistryObject<Item> HOP = ITEMS_REGISTER.register("hop", () -> new Item(new Item.Properties().food(KDWFoods.GRAPE)));

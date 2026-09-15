@@ -29,6 +29,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // 物品
         basicItem(KDWItems.ANGEL_WINGS.get()); // 天使之翼
         basicItem(KDWItems.ANGEL_FEATHER.get()); // 天使之羽
+        basicItem(KDWItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
         // 瓶装
         basicItem(KDWItems.POP_CAN.get()); // 易拉罐
         // 作物
@@ -106,8 +107,6 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         // ==================== 次元维度 - 蜜蜂领域 ====================
         if (ModList.get().isLoaded("the_bumblezone")) {
-            // -------------------- 物品 --------------------
-            basicItem(TheBumblezoneItems.CARBOCRETIN_POWDER.get()); // 凝碳粉
             // -------------------- 酒类 --------------------
             compatTheBumblezoneDrinkItem(TheBumblezoneItems.SPRITE); // 雪碧
             compatTheBumblezoneDrinkItem(TheBumblezoneItems.PEPSI); // 可乐

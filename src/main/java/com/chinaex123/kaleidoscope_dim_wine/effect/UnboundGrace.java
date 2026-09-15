@@ -67,8 +67,12 @@ public class UnboundGrace extends MobEffect {
                 }
             }
         } else if (FLYING_PLAYERS.contains(player.getUUID())) {
-            player.getAbilities().mayfly = false;
-            player.getAbilities().flying = false;
+            // 只在非创造模式下移除飞行能力，避免覆盖创造模式的天然飞行
+            if (!player.isCreative()) {
+                player.getAbilities().mayfly = false;
+                player.getAbilities().flying = false;
+                player.onUpdateAbilities();
+            }
             FLYING_PLAYERS.remove(player.getUUID());
         }
     }
@@ -78,10 +82,13 @@ public class UnboundGrace extends MobEffect {
         if (event.getEffect() instanceof UnboundGrace) {
             var entity = event.getEntity();
             if (entity instanceof net.minecraft.world.entity.player.Player player) {
-                player.getAbilities().mayfly = false;
-                player.getAbilities().flying = false;
+                // 只在非创造模式下移除飞行能力，避免覆盖创造模式的天然飞行
+                if (!player.isCreative()) {
+                    player.getAbilities().mayfly = false;
+                    player.getAbilities().flying = false;
+                    player.onUpdateAbilities();
+                }
                 FLYING_PLAYERS.remove(player.getUUID());
-                player.onUpdateAbilities();
             }
 
             AttributeInstance instance = entity.getAttribute(Attributes.FLYING_SPEED);
@@ -101,10 +108,13 @@ public class UnboundGrace extends MobEffect {
         if (event.getEffectInstance() != null && event.getEffectInstance().getEffect() instanceof UnboundGrace) {
             var entity = event.getEntity();
             if (entity instanceof net.minecraft.world.entity.player.Player player) {
-                player.getAbilities().mayfly = false;
-                player.getAbilities().flying = false;
+                // 只在非创造模式下移除飞行能力，避免覆盖创造模式的天然飞行
+                if (!player.isCreative()) {
+                    player.getAbilities().mayfly = false;
+                    player.getAbilities().flying = false;
+                    player.onUpdateAbilities();
+                }
                 FLYING_PLAYERS.remove(player.getUUID());
-                player.onUpdateAbilities();
             }
 
             AttributeInstance instance = entity.getAttribute(Attributes.FLYING_SPEED);
@@ -122,10 +132,13 @@ public class UnboundGrace extends MobEffect {
     @Override
     public void removeAttributeModifiers(@NotNull LivingEntity entity, AttributeMap attributes, int amplifier) {
         if (entity instanceof Player player) {
-            player.getAbilities().mayfly = false;
-            player.getAbilities().flying = false;
+            // 只在非创造模式下移除飞行能力，避免覆盖创造模式的天然飞行
+            if (!player.isCreative()) {
+                player.getAbilities().mayfly = false;
+                player.getAbilities().flying = false;
+                player.onUpdateAbilities();
+            }
             FLYING_PLAYERS.remove(player.getUUID());
-            player.onUpdateAbilities();
         }
 
         AttributeInstance instance = entity.getAttribute(Attributes.FLYING_SPEED);

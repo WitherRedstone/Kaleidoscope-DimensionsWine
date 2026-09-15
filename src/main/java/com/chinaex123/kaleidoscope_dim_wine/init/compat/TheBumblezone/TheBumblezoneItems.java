@@ -18,7 +18,6 @@ public interface TheBumblezoneItems {
 
     // 物品
     RegistryObject<Item> MEAD_ESSENCE = ITEMS_REGISTER.register("mead_essence", MeadEssence::new);
-    RegistryObject<Item> CARBOCRETIN_POWDER = ITEMS_REGISTER.register("carbocretin_powder", () -> new Item(new Item.Properties()));
     
     // 酒类
     RegistryObject<Item> SPRITE = ITEMS_REGISTER.register("sprite", () -> new PopCanDrinkItem(TheBumblezoneBlocks.SPRITE.get()));

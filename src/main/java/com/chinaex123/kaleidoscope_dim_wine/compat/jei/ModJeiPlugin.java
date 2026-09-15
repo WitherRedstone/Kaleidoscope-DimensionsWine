@@ -42,6 +42,11 @@ public class ModJeiPlugin implements IModPlugin {
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
                 Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.angel_wings")
         });
+        // 凝碳粉
+        itemInfos.put(KDWItems.CARBOCRETIN_POWDER.get(), new Component[]{
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
+                Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder")
+        });
 
         // ==================== 次元维度 - 下界 ====================
         // 绯红葡萄藤
@@ -128,11 +133,6 @@ public class ModJeiPlugin implements IModPlugin {
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.3"),
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.4"),
                     Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.5")
-            });
-            // 凝碳粉
-            itemInfos.put(TheBumblezoneItems.CARBOCRETIN_POWDER.get(), new Component[]{
-                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement").withStyle(ChatFormatting.BOLD),
-                    Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder")
             });
         }
 

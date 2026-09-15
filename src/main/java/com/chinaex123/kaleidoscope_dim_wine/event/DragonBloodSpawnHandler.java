@@ -1,6 +1,7 @@
 package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.KaleidoscopeDimensionsWine;
+import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -34,6 +35,11 @@ public class DragonBloodSpawnHandler {
     public static void onEnderDragonDeath(LivingDeathEvent event) {
         // 客户端不处理
         if (event.getEntity().level().isClientSide()) {
+            return;
+        }
+
+        // 检查配置文件是否启用龙血生成
+        if (!KDWConfig.DRAGON_BLOOD_SPAWN_ENABLED.get()) {
             return;
         }
 

@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = "kaleidoscope_dim_wine")
-public class KDWTooltop {
+public class KDWTooltip {
 
     @SubscribeEvent
     public static void onItemTooltip(ItemTooltipEvent event) {
@@ -59,6 +59,12 @@ public class KDWTooltop {
         if (stack.getItem() == KDWItems.ANGEL_WINGS.get()) {
             // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
             String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.angel_wings").getString();
+            tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
+        }
+        // 凝碳粉
+        if (stack.getItem() == KDWItems.CARBOCRETIN_POWDER.get()) {
+            // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+            String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder").getString();
             tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
         }
 
@@ -142,12 +148,6 @@ public class KDWTooltop {
                     String text5 = Component.translatable("jei.info.kaleidoscope_dim_wine.items.info.mead_essence.5").getString();
                     tooltip.add(GradientTextHelper.createDreamyFourGradientText(text5, false,  1.0, false, false, false, false, false));
                 }
-            }
-            // 凝碳粉
-            if (stack.getItem() == TheBumblezoneItems.CARBOCRETIN_POWDER.get()) {
-                // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
-                String text = Component.translatable("jei.info.kaleidoscope_dim_wine.items.requirement.carbocretin_powder").getString();
-                tooltip.add(GradientTextHelper.createPinkGradientText(text, false,  1.0, false, false, false, false, false));
             }
         }
     }
