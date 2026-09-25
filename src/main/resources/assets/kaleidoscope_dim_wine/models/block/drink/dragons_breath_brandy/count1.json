@@ -8,10 +8,10 @@
 	},
 	"elements": [
 		{
-			"name": "count2",
-			"from": [5, 0, 6],
-			"to": [9, 10, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 8]},
+			"name": "count1",
+			"from": [6, 0, 6],
+			"to": [10, 10, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 0, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 4, 10], "texture": "#0"},
 				"east": {"uv": [0, 0, 4, 10], "texture": "#0"},
@@ -22,10 +22,10 @@
 			}
 		},
 		{
-			"name": "count2",
-			"from": [6, 10, 7],
-			"to": [8, 16, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 8]},
+			"name": "count1",
+			"from": [7, 10, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 0, 8]},
 			"faces": {
 				"north": {"uv": [4, 0, 6, 6], "texture": "#0"},
 				"east": {"uv": [6, 0, 8, 6], "texture": "#0"},
@@ -38,7 +38,7 @@
 	],
 	"groups": [
 		{
-			"name": "count2",
+			"name": "count1",
 			"origin": [0, 0, 0],
 			"scope": 0,
 			"color": 1,

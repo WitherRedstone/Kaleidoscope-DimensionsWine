@@ -16,14 +16,14 @@ public interface TheBumblezoneBlocks {
     DeferredRegister<Block> BLOCK_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, KaleidoscopeDimensionsWine.MOD_ID);
 
     // 酒类
-    RegistryObject<Block> SPRITE = BLOCK_REGISTER.register("sprite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> PEPSI = BLOCK_REGISTER.register("pepsi", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> FANTA = BLOCK_REGISTER.register("fanta", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> POLLEN_NECTAR = BLOCK_REGISTER.register("pollen_nectar", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> HONEYTHORN_MEAD = BLOCK_REGISTER.register("honeythorn_mead", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> BEESWAX_HONEY_WINE = BLOCK_REGISTER.register("beeswax_honey_wine", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> SWEET_CRYSTAL_HONEY = BLOCK_REGISTER.register("sweet_crystal_honey", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> ROYAL_HONEY_BREW = BLOCK_REGISTER.register("royal_honey_brew", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getShortBottleShapes()).build().get());
+    RegistryObject<Block> SPRITE = BLOCK_REGISTER.register("sprite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    RegistryObject<Block> PEPSI = BLOCK_REGISTER.register("pepsi", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    RegistryObject<Block> FANTA = BLOCK_REGISTER.register("fanta", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    RegistryObject<Block> POLLEN_NECTAR = BLOCK_REGISTER.register("pollen_nectar", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    RegistryObject<Block> HONEYTHORN_MEAD = BLOCK_REGISTER.register("honeythorn_mead", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    RegistryObject<Block> BEESWAX_HONEY_WINE = BLOCK_REGISTER.register("beeswax_honey_wine", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    RegistryObject<Block> SWEET_CRYSTAL_HONEY = BLOCK_REGISTER.register("sweet_crystal_honey", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    RegistryObject<Block> ROYAL_HONEY_BREW = BLOCK_REGISTER.register("royal_honey_brew", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_SHORT).build().get());
 
     static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

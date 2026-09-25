@@ -116,15 +116,15 @@ public interface KDWBlocks {
     RegistryObject<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
 
     // 酒类
-    RegistryObject<Block> CHORUS_COGNAC = BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> DRAGONS_BREATH_BRANDY = BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> ABYSSAL_PORTER = BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> SILENT_SHERRY = BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> FORGOTTEN_MARGARITA = BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> PHANTOM_DREAM_BUBBLE = BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> END_STARLIGHT = BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> DIVINE_EMBRYO_PORT = BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    RegistryObject<Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    RegistryObject<Block> CHORUS_COGNAC = BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> DRAGONS_BREATH_BRANDY = BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> ABYSSAL_PORTER = BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> SILENT_SHERRY = BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> FORGOTTEN_MARGARITA = BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> PHANTOM_DREAM_BUBBLE = BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> END_STARLIGHT = BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> DIVINE_EMBRYO_PORT = BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    RegistryObject<Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_SHORT).build().get());
 
     static <T extends Block> void registerBlockItems(String name, RegistryObject<T> block, Rarity rarity) {
         KDWItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
