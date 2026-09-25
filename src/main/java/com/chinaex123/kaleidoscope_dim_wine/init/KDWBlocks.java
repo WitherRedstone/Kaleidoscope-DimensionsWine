@@ -75,6 +75,9 @@ public interface KDWBlocks {
     // 瓶装
     RegistryObject<Block> POP_CAN = BLOCK_REGISTER.register("pop_can", PopCanBlock::new);
 
+    // 酒类
+    RegistryObject<Block> BUDWEISER_BEER = BLOCK_REGISTER.register("budweiser_beer", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+
     // ==================== 次元维度 - 下界 ====================
     // 作物
     RegistryObject<Block> CRIMSON_GRAPE_CROP = BLOCK_REGISTER.register("crimson_grape_crop", CrimsonGrapeCropBlock::new);

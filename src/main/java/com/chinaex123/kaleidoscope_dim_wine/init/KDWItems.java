@@ -30,6 +30,9 @@ public interface KDWItems {
     // 瓶装
     RegistryObject<Item> POP_CAN = ITEMS_REGISTER.register("pop_can", () -> new BottleBlockItem(KDWBlocks.POP_CAN.get(), new Item.Properties()));
 
+    // 酒类
+    RegistryObject<Item> BUDWEISER_BEER = ITEMS_REGISTER.register("budweiser_beer", () -> new DrinkBlockItem(KDWBlocks.BUDWEISER_BEER.get()));
+
     // ==================== 次元维度 - 下界 ====================
     // 作物
     RegistryObject<Item> CRIMSON_GRAPEVINE = ITEMS_REGISTER.register("crimson_grapevine", CrimsonGrapevineItem::new);

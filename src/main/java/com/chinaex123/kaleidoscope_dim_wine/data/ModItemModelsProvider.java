@@ -35,6 +35,8 @@ public class ModItemModelsProvider extends ItemModelProvider {
         // 作物
         basicItem(KDWItems.HOP.get()); // 啤酒花
         basicItem(KDWItems.HOP_SEED.get()); // 啤酒花种子
+        // 酒类
+        basicDrinkItem(KDWItems.BUDWEISER_BEER); // 百威啤酒
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 流体 --------------------

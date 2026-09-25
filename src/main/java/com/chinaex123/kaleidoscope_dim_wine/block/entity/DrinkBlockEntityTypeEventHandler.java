@@ -33,6 +33,9 @@ public final class DrinkBlockEntityTypeEventHandler {
             BuiltInRegistries.BLOCK_ENTITY_TYPE.getOptional(TAVERN_DRINK_BE).ifPresent(drinkType -> {
                 List<Block> blocks = new ArrayList<>();
 
+                // ==================== 次元维度 - 主世界 ====================
+                blocks.add(KDWBlocks.BUDWEISER_BEER.get()); // 百威啤酒
+
                 // ==================== 次元维度 - 下界 ====================
                 blocks.add(KDWBlocks.CRIMSON_CRESCENDO.get()); // 绯红绝响
                 blocks.add(KDWBlocks.ETHEREAL_NOBLE.get()); // 以太贵族
