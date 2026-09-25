@@ -171,6 +171,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         /* 鸡尾酒原料颜色分类 */
         // 黑色
         tag(TagMod.COCKTAIL_INGREDIENT_BLACK)
+                .add(KDWItems.BUDWEISER_BEER.get())
                 .addOptional(KaleidoscopeDimensionsWine.id("star_trail"))
                 .addOptional(KaleidoscopeDimensionsWine.id("lunar_eclipse"))
                 .addOptional(KaleidoscopeDimensionsWine.id("eclipse"));
@@ -296,6 +297,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         // 机械动力
         tag(KDWItemTags.UPRIGHT_ON_BELT)
                 .add(KDWItems.POP_CAN.get())
+                .add(KDWItems.BUDWEISER_BEER.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -355,6 +357,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         // 葡园酒香柜子 - 小瓶酒
         tag(KDWItemTags.VINERY_SMALL_BOTTLE)
                 .add(KDWItems.POP_CAN.get())
+                .add(KDWItems.BUDWEISER_BEER.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -417,6 +420,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         // 幻想乡乐事柜子
         tag(KDWItemTags.YOUKAISFEASTS_WINE)
                 .add(KDWItems.POP_CAN.get())
+                .add(KDWItems.BUDWEISER_BEER.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
