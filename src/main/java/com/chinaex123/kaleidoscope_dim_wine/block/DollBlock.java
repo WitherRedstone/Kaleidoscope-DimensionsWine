@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
- * 玩偶方块 - 具有方向性和精确碰撞箱的装饰性方块
+ * 玩偶方块
  */
 public class DollBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<DollBlock> CODEC = MapCodec.unit(DollBlock::new);

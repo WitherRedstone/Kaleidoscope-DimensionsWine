@@ -44,6 +44,20 @@ public class KDWTooltip {
             tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
         }
 
+        // 玩偶 - SCXSYGL
+        if (stack.getItem() == KDWBlocks.DOLL_004.get().asItem()) {
+            // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+            String text = Component.translatable("block.kaleidoscope_dim_wine.doll_004.tooltip").getString();
+            tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
+        }
+
+        // 玩偶 - nade__shiko
+        if (stack.getItem() == KDWBlocks.DOLL_005.get().asItem()) {
+            // 形参：原始文本, 渐变方向（true=从左到右，false=从右到左）, 动画速度, 是否加粗, 是否斜体, 是否下划线, 是否删除线, 是否乱码
+            String text = Component.translatable("block.kaleidoscope_dim_wine.doll_005.tooltip").getString();
+            tooltip.add(GradientTextHelper.createNatureSeasonsGradientText(text, false,  1.0, false, false, false, false, false));
+        }
+
         // ==================== 次元维度 - 装饰 ====================
         // 小灯串（基岩）
         if (stack.getItem() == KDWBlocks.STRING_LIGHTS_BLOCK_BEDROCK.get().asItem()) {

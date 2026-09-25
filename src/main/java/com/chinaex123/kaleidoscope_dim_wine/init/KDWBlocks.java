@@ -43,6 +43,8 @@ public interface KDWBlocks {
     RegistryObject<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE); // 玩偶 - ChinaEX123_BILI
     RegistryObject<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE); // 玩偶 - Fvue233
     RegistryObject<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE); // 玩偶 - Agens_Eland
+    RegistryObject<Block> DOLL_004 = registerConditionalDoll("doll_004", Rarity.RARE); // 玩偶 - SCXSYGL
+    RegistryObject<Block> DOLL_005 = registerConditionalDoll("doll_005", Rarity.RARE); // 玩偶 - nade__shiko
 
     // 小灯串
     RegistryObject<Block> STRING_LIGHTS_BLOCK_COMMAND = registerStringLights("string_lights_block_command", () -> new StringLightsBlock(null));
