@@ -15,14 +15,14 @@ public interface TheBumblezoneBlocks {
     DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
 
     // 酒类
-    DeferredHolder<Block, Block> SPRITE = BLOCK_REGISTER.register("sprite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> PEPSI = BLOCK_REGISTER.register("pepsi", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> FANTA = BLOCK_REGISTER.register("fanta", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> POLLEN_NECTAR = BLOCK_REGISTER.register("pollen_nectar", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> HONEYTHORN_MEAD = BLOCK_REGISTER.register("honeythorn_mead", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> BEESWAX_HONEY_WINE = BLOCK_REGISTER.register("beeswax_honey_wine", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> SWEET_CRYSTAL_HONEY = BLOCK_REGISTER.register("sweet_crystal_honey", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    DeferredHolder<Block, Block> ROYAL_HONEY_BREW = BLOCK_REGISTER.register("royal_honey_brew", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getShortBottleShapes()).build().get());
+    DeferredHolder<Block, Block> SPRITE = BLOCK_REGISTER.register("sprite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    DeferredHolder<Block, Block> PEPSI = BLOCK_REGISTER.register("pepsi", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    DeferredHolder<Block, Block> FANTA = BLOCK_REGISTER.register("fanta", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.SHORT_BOTTLE).build().get());
+    DeferredHolder<Block, Block> POLLEN_NECTAR = BLOCK_REGISTER.register("pollen_nectar", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    DeferredHolder<Block, Block> HONEYTHORN_MEAD = BLOCK_REGISTER.register("honeythorn_mead", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    DeferredHolder<Block, Block> BEESWAX_HONEY_WINE = BLOCK_REGISTER.register("beeswax_honey_wine", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    DeferredHolder<Block, Block> SWEET_CRYSTAL_HONEY = BLOCK_REGISTER.register("sweet_crystal_honey", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.IRREGULAR_CORNER_SHORT).build().get());
+    DeferredHolder<Block, Block> ROYAL_HONEY_BREW = BLOCK_REGISTER.register("royal_honey_brew", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_SHORT).build().get());
 
     static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

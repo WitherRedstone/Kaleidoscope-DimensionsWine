@@ -37,8 +37,8 @@
 		},
 		{
 			"name": "count4",
-			"from": [11, 10, 11],
-			"to": [13, 16, 13],
+			"from": [11, 10, 3],
+			"to": [13, 16, 5],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [9, 5, 7, 11], "texture": "#0"},
@@ -51,8 +51,8 @@
 		},
 		{
 			"name": "count4",
-			"from": [10, 0, 10],
-			"to": [14, 10, 14],
+			"from": [10, 0, 2],
+			"to": [14, 10, 6],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 4, 10], "texture": "#0"},
@@ -93,8 +93,8 @@
 		},
 		{
 			"name": "count4",
-			"from": [11, 10, 3],
-			"to": [13, 16, 5],
+			"from": [11, 10, 11],
+			"to": [13, 16, 13],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [9, 5, 7, 11], "texture": "#0"},
@@ -107,8 +107,8 @@
 		},
 		{
 			"name": "count4",
-			"from": [10, 0, 2],
-			"to": [14, 10, 6],
+			"from": [10, 0, 10],
+			"to": [14, 10, 14],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 4, 10], "texture": "#0"},
@@ -126,7 +126,28 @@
 			"origin": [0, 0, 0],
 			"scope": 0,
 			"color": 3,
-			"children": [0, 1, 2, 3, 4, 5, 6, 7]
+			"children": [0, 1]
+		},
+		{
+			"name": "count4",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [2, 3]
+		},
+		{
+			"name": "count4",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [4, 5]
+		},
+		{
+			"name": "count4",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [6, 7]
 		}
 	]
 }

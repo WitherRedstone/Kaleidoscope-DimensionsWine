@@ -9,9 +9,9 @@
 	"elements": [
 		{
 			"name": "count4",
-			"from": [8, 10, 7],
-			"to": [10, 16, 9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [5, 1, 12]},
+			"from": [7, 10, 7],
+			"to": [9, 16, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, 12]},
 			"faces": {
 				"north": {"uv": [9, 5, 7, 11], "texture": "#0"},
 				"east": {"uv": [9, 5, 7, 11], "texture": "#0"},
@@ -23,9 +23,9 @@
 		},
 		{
 			"name": "count4",
-			"from": [7, 8, 6],
-			"to": [11, 10, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 12]},
+			"from": [6, 8, 6],
+			"to": [10, 10, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 12]},
 			"faces": {
 				"north": {"uv": [16, 14, 12, 16], "texture": "#0"},
 				"east": {"uv": [16, 14, 12, 16], "texture": "#0"},
@@ -37,9 +37,9 @@
 		},
 		{
 			"name": "count4",
-			"from": [6, 0, 5],
-			"to": [12, 8, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 11]},
+			"from": [5, 0, 5],
+			"to": [11, 8, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 11]},
 			"faces": {
 				"north": {"uv": [0, 0, 6, 8], "texture": "#0"},
 				"east": {"uv": [0, 0, 6, 8], "texture": "#0"},

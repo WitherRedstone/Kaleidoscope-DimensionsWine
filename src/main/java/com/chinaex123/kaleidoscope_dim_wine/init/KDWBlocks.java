@@ -81,12 +81,12 @@ public interface KDWBlocks {
     DeferredBlock<Block> WARPED_GRAPEVINE_PLANT = BLOCK_REGISTER.register("warped_grapevine_plant", WarpedGrapeCropWildGrapevinePlant::new);
 
     // 酒类
-    DeferredHolder<Block, Block> CRIMSON_CRESCENDO = BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> ETHEREAL_NOBLE = BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> WART_HENNESSY = BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> BLAZE_MARTELL = BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> MAGMA_ROYAL_SALUTE = BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> BLACK_BONE_LAFITE = BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    DeferredHolder<Block, Block> CRIMSON_CRESCENDO = BLOCK_REGISTER.register("crimson_crescendo", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> ETHEREAL_NOBLE = BLOCK_REGISTER.register("ethereal_noble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> WART_HENNESSY = BLOCK_REGISTER.register("wart_hennessy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> BLAZE_MARTELL = BLOCK_REGISTER.register("blaze_martell", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_TALL).build().get());
+    DeferredHolder<Block, Block> MAGMA_ROYAL_SALUTE = BLOCK_REGISTER.register("magma_royal_salute", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_TALL).build().get());
+    DeferredHolder<Block, Block> BLACK_BONE_LAFITE = BLOCK_REGISTER.register("black_bone_lafite", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
 
 
     // ==================== 次元维度 - 末地 ====================
@@ -110,15 +110,15 @@ public interface KDWBlocks {
     DeferredBlock<Block> DREAMFRUIT_VINE_PLANT = BLOCK_REGISTER.register("dreamfruit_vine_plant", DreamfruitCropWildVinePlant::new);
 
     // 酒类
-    DeferredHolder<Block, Block> CHORUS_COGNAC = BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> DRAGONS_BREATH_BRANDY = BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> ABYSSAL_PORTER = BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> SILENT_SHERRY = BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> FORGOTTEN_MARGARITA = BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> PHANTOM_DREAM_BUBBLE = BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> END_STARLIGHT = BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> DIVINE_EMBRYO_PORT = BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    DeferredHolder<Block, Block> CHORUS_COGNAC = BLOCK_REGISTER.register("chorus_cognac", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> DRAGONS_BREATH_BRANDY = BLOCK_REGISTER.register("dragons_breath_brandy", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> ABYSSAL_PORTER = BLOCK_REGISTER.register("abyssal_porter", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> SILENT_SHERRY = BLOCK_REGISTER.register("silent_sherry", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> FORGOTTEN_MARGARITA = BLOCK_REGISTER.register("forgotten_margarita", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> PHANTOM_DREAM_BUBBLE = BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> END_STARLIGHT = BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> DIVINE_EMBRYO_PORT = BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.IRREGULAR_SHORT).build().get());
 
     static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block, Rarity rarity) {
         KDWItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
