@@ -118,7 +118,7 @@ public interface KDWBlocks {
     DeferredHolder<Block, Block> PHANTOM_DREAM_BUBBLE = BLOCK_REGISTER.register("phantom_dream_bubble", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     DeferredHolder<Block, Block> END_STARLIGHT = BLOCK_REGISTER.register("end_starlight", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     DeferredHolder<Block, Block> DIVINE_EMBRYO_PORT = BLOCK_REGISTER.register("divine_embryo_port", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    DeferredHolder<Block, Block> DRACONIC_BLOOD_WINE = BLOCK_REGISTER.register("draconic_blood_wine", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
 
     static <T extends Block> void registerBlockItems(String name, DeferredBlock<T> block, Rarity rarity) {
         KDWItems.ITEMS_REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));

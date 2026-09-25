@@ -20,8 +20,8 @@ public interface TwilightforestBlocks {
     DeferredBlock<Block> FROSTHEART_FRUIT_BUSH = BLOCK_REGISTER.register("frostheart_fruit_bush", FrostheartFruitBushBlock::new);
     
     // 酒类
-    DeferredHolder<Block, Block> CAVE_GLOWBREW = BLOCK_REGISTER.register("cave_glowbrew", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
-    DeferredHolder<Block, Block> DAWNLIGHT_DEW = BLOCK_REGISTER.register("dawnlight_dew", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
+    DeferredHolder<Block, Block> CAVE_GLOWBREW = BLOCK_REGISTER.register("cave_glowbrew", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
+    DeferredHolder<Block, Block> DAWNLIGHT_DEW = BLOCK_REGISTER.register("dawnlight_dew", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     DeferredHolder<Block, Block> DEAD_END_SPITTLE = BLOCK_REGISTER.register("dead_end_spittle", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     DeferredHolder<Block, Block> SNAKESKIN_LIQUEUR = BLOCK_REGISTER.register("snakeskin_liqueur", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getStandardBottleShapes()).build().get());
     DeferredHolder<Block, Block> FROSTVEIN_BEASTBLOOD = BLOCK_REGISTER.register("frostvein_beastblood", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getStandardBottleShapes()).build().get());

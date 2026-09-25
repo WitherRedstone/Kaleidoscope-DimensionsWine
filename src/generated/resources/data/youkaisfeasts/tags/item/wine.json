@@ -1,9 +1,11 @@
 {
   "values": [
+    "kaleidoscope_dim_wine:pop_can",
     "kaleidoscope_dim_wine:crimson_crescendo",
     "kaleidoscope_dim_wine:ethereal_noble",
     "kaleidoscope_dim_wine:wart_hennessy",
     "kaleidoscope_dim_wine:blaze_martell",
+    "kaleidoscope_dim_wine:magma_royal_salute",
     "kaleidoscope_dim_wine:black_bone_lafite",
     "kaleidoscope_dim_wine:chorus_cognac",
     "kaleidoscope_dim_wine:dragons_breath_brandy",
@@ -19,6 +21,10 @@
       "required": false
     },
     {
+      "id": "kaleidoscope_dim_wine:dawnlight_dew",
+      "required": false
+    },
+    {
       "id": "kaleidoscope_dim_wine:snakeskin_liqueur",
       "required": false
     },
@@ -28,6 +34,14 @@
     },
     {
       "id": "kaleidoscope_dim_wine:embereye",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:thornheart",
       "required": false
     },
     {
@@ -59,22 +73,6 @@
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:pollen_nectar",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:honeythorn_mead",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:beeswax_honey_wine",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:sweet_crystal_honey",
-      "required": false
-    },
-    {
       "id": "kaleidoscope_dim_wine:royal_honey_brew",
       "required": false
     },
@@ -99,10 +97,6 @@
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:divinity",
-      "required": false
-    },
-    {
       "id": "kaleidoscope_dim_wine:star_trail",
       "required": false
     },
@@ -115,23 +109,11 @@
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:lunar_eclipse",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:deep_freeze",
-      "required": false
-    },
-    {
       "id": "kaleidoscope_dim_wine:blood_moon",
       "required": false
     },
     {
       "id": "kaleidoscope_dim_wine:abyss",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:blazing_sun",
       "required": false
     },
     {

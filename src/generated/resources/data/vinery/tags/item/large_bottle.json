@@ -1,10 +1,5 @@
 {
   "values": [
-    "kaleidoscope_dim_wine:magma_royal_salute",
-    {
-      "id": "kaleidoscope_dim_wine:dawnlight_dew",
-      "required": false
-    },
     {
       "id": "kaleidoscope_dim_wine:dead_end_spittle",
       "required": false
@@ -14,15 +9,23 @@
       "required": false
     },
     {
-      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
-      "required": false
-    },
-    {
-      "id": "kaleidoscope_dim_wine:thornheart",
-      "required": false
-    },
-    {
       "id": "kaleidoscope_dim_wine:giants_hymn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pollen_nectar",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:honeythorn_mead",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:beeswax_honey_wine",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sweet_crystal_honey",
       "required": false
     },
     {
@@ -31,6 +34,22 @@
     },
     {
       "id": "kaleidoscope_dim_wine:gingerbread_warmer",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divinity",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:deep_freeze",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blazing_sun",
       "required": false
     }
   ]

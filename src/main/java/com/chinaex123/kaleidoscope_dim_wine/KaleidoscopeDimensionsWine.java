@@ -16,6 +16,7 @@ import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblez
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.config.ModConfig.Type;
 import net.neoforged.bus.api.IEventBus;
@@ -73,5 +74,9 @@ public class KaleidoscopeDimensionsWine {
             EternalStarlightFluids.FLUID_TYPES.register(modEventBus);
             EternalStarlightFluids.FLUIDS.register(modEventBus);
         }
+    }
+
+    public static ResourceLocation id(String name) {
+        return ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, name);
     }
 }

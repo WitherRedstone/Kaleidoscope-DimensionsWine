@@ -1,3 +1,112 @@
 {
-  "values": []
+  "values": [
+    "kaleidoscope_dim_wine:blaze_martell",
+    "kaleidoscope_dim_wine:magma_royal_salute",
+    "kaleidoscope_dim_wine:forgotten_margarita",
+    "kaleidoscope_dim_wine:draconic_blood_wine",
+    {
+      "id": "kaleidoscope_dim_wine:dawnlight_dew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:dead_end_spittle",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:frostvein_beastblood",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:rangers_satchel",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:embereye",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:stagcall_monsoon",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:thornheart",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:perennial_frost",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:giants_hymn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:goblins_stash",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:pollen_nectar",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:honeythorn_mead",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:beeswax_honey_wine",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:sweet_crystal_honey",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:royal_honey_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divine_offering_brew",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:healing_elixir",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:gingerbread_warmer",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:unbound_skyborn",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:divinity",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:star_trail",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:lunar_eclipse",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:deep_freeze",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:abyss",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_dim_wine:blazing_sun",
+      "required": false
+    }
+  ]
 }
