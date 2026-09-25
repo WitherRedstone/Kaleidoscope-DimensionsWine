@@ -13,8 +13,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * 易拉罐方块
- * <p>继承自 BottleBlock，用于表示各种易拉罐饮料</p>
- * <p>碰撞箱尺寸：6x8x6（比标准酒瓶更小）</p>
  */
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

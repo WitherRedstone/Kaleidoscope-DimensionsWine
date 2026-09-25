@@ -4,6 +4,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+/**
+ * 酒的碰撞箱
+ */
 public class DrinkShapes {
 
     public static final VoxelShape[] STANDARD_BOTTLE = shapeGen(2, 16);

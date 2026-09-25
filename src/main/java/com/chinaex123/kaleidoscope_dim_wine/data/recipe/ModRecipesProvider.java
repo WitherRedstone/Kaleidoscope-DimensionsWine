@@ -49,6 +49,24 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .define('B', Items.MAGENTA_WOOL)
                 .unlockedBy("has_doll_3", has(Items.MAGENTA_WOOL))
                 .save(recipeOutput);
+        // 玩偶 - SCXSYGL
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, KDWBlocks.DOLL_004.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('A', Tags.Items.GEMS_DIAMOND)
+                .define('B', Items.LIGHT_GRAY_WOOL)
+                .unlockedBy("has_doll_4", has(Items.LIGHT_GRAY_WOOL))
+                .save(recipeOutput);
+        // 玩偶 - nade__shiko
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, KDWBlocks.DOLL_005.get())
+                .pattern("BBB")
+                .pattern("BAB")
+                .pattern("BBB")
+                .define('A', Tags.Items.GEMS_DIAMOND)
+                .define('B', Items.YELLOW_WOOL)
+                .unlockedBy("has_doll_5", has(Items.YELLOW_WOOL))
+                .save(recipeOutput);
 
         // ==================== 次元维度 - 小装饰 ====================
         // 小灯串（潜影贝-无色）

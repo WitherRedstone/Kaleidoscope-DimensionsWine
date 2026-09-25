@@ -29,6 +29,8 @@ public class KDWCreativeTabs {
                         output.accept(KDWBlocks.DOLL_001.get()); // 玩偶 - ChinaEX123_BILI
                         output.accept(KDWBlocks.DOLL_002.get()); // 玩偶 - Fvue233
                         output.accept(KDWBlocks.DOLL_003.get()); // 玩偶 - Agens_Eland
+                        output.accept(KDWBlocks.DOLL_004.get()); // 玩偶 - SCXSYGL
+                        output.accept(KDWBlocks.DOLL_005.get()); // 玩偶 - nade__shiko
                         // -------------------- 物品 --------------------
                         output.accept(KDWItems.POP_CAN.get()); // 易拉罐
                         output.accept(KDWItems.ANGEL_WINGS.get()); // 天使之翼

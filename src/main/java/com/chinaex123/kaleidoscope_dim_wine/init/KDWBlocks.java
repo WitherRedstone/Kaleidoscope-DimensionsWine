@@ -36,6 +36,8 @@ public interface KDWBlocks {
     DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE); // 玩偶 - ChinaEX123_BILI
     DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE); // 玩偶 - Fvue233
     DeferredBlock<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE); // 玩偶 - Agens_Eland
+    DeferredBlock<Block> DOLL_004 = registerConditionalDoll("doll_004", Rarity.RARE); // 玩偶 - SCXSYGL
+    DeferredBlock<Block> DOLL_005 = registerConditionalDoll("doll_005", Rarity.RARE); // 玩偶 - nade__shiko
 
     // 小灯串
     DeferredBlock<Block> STRING_LIGHTS_BLOCK_COMMAND = registerStringLights("string_lights_block_command", () -> new StringLightsBlock(null));
