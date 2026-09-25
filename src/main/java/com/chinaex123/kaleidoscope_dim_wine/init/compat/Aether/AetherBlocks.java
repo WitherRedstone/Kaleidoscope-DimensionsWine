@@ -23,7 +23,7 @@ public interface AetherBlocks {
     RegistryObject<Block> GRAVITITE_DRUNK = BLOCK_REGISTER.register("gravitite_drunk", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
     RegistryObject<Block> HEALING_ELIXIR = BLOCK_REGISTER.register("healing_elixir", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
     RegistryObject<Block> GINGERBREAD_WARMER = BLOCK_REGISTER.register("gingerbread_warmer", () -> DrinkBlock.create().maxCount(2).shapes(DrinkShapes.getShortBottleShapes()).build().get());
-    RegistryObject<Block> UNBOUND_SKYBORN = BLOCK_REGISTER.register("unbound_skyborn", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.getShortBottleShapes()).build().get());
+    RegistryObject<Block> UNBOUND_SKYBORN = BLOCK_REGISTER.register("unbound_skyborn", () -> DrinkBlock.create().maxCount(3).shapes(DrinkShapes.getShortBottleShapes()).build().get());
 
     static void register(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

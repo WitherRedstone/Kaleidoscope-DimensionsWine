@@ -124,6 +124,7 @@
 		{
 			"name": "count4",
 			"origin": [0, 0, 0],
+			"scope": 0,
 			"color": 3,
 			"children": [0, 1, 2, 3, 4, 5, 6, 7]
 		}

@@ -27,49 +27,114 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         /* 酒柜异形酒瓶名单，这种类型的酒只允许放入一瓶 */
         tag(TagMod.BAR_CABINET_IRREGULAR)
+                .add(KDWItems.BLAZE_MARTELL.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"));
+                .add(KDWItems.FORGOTTEN_MARGARITA.get())
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get())
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
         /* 窖藏酒柜黑名单，即不允许放入窖藏酒柜的酒 */
-        tag(TagMod.CELLAR_CABINET_BLOCKLIST);
+        tag(TagMod.CELLAR_CABINET_BLOCKLIST)
+                .add(KDWItems.BLAZE_MARTELL.get())
+                .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
+                .add(KDWItems.FORGOTTEN_MARGARITA.get())
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get())
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("rangers_satchel"))
+                .addOptional(KaleidoscopeDimensionsWine.id("embereye"))
+                .addOptional(KaleidoscopeDimensionsWine.id("stagcall_monsoon"))
+                .addOptional(KaleidoscopeDimensionsWine.id("thornheart"))
+                .addOptional(KaleidoscopeDimensionsWine.id("perennial_frost"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
         /* 倾斜酒架黑名单，即不允许放入倾斜酒架的酒 */
         tag(TagMod.TILTED_RACK_BLOCKLIST)
+                .add(KDWItems.BLAZE_MARTELL.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"));
+                .add(KDWItems.FORGOTTEN_MARGARITA.get())
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get())
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
         /* 圆周酒架黑名单，即不允许放入圆周酒架的酒 */
         tag(TagMod.CIRCULAR_RACK_BLOCKLIST)
+                .add(KDWItems.BLAZE_MARTELL.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"));
+                .add(KDWItems.FORGOTTEN_MARGARITA.get())
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get())
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
         /* 单体酒架黑名单，即不允许放入单体酒架的酒 */
         tag(TagMod.HOLDER_BLOCKLIST)
+                .add(KDWItems.BLAZE_MARTELL.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"));
+                .add(KDWItems.FORGOTTEN_MARGARITA.get())
+                .add(KDWItems.DRACONIC_BLOOD_WINE.get())
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
 
         /* 鸡尾酒原料颜色分类 */
         // 黑色
         tag(TagMod.COCKTAIL_INGREDIENT_BLACK);
         // 深蓝色
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_BLUE)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "goblins_stash"));
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"));
         // 深绿色
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_GREEN);
         // 深青色
@@ -79,29 +144,29 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_RED)
                 .add(KDWItems.CRIMSON_GRAPE.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "crimson_crescendo"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "thornheart"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "rangers_satchel"));
+                .addOptional(KaleidoscopeDimensionsWine.id("crimson_crescendo"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("thornheart"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("rangers_satchel"));
         // 深紫色
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_PURPLE)
                 .add(KDWItems.CHORUS_COGNAC.get())
                 .add(KDWItems.DRAGONS_BREATH_BRANDY.get())
                 .add(KDWItems.DRACONIC_BLOOD_WINE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "druids_secret_brew"));
+                .addOptional(KaleidoscopeDimensionsWine.id("druids_secret_brew"));
         // 金色
         tag(TagMod.COCKTAIL_INGREDIENT_GOLD)
                 .add(KDWItems.BLAZE_MARTELL.get())
                 .add(KDWItems.DIVINE_EMBRYO_PORT.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "snakeskin_liqueur"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "moorglow_birds_song"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "unbound_skyborn"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "fanta"));
+                .addOptional(KaleidoscopeDimensionsWine.id("snakeskin_liqueur"))
+                .addOptional(KaleidoscopeDimensionsWine.id("moorglow_birds_song"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("fanta"));
         // 灰色
         tag(TagMod.COCKTAIL_INGREDIENT_GRAY)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "cave_glowbrew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"));
+                .addOptional(KaleidoscopeDimensionsWine.id("cave_glowbrew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"));
         // 深灰色
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_GRAY)
                 .add(KDWItems.BLACK_BONE_LAFITE.get())
@@ -109,21 +174,21 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.END_STARLIGHT.get());
         // 蓝色
         tag(TagMod.COCKTAIL_INGREDIENT_BLUE)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "swet_fizz"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"));
+                .addOptional(KaleidoscopeDimensionsWine.id("swet_fizz"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"));
         // 绿色
         tag(TagMod.COCKTAIL_INGREDIENT_GREEN)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sprite"));
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sprite"));
         // 青色
         tag(TagMod.COCKTAIL_INGREDIENT_AQUA)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "perennial_frost"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "stagcall_monsoon"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"));
+                .addOptional(KaleidoscopeDimensionsWine.id("perennial_frost"))
+                .addOptional(KaleidoscopeDimensionsWine.id("stagcall_monsoon"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"));
         // 红色
         tag(TagMod.COCKTAIL_INGREDIENT_RED)
                 .add(KDWItems.WART_HENNESSY.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gravitite_drunk"));
+                .addOptional(KaleidoscopeDimensionsWine.id("gravitite_drunk"));
         // 浅紫色
         tag(TagMod.COCKTAIL_INGREDIENT_LIGHT_PURPLE)
                 .add(KDWItems.SILENT_SHERRY.get())
@@ -131,17 +196,17 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.PHANTOM_DREAM_BUBBLE.get());
         // 黄色
         tag(TagMod.COCKTAIL_INGREDIENT_YELLOW)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "embereye"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pollen_nectar"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "honeythorn_mead"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "beeswax_honey_wine"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "royal_honey_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sweet_crystal_honey"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_energy_mist"));
+                .addOptional(KaleidoscopeDimensionsWine.id("embereye"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"));
         // 白色
         tag(TagMod.COCKTAIL_INGREDIENT_WHITE)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "healing_elixir"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pepsi"));
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pepsi"));
 
 
 
@@ -154,11 +219,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.CRIMSON_GRAPE.get())
                 .add(KDWItems.WARPED_GRAPE.get())
                 .add(KDWItems.DREAMFRUIT.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit"));
+                .addOptional(KaleidoscopeDimensionsWine.id("frostheart_fruit"));
         tag(KDWItemTags.FRUITS_CRIMSON_GRAPE).add(KDWItems.CRIMSON_GRAPE.get());
         tag(KDWItemTags.FRUITS_WARPED_GRAPE).add(KDWItems.WARPED_GRAPE.get());
         tag(KDWItemTags.FRUITS_DREAMFRUIT).add(KDWItems.DREAMFRUIT.get());
-        tag(KDWItemTags.FRUITS_FROSTHEART).addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit"));
+        tag(KDWItemTags.FRUITS_FROSTHEART).addOptional(KaleidoscopeDimensionsWine.id("frostheart_fruit"));
         tag(KDWItemTags.HOPS).add(KDWItems.HOP.get());
         tag(KDWItemTags.CROPS_HOP).add(KDWItems.HOP.get());
         tag(KDWItemTags.SEEDS_HOP).add(KDWItems.HOP_SEED.get());
@@ -168,7 +233,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.CRIMSON_GRAPE.get())
                 .add(KDWItems.WARPED_GRAPE.get())
                 .add(KDWItems.DREAMFRUIT.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit"));
+                .addOptional(KaleidoscopeDimensionsWine.id("frostheart_fruit"));
 
         // 静谧四季
         tag(KDWItemTags.YEAR_ROUND_CROPS)
@@ -178,7 +243,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(KDWItemTags.SUMMER_CROPS)
                 .add(KDWItems.HOP_SEED.get());
         tag(KDWItemTags.WINTER_CROPS)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostheart_fruit"));
+                .addOptional(KaleidoscopeDimensionsWine.id("frostheart_fruit"));
 
         // 机械动力
         tag(KDWItemTags.UPRIGHT_ON_BELT)
@@ -198,38 +263,39 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.END_STARLIGHT.get())
                 .add(KDWItems.DIVINE_EMBRYO_PORT.get())
                 .add(KDWItems.DRACONIC_BLOOD_WINE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "cave_glowbrew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "snakeskin_liqueur"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "rangers_satchel"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "embereye"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "stagcall_monsoon"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "thornheart"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "druids_secret_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "moorglow_birds_song"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "perennial_frost"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "goblins_stash"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sprite"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pepsi"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "fanta"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pollen_nectar"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "honeythorn_mead"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "beeswax_honey_wine"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sweet_crystal_honey"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "royal_honey_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_energy_mist"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "swet_fizz"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gravitite_drunk"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "healing_elixir"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "unbound_skyborn"));
+                .addOptional(KaleidoscopeDimensionsWine.id("cave_glowbrew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("snakeskin_liqueur"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("rangers_satchel"))
+                .addOptional(KaleidoscopeDimensionsWine.id("embereye"))
+                .addOptional(KaleidoscopeDimensionsWine.id("stagcall_monsoon"))
+                .addOptional(KaleidoscopeDimensionsWine.id("thornheart"))
+                .addOptional(KaleidoscopeDimensionsWine.id("druids_secret_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("moorglow_birds_song"))
+                .addOptional(KaleidoscopeDimensionsWine.id("perennial_frost"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sprite"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pepsi"))
+                .addOptional(KaleidoscopeDimensionsWine.id("fanta"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"))
+                .addOptional(KaleidoscopeDimensionsWine.id("swet_fizz"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gravitite_drunk"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
 
         // 葡园酒香柜子 - 小瓶酒
         tag(KDWItemTags.VINERY_SMALL_BOTTLE)
+                .add(KDWItems.POP_CAN.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -245,41 +311,41 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.END_STARLIGHT.get())
                 .add(KDWItems.DIVINE_EMBRYO_PORT.get())
                 .add(KDWItems.DRACONIC_BLOOD_WINE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "cave_glowbrew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "snakeskin_liqueur"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "rangers_satchel"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "embereye"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "druids_secret_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "moorglow_birds_song"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "perennial_frost"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "goblins_stash"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sprite"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pepsi"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "fanta"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pollen_nectar"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "honeythorn_mead"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "beeswax_honey_wine"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sweet_crystal_honey"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "royal_honey_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_energy_mist"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "swet_fizz"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gravitite_drunk"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "healing_elixir"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "unbound_skyborn"));
+                .addOptional(KaleidoscopeDimensionsWine.id("cave_glowbrew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("snakeskin_liqueur"))
+                .addOptional(KaleidoscopeDimensionsWine.id("rangers_satchel"))
+                .addOptional(KaleidoscopeDimensionsWine.id("embereye"))
+                .addOptional(KaleidoscopeDimensionsWine.id("stagcall_monsoon"))
+                .addOptional(KaleidoscopeDimensionsWine.id("thornheart"))
+                .addOptional(KaleidoscopeDimensionsWine.id("druids_secret_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("moorglow_birds_song"))
+                .addOptional(KaleidoscopeDimensionsWine.id("perennial_frost"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sprite"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pepsi"))
+                .addOptional(KaleidoscopeDimensionsWine.id("fanta"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"))
+                .addOptional(KaleidoscopeDimensionsWine.id("swet_fizz"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gravitite_drunk"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
         // 大瓶酒
         tag(KDWItemTags.VINERY_LARGE_BOTTLE)
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "magma_royal_salute"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dawnlight_dew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "dead_end_spittle"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "frostvein_beastblood"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "stagcall_monsoon"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "thornheart"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "giants_hymn"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_offering_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gingerbread_warmer"));
+                .addOptional(KaleidoscopeDimensionsWine.id("dead_end_spittle"))
+                .addOptional(KaleidoscopeDimensionsWine.id("frostvein_beastblood"))
+                .addOptional(KaleidoscopeDimensionsWine.id("giants_hymn"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pollen_nectar"))
+                .addOptional(KaleidoscopeDimensionsWine.id("honeythorn_mead"))
+                .addOptional(KaleidoscopeDimensionsWine.id("beeswax_honey_wine"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sweet_crystal_honey"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gingerbread_warmer"));
 
         // 幻想乡乐事柜子
         tag(KDWItemTags.YOUKAISFEASTS_WINE)
+                .add(KDWItems.POP_CAN.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -295,27 +361,26 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.END_STARLIGHT.get())
                 .add(KDWItems.DIVINE_EMBRYO_PORT.get())
                 .add(KDWItems.DRACONIC_BLOOD_WINE.get())
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "cave_glowbrew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "snakeskin_liqueur"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "rangers_satchel"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "embereye"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "druids_secret_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "moorglow_birds_song"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "perennial_frost"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "goblins_stash"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sprite"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pepsi"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "fanta"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "pollen_nectar"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "honeythorn_mead"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "beeswax_honey_wine"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "sweet_crystal_honey"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "royal_honey_brew"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "divine_energy_mist"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "swet_fizz"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "gravitite_drunk"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "healing_elixir"))
-                .addOptional(ResourceLocation.fromNamespaceAndPath(KaleidoscopeDimensionsWine.MOD_ID, "unbound_skyborn"));
+                .addOptional(KaleidoscopeDimensionsWine.id("cave_glowbrew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("snakeskin_liqueur"))
+                .addOptional(KaleidoscopeDimensionsWine.id("rangers_satchel"))
+                .addOptional(KaleidoscopeDimensionsWine.id("embereye"))
+                .addOptional(KaleidoscopeDimensionsWine.id("stagcall_monsoon"))
+                .addOptional(KaleidoscopeDimensionsWine.id("thornheart"))
+                .addOptional(KaleidoscopeDimensionsWine.id("druids_secret_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("moorglow_birds_song"))
+                .addOptional(KaleidoscopeDimensionsWine.id("perennial_frost"))
+                .addOptional(KaleidoscopeDimensionsWine.id("goblins_stash"))
+                .addOptional(KaleidoscopeDimensionsWine.id("sprite"))
+                .addOptional(KaleidoscopeDimensionsWine.id("pepsi"))
+                .addOptional(KaleidoscopeDimensionsWine.id("fanta"))
+                .addOptional(KaleidoscopeDimensionsWine.id("royal_honey_brew"))
+                .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"))
+                .addOptional(KaleidoscopeDimensionsWine.id("swet_fizz"))
+                .addOptional(KaleidoscopeDimensionsWine.id("gravitite_drunk"))
+                .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
+                .addOptional(KaleidoscopeDimensionsWine.id("unbound_skyborn"));
 
         // 巨物碎片
         tag(KDWItemTags.COLOSSAL)

@@ -84,15 +84,26 @@ Kaleidoscope: Dimensions Wine is an expansion mod for Kaleidoscope: Tavern, brin
 - **Unbound Skyborn** Ultimate sky gift from Wings to boundless flight.
 - **Aether** Added related wines.
 
+### Eternal Starlight Integration
+#### Brewable Wines
+- **Divinity** A judgment wine bathed in holy light;
+- **Star Trail** A cosmic brew crafted along stellar trajectories;
+- **Aurora** Capturing the dazzling lights of the polar night sky;
+- **Eclipse** The forbidden power at the moment of solar eclipse;
+- **Lunar Eclipse** Mysterious whispers under the blood moon;
+- **Deep Freeze** Extreme cold sealed in permafrost layers;
+- **Blood Moon** A frenzied drink soaked in crimson moonlight;
+- **Abyss** A gazing wine from the bottomless darkness;
+- **Blazing Sun** The blazing essence of a stellar core;
+- **Wind Trace** The invisible trail of wind sweeping across the starry sky.
+
+
 ### Mod Compatibility
 - **JEI** - Full recipe display support and item acquisition hints
 - **Kaleidoscope: Doll** - Limited developer doll blocks
 - **Create** Added compatibility recipes;
 - **The Twilight Forest** Added related crops and wines.
 - **The Bumblezone** Added related wines.
-
-## Future Plans
-Add compatibility with dimensional mods such as Eternal Starlight.
 
 **Raise your cup to invite the moon, with three people including your shadow. Travel between dimensions and savor unique fine wines!**
 
@@ -174,6 +185,19 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 - **姜饼暖饮** 天境节日特制的温暖饮品；
 - **无界苍穹** 从苍穹之翼到无界之赐的终极天空之酒。
 
+### 联动：永恒星光
+#### 可酿造酒类
+- **神圣裁决** 沐浴圣光的审判之酒；
+- **星轨** 沿星辰轨迹酿制的宇宙佳酿；
+- **极光** 捕捉极夜天幕的绚烂光影；
+- **日蚀** 日月交替瞬间的禁忌之力；
+- **月蚀** 血月笼罩下的神秘低语；
+- **深寒** 封印永冻冰层的极致低温；
+- **血月** 猩红月光浸染的狂乱之饮；
+- **深渊** 来自无底黑暗的凝视之酒；
+- **烈阳** 恒星核心燃烧的炽热精华；
+- **风痕** 掠过星空疾风的无形痕迹。
+
 ### 模组联动
 - **JEI** 完整的配方分类显示支持和物品获取提示；
 - **森罗物语：玩偶** 限定开发者玩偶方块；
@@ -181,6 +205,7 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 - **暮色森林** 添加相关作物和酒类。
 - **蜜蜂领域** 添加相关酒类。
 - **天境** 添加相关酒类。
+- **永恒星光** 添加相关酒类。
 
 **举杯邀明月，对影成三人。在各个维度间穿梭，品味独一无二的佳酿吧！**
 
@@ -239,3 +264,22 @@ Kaleidoscope: Dimensions Wine（次元酒窖）是 森罗物语：酒馆 的扩�
 治愈灵药[healing_elixir]：0xd9d9d9
 姜饼暖饮[gingerbread_warmer]：0x737460
 无界苍穹[unbound_skyborn]：0xb8bce3
+
+#### 永恒星光联动
+神圣裁决[divinity]：0xb3926e
+星轨[star_trail]：0x938f8f
+极光[aurora]：0x68209a
+日蚀[eclipse]：0x892a12
+月蚀[lunar_eclipse]：0x2a334a
+深寒[deep_freeze]：0xc1c4cd
+血月[blood_moon]：0xc81616
+深渊[abyss]：0x88180c
+烈阳[blazing_sun]：0xff660e
+风痕[wind_trace]：0x6582ae
+
+
+
+
+
+
+

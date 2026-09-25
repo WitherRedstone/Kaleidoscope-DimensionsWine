@@ -11,6 +11,7 @@ import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblez
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -60,5 +61,10 @@ public class KaleidoscopeDimensionsWine {
 
     private void onCommonSetup(FMLCommonSetupEvent event) {
         KDWCompostables.setup(event);
+    }
+
+    @SuppressWarnings("removal")
+    public static ResourceLocation id(String name) {
+        return new ResourceLocation(KaleidoscopeDimensionsWine.MOD_ID, name);
     }
 }
