@@ -178,8 +178,8 @@ public class HopCrop extends CropBlock {
         if (!level.isClientSide()) {
             if (this.getAge(state) == this.getMaxAge()) {
                 level.setBlock(pos, this.getStateForAge(0), 3);
-                int count = 3 + level.random.nextInt(6);
-                popResource(level, pos, new ItemStack(KDWItems.HOP.get(), count));
+                popResource(level, pos, new ItemStack(KDWItems.HOP.get(), 3 + level.random.nextInt(6)));
+                popResource(level, pos, new ItemStack(KDWItems.HOP_SEED.get(), 1 + level.random.nextInt(3)));
                 return InteractionResult.SUCCESS;
             }
         }
