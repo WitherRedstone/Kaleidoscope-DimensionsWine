@@ -80,7 +80,11 @@ public class ModBlockLootTablesProvider extends BlockLootSubProvider {
                 .withPool(LootPool.lootPool()
                         .when(builder2)
                         .add(LootItem.lootTableItem(KDWItems.HOP.get()))
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 8)))));
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 8))))
+                .withPool(LootPool.lootPool()
+                        .when(builder2)
+                        .add(LootItem.lootTableItem(KDWItems.HOP_SEED.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(1, 3)))));
 
         // ==================== 次元维度 - 下界 ====================
         // -------------------- 作物 --------------------
