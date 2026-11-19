@@ -1,0 +1,119 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
+  "effects": [
+    [
+      {
+        "amplifier": 0,
+        "duration": 30,
+        "effect": "minecraft:nausea",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "amplifier": 0,
+        "duration": 45,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 60,
+        "effect": "minecraft:haste",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 30,
+        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "amplifier": 0,
+        "duration": 30,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 1,
+        "duration": 180,
+        "effect": "minecraft:haste",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 120,
+        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "amplifier": 0,
+        "duration": 20,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 2,
+        "duration": 300,
+        "effect": "minecraft:haste",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 240,
+        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "amplifier": 0,
+        "duration": 10,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 3,
+        "duration": 600,
+        "effect": "minecraft:haste",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 360,
+        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "amplifier": 0,
+        "duration": 5,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 3,
+        "duration": 600,
+        "effect": "minecraft:haste",
+        "probability": 1.0
+      },
+      {
+        "amplifier": 0,
+        "duration": 360,
+        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ]
+  ],
+  "item": "kaleidoscope_dim_wine:divine_offering_brew"
+}
