@@ -27,6 +27,7 @@ public final class DrinkBlockEntityTypeEventHandler {
 
             // ==================== 次元维度 - 主世界 ====================
             blocks.add(KDWBlocks.BUDWEISER_BEER.get()); // 百威啤酒
+            blocks.add(KDWBlocks.BOCCHI.get()); // 波奇
 
             // ==================== 次元维度 - 下界 ====================
             blocks.add(KDWBlocks.CRIMSON_CRESCENDO.get()); // 绯红绝响

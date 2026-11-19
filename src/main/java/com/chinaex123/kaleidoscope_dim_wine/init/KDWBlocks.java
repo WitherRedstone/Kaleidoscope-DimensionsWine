@@ -8,6 +8,7 @@ import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Dreamfruit.*;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.Hop.HopCrop;
 import com.chinaex123.kaleidoscope_dim_wine.block.crop.vanilla.WarpedGrape.*;
 import com.chinaex123.kaleidoscope_dim_wine.compat.kaleidoscope_doll.KaleidoscopeDollBlock;
+import com.chinaex123.kaleidoscope_dim_wine.util.DollShapes.DollType;
 import com.chinaex123.kaleidoscope_dim_wine.util.DrinkShapes;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.brew.DrinkBlock;
 import com.github.ysbbbbbb.kaleidoscopetavern.block.deco.StringLightsBlock;
@@ -33,11 +34,11 @@ public interface KDWBlocks {
             DeferredRegister.createBlocks(KaleidoscopeDimensionsWine.MOD_ID);
 
     // ==================== 小彩蛋 ====================
-    DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE); // 玩偶 - ChinaEX123_BILI
-    DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE); // 玩偶 - Fvue233
-    DeferredBlock<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE); // 玩偶 - Agens_Eland
-    DeferredBlock<Block> DOLL_004 = registerConditionalDoll("doll_004", Rarity.RARE); // 玩偶 - SCXSYGL
-    DeferredBlock<Block> DOLL_005 = registerConditionalDoll("doll_005", Rarity.RARE); // 玩偶 - nade__shiko
+    DeferredBlock<Block> DOLL_001 = registerConditionalDoll("doll_001", Rarity.RARE, DollType.STEVE); // 玩偶 - ChinaEX123_BILI
+    DeferredBlock<Block> DOLL_002 = registerConditionalDoll("doll_002", Rarity.RARE, DollType.ALEX); // 玩偶 - Fvue233
+    DeferredBlock<Block> DOLL_003 = registerConditionalDoll("doll_003", Rarity.RARE, DollType.ALEX); // 玩偶 - Agens_Eland
+    DeferredBlock<Block> DOLL_004 = registerConditionalDoll("doll_004", Rarity.RARE, DollType.STEVE); // 玩偶 - SCXSYGL
+    DeferredBlock<Block> DOLL_005 = registerConditionalDoll("doll_005", Rarity.RARE, DollType.ALEX); // 玩偶 - nade__shiko
 
     // 小灯串
     DeferredBlock<Block> STRING_LIGHTS_BLOCK_COMMAND = registerStringLights("string_lights_block_command", () -> new StringLightsBlock(null));
@@ -72,6 +73,7 @@ public interface KDWBlocks {
 
     // 酒类
     DeferredHolder<Block, Block> BUDWEISER_BEER = BLOCK_REGISTER.register("budweiser_beer", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
+    DeferredHolder<Block, Block> BOCCHI = BLOCK_REGISTER.register("bocchi", () -> DrinkBlock.create().maxCount(4).shapes(DrinkShapes.STANDARD_BOTTLE).build().get());
 
     // ==================== 次元维度 - 下界 ====================
     // 作物
@@ -144,13 +146,13 @@ public interface KDWBlocks {
         return blocks;
     }
 
-    private static DeferredBlock<Block> registerConditionalDoll(String name, Rarity rarity) {
+    private static DeferredBlock<Block> registerConditionalDoll(String name, Rarity rarity, DollType dollType) {
         return registerBlocks(name, () -> {
             if (KaleidoscopeDollBlock.isKaleidoscopeDollLoaded()) {
                 Block doll = KaleidoscopeDollBlock.createKaleidoscopeDoll();
-                return doll != null ? doll : new DollBlock();
+                return doll != null ? doll : new DollBlock(dollType);
             } else {
-                return new DollBlock();
+                return new DollBlock(dollType);
             }
         }, rarity);
     }

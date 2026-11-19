@@ -31,6 +31,7 @@ public interface KDWItems {
 
     // 酒类
     DeferredItem<Item> BUDWEISER_BEER = ITEMS_REGISTER.register("budweiser_beer", () -> new DrinkBlockItem(KDWBlocks.BUDWEISER_BEER.get()));
+    DeferredItem<Item> BOCCHI = ITEMS_REGISTER.register("bocchi", () -> new DrinkBlockItem(KDWBlocks.BOCCHI.get()));
 
     // ==================== 次元维度 - 下界 ====================
     // 作物

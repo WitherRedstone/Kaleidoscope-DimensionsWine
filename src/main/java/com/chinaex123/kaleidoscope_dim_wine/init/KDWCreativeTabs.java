@@ -55,6 +55,7 @@ public class KDWCreativeTabs {
                         output.accept(KDWItems.DRAGON_BLOOD_BOTTLE.get()); // 龙血瓶
                         // -------------------- 酒类 --------------------
                         output.accept(BottleBlockItem.getMaxLevelDrink(KDWItems.BUDWEISER_BEER)); // 百威啤酒
+                        output.accept(BottleBlockItem.getMaxLevelDrink(KDWItems.BOCCHI)); // 波奇
                         output.accept(BottleBlockItem.getMaxLevelDrink(KDWItems.CRIMSON_CRESCENDO)); // 绯红绝响
                         output.accept(BottleBlockItem.getMaxLevelDrink(KDWItems.ETHEREAL_NOBLE)); // 诡影尊爵
                         output.accept(BottleBlockItem.getMaxLevelDrink(KDWItems.WART_HENNESSY)); // 疣域轩尼诗
