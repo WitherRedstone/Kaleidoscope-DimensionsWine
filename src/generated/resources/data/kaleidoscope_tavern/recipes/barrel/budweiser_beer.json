@@ -1,0 +1,19 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "minecraft:water",
+  "ingredients": [
+    {
+      "tag": "forge:hops"
+    },
+    {
+      "tag": "forge:seeds/wheat"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_dim_wine:budweiser_beer"
+  },
+  "unit_time": 2400
+}

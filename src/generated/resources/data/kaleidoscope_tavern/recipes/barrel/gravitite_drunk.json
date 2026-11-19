@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "aether"
+        }
+      ],
+      "recipe": {
+        "type": "kaleidoscope_tavern:barrel",
+        "carrier": {
+          "item": "kaleidoscope_tavern:empty_bottle"
+        },
+        "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+        "ingredients": [
+          {
+            "item": "aether:enchanted_gravitite"
+          },
+          {
+            "item": "aether:cold_aercloud"
+          }
+        ],
+        "result": {
+          "item": "kaleidoscope_dim_wine:gravitite_drunk"
+        },
+        "unit_time": 2400
+      }
+    }
+  ]
+}

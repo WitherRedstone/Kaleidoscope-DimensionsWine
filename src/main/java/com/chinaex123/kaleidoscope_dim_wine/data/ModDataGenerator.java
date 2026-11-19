@@ -35,6 +35,7 @@ public class ModDataGenerator {
         generator.addProvider(event.includeClient(), new ModFluidTagsProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModRecipesProvider(packOutput));
+        generator.addProvider(event.includeServer(), new DrinkEffectDataGen(packOutput));
         generator.addProvider(event.includeServer(), new ModAdvancements(packOutput, lookupProvider, existingFileHelper));
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "aether"
+        }
+      ],
+      "recipe": {
+        "type": "kaleidoscope_tavern:pressing_tub",
+        "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+        "fluid_amount": 125,
+        "ingredient": {
+          "item": "aether:enchanted_berry"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "aether"
+        }
+      ],
+      "recipe": {
+        "type": "kaleidoscope_tavern:barrel",
+        "carrier": {
+          "item": "kaleidoscope_tavern:empty_bottle"
+        },
+        "fluid": "kaleidoscope_dim_wine:enchanted_berry_juice",
+        "ingredients": [
+          {
+            "item": "kaleidoscope_dim_wine:angel_feather"
+          },
+          {
+            "item": "aether:healing_stone"
+          },
+          {
+            "item": "aether:ambrosium_shard"
+          },
+          {
+            "item": "aether:golden_amber"
+          }
+        ],
+        "result": {
+          "item": "kaleidoscope_dim_wine:unbound_skyborn"
+        },
+        "unit_time": 2400
+      }
+    }
+  ]
+}
