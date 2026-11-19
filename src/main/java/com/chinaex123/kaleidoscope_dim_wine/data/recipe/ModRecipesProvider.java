@@ -22,6 +22,11 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> recipeOutput) {
+        modRecipes(recipeOutput);
+    }
+
+    /** 模组配方 */
+    protected void modRecipes(Consumer<FinishedRecipe> recipeOutput) {
         // ==================== 小彩蛋 ====================
         // 玩偶 - ChinaEX123_BILI
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, KDWBlocks.DOLL_001.get())
@@ -299,4 +304,5 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_pop_can_nuggets_iron", has(Tags.Items.NUGGETS_IRON))
                 .save(recipeOutput);
     }
+
 }

@@ -150,9 +150,9 @@
   "effect.kaleidoscope_dim_wine.unbound_grace.desc": "Enables creative flight and removes mining penalty while airborne",
 
   "_comment.wine_items": "Wine-Items",
-  "item.kaleidoscope_dim_wine.empty_bamboo_cup": "Empty Bamboo Cup",
   "item.kaleidoscope_dim_wine.pop_can": "Pop Can",
   "item.kaleidoscope_dim_wine.budweiser_beer": "Budweiser Beer",
+  "block.kaleidoscope_dim_wine.bocchi": "Bocchi Wine",
   "item.kaleidoscope_dim_wine.crimson_crescendo": "Crimson Crescendo",
   "item.kaleidoscope_dim_wine.ethereal_noble": "Ethereal Noble",
   "item.kaleidoscope_dim_wine.wart_hennessy": "Wart Hennessy",

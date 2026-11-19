@@ -143,7 +143,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(KDWItems.ETHEREAL_NOBLE.get());
         // 深红色
         tag(TagMod.COCKTAIL_INGREDIENT_DARK_RED)
-                .add(KDWItems.CRIMSON_GRAPE.get())
                 .add(KDWItems.MAGMA_ROYAL_SALUTE.get())
                 .addOptional(KaleidoscopeDimensionsWine.id("crimson_crescendo"))
                 .addOptional(KaleidoscopeDimensionsWine.id("dawnlight_dew"))
@@ -188,6 +187,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(KaleidoscopeDimensionsWine.id("divine_offering_brew"));
         // 红色
         tag(TagMod.COCKTAIL_INGREDIENT_RED)
+                .add(KDWItems.BOCCHI.get())
                 .add(KDWItems.WART_HENNESSY.get())
                 .addOptional(KaleidoscopeDimensionsWine.id("gravitite_drunk"));
         // 浅紫色
@@ -206,8 +206,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"));
         // 白色
         tag(TagMod.COCKTAIL_INGREDIENT_WHITE)
+                .add(KDWItems.BOCCHI.get())
                 .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
                 .addOptional(KaleidoscopeDimensionsWine.id("pepsi"));
+        // 通用
+        tag(TagMod.COCKTAIL_INGREDIENT);
 
 
 
@@ -250,6 +253,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(KDWItemTags.UPRIGHT_ON_BELT)
                 .add(KDWItems.POP_CAN.get())
                 .add(KDWItems.BUDWEISER_BEER.get())
+                .add(KDWItems.BOCCHI.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -299,6 +303,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(KDWItemTags.VINERY_SMALL_BOTTLE)
                 .add(KDWItems.POP_CAN.get())
                 .add(KDWItems.BUDWEISER_BEER.get())
+                .add(KDWItems.BOCCHI.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())
@@ -350,6 +355,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(KDWItemTags.YOUKAISFEASTS_WINE)
                 .add(KDWItems.POP_CAN.get())
                 .add(KDWItems.BUDWEISER_BEER.get())
+                .add(KDWItems.BOCCHI.get())
                 .add(KDWItems.CRIMSON_CRESCENDO.get())
                 .add(KDWItems.ETHEREAL_NOBLE.get())
                 .add(KDWItems.WART_HENNESSY.get())

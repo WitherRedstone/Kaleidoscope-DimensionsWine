@@ -2,91 +2,95 @@ package com.chinaex123.kaleidoscope_dim_wine.util;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.EnumMap;
+import java.util.Map;
+
 /**
- * 玩偶的碰撞箱
+ * 玩偶的碰撞箱。
+ * <p>
+ * 所有玩偶共用一个整体盒体碰撞箱，正好框住模型（含 ±22.5° 倾斜的手臂与腿部）。
+ * 模型朝向为 NORTH，其余水平朝向由 NORTH 的碰撞箱绕 Y 轴旋转得到。
  */
-public class DollShapes {
-    private static final VoxelShape SHAPE_NORTH = Shapes.or(
-            // Head (头部)
-            Block.box(4.35, 6, 5.75, 11.65, 13.3, 13.05),
-            Block.box(4, 6, 5.4, 12, 14, 13.4),
+public final class DollShapes {
 
-            // Body (身体)
-            Block.box(5.6, 0, 8, 10.4, 6, 10.8),
-            Block.box(5.5, -0.1, 7.9, 10.5, 6.1, 10.9),
+    /** 玩偶的体型，用于区分外观 */
+    public enum DollType {
+        STEVE,
+        ALEX
+    }
 
-            // RightHand (右手)
-            Block.box(9.5, -0.25, 8.4, 11.5, 5.75, 10.4),
-            Block.box(9.4, -0.35, 8.3, 11.6, 5.85, 10.5),
+    /** 朝北时覆盖整体模型的碰撞箱。 */
+    private static final VoxelShape NORTH = Block.box(3.75, 0.0, 2.3, 12.85, 14.5, 13.4);
 
-            // LeftHand (左手)
-            Block.box(4.5, -0.25, 8.4, 6.5, 5.75, 10.4),
-            Block.box(4.4, -0.35, 8.3, 6.6, 5.85, 10.5),
+    /** 各朝向的碰撞箱。 */
+    private static final Map<Direction, VoxelShape> SHAPES = rotateAll(NORTH);
 
-            // RightLeg (右腿)
-            Block.box(8, 0, 2.4, 10, 2, 8.4),
-            Block.box(7.9, -0.1, 2.3, 10.1, 2.1, 8.5),
+    private DollShapes() {
+    }
 
-            // LeftLeg (左腿)
-            Block.box(6, 0, 2.4, 8, 2, 8.4),
-            Block.box(5.9, -0.1, 2.3, 8.1, 2.1, 8.5)
-    );
+    /**
+     * 获取指定体型与朝向的碰撞箱。
+     * <p>
+     * 所有体型共用同一碰撞箱；朝向不在缓存中时回退到 NORTH。
+     *
+     * @param type   玩偶体型
+     * @param facing 朝向
+     * @return 碰撞箱
+     */
+    public static VoxelShape getShape(DollType type, Direction facing) {
+        return SHAPES.getOrDefault(facing, SHAPES.get(Direction.NORTH));
+    }
 
-    private static final VoxelShape SHAPE_SOUTH = Shapes.or(
-            Block.box(4.35, 6, 2.95, 11.65, 13.3, 10.25),
-            Block.box(4, 6, 2.6, 12, 14, 10.6),
-            Block.box(5.6, 0, 5.2, 10.4, 6, 8),
-            Block.box(5.5, -0.1, 5.1, 10.5, 6.1, 8.1),
-            Block.box(4.5, -0.25, 5.6, 6.5, 5.75, 7.6),
-            Block.box(4.4, -0.35, 5.5, 6.6, 5.85, 7.7),
-            Block.box(9.5, -0.25, 5.6, 11.5, 5.75, 7.6),
-            Block.box(9.4, -0.35, 5.5, 11.6, 5.85, 7.7),
-            Block.box(6, 0, 7.6, 8, 2, 13.6),
-            Block.box(5.9, -0.1, 7.5, 8.1, 2.1, 13.7),
-            Block.box(8, 0, 7.6, 10, 2, 13.6),
-            Block.box(7.9, -0.1, 7.5, 10.1, 2.1, 13.7)
-    );
+    /**
+     * 以 NORTH 朝向的碰撞箱生成四个水平朝向的碰撞箱。
+     *
+     * @param north NORTH 朝向的碰撞箱
+     * @return 朝向到碰撞箱的映射
+     */
+    private static Map<Direction, VoxelShape> rotateAll(VoxelShape north) {
+        Map<Direction, VoxelShape> shapes = new EnumMap<>(Direction.class);
+        shapes.put(Direction.NORTH, north);
+        shapes.put(Direction.EAST, rotate(north, Direction.EAST));
+        shapes.put(Direction.SOUTH, rotate(north, Direction.SOUTH));
+        shapes.put(Direction.WEST, rotate(north, Direction.WEST));
+        return shapes;
+    }
 
-    private static final VoxelShape SHAPE_WEST = Shapes.or(
-            Block.box(2.95, 6, 4.35, 10.25, 13.3, 11.65),
-            Block.box(2.6, 6, 4, 10.6, 14, 12),
-            Block.box(5.2, 0, 5.6, 8, 6, 10.4),
-            Block.box(5.1, -0.1, 5.5, 8.1, 6.1, 10.5),
-            Block.box(5.6, -0.25, 4.5, 7.6, 5.75, 6.5),
-            Block.box(5.5, -0.35, 4.4, 7.7, 5.85, 6.6),
-            Block.box(5.6, -0.25, 9.5, 7.6, 5.75, 11.5),
-            Block.box(5.5, -0.35, 9.4, 7.7, 5.85, 11.6),
-            Block.box(7.6, 0, 6, 13.6, 2, 8),
-            Block.box(7.5, -0.1, 5.9, 13.7, 2.1, 8.1),
-            Block.box(7.6, 0, 8, 13.6, 2, 10),
-            Block.box(7.5, -0.1, 7.9, 13.7, 2.1, 10.1)
-    );
-
-    private static final VoxelShape SHAPE_EAST = Shapes.or(
-            Block.box(5.75, 6, 4.35, 13.05, 13.3, 11.65),
-            Block.box(5.4, 6, 4, 13.4, 14, 12),
-            Block.box(8, 0, 5.2, 10.8, 6, 8),
-            Block.box(7.9, -0.1, 5.1, 10.9, 6.1, 8.1),
-            Block.box(8.4, -0.25, 9.5, 10.4, 5.75, 11.5),
-            Block.box(8.3, -0.35, 9.4, 10.5, 5.85, 11.6),
-            Block.box(8.4, -0.25, 4.5, 10.4, 5.75, 6.5),
-            Block.box(8.3, -0.35, 4.4, 10.5, 5.85, 6.6),
-            Block.box(2.4, 0, 8, 8.4, 2, 10),
-            Block.box(2.3, -0.1, 7.9, 8.5, 2.1, 10.1),
-            Block.box(2.4, 0, 6, 8.4, 2, 8),
-            Block.box(2.3, -0.1, 5.9, 8.5, 2.1, 8.1)
-    );
-
-    public static VoxelShape getShape(Direction facing) {
-        return switch (facing) {
-            case NORTH -> SHAPE_NORTH;
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            case EAST -> SHAPE_EAST;
-            default -> SHAPE_NORTH;
-        };
+    /**
+     * 将 NORTH 朝向的碰撞箱绕 Y 轴旋转到指定朝向。
+     * <p>
+     * 直接返回 NORTH 或逐个盒体按对应变换旋转后合并；
+     * 未知朝向直接使用原盒体。
+     *
+     * @param north  NORTH 朝向的碰撞箱
+     * @param facing 目标朝向
+     * @return 旋转后的碰撞箱
+     */
+    private static VoxelShape rotate(VoxelShape north, Direction facing) {
+        if (facing == Direction.NORTH) {
+            return north;
+        }
+        VoxelShape result = Shapes.empty();
+        for (AABB box : north.toAabbs()) {
+            VoxelShape rotated = switch (facing) {
+                // (x, z) -> (1 - z, x)
+                case EAST -> Shapes.box(1.0 - box.maxZ, box.minY, box.minX,
+                        1.0 - box.minZ, box.maxY, box.maxX);
+                // (x, z) -> (1 - x, 1 - z)
+                case SOUTH -> Shapes.box(1.0 - box.maxX, box.minY, 1.0 - box.maxZ,
+                        1.0 - box.minX, box.maxY, 1.0 - box.minZ);
+                // (x, z) -> (z, 1 - x)
+                case WEST -> Shapes.box(box.minZ, box.minY, 1.0 - box.maxX,
+                        box.maxZ, box.maxY, 1.0 - box.minX);
+                default -> Shapes.box(box.minX, box.minY, box.minZ,
+                        box.maxX, box.maxY, box.maxZ);
+            };
+            result = Shapes.or(result, rotated);
+        }
+        return result;
     }
 }
