@@ -1,113 +1,113 @@
 {
+  "item": "kaleidoscope_dim_wine:black_bone_lafite",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 35,
         "effect": "minecraft:nausea",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
+        "effect": "kaleidoscope_dim_wine:withered_slash",
         "duration": 60,
-        "effect": "kaleidoscope_dim_wine:withered_slash",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:wither",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "kaleidoscope_dim_wine:withered_slash",
         "duration": 180,
-        "effect": "kaleidoscope_dim_wine:withered_slash",
+        "amplifier": 1,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "minecraft:wither",
+        "duration": 20,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 2,
+        "effect": "kaleidoscope_dim_wine:withered_slash",
         "duration": 300,
-        "effect": "kaleidoscope_dim_wine:withered_slash",
+        "amplifier": 2,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 10,
         "effect": "minecraft:wither",
+        "duration": 10,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 10,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
-        "duration": 600,
-        "effect": "kaleidoscope_dim_wine:withered_slash",
-        "probability": 1.0
-      },
-      {
+        "duration": 20,
         "amplifier": 0,
-        "duration": 5,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:withered_slash",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:wither",
+        "duration": 5,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 5,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
-        "duration": 600,
-        "effect": "kaleidoscope_dim_wine:withered_slash",
-        "probability": 1.0
-      },
-      {
+        "duration": 10,
         "amplifier": 0,
-        "duration": 5,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:withered_slash",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      },
+      {
         "effect": "minecraft:wither",
+        "duration": 5,
+        "amplifier": 0,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:black_bone_lafite"
+  ]
 }

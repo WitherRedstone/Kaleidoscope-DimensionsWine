@@ -1,83 +1,83 @@
 {
+  "item": "kaleidoscope_dim_wine:dawnlight_dew",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:nausea",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 60,
-        "effect": "minecraft:speed",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
         "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "minecraft:speed",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:speed",
         "duration": 180,
-        "effect": "minecraft:speed",
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 2,
+        "effect": "minecraft:speed",
         "duration": 300,
-        "effect": "minecraft:speed",
+        "amplifier": 2,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:speed",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 10,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
-        "duration": 600,
-        "effect": "minecraft:speed",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
         "amplifier": 0,
-        "duration": 5,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "probability": 1.0
       },
       {
-        "amplifier": 3,
-        "duration": 600,
         "effect": "minecraft:speed",
+        "duration": 600,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:dawnlight_dew"
+  ]
 }

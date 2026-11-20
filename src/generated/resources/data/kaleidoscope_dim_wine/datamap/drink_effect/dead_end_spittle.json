@@ -1,83 +1,83 @@
 {
+  "item": "kaleidoscope_dim_wine:dead_end_spittle",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:nausea",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 60,
-        "effect": "kaleidoscope_dim_wine:hardened",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
         "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "kaleidoscope_dim_wine:hardened",
+        "duration": 60,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:hardened",
         "duration": 180,
-        "effect": "kaleidoscope_dim_wine:hardened",
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 2,
+        "effect": "kaleidoscope_dim_wine:hardened",
         "duration": 300,
-        "effect": "kaleidoscope_dim_wine:hardened",
+        "amplifier": 2,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:hardened",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 10,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
-        "duration": 600,
-        "effect": "kaleidoscope_dim_wine:hardened",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
         "amplifier": 0,
-        "duration": 5,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "probability": 1.0
       },
       {
-        "amplifier": 3,
-        "duration": 600,
         "effect": "kaleidoscope_dim_wine:hardened",
+        "duration": 600,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:dead_end_spittle"
+  ]
 }

@@ -1,113 +1,113 @@
 {
+  "item": "kaleidoscope_dim_wine:dragons_breath_brandy",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:nausea",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 90,
-        "effect": "minecraft:night_vision",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 90,
-        "effect": "minecraft:haste",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
         "duration": 30,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
         "amplifier": 0,
-        "duration": 480,
-        "effect": "minecraft:night_vision",
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "minecraft:night_vision",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:haste",
+        "duration": 90,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 480,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:haste",
         "duration": 120,
-        "effect": "minecraft:haste",
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
+        "duration": 30,
         "amplifier": 0,
-        "duration": 1440,
-        "effect": "minecraft:night_vision",
         "probability": 1.0
       },
       {
-        "amplifier": 2,
+        "effect": "minecraft:night_vision",
+        "duration": 1440,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:haste",
         "duration": 480,
-        "effect": "minecraft:haste",
+        "amplifier": 2,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:night_vision",
+        "duration": 2880,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:haste",
+        "duration": 1440,
+        "amplifier": 3,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 10,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 2880,
         "effect": "minecraft:night_vision",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
-        "duration": 1440,
-        "effect": "minecraft:haste",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 5,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
         "duration": 2880,
-        "effect": "minecraft:night_vision",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 3,
-        "duration": 1440,
         "effect": "minecraft:haste",
+        "duration": 1440,
+        "amplifier": 3,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:dragons_breath_brandy"
+  ]
 }
