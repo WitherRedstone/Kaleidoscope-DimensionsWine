@@ -1,113 +1,113 @@
 {
+  "item": "kaleidoscope_dim_wine:magma_royal_salute",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:nausea",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
+        "effect": "kaleidoscope_dim_wine:fire_attack",
         "duration": 60,
-        "effect": "kaleidoscope_dim_wine:fire_attack",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:fire_resistance",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "kaleidoscope_dim_wine:fire_attack",
         "duration": 180,
-        "effect": "kaleidoscope_dim_wine:fire_attack",
+        "amplifier": 1,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
+        "effect": "minecraft:fire_resistance",
         "duration": 120,
-        "effect": "minecraft:fire_resistance",
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 2,
+        "effect": "kaleidoscope_dim_wine:fire_attack",
         "duration": 300,
-        "effect": "kaleidoscope_dim_wine:fire_attack",
+        "amplifier": 2,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
+        "effect": "minecraft:fire_resistance",
         "duration": 240,
-        "effect": "minecraft:fire_resistance",
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "kaleidoscope_dim_wine:fire_attack",
+        "duration": 600,
+        "amplifier": 3,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:fire_resistance",
+        "duration": 360,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 10,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 3,
-        "duration": 600,
         "effect": "kaleidoscope_dim_wine:fire_attack",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 360,
-        "effect": "minecraft:fire_resistance",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 5,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 3,
         "duration": 600,
-        "effect": "kaleidoscope_dim_wine:fire_attack",
+        "amplifier": 3,
         "probability": 1.0
       },
       {
-        "amplifier": 0,
-        "duration": 360,
         "effect": "minecraft:fire_resistance",
+        "duration": 360,
+        "amplifier": 0,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:magma_royal_salute"
+  ]
 }

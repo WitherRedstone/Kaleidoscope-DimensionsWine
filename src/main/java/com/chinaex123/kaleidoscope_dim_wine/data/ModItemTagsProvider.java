@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -261,6 +262,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(TagMod.COCKTAIL_INGREDIENT);
 
 
+        // 种子
+        tag(Tags.Items.SEEDS).add(KDWItems.HOP_SEED.get());
         // 葡萄
         tag(KDWItemTags.GRAPES)
                 .add(KDWItems.CRIMSON_GRAPE.get())

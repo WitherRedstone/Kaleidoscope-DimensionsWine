@@ -9,58 +9,51 @@ import com.chinaex123.kaleidoscope_dim_wine.init.compat.EternalStarlight.Eternal
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneItems;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Twilightforest.TwilightforestItems;
 import com.github.ysbbbbbb.kaleidoscopetavern.datamap.data.DrinkEffectData;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.google.common.hash.Hashing;
+import com.google.common.hash.HashingOutputStream;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.stream.JsonWriter;
 import com.mojang.serialization.JsonOps;
+import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import net.minecraft.util.GsonHelper;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.registries.DeferredItem;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.ToIntFunction;
 
 public class DrinkEffectDataGen implements DataProvider {
-    /** 等级 2-6 固定附带的微醺时长 */
-    private static final int[] SLIGHTLY_TIPSY_DURATIONS = {45, 30, 20, 10, 5};
+    private static final int[] SLIGHTLY_TIPSY_DURATIONS = {45, 30, 30, 20, 10};
 
-    private final PackOutput.PathProvider pathProvider;
-    private final Map<String, DrinkEffectData> data = new LinkedHashMap<>();
-    private final Map<String, String> conditions = new LinkedHashMap<>();
+    private static final ToIntFunction<String> ORDER_FIELDS = Util.make(new Object2IntOpenHashMap<>(), map -> {
+        map.put("item", 0);
+        map.defaultReturnValue(1);
+    });
+
+    private final Map<String, DrinkEffectData> data = Maps.newLinkedHashMap();
+    private final PackOutput output;
 
     public DrinkEffectDataGen(PackOutput output) {
-        this.pathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "datamap/drink_effect");
-    }
-
-    @Override
-    public CompletableFuture<?> run(CachedOutput cache) {
-        gather();
-        List<CompletableFuture<?>> futures = new ArrayList<>();
-        this.data.forEach((name, drinkEffect) -> DrinkEffectData.CODEC
-                .encodeStart(JsonOps.INSTANCE, drinkEffect)
-                .resultOrPartial(error -> KaleidoscopeDimensionsWine.LOGGER
-                        .error("饮品效果 {} 编码失败: {}", name, error))
-                .ifPresent(json -> {
-                    addCondition(json, this.conditions.get(name));
-                    futures.add(DataProvider.saveStable(cache, json,
-                            this.pathProvider.json(KaleidoscopeDimensionsWine.id(name))));
-                }));
-        return CompletableFuture.allOf(futures.toArray(CompletableFuture[]::new));
-    }
-
-    @Override
-    public String getName() {
-        return "Drink Effect Data";
+        this.output = output;
     }
 
     private void gather() {
@@ -76,7 +69,7 @@ public class DrinkEffectDataGen implements DataProvider {
                 List.of(effect(MobEffects.DAMAGE_BOOST, 300, 2), effect(MobEffects.NIGHT_VISION, 240, 0)),
                 List.of(effect(MobEffects.DAMAGE_BOOST, 600, 3), effect(MobEffects.NIGHT_VISION, 360, 0))
         );
-        addWithLevel2Effects(KDWItems.BLACK_BONE_LAFITE, 35,
+        addWithLevel2Effects(KDWItems.BLACK_BONE_LAFITE,
                 List.of(effect(KDWEffects.WITHERED_SLASH, 60, 0), effect(MobEffects.WITHER, 30, 0)),
                 List.of(effect(KDWEffects.WITHERED_SLASH, 180, 1), effect(MobEffects.WITHER, 20, 0)),
                 List.of(effect(KDWEffects.WITHERED_SLASH, 300, 2), effect(MobEffects.WITHER, 10, 0)),
@@ -112,7 +105,7 @@ public class DrinkEffectDataGen implements DataProvider {
                 List.of(effect(KDWEffects.PARADOX, 300, 2)),
                 List.of(effect(KDWEffects.PARADOX, 600, 3))
         );
-        addFull(KDWItems.DRACONIC_BLOOD_WINE,
+        addAllLevels(KDWItems.DRACONIC_BLOOD_WINE,
                 List.of(effect(MobEffects.CONFUSION, 30, 0)),
                 List.of(effect(ModEffects.SLIGHTLY_TIPSY, 45, 0)),
                 List.of(effect(ModEffects.SLIGHTLY_TIPSY, 60, 0), effect(KDWEffects.BLOODTHIRSTY, 30, 0)),
@@ -440,77 +433,126 @@ public class DrinkEffectDataGen implements DataProvider {
     }
 
     @SafeVarargs
-    private void addWithLevel2Effects(DeferredItem<Item> item, List<DrinkEffectData.Entry>... levelAbove1) {
-        addWithLevel2Effects(item, 30, levelAbove1);
+    public final void add(DeferredItem<? extends Item> key, List<DrinkEffectData.Entry>... levelAbove2) {
+        var itemKey = BuiltInRegistries.ITEM.getKey(key.value());
+        this.add(itemKey.getPath(), key, levelAbove2);
+    }
+
+    private DrinkEffectData.Entry effect(Holder<MobEffect> effect, int duration, int amplifier) {
+        return new DrinkEffectData.Entry(effect, duration, amplifier, 1f);
+    }
+
+    private void addCocktail(DeferredItem<? extends Item> key, DrinkEffectData.Entry... entries) {
+        var itemKey = BuiltInRegistries.ITEM.getKey(key.get());
+        this.add(itemKey.getPath(), new DrinkEffectData(key, List.of(List.of(entries))));
     }
 
     @SafeVarargs
-    private void addWithLevel2Effects(DeferredItem<Item> item, int confusionDuration,
-                                      List<DrinkEffectData.Entry>... levelAbove1) {
-        put(BuiltInRegistries.ITEM.getKey(item.get()).getPath(), null, item, confusionDuration, levelAbove1);
-    }
-
-    @SafeVarargs
-    private void addWithLevel2Effects(String modId, DeferredItem<Item> item,
-                                      List<DrinkEffectData.Entry>... levelAbove1) {
-        put(BuiltInRegistries.ITEM.getKey(item.get()).getPath(), modId, item, 30, levelAbove1);
-    }
-
-    @SafeVarargs
-    private void addFull(DeferredItem<Item> item, List<DrinkEffectData.Entry>... levels) {
-        addFull(null, item, levels);
-    }
-
-    @SafeVarargs
-    private void addFull(String modId, DeferredItem<Item> item, List<DrinkEffectData.Entry>... levels) {
-        String name = BuiltInRegistries.ITEM.getKey(item.get()).getPath();
-        if (modId != null) {
-            this.conditions.put(name, modId);
+    public final void add(String fileName, DeferredItem<? extends Item> key, List<DrinkEffectData.Entry>... levelAbove2) {
+        int length = levelAbove2.length;
+        if (length == 0) {
+            throw new IllegalArgumentException("At least one level above 2 must be provided");
         }
-        this.data.put(name, new DrinkEffectData(item.get().builtInRegistryHolder(), List.of(levels)));
+        this.addWithLevel2Effects(fileName, key,
+                List.of(),
+                levelAbove2[0],
+                levelAbove2[Math.min(1, length - 1)],
+                levelAbove2[Math.min(2, length - 1)],
+                levelAbove2[Math.min(3, length - 1)]
+        );
     }
 
     @SafeVarargs
-    private void put(String name, String modId, DeferredItem<Item> item, int confusionDuration,
-                     List<DrinkEffectData.Entry>... levelAbove1) {
+    private void addWithLevel2Effects(DeferredItem<? extends Item> key, List<DrinkEffectData.Entry>... levelAbove1) {
+        var itemKey = BuiltInRegistries.ITEM.getKey(key.get());
+        this.addWithLevel2Effects(itemKey.getPath(), key, levelAbove1);
+    }
+
+    @SafeVarargs
+    private void addWithLevel2Effects(String fileName, DeferredItem<? extends Item> key,
+                                      List<DrinkEffectData.Entry>... levelAbove1) {
         int length = levelAbove1.length;
         if (length == 0) {
-            throw new IllegalArgumentException("等级 2 以上至少需要一个等级的效果");
+            throw new IllegalArgumentException("At least one level above 1 must be provided");
         }
-        if (modId != null) {
-            this.conditions.put(name, modId);
-        }
-        List<List<DrinkEffectData.Entry>> effects = new ArrayList<>(SLIGHTLY_TIPSY_DURATIONS.length + 1);
-        // 等级 1：反胃
-        effects.add(List.of(new DrinkEffectData.Entry(MobEffects.CONFUSION, confusionDuration, 0, 1.0F)));
-        // 等级 2-6：固定附带微醺，再叠加专属效果
+
+        var effects = Lists.<List<DrinkEffectData.Entry>>newArrayListWithExpectedSize(SLIGHTLY_TIPSY_DURATIONS.length + 1);
+        // 等级 1，固定为反胃 30s
+        effects.add(List.of(new DrinkEffectData.Entry(MobEffects.CONFUSION, 30, 0, 1f)));
+        // 等级 2-6，除难以下咽外，都会额外附带对应时长的微醺效果
         for (int i = 0; i < SLIGHTLY_TIPSY_DURATIONS.length; i++) {
-            List<DrinkEffectData.Entry> extra = levelAbove1[Math.min(i, length - 1)];
-            List<DrinkEffectData.Entry> merged = new ArrayList<>(extra.size() + 1);
-            merged.add(new DrinkEffectData.Entry(ModEffects.SLIGHTLY_TIPSY, SLIGHTLY_TIPSY_DURATIONS[i], 0, 1.0F));
-            merged.addAll(extra);
-            effects.add(List.copyOf(merged));
+            effects.add(withSlightlyTipsy(SLIGHTLY_TIPSY_DURATIONS[i], levelAbove1[Math.min(i, length - 1)]));
         }
-        this.data.put(name, new DrinkEffectData(item.get().builtInRegistryHolder(), effects));
+
+        this.add(fileName, new DrinkEffectData(key, effects));
     }
 
-    private static DrinkEffectData.Entry effect(Holder<MobEffect> effect, int duration, int amplifier) {
-        return new DrinkEffectData.Entry(effect, duration, amplifier, 1.0F);
+    public void addAllLevels(DeferredItem<? extends Item> key,
+                             List<DrinkEffectData.Entry> level1,
+                             List<DrinkEffectData.Entry> level2,
+                             List<DrinkEffectData.Entry> level3,
+                             List<DrinkEffectData.Entry> level4,
+                             List<DrinkEffectData.Entry> level5,
+                             List<DrinkEffectData.Entry> level6) {
+        var itemKey = BuiltInRegistries.ITEM.getKey(key.get());
+        var effects = Lists.newArrayList(level1, level2, level3, level4, level5, level6);
+        this.add(itemKey.getPath(), new DrinkEffectData(key, effects));
     }
 
-    private static DrinkEffectData.Entry effect(Holder<MobEffect> effect, int duration, int amplifier, float probability) {
-        return new DrinkEffectData.Entry(effect, duration, amplifier, probability);
+    private List<DrinkEffectData.Entry> withSlightlyTipsy(int duration, List<DrinkEffectData.Entry> entries) {
+        var result = Lists.<DrinkEffectData.Entry>newArrayListWithExpectedSize(entries.size() + 1);
+        result.add(effect(ModEffects.SLIGHTLY_TIPSY, duration, 0));
+        result.addAll(entries);
+        return result;
     }
 
-    private static void addCondition(JsonElement element, String modId) {
-        if (modId == null || !element.isJsonObject()) {
-            return;
+    public void add(String fileName, DrinkEffectData value) {
+        this.data.put(fileName, value);
+    }
+
+    @Override
+    public CompletableFuture<?> run(CachedOutput cache) {
+        this.gather();
+
+        List<CompletableFuture<?>> futures = Lists.newArrayList();
+        var pathProvider = this.output.createPathProvider(PackOutput.Target.DATA_PACK, "datamap/drink_effect");
+
+        for (var entry : data.entrySet()) {
+            DrinkEffectData.CODEC
+                    .encodeStart(JsonOps.INSTANCE, entry.getValue())
+                    .resultOrPartial(KaleidoscopeDimensionsWine.LOGGER::error)
+                    .ifPresent(json -> {
+                        var filePath = pathProvider.json(KaleidoscopeDimensionsWine.id(entry.getKey()));
+                        var future = this.saveStable(cache, json, filePath);
+                        futures.add(future);
+                    });
         }
-        JsonObject condition = new JsonObject();
-        condition.addProperty("type", "neoforge:mod_loaded");
-        condition.addProperty("modid", modId);
-        JsonArray conditions = new JsonArray();
-        conditions.add(condition);
-        element.getAsJsonObject().add("neoforge:conditions", conditions);
+
+        return CompletableFuture.allOf(futures.toArray(CompletableFuture[]::new));
+    }
+
+    @SuppressWarnings("all")
+    private CompletableFuture<?> saveStable(CachedOutput output, JsonElement json, Path path) {
+        return CompletableFuture.runAsync(() -> {
+            try {
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                HashingOutputStream hashing = new HashingOutputStream(Hashing.sha1(), stream);
+
+                try (JsonWriter writer = new JsonWriter(new OutputStreamWriter(hashing, StandardCharsets.UTF_8))) {
+                    writer.setSerializeNulls(false);
+                    writer.setIndent("  ");
+                    GsonHelper.writeValue(writer, json, Comparator.comparingInt(ORDER_FIELDS));
+                }
+
+                output.writeIfNeeded(path, stream.toByteArray(), hashing.hash());
+            } catch (IOException ioexception) {
+                KaleidoscopeDimensionsWine.LOGGER.error("Failed to save file to {}", path, ioexception);
+            }
+        }, Util.backgroundExecutor());
+    }
+
+    @Override
+    public String getName() {
+        return "Drink Effect Data";
     }
 }

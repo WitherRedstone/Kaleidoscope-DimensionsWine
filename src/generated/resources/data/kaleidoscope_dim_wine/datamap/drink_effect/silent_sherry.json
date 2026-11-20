@@ -1,83 +1,83 @@
 {
+  "item": "kaleidoscope_dim_wine:silent_sherry",
   "effects": [
     [
       {
-        "amplifier": 0,
-        "duration": 30,
         "effect": "minecraft:nausea",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
-        "duration": 45,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 0,
-        "duration": 60,
-        "effect": "minecraft:strength",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
-        "amplifier": 0,
         "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 45,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
+        "effect": "minecraft:strength",
+        "duration": 60,
         "amplifier": 0,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:strength",
         "duration": 180,
-        "effect": "minecraft:strength",
+        "amplifier": 0,
         "probability": 1.0
       }
     ],
     [
       {
-        "amplifier": 0,
-        "duration": 20,
         "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 30,
+        "amplifier": 0,
         "probability": 1.0
       },
       {
-        "amplifier": 1,
+        "effect": "minecraft:strength",
         "duration": 300,
-        "effect": "minecraft:strength",
+        "amplifier": 1,
         "probability": 1.0
       }
     ],
     [
       {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
+        "duration": 20,
         "amplifier": 0,
+        "probability": 1.0
+      },
+      {
+        "effect": "minecraft:strength",
+        "duration": 600,
+        "amplifier": 2,
+        "probability": 1.0
+      }
+    ],
+    [
+      {
+        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "duration": 10,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
-        "probability": 1.0
-      },
-      {
-        "amplifier": 2,
-        "duration": 600,
-        "effect": "minecraft:strength",
-        "probability": 1.0
-      }
-    ],
-    [
-      {
         "amplifier": 0,
-        "duration": 5,
-        "effect": "kaleidoscope_tavern:slightly_tipsy",
         "probability": 1.0
       },
       {
-        "amplifier": 2,
-        "duration": 600,
         "effect": "minecraft:strength",
+        "duration": 600,
+        "amplifier": 2,
         "probability": 1.0
       }
     ]
-  ],
-  "item": "kaleidoscope_dim_wine:silent_sherry"
+  ]
 }
