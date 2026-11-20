@@ -1,4 +1,4 @@
-// 1.20.1	2026-11-19T18:31:30.9925238	Recipes
+// 1.20.1	2026-11-20T16:33:57.3653653	Recipes
 afad26dac916b0507a41cd0e99cb1f324cd304e1 data/kaleidoscope_dim_wine/advancements/recipes/food/dragon_blood_bottle.json
 b41faadd836dff819ddb59a9347b711e5bc06f64 data/kaleidoscope_dim_wine/advancements/recipes/misc/angel_feather.json
 8a748974ec01a611cd0f867ab78f36bd8383e496 data/kaleidoscope_dim_wine/advancements/recipes/misc/doll_001.json
@@ -58,7 +58,7 @@ b3bb2d1e5cd430f5f27cd9dd2f77873b72864e08 data/kaleidoscope_tavern/recipes/barrel
 9ba10f7c606a5709f11b7a6a645d6f6a9b1bef38 data/kaleidoscope_tavern/recipes/barrel/beeswax_honey_wine.json
 f5d679a3811a27df7c6f7c06ff608212de276110 data/kaleidoscope_tavern/recipes/barrel/black_bone_lafite.json
 e30dd69f64f2022b8bf30d44c208d9a576f73e23 data/kaleidoscope_tavern/recipes/barrel/blaze_martell.json
-8e4b54cfbf365d987913fc6367da68bdec862970 data/kaleidoscope_tavern/recipes/barrel/bocchi.json
+d6b3c0667822a35df6bee14c36e63a9667e38540 data/kaleidoscope_tavern/recipes/barrel/bocchi.json
 5e153f7c59df71b80e21b5a13cf0a8a192fcde8d data/kaleidoscope_tavern/recipes/barrel/budweiser_beer.json
 25e81a4ae47bfd339c12c28e282499c20570c3c3 data/kaleidoscope_tavern/recipes/barrel/cave_glowbrew.json
 9825b2b6502251f0ba02d3dfd3be77d7fd92b532 data/kaleidoscope_tavern/recipes/barrel/chorus_cognac.json

@@ -385,7 +385,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .setResult(KDWItems.BUDWEISER_BEER.get())
                 .save(output);
         BarrelBuilder.builder()
-                .setFluid(ModFluids.GOLD_GRAPE_JUICE.get())
+                .setFluid(ModFluids.GLOW_BERRIES_JUICE.get())
                 .addIngredient(Items.SUGAR)
                 .addIngredient(Items.PINK_PETALS)
                 .addIngredient(Items.BLUE_ORCHID)

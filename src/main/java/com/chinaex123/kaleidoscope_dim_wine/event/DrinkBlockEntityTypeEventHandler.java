@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.block.entity;
+package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.TheBumblezone.TheBumblezoneBlocks;

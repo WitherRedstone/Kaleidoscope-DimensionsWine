@@ -1,4 +1,4 @@
-// 1.20.1	2026-09-26T21:49:11.3168092	Loot Tables
+// 1.20.1	2026-11-20T10:32:55.9446124	Loot Tables
 6d7a2d22b592e5a7bb9b44dc01d09d5ee06fd9ea data/kaleidoscope_dim_wine/loot_tables/advancements/mead_essence.json
 efb65a6fb2b049082853ffc0e0f2e376a8d75ceb data/kaleidoscope_dim_wine/loot_tables/advancements/twilightforest_wine.json
 5403fd36da1767bc11945f3bd01de86edc2fa9b2 data/kaleidoscope_dim_wine/loot_tables/blocks/crimson_grapevine.json
@@ -8,6 +8,8 @@ e6a665e6746382570eea9a14fc46afc7052a99bb data/kaleidoscope_dim_wine/loot_tables/
 f2a50308f359762bf3cfd2c84e5ddc2cb58a1167 data/kaleidoscope_dim_wine/loot_tables/blocks/doll_001.json
 3f19d2d9c7c03c0a368378354774e7c30f535e31 data/kaleidoscope_dim_wine/loot_tables/blocks/doll_002.json
 862116fe9a747f65465bf7a72443e002c85392ab data/kaleidoscope_dim_wine/loot_tables/blocks/doll_003.json
+b7785ce276a08869a8e5c845d98a5e6ae19cc279 data/kaleidoscope_dim_wine/loot_tables/blocks/doll_004.json
+8ed9d47076b21107066e51484568d2f36c18b71b data/kaleidoscope_dim_wine/loot_tables/blocks/doll_005.json
 e1daaad203fd52696ddb1f2cd36c70d91e9a1d73 data/kaleidoscope_dim_wine/loot_tables/blocks/dreamfruit_vine.json
 a6af43029340046c72151b13591829428ed0c0da data/kaleidoscope_dim_wine/loot_tables/blocks/dreamfruit_vine_plant.json
 b651627e95096e0a8913c2036e7639c2a82492bf data/kaleidoscope_dim_wine/loot_tables/blocks/hop_crop.json

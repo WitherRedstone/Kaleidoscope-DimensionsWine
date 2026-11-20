@@ -48,6 +48,8 @@ public class ModBlockLootTablesProvider extends BlockLootSubProvider {
         dropSelf(KDWBlocks.DOLL_001.get());
         dropSelf(KDWBlocks.DOLL_002.get());
         dropSelf(KDWBlocks.DOLL_003.get());
+        dropSelf(KDWBlocks.DOLL_004.get());
+        dropSelf(KDWBlocks.DOLL_005.get());
         // ==================== 小彩蛋 ====================
         dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER.get()); // 小灯串（潜影贝-无色）
         dropSelf(KDWBlocks.STRING_LIGHTS_ENTITY_SHULKER_WHITE.get()); // 小灯串（潜影贝-白色）
