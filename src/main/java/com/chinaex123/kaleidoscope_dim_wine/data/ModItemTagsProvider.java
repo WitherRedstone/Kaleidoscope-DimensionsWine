@@ -254,7 +254,6 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .addOptional(KaleidoscopeDimensionsWine.id("divine_energy_mist"));
         // 白色
         tag(TagMod.COCKTAIL_INGREDIENT_WHITE)
-                .add(KDWItems.BOCCHI.get())
                 .addOptional(KaleidoscopeDimensionsWine.id("healing_elixir"))
                 .addOptional(KaleidoscopeDimensionsWine.id("pepsi"))
                 .addOptional(KaleidoscopeDimensionsWine.id("wind_trace"));

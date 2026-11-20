@@ -24,13 +24,9 @@ public final class DollShapes {
     }
 
     /** 朝北时覆盖整体模型的碰撞箱。 */
-    private static final VoxelShape NORTH = Block.box(3.75, 0.0, 2.3, 12.85, 14.5, 13.4);
-
+    private static final VoxelShape NORTH = Block.box(2.0, 0.0, 2.0, 14, 14, 14);
     /** 各朝向的碰撞箱。 */
     private static final Map<Direction, VoxelShape> SHAPES = rotateAll(NORTH);
-
-    private DollShapes() {
-    }
 
     /**
      * 获取指定体型与朝向的碰撞箱。

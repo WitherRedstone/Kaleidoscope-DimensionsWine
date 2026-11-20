@@ -4,7 +4,7 @@ import com.chinaex123.kaleidoscope_dim_wine.config.KDWConfig;
 import com.chinaex123.kaleidoscope_dim_wine.data.recipe.ModRecipes;
 import com.chinaex123.kaleidoscope_dim_wine.event.EffectAttributeRemoveHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.*;
-import com.chinaex123.kaleidoscope_dim_wine.block.entity.DrinkBlockEntityTypeEventHandler;
+import com.chinaex123.kaleidoscope_dim_wine.event.DrinkBlockEntityTypeEventHandler;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherFluids;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherItems;

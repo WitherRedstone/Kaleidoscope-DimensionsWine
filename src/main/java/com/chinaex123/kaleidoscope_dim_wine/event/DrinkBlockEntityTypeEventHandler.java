@@ -1,4 +1,4 @@
-package com.chinaex123.kaleidoscope_dim_wine.block.entity;
+package com.chinaex123.kaleidoscope_dim_wine.event;
 
 import com.chinaex123.kaleidoscope_dim_wine.init.KDWBlocks;
 import com.chinaex123.kaleidoscope_dim_wine.init.compat.Aether.AetherBlocks;
@@ -18,7 +18,6 @@ import java.util.List;
  * 酒类方块实体类型事件处理器
  */
 public final class DrinkBlockEntityTypeEventHandler {
-
     private static final ResourceLocation TAVERN_DRINK_BE = ResourceLocation.tryBuild("kaleidoscope_tavern", "drink");
 
     public static void onBlockEntityTypeAddBlocks(BlockEntityTypeAddBlocksEvent event) {
