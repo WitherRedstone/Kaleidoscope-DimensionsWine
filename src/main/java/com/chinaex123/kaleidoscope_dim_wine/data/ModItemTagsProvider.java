@@ -10,6 +10,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -213,6 +214,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
 
 
+        // 种子
+        tag(Tags.Items.SEEDS).add(KDWItems.HOP_SEED.get());
         // 葡萄
         tag(KDWItemTags.GRAPES)
                 .add(KDWItems.CRIMSON_GRAPE.get())
