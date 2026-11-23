@@ -323,15 +323,15 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
 
         // 绯红葡萄
         PressingTubBuilder.builder()
-                .setIngredient(KDWItems.CRIMSON_GRAPEVINE)
+                .setIngredient(KDWItems.CRIMSON_GRAPE)
                 .setFluid(KDWFluids.CRIMSON_GRAPE_JUICE.get())
                 .save(output);
         // 诡异葡萄
         PressingTubBuilder.builder()
-                .setIngredient(KDWItems.WARPED_GRAPEVINE)
+                .setIngredient(KDWItems.WARPED_GRAPE)
                 .setFluid(KDWFluids.WARPED_GRAPE_JUICE.get())
                 .save(output);
-        // 迷梦果
+        // 迷梦果         
         PressingTubBuilder.builder()
                 .setIngredient(KDWItems.DREAMFRUIT)
                 .setFluid(KDWFluids.DREAMFRUIT_JUICE.get())

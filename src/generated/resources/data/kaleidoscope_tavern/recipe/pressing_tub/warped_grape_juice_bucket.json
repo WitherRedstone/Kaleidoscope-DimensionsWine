@@ -2,6 +2,6 @@
   "type": "kaleidoscope_tavern:pressing_tub",
   "fluid": "kaleidoscope_dim_wine:warped_grape_juice",
   "ingredient": {
-    "item": "kaleidoscope_dim_wine:warped_grapevine"
+    "item": "kaleidoscope_dim_wine:warped_grape"
   }
 }
