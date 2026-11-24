@@ -312,42 +312,36 @@ public class DrinkEffectDataGen implements DataProvider {
                     List.of(effect(MobEffects.LUCK, 1440, 15)),
                     List.of(effect(MobEffects.LUCK, 2880, 30))
             );
-
             addWithLevel2Effects(AetherItems.UNBOUND_SKYBORN,
                     List.of(effect(KDWEffects.SKYBORN_GRACE, 30, 0)),
                     List.of(effect(KDWEffects.SKYBORN_GRACE, 120, 0)),
                     List.of(effect(KDWEffects.SKYBORN_GRACE, 240, 0)),
                     List.of(effect(KDWEffects.UNBOUND_GRACE, 360, 0))
             );
-
             addWithLevel2Effects(AetherItems.DIVINE_ENERGY_MIST,
                     List.of(effect(MobEffects.MOVEMENT_SPEED, 60, 0), effect(MobEffects.INVISIBILITY, 30, 0), effect(MobEffects.HUNGER, 30, 0)),
                     List.of(effect(MobEffects.MOVEMENT_SPEED, 180, 1), effect(MobEffects.INVISIBILITY, 120, 0), effect(MobEffects.HUNGER, 20, 0)),
                     List.of(effect(MobEffects.MOVEMENT_SPEED, 300, 2), effect(MobEffects.INVISIBILITY, 240, 0), effect(MobEffects.HUNGER, 10, 0)),
                     List.of(effect(MobEffects.MOVEMENT_SPEED, 600, 3), effect(MobEffects.INVISIBILITY, 360, 0), effect(MobEffects.HUNGER, 5, 0))
             );
-
             addWithLevel2Effects(AetherItems.DIVINE_OFFERING_BREW,
                     List.of(effect(MobEffects.DIG_SPEED, 60, 0), effect(MobEffects.NIGHT_VISION, 30, 0)),
                     List.of(effect(MobEffects.DIG_SPEED, 180, 1), effect(MobEffects.NIGHT_VISION, 120, 0)),
                     List.of(effect(MobEffects.DIG_SPEED, 300, 2), effect(MobEffects.NIGHT_VISION, 240, 0)),
                     List.of(effect(MobEffects.DIG_SPEED, 600, 3), effect(MobEffects.NIGHT_VISION, 360, 0))
             );
-
             addWithLevel2Effects(AetherItems.GRAVITITE_DRUNK,
                     List.of(effect(MobEffects.JUMP, 60, 0), effect(MobEffects.SLOW_FALLING, 60, 0)),
                     List.of(effect(MobEffects.JUMP, 180, 1), effect(MobEffects.SLOW_FALLING, 180, 0)),
                     List.of(effect(MobEffects.JUMP, 300, 2), effect(MobEffects.SLOW_FALLING, 300, 0)),
                     List.of(effect(MobEffects.JUMP, 600, 3), effect(MobEffects.SLOW_FALLING, 600, 0))
             );
-
             addWithLevel2Effects(AetherItems.HEALING_ELIXIR,
                     List.of(effect(MobEffects.REGENERATION, 30, 0), effect(MobEffects.HEAL, 0, 0)),
                     List.of(effect(MobEffects.REGENERATION, 120, 1), effect(MobEffects.HEAL, 0, 1)),
                     List.of(effect(MobEffects.REGENERATION, 240, 2), effect(MobEffects.HEAL, 0, 2)),
                     List.of(effect(MobEffects.REGENERATION, 360, 4), effect(MobEffects.HEAL, 0, 3))
             );
-
             addWithLevel2Effects(AetherItems.SWET_FIZZ,
                     List.of(effect(MobEffects.REGENERATION, 30, 0)),
                     List.of(effect(MobEffects.REGENERATION, 120, 1)),
